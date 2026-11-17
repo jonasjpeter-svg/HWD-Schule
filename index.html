@@ -1195,7 +1195,7 @@
 
         <div class="quiz-actions">
             <button type="button" class="quiz-btn" onclick="checkQuiz()">Antworten prüfen &amp; auswerten</button>
-            <button type="button" class="quiz-btn secondary" onclick="resetQuiz()">Quiz neu starten</button>
+            <button type="button" class="quiz-btn secondary" onclick="resetQuiz()">Neue Fragen / Quiz neu starten</button>
             <div id="quiz-score" class="quiz-score"></div>
         </div>
     </section>
@@ -1207,124 +1207,219 @@
 </footer>
 
 <script>
-const quizData = [
-    // --- SINGLE CHOICE (5) ---
+const questionBank = [
+    // --- SINGLE CHOICE (10) ---
     {
-        id: 'q1', type: 'single',
-        question: '1. Wann spricht man volkswirtschaftlich offiziell von einer Rezession?',
+        id: 'sc1', type: 'single',
+        question: 'Wann spricht man volkswirtschaftlich offiziell von einer Rezession?',
         options: [
-            'Wenn das BIP in 2 aufeinanderfolgenden Quartalen sinkt',
-            'Wenn die Inflation über 3% steigt',
-            'Wenn die Arbeitslosenquote einmalig über 5% liegt',
-            'Wenn die Notenbank den Leitzins senkt'
+            { text: 'Wenn das BIP in 2 aufeinanderfolgenden Quartalen sinkt', ok: true },
+            { text: 'Wenn die Inflation über 3% steigt', ok: false },
+            { text: 'Wenn die Arbeitslosenquote einmalig über 5% liegt', ok: false },
+            { text: 'Wenn die Notenbank den Leitzins senkt', ok: false }
         ],
-        answer: 0,
-        explanation: 'Richtig: Sinkt das Bruttoinlandprodukt (BIP) in zwei aufeinanderfolgenden Quartalen, liegt eine Rezession vor.'
+        explanation: 'Sinkt das Bruttoinlandprodukt (BIP) in zwei aufeinanderfolgenden Quartalen, liegt eine Rezession vor.'
     },
     {
-        id: 'q2', type: 'single',
-        question: '2. Welcher Effekt entsteht, wenn der Staat einen Höchstpreis unterhalb des Gleichgewichtspreises festlegt?',
+        id: 'sc2', type: 'single',
+        question: 'Welcher Effekt entsteht, wenn der Staat einen Höchstpreis unterhalb des Gleichgewichtspreises festlegt?',
         options: [
-            'Ein Angebotsüberschuss (zu viel Ware auf dem Markt)',
-            'Ein Nachfrageüberschuss bzw. Mangel',
-            'Keine Veränderung der nachgefragten Menge',
-            'Eine Verschiebung der Nachfragekurve nach rechts'
+            { text: 'Ein Nachfrageüberschuss bzw. Mangel', ok: true },
+            { text: 'Ein Angebotsüberschuss (zu viel Ware auf dem Markt)', ok: false },
+            { text: 'Keine Veränderung der nachgefragten Menge', ok: false },
+            { text: 'Eine Verschiebung der Nachfragekurve nach rechts', ok: false }
         ],
-        answer: 1,
         explanation: 'Ein Höchstpreis unter dem Gleichgewicht (z.B. Mietpreisdeckel) führt dazu, dass viele kaufen wollen, aber weniger angeboten wird = Nachfrageüberschuss.'
     },
     {
-        id: 'q3', type: 'single',
-        question: '3. Was beschreibt das Problem «Moral Hazard» am Beispiel einer Versicherung?',
+        id: 'sc3', type: 'single',
+        question: 'Was beschreibt das Problem «Moral Hazard» am Beispiel einer Versicherung?',
         options: [
-            'Verborgene Eigenschaften vor Vertragsabschluss führen zur Abwanderung guter Risiken',
-            'Verborgenes Verhalten nach Vertragsabschluss: Versicherte gehen höhere Risiken ein',
-            'Der Staat zwingt alle Bürger zu einer Grundversicherung',
-            'Die Versicherungsprämien sinken automatisch bei steigenden Schäden'
+            { text: 'Verborgenes Verhalten nach Vertragsabschluss: Versicherte gehen höhere Risiken ein', ok: true },
+            { text: 'Verborgene Eigenschaften vor Vertragsabschluss führen zur Abwanderung guter Risiken', ok: false },
+            { text: 'Der Staat zwingt alle Bürger zu einer Grundversicherung', ok: false },
+            { text: 'Die Versicherungsprämien sinken automatisch bei steigenden Schäden', ok: false }
         ],
-        answer: 1,
         explanation: 'Moral Hazard entsteht nach Vertragsabschluss (verborgenes Verhalten). Gegenmassnahmen sind Selbstbehalt, Überwachung und Bonus-Malus.'
     },
     {
-        id: 'q4', type: 'single',
-        question: '4. Welche Wachstumsstrategie in der Ansoff-Matrix kombiniert ein NEUES Produkt mit einem NEUEN Markt?',
+        id: 'sc4', type: 'single',
+        question: 'Welche Wachstumsstrategie in der Ansoff-Matrix kombiniert ein NEUES Produkt mit einem NEUEN Markt?',
         options: [
-            'Marktdurchdringung',
-            'Marktentwicklung',
-            'Produktentwicklung',
-            'Diversifikation'
+            { text: 'Diversifikation', ok: true },
+            { text: 'Marktdurchdringung', ok: false },
+            { text: 'Marktentwicklung', ok: false },
+            { text: 'Produktentwicklung', ok: false }
         ],
-        answer: 3,
         explanation: 'Diversifikation (Neu-Neu) ist die strategisch risikoreichste Wachstumsstrategie in der Ansoff-Matrix.'
     },
     {
-        id: 'q5', type: 'single',
-        question: '5. Nach welchem Finanzierungsverfahren funktioniert die 1. Säule (AHV/IV) in der Schweiz?',
+        id: 'sc5', type: 'single',
+        question: 'Nach welchem Finanzierungsverfahren funktioniert die 1. Säule (AHV/IV) in der Schweiz?',
         options: [
-            'Kapitaldeckungsverfahren',
-            'Umlageverfahren (Beiträge von Versicherten + Staat)',
-            'Rein freiwilliges privates Sparen',
-            'Steuerbefreite Vorsorge 3a'
+            { text: 'Umlageverfahren (Beiträge von Versicherten + Staat)', ok: true },
+            { text: 'Kapitaldeckungsverfahren', ok: false },
+            { text: 'Rein freiwilliges privates Sparen', ok: false },
+            { text: 'Steuerbefreite Vorsorge 3a', ok: false }
         ],
-        answer: 1,
         explanation: 'Die 1. Säule (Existenzsicherung) wird im Umlageverfahren finanziert; die 2. Säule (BVG/Pensionskasse) im Kapitaldeckungsverfahren.'
     },
-    // --- MULTIPLE CHOICE (4) ---
     {
-        id: 'q6', type: 'multi',
-        question: '6. Inflation: Welche ZWEI Aussagen sind richtig?',
+        id: 'sc6', type: 'single',
+        question: 'Was passiert bei einer Steuererhöhung auf einem Produkt (z.B. Benzin) im Preis-/Mengen-Diagramm?',
         options: [
-            'Inflation bedeutet Geldentwertung',
-            'Inflation bedeutet einen allgemeinen Anstieg der Löhne',
-            'Inflation bedeutet den starken Preisanstieg eines einzelnen Guts',
-            'Inflation bedeutet den allgemeinen Anstieg der Preise',
-            'Inflation bedeutet einen anhaltenden Anstieg der Zinssätze'
+            { text: 'Die Angebotskurve verschiebt sich nach oben/links, Käufer zahlen mehr, die Menge sinkt', ok: true },
+            { text: 'Die Angebotskurve verschiebt sich nach unten/rechts, Käufer zahlen weniger', ok: false },
+            { text: 'Die Gleichgewichtsmenge steigt stark an', ok: false },
+            { text: 'Der Preis für Verkäufer steigt über den Käuferpreis', ok: false }
         ],
-        answers: [0, 3],
+        explanation: 'Steuern verteuern das Angebot: Die Angebotskurve wandert nach oben, der Käuferpreis steigt und die gehandelte Menge geht zurück.'
+    },
+    {
+        id: 'sc7', type: 'single',
+        question: 'Welches Kriterium gehört NICHT zur SMART-Formel bei der Zielformulierung?',
+        options: [
+            { text: 'Spekulativ', ok: true },
+            { text: 'Spezifisch', ok: false },
+            { text: 'Messbar', ok: false },
+            { text: 'Terminiert', ok: false }
+        ],
+        explanation: 'SMART steht für Spezifisch, Messbar, Akzeptiert, Realistisch/Relevant, Terminiert.'
+    },
+    {
+        id: 'sc8', type: 'single',
+        question: 'Was bedeutet ein hoher Sättigungsgrad (Marktvolumen / Marktpotenzial × 100)?',
+        options: [
+            { text: 'Der Markt ist weitgehend ausgeschöpft und bietet kaum noch Wachstumspotenzial', ok: true },
+            { text: 'Das Unternehmen hat ein Monopol', ok: false },
+            { text: 'Die variablen Kosten sind höher als die fixen Kosten', ok: false },
+            { text: 'Die Preise fallen automatisch unter das Gleichgewicht', ok: false }
+        ],
+        explanation: 'Je näher das Marktvolumen am theoretisch möglichen Marktpotenzial liegt, desto gesättigter ist der Markt.'
+    },
+    {
+        id: 'sc9', type: 'single',
+        question: 'Wie berechnet sich die betriebliche Wertschöpfung eines Unternehmens?',
+        options: [
+            { text: 'Verkaufserlös minus Vorleistungen (Zukäufe)', ok: true },
+            { text: 'Fixe Kosten plus variable Kosten', ok: false },
+            { text: 'Umsatz mal Marktanteil', ok: false },
+            { text: 'BIP minus Staatsausgaben', ok: false }
+        ],
+        explanation: 'Wertschöpfung = Verkaufserlös − Vorleistungen (= Betriebskosten + Erfolg).'
+    },
+    {
+        id: 'sc10', type: 'single',
+        question: 'Was ist der Unterschied zwischen Moral und Ethik?',
+        options: [
+            { text: 'Moral beschreibt, was richtig/falsch ist; Ethik begründet, warum es richtig/falsch ist', ok: true },
+            { text: 'Moral gilt nur für Unternehmen, Ethik nur für den Staat', ok: false },
+            { text: 'Ethik ist gesetzlich verpflichtend, Moral ist immer strafbar', ok: false },
+            { text: 'Es gibt keinen Unterschied', ok: false }
+        ],
+        explanation: 'Moral sind die geltenden Vorstellungen von richtig/falsch; Ethik liefert die Begründung dafür.'
+    },
+
+    // --- MULTIPLE CHOICE (8) ---
+    {
+        id: 'mc1', type: 'multi',
+        question: 'Inflation: Welche ZWEI Aussagen sind richtig?',
+        options: [
+            { text: 'Inflation bedeutet Geldentwertung', ok: true },
+            { text: 'Inflation bedeutet den allgemeinen Anstieg der Preise', ok: true },
+            { text: 'Inflation bedeutet einen allgemeinen Anstieg der Löhne', ok: false },
+            { text: 'Inflation bedeutet den starken Preisanstieg eines einzelnen Guts', ok: false },
+            { text: 'Inflation bedeutet einen anhaltenden Anstieg der Zinssätze', ok: false }
+        ],
         explanation: 'Inflation ist ein allgemeiner Anstieg des Preisniveaus, was gleichbedeutend mit Geldentwertung (sinkender Kaufkraft) ist.'
     },
     {
-        id: 'q7', type: 'multi',
-        question: '7. Welche Massnahmen gehören zur expansiven (antizyklischen) Konjunkturpolitik in einer Rezession? (Mehrere richtig)',
+        id: 'mc2', type: 'multi',
+        question: 'Welche Massnahmen gehören zur expansiven (antizyklischen) Konjunkturpolitik in einer Rezession?',
         options: [
-            'Staatsausgaben erhöhen',
-            'Steuern senken',
-            'Steuereinnahmen erhöhen',
-            'Staatsausgaben senken',
-            'Arbeitslosenkasse stützt Einkommen'
+            { text: 'Staatsausgaben erhöhen', ok: true },
+            { text: 'Steuern senken', ok: true },
+            { text: 'Arbeitslosenkasse stützt Einkommen', ok: true },
+            { text: 'Steuereinnahmen erhöhen', ok: false },
+            { text: 'Staatsausgaben senken', ok: false }
         ],
-        answers: [0, 1, 4],
-        explanation: 'In der Rezession stützt der Staat die Kaufkraft und Gesamtnachfrage durch höhere Staatsausgaben, Steuersenkungen und Leistungen der Arbeitslosenkasse.'
+        explanation: 'In der Rezession stützt der Staat die Kaufkraft und Gesamtnachfrage durch höhere Staatsausgaben, Steuersenkungen und Arbeitslosenkasse.'
     },
     {
-        id: 'q8', type: 'multi',
-        question: '8. Welche Bausteine gehören zum Total Quality Management (TQM)? (Mehrere richtig)',
+        id: 'mc3', type: 'multi',
+        question: 'Welche Bausteine gehören zum Total Quality Management (TQM)?',
         options: [
-            'Kundenorientierung',
-            'Nullfehlerprinzip',
-            'Ständige Verbesserung (Kaizen)',
-            'Interne Kunden / Lieferanten',
-            'Möglichst hohe Fehlerquote akzeptieren'
+            { text: 'Kundenorientierung', ok: true },
+            { text: 'Nullfehlerprinzip', ok: true },
+            { text: 'Ständige Verbesserung (Kaizen)', ok: true },
+            { text: 'Interne Kunden / Lieferanten', ok: true },
+            { text: 'Möglichst hohe Fehlerquote akzeptieren', ok: false }
         ],
-        answers: [0, 1, 2, 3],
-        explanation: 'TQM basiert auf genau diesen 4 Bausteinen: Kundenorientierung, Nullfehlerprinzip, Kaizen und interne Kunden/Lieferanten.'
+        explanation: 'TQM basiert auf Kundenorientierung, Nullfehlerprinzip, Kaizen und internen Kunden/Lieferanten.'
     },
     {
-        id: 'q9', type: 'multi',
-        question: '9. Internationale Organisationen & Währung: Welche Aussagen stimmen? (Mehrere richtig)',
+        id: 'mc4', type: 'multi',
+        question: 'Internationale Organisationen & Währung: Welche Aussagen stimmen?',
         options: [
-            'Die Schweiz ist weder in G7, G20 noch BRICS Mitglied',
-            'Die Euro-Zone umfasst 21 Länder (EU: 27 Länder)',
-            'Die EZB in Zürich steuert die Euro-Geldpolitik',
-            'Die WTO kümmert sich um Abbau von Handelshemmnissen (Zölle, Quoten)'
+            { text: 'Die Schweiz ist weder in G7, G20 noch BRICS Mitglied', ok: true },
+            { text: 'Die Euro-Zone umfasst 21 Länder (EU: 27 Länder)', ok: true },
+            { text: 'Die WTO kümmert sich um Abbau von Handelshemmnissen (Zölle, Quoten)', ok: true },
+            { text: 'Die EZB in Zürich steuert die Euro-Geldpolitik', ok: false }
         ],
-        answers: [0, 1, 3],
-        explanation: 'Die Schweiz ist nirgends Mitglied, die Euro-Zone hat 21 Länder und die WTO regelt den Welthandel. Die EZB sitzt in Frankfurt (nicht Zürich).'
+        explanation: 'Die Schweiz ist nirgends Mitglied, die Euro-Zone hat 21 Länder, die WTO regelt den Welthandel. Die EZB sitzt in Frankfurt.'
     },
-    // --- DRAG AND DROP (3) ---
     {
-        id: 'q10', type: 'dnd',
-        question: '10. Drag & Drop: Ordne die 4 Felder der BCG-Matrix richtig zu.',
+        id: 'mc5', type: 'multi',
+        question: 'Welche Voraussetzungen müssen für «vollständige Konkurrenz» erfüllt sein?',
+        options: [
+            { text: 'Zahlreiche Teilnehmer auf Angebots- und Nachfrageseite', ok: true },
+            { text: 'Homogene (gleichartige) Güter', ok: true },
+            { text: 'Vollständige Information (Markttransparenz)', ok: true },
+            { text: 'Keine Markthindernisse', ok: true },
+            { text: 'Ein einziger Monopolanbieter', ok: false }
+        ],
+        explanation: 'Vollständige Konkurrenz erfordert viele Teilnehmer, homogene Güter, volle Information und freien Marktzugang.'
+    },
+    {
+        id: 'mc6', type: 'multi',
+        question: 'Welche Kriterien zählen zur Balanced Scorecard (4 Perspektiven)?',
+        options: [
+            { text: 'Finanzen', ok: true },
+            { text: 'Kunden', ok: true },
+            { text: 'Interne Geschäftsprozesse', ok: true },
+            { text: 'Lernen und Entwicklung', ok: true },
+            { text: 'Adverse Selektion', ok: false }
+        ],
+        explanation: 'Die 4 BSC-Perspektiven sind Finanzen, Kunden, Interne Geschäftsprozesse sowie Lernen & Entwicklung.'
+    },
+    {
+        id: 'mc7', type: 'multi',
+        question: 'Welche Massnahmen helfen gegen «Adverse Selektion» bei Versicherungen?',
+        options: [
+            { text: 'Screening (Informationen einholen, Bonus-Malus)', ok: true },
+            { text: 'Signalisieren durch Versicherungsnehmer', ok: true },
+            { text: 'Kollektivversicherungen', ok: true },
+            { text: 'Obligatorium (Versicherungspflicht)', ok: true },
+            { text: 'Abschaffung aller Prämien', ok: false }
+        ],
+        explanation: 'Screening, Signalisieren, Kollektivversicherungen und Obligatorium verhindern, dass gute Risiken abwandern.'
+    },
+    {
+        id: 'mc8', type: 'multi',
+        question: 'Welche der folgenden Indikatoren sind «vorauslaufende Konjunkturindikatoren»?',
+        options: [
+            { text: 'Auftragseingänge', ok: true },
+            { text: 'Aktienkurse', ok: true },
+            { text: 'Baugenehmigungen & Konsumentenvertrauen', ok: true },
+            { text: 'Arbeitslosenquote vom Vorjahr', ok: false }
+        ],
+        explanation: 'Auftragseingänge, Aktienkurse, Gewinnerwartungen, Baugenehmigungen und Konsumentenvertrauen laufen der Konjunktur voraus.'
+    },
+
+    // --- DRAG AND DROP (6) ---
+    {
+        id: 'dnd1', type: 'dnd',
+        question: 'Drag & Drop: Ordne die 4 Felder der BCG-Matrix richtig zu.',
         items: [
             { id: 'bcg1', text: 'Stars', target: 't1' },
             { id: 'bcg2', text: 'Cash Cows', target: 't2' },
@@ -1340,8 +1435,8 @@ const quizData = [
         explanation: 'Stars = hoch/hoch, Cash Cows = tief/hoch, Question Marks = hoch/tief, Poor Dogs = tief/tief.'
     },
     {
-        id: 'q11', type: 'dnd',
-        question: '11. Drag & Drop: Ordne die Kostenarten richtig zu (Block 9).',
+        id: 'dnd2', type: 'dnd',
+        question: 'Drag & Drop: Ordne die Kostenarten richtig zu (Block 9).',
         items: [
             { id: 'k1', text: 'Miete & Leasing', target: 'fix' },
             { id: 'k2', text: 'Grundgehälter & Kreditzinsen', target: 'fix' },
@@ -1355,8 +1450,8 @@ const quizData = [
         explanation: 'Fixe Kosten (Miete, Leasing, Grundgehälter, Zinsen) fallen unabhängig von der Menge an; variable Kosten hängen von der Produktionsmenge ab.'
     },
     {
-        id: 'q12', type: 'dnd',
-        question: '12. Drag & Drop: Magisches Sechseck – Ordne die Zielpaare der richtigen Beziehung zu.',
+        id: 'dnd3', type: 'dnd',
+        question: 'Drag & Drop: Magisches Sechseck – Ordne die Zielpaare der richtigen Beziehung zu.',
         items: [
             { id: 'z1', text: 'Wachstum ↔ Vollbeschäftigung', target: 'harm' },
             { id: 'z2', text: 'Wachstum ↔ Umweltschutz', target: 'konf' },
@@ -1369,13 +1464,79 @@ const quizData = [
             { id: 'neut', label: 'Zielneutralität' }
         ],
         explanation: 'Wachstum & Vollbeschäftigung fördern sich (Harmonie); Wachstum vs. Umwelt sowie Vollbeschäftigung vs. Preisstabilität stehen oft im Konflikt.'
+    },
+    {
+        id: 'dnd4', type: 'dnd',
+        question: 'Drag & Drop: Ordne die Aktivitäten der Wertkette nach Michael Porter zu (Block 3).',
+        items: [
+            { id: 'p1', text: 'Eingangs- & Ausgangslogistik', target: 'prim' },
+            { id: 'p2', text: 'Produktion, Marketing & Service', target: 'prim' },
+            { id: 'p3', text: 'Unternehmensinfrastruktur & Personal', target: 'sek' },
+            { id: 'p4', text: 'Technologie- & Beschaffungsmanagement', target: 'sek' }
+        ],
+        targets: [
+            { id: 'prim', label: 'Primäre Aktivitäten' },
+            { id: 'sek', label: 'Unterstützende (sekundäre) Aktivitäten' }
+        ],
+        explanation: 'Primär: Eingangslogistik, Produktion, Ausgangslogistik, Marketing/Verkauf, Service. Unterstützend: Infrastruktur, Personal, Technologie, Beschaffung.'
+    },
+    {
+        id: 'dnd5', type: 'dnd',
+        question: 'Drag & Drop: Ordne die 4 Ps des Marketing-Mix den Beispielen zu.',
+        items: [
+            { id: 'm1', text: 'Qualität, Marke, Design, Verpackung', target: 'prod' },
+            { id: 'm2', text: 'Preis- & Konditionenpolitik', target: 'price' },
+            { id: 'm3', text: 'Absatzweg, Logistik, Franchising', target: 'place' },
+            { id: 'm4', text: 'Werbung, PR, Sponsoring, Messen', target: 'promo' }
+        ],
+        targets: [
+            { id: 'prod', label: 'Product (Produkt)' },
+            { id: 'price', label: 'Price (Preis)' },
+            { id: 'place', label: 'Place (Vertrieb)' },
+            { id: 'promo', label: 'Promotion (Kommunikation)' }
+        ],
+        explanation: 'Product = Sortiment/Qualität/Marke, Price = Preispolitik, Place = Vertrieb/Logistik, Promotion = Werbung/PR/Sponsoring.'
+    },
+    {
+        id: 'dnd6', type: 'dnd',
+        question: 'Drag & Drop: Ordne die Geldwertstörungen der richtigen Beschreibung zu.',
+        items: [
+            { id: 'g1', text: 'Preise steigen, Kaufkraft sinkt', target: 'inf' },
+            { id: 'g2', text: 'Preise sinken, Kaufkraft steigt, Produktion sinkt', target: 'def' },
+            { id: 'g3', text: 'Wirtschaft stagniert & Preise steigen gleichzeitig', target: 'stag' }
+        ],
+        targets: [
+            { id: 'inf', label: 'Inflation' },
+            { id: 'def', label: 'Deflation' },
+            { id: 'stag', label: 'Stagflation' }
+        ],
+        explanation: 'Inflation = Preissteigerung; Deflation = Preisrückgang mit Produktionsdrosselung; Stagflation = Stagnation + Inflation gleichzeitig.'
     }
 ];
 
+let activeQuiz = [];
+let usedIds = new Set();
 let selectedChip = null;
 
 function shuffle(arr) {
     return [...arr].sort(() => Math.random() - 0.5);
+}
+
+function pickFromPool(type, count) {
+    const all = questionBank.filter(q => q.type === type);
+    let fresh = all.filter(q => !usedIds.has(q.id));
+    if (fresh.length < count) {
+        all.forEach(q => usedIds.delete(q.id));
+        fresh = all;
+    }
+    const chosen = shuffle(fresh).slice(0, count);
+    chosen.forEach(q => usedIds.add(q.id));
+    return chosen.map(q => {
+        if (q.type === 'single' || q.type === 'multi') {
+            return { ...q, shuffledOptions: shuffle(q.options) };
+        }
+        return q;
+    });
 }
 
 function renderQuiz() {
@@ -1383,7 +1544,13 @@ function renderQuiz() {
     container.innerHTML = '';
     selectedChip = null;
 
-    quizData.forEach(q => {
+    activeQuiz = [
+        ...pickFromPool('single', 5),
+        ...pickFromPool('multi', 4),
+        ...pickFromPool('dnd', 3)
+    ];
+
+    activeQuiz.forEach((q, qIdx) => {
         const card = document.createElement('div');
         card.className = 'quiz-question';
         card.id = 'card-' + q.id;
@@ -1394,11 +1561,11 @@ function renderQuiz() {
         card.appendChild(badge);
 
         const title = document.createElement('h4');
-        title.textContent = q.question;
+        title.textContent = `${qIdx + 1}. ${q.question}`;
         card.appendChild(title);
 
         if (q.type === 'single' || q.type === 'multi') {
-            q.options.forEach((opt, idx) => {
+            q.shuffledOptions.forEach((opt, idx) => {
                 const label = document.createElement('label');
                 label.className = 'quiz-option';
                 const inp = document.createElement('input');
@@ -1407,7 +1574,7 @@ function renderQuiz() {
                 inp.value = idx;
                 label.appendChild(inp);
                 const span = document.createElement('span');
-                span.textContent = opt;
+                span.textContent = opt.text;
                 label.appendChild(span);
                 card.appendChild(label);
             });
@@ -1501,7 +1668,7 @@ function setupDropZone(zone, qid, slotEl = null) {
 
 function checkQuiz() {
     let score = 0;
-    quizData.forEach(q => {
+    activeQuiz.forEach(q => {
         const card = document.getElementById('card-' + q.id);
         const fb = document.getElementById('fb-' + q.id);
         let ok = false;
@@ -1509,18 +1676,19 @@ function checkQuiz() {
         if (q.type === 'single') {
             const labels = card.querySelectorAll('.quiz-option');
             labels.forEach(l => l.classList.remove('is-correct', 'is-wrong'));
+            const correctIdx = q.shuffledOptions.findIndex(o => o.ok);
             const checked = card.querySelector('input:checked');
             if (checked) {
                 const val = parseInt(checked.value, 10);
-                ok = val === q.answer;
+                ok = val === correctIdx;
                 labels[val].classList.add(ok ? 'is-correct' : 'is-wrong');
             }
-            if (!ok) labels[q.answer].classList.add('is-correct');
+            if (!ok) labels[correctIdx].classList.add('is-correct');
         } else if (q.type === 'multi') {
             const labels = card.querySelectorAll('.quiz-option');
             labels.forEach(l => l.classList.remove('is-correct', 'is-wrong'));
             const checkedVals = [...card.querySelectorAll('input:checked')].map(i => parseInt(i.value, 10)).sort();
-            const expected = [...q.answers].sort();
+            const expected = q.shuffledOptions.map((o, i) => o.ok ? i : -1).filter(i => i !== -1);
             ok = checkedVals.length === expected.length && checkedVals.every((v, i) => v === expected[i]);
             labels.forEach((l, idx) => {
                 const isExp = expected.includes(idx);
@@ -1551,10 +1719,10 @@ function checkQuiz() {
         fb.textContent = (ok ? '✓ Richtig! ' : '✗ Noch nicht ganz. ') + q.explanation;
     });
 
-    const pct = Math.round((score / quizData.length) * 100);
+    const pct = Math.round((score / activeQuiz.length) * 100);
     const scoreBox = document.getElementById('quiz-score');
     scoreBox.style.display = 'inline-block';
-    scoreBox.textContent = `Ergebnis: ${score} von ${quizData.length} Punkten (${pct}%)`;
+    scoreBox.textContent = `Ergebnis: ${score} von ${activeQuiz.length} Punkten (${pct}%)`;
 }
 
 function resetQuiz() {
