@@ -205,6 +205,121 @@
             section { padding: 1.15rem; }
             header h1 { font-size: 1.65rem; }
         }
+        /* Quiz Styles */
+        .quiz-question {
+            background: #faf9fc;
+            border: 1px solid #e5d9ee;
+            border-radius: 10px;
+            padding: 1.15rem;
+            margin-bottom: 1.25rem;
+        }
+        .quiz-type-tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            background: var(--primary-light);
+            color: var(--secondary);
+            margin-bottom: 0.4rem;
+        }
+        .quiz-question h4 { margin: 0.25rem 0 0.75rem; color: var(--secondary); }
+        .quiz-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.55rem;
+            padding: 0.45rem 0.65rem;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-bottom: 0.35rem;
+            border: 1px solid transparent;
+            transition: background 0.15s;
+        }
+        .quiz-option:hover { background: #f1e8f7; }
+        .quiz-option input { margin-top: 0.25rem; cursor: pointer; }
+        .quiz-option.is-correct { background: #dcfce7; border-color: #16a34a; }
+        .quiz-option.is-wrong { background: #fee2e2; border-color: #dc2626; }
+        .dnd-pool {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding: 0.75rem;
+            background: #ffffff;
+            border: 1px dashed #94a3b8;
+            border-radius: 8px;
+            min-height: 48px;
+            margin-bottom: 0.85rem;
+        }
+        .dnd-chip {
+            background: var(--primary);
+            color: #ffffff;
+            padding: 0.38rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.86rem;
+            font-weight: 600;
+            cursor: grab;
+            user-select: none;
+            transition: transform 0.12s, box-shadow 0.12s;
+        }
+        .dnd-chip:active { cursor: grabbing; }
+        .dnd-chip.selected { outline: 3px solid var(--accent); transform: scale(1.03); }
+        .dnd-targets {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0.75rem;
+        }
+        .dnd-target {
+            background: #ffffff;
+            border: 2px dashed #cbd5e1;
+            border-radius: 8px;
+            padding: 0.65rem;
+            min-height: 76px;
+            transition: border-color 0.15s, background 0.15s;
+        }
+        .dnd-target.drag-over { border-color: var(--primary); background: var(--primary-soft); }
+        .dnd-target.is-correct { border-color: #16a34a; background: #f0fdf4; border-style: solid; }
+        .dnd-target.is-wrong { border-color: #dc2626; background: #fef2f2; border-style: solid; }
+        .dnd-target-label { font-size: 0.86rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.45rem; }
+        .dnd-slot { display: flex; flex-wrap: wrap; gap: 0.35rem; min-height: 28px; }
+        .quiz-feedback {
+            margin-top: 0.65rem;
+            padding: 0.6rem 0.85rem;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            display: none;
+        }
+        .quiz-feedback.ok { display: block; background: #dcfce7; color: #14532d; }
+        .quiz-feedback.err { display: block; background: #fee2e2; color: #7f1d1d; }
+        .quiz-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+            margin-top: 1.25rem;
+        }
+        .quiz-btn {
+            background: var(--primary);
+            color: #ffffff;
+            border: none;
+            padding: 0.7rem 1.35rem;
+            border-radius: 8px;
+            font-size: 0.96rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .quiz-btn:hover { background: var(--secondary); }
+        .quiz-btn.secondary { background: #e2e8f0; color: var(--text); }
+        .quiz-btn.secondary:hover { background: #cbd5e1; }
+        .quiz-score {
+            font-size: 1.08rem;
+            font-weight: 700;
+            padding: 0.65rem 1rem;
+            border-radius: 8px;
+            background: var(--primary-soft);
+            color: var(--secondary);
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -223,6 +338,7 @@
     <a href="#block8">Block 8</a>
     <a href="#block9">Block 9</a>
     <a href="#block10">Block 10</a>
+    <a href="#quiz" style="background: var(--primary); color: #ffffff;">Prüfungs-Quiz</a>
 </nav>
 
 <div class="container">
@@ -1069,11 +1185,385 @@
         </div>
     </section>
 
+    <!-- ==================== PRÜFUNGS-QUIZ ==================== -->
+    <section id="quiz">
+        <span class="block-badge">Prüfungstraining (DP / ZP)</span>
+        <h2>Interaktives Quiz: Single Choice, Multiple Choice &amp; Drag &amp; Drop</h2>
+        <p>Teste dein Wissen über alle 10 Blöcke. <em>Tipp für Drag &amp; Drop:</em> Du kannst Kärtchen entweder per Maus/Touch ziehen oder einfach ein Kärtchen anklicken und danach auf das gewünschte Zielfeld tippen.</p>
+
+        <div id="quiz-container"></div>
+
+        <div class="quiz-actions">
+            <button type="button" class="quiz-btn" onclick="checkQuiz()">Antworten prüfen &amp; auswerten</button>
+            <button type="button" class="quiz-btn secondary" onclick="resetQuiz()">Quiz neu starten</button>
+            <div id="quiz-score" class="quiz-score"></div>
+        </div>
+    </section>
+
 </div>
 
 <footer>
     <p>&copy; 2026 HWD Lernkompendium VWL &amp; BWL (Blöcke 1–10) &bull; Vollständige Prüfungsvorbereitung</p>
 </footer>
+
+<script>
+const quizData = [
+    // --- SINGLE CHOICE (5) ---
+    {
+        id: 'q1', type: 'single',
+        question: '1. Wann spricht man volkswirtschaftlich offiziell von einer Rezession?',
+        options: [
+            'Wenn das BIP in 2 aufeinanderfolgenden Quartalen sinkt',
+            'Wenn die Inflation über 3% steigt',
+            'Wenn die Arbeitslosenquote einmalig über 5% liegt',
+            'Wenn die Notenbank den Leitzins senkt'
+        ],
+        answer: 0,
+        explanation: 'Richtig: Sinkt das Bruttoinlandprodukt (BIP) in zwei aufeinanderfolgenden Quartalen, liegt eine Rezession vor.'
+    },
+    {
+        id: 'q2', type: 'single',
+        question: '2. Welcher Effekt entsteht, wenn der Staat einen Höchstpreis unterhalb des Gleichgewichtspreises festlegt?',
+        options: [
+            'Ein Angebotsüberschuss (zu viel Ware auf dem Markt)',
+            'Ein Nachfrageüberschuss bzw. Mangel',
+            'Keine Veränderung der nachgefragten Menge',
+            'Eine Verschiebung der Nachfragekurve nach rechts'
+        ],
+        answer: 1,
+        explanation: 'Ein Höchstpreis unter dem Gleichgewicht (z.B. Mietpreisdeckel) führt dazu, dass viele kaufen wollen, aber weniger angeboten wird = Nachfrageüberschuss.'
+    },
+    {
+        id: 'q3', type: 'single',
+        question: '3. Was beschreibt das Problem «Moral Hazard» am Beispiel einer Versicherung?',
+        options: [
+            'Verborgene Eigenschaften vor Vertragsabschluss führen zur Abwanderung guter Risiken',
+            'Verborgenes Verhalten nach Vertragsabschluss: Versicherte gehen höhere Risiken ein',
+            'Der Staat zwingt alle Bürger zu einer Grundversicherung',
+            'Die Versicherungsprämien sinken automatisch bei steigenden Schäden'
+        ],
+        answer: 1,
+        explanation: 'Moral Hazard entsteht nach Vertragsabschluss (verborgenes Verhalten). Gegenmassnahmen sind Selbstbehalt, Überwachung und Bonus-Malus.'
+    },
+    {
+        id: 'q4', type: 'single',
+        question: '4. Welche Wachstumsstrategie in der Ansoff-Matrix kombiniert ein NEUES Produkt mit einem NEUEN Markt?',
+        options: [
+            'Marktdurchdringung',
+            'Marktentwicklung',
+            'Produktentwicklung',
+            'Diversifikation'
+        ],
+        answer: 3,
+        explanation: 'Diversifikation (Neu-Neu) ist die strategisch risikoreichste Wachstumsstrategie in der Ansoff-Matrix.'
+    },
+    {
+        id: 'q5', type: 'single',
+        question: '5. Nach welchem Finanzierungsverfahren funktioniert die 1. Säule (AHV/IV) in der Schweiz?',
+        options: [
+            'Kapitaldeckungsverfahren',
+            'Umlageverfahren (Beiträge von Versicherten + Staat)',
+            'Rein freiwilliges privates Sparen',
+            'Steuerbefreite Vorsorge 3a'
+        ],
+        answer: 1,
+        explanation: 'Die 1. Säule (Existenzsicherung) wird im Umlageverfahren finanziert; die 2. Säule (BVG/Pensionskasse) im Kapitaldeckungsverfahren.'
+    },
+    // --- MULTIPLE CHOICE (4) ---
+    {
+        id: 'q6', type: 'multi',
+        question: '6. Inflation: Welche ZWEI Aussagen sind richtig?',
+        options: [
+            'Inflation bedeutet Geldentwertung',
+            'Inflation bedeutet einen allgemeinen Anstieg der Löhne',
+            'Inflation bedeutet den starken Preisanstieg eines einzelnen Guts',
+            'Inflation bedeutet den allgemeinen Anstieg der Preise',
+            'Inflation bedeutet einen anhaltenden Anstieg der Zinssätze'
+        ],
+        answers: [0, 3],
+        explanation: 'Inflation ist ein allgemeiner Anstieg des Preisniveaus, was gleichbedeutend mit Geldentwertung (sinkender Kaufkraft) ist.'
+    },
+    {
+        id: 'q7', type: 'multi',
+        question: '7. Welche Massnahmen gehören zur expansiven (antizyklischen) Konjunkturpolitik in einer Rezession? (Mehrere richtig)',
+        options: [
+            'Staatsausgaben erhöhen',
+            'Steuern senken',
+            'Steuereinnahmen erhöhen',
+            'Staatsausgaben senken',
+            'Arbeitslosenkasse stützt Einkommen'
+        ],
+        answers: [0, 1, 4],
+        explanation: 'In der Rezession stützt der Staat die Kaufkraft und Gesamtnachfrage durch höhere Staatsausgaben, Steuersenkungen und Leistungen der Arbeitslosenkasse.'
+    },
+    {
+        id: 'q8', type: 'multi',
+        question: '8. Welche Bausteine gehören zum Total Quality Management (TQM)? (Mehrere richtig)',
+        options: [
+            'Kundenorientierung',
+            'Nullfehlerprinzip',
+            'Ständige Verbesserung (Kaizen)',
+            'Interne Kunden / Lieferanten',
+            'Möglichst hohe Fehlerquote akzeptieren'
+        ],
+        answers: [0, 1, 2, 3],
+        explanation: 'TQM basiert auf genau diesen 4 Bausteinen: Kundenorientierung, Nullfehlerprinzip, Kaizen und interne Kunden/Lieferanten.'
+    },
+    {
+        id: 'q9', type: 'multi',
+        question: '9. Internationale Organisationen & Währung: Welche Aussagen stimmen? (Mehrere richtig)',
+        options: [
+            'Die Schweiz ist weder in G7, G20 noch BRICS Mitglied',
+            'Die Euro-Zone umfasst 21 Länder (EU: 27 Länder)',
+            'Die EZB in Zürich steuert die Euro-Geldpolitik',
+            'Die WTO kümmert sich um Abbau von Handelshemmnissen (Zölle, Quoten)'
+        ],
+        answers: [0, 1, 3],
+        explanation: 'Die Schweiz ist nirgends Mitglied, die Euro-Zone hat 21 Länder und die WTO regelt den Welthandel. Die EZB sitzt in Frankfurt (nicht Zürich).'
+    },
+    // --- DRAG AND DROP (3) ---
+    {
+        id: 'q10', type: 'dnd',
+        question: '10. Drag & Drop: Ordne die 4 Felder der BCG-Matrix richtig zu.',
+        items: [
+            { id: 'bcg1', text: 'Stars', target: 't1' },
+            { id: 'bcg2', text: 'Cash Cows', target: 't2' },
+            { id: 'bcg3', text: 'Question Marks', target: 't3' },
+            { id: 'bcg4', text: 'Poor Dogs', target: 't4' }
+        ],
+        targets: [
+            { id: 't1', label: 'Hohes Wachstum & hoher Marktanteil (Investieren)' },
+            { id: 't2', label: 'Tiefes Wachstum & hoher Marktanteil (Erträge abschöpfen)' },
+            { id: 't3', label: 'Hohes Wachstum & tiefer Marktanteil (Selektiv prüfen)' },
+            { id: 't4', label: 'Tiefes Wachstum & tiefer Marktanteil (Ausstieg prüfen)' }
+        ],
+        explanation: 'Stars = hoch/hoch, Cash Cows = tief/hoch, Question Marks = hoch/tief, Poor Dogs = tief/tief.'
+    },
+    {
+        id: 'q11', type: 'dnd',
+        question: '11. Drag & Drop: Ordne die Kostenarten richtig zu (Block 9).',
+        items: [
+            { id: 'k1', text: 'Miete & Leasing', target: 'fix' },
+            { id: 'k2', text: 'Grundgehälter & Kreditzinsen', target: 'fix' },
+            { id: 'k3', text: 'Strom & Produktionsmaterial', target: 'var' },
+            { id: 'k4', text: 'Akkordlohn & Provisionen', target: 'var' }
+        ],
+        targets: [
+            { id: 'fix', label: 'Fixe Kosten (fallen immer an)' },
+            { id: 'var', label: 'Variable Kosten (mengenabhängig)' }
+        ],
+        explanation: 'Fixe Kosten (Miete, Leasing, Grundgehälter, Zinsen) fallen unabhängig von der Menge an; variable Kosten hängen von der Produktionsmenge ab.'
+    },
+    {
+        id: 'q12', type: 'dnd',
+        question: '12. Drag & Drop: Magisches Sechseck – Ordne die Zielpaare der richtigen Beziehung zu.',
+        items: [
+            { id: 'z1', text: 'Wachstum ↔ Vollbeschäftigung', target: 'harm' },
+            { id: 'z2', text: 'Wachstum ↔ Umweltschutz', target: 'konf' },
+            { id: 'z3', text: 'Vollbeschäftigung ↔ Preisstabilität', target: 'konf' },
+            { id: 'z4', text: 'Preisstabilität ↔ Ertragsbilanz', target: 'neut' }
+        ],
+        targets: [
+            { id: 'harm', label: 'Zielharmonie' },
+            { id: 'konf', label: 'Zielkonflikt' },
+            { id: 'neut', label: 'Zielneutralität' }
+        ],
+        explanation: 'Wachstum & Vollbeschäftigung fördern sich (Harmonie); Wachstum vs. Umwelt sowie Vollbeschäftigung vs. Preisstabilität stehen oft im Konflikt.'
+    }
+];
+
+let selectedChip = null;
+
+function shuffle(arr) {
+    return [...arr].sort(() => Math.random() - 0.5);
+}
+
+function renderQuiz() {
+    const container = document.getElementById('quiz-container');
+    container.innerHTML = '';
+    selectedChip = null;
+
+    quizData.forEach(q => {
+        const card = document.createElement('div');
+        card.className = 'quiz-question';
+        card.id = 'card-' + q.id;
+
+        const badge = document.createElement('span');
+        badge.className = 'quiz-type-tag';
+        badge.textContent = q.type === 'single' ? 'Single Choice' : (q.type === 'multi' ? 'Multiple Choice' : 'Drag & Drop');
+        card.appendChild(badge);
+
+        const title = document.createElement('h4');
+        title.textContent = q.question;
+        card.appendChild(title);
+
+        if (q.type === 'single' || q.type === 'multi') {
+            q.options.forEach((opt, idx) => {
+                const label = document.createElement('label');
+                label.className = 'quiz-option';
+                const inp = document.createElement('input');
+                inp.type = q.type === 'single' ? 'radio' : 'checkbox';
+                inp.name = q.id;
+                inp.value = idx;
+                label.appendChild(inp);
+                const span = document.createElement('span');
+                span.textContent = opt;
+                label.appendChild(span);
+                card.appendChild(label);
+            });
+        } else if (q.type === 'dnd') {
+            const pool = document.createElement('div');
+            pool.className = 'dnd-pool';
+            pool.id = 'pool-' + q.id;
+            setupDropZone(pool, q.id);
+
+            shuffle(q.items).forEach(item => {
+                const chip = document.createElement('div');
+                chip.className = 'dnd-chip';
+                chip.textContent = item.text;
+                chip.draggable = true;
+                chip.id = item.id;
+                chip.dataset.qid = q.id;
+                chip.dataset.target = item.target;
+
+                chip.addEventListener('dragstart', e => {
+                    e.dataTransfer.setData('text/plain', chip.id);
+                    selectedChip = chip;
+                });
+                chip.addEventListener('click', e => {
+                    e.stopPropagation();
+                    if (selectedChip === chip) {
+                        chip.classList.remove('selected');
+                        selectedChip = null;
+                    } else {
+                        document.querySelectorAll('.dnd-chip').forEach(c => c.classList.remove('selected'));
+                        selectedChip = chip;
+                        chip.classList.add('selected');
+                    }
+                });
+                pool.appendChild(chip);
+            });
+            card.appendChild(pool);
+
+            const targetsWrap = document.createElement('div');
+            targetsWrap.className = 'dnd-targets';
+            q.targets.forEach(t => {
+                const box = document.createElement('div');
+                box.className = 'dnd-target';
+                box.dataset.tid = t.id;
+                box.dataset.qid = q.id;
+                const lbl = document.createElement('div');
+                lbl.className = 'dnd-target-label';
+                lbl.textContent = t.label;
+                box.appendChild(lbl);
+                const slot = document.createElement('div');
+                slot.className = 'dnd-slot';
+                box.appendChild(slot);
+                setupDropZone(box, q.id, slot);
+                targetsWrap.appendChild(box);
+            });
+            card.appendChild(targetsWrap);
+        }
+
+        const fb = document.createElement('div');
+        fb.className = 'quiz-feedback';
+        fb.id = 'fb-' + q.id;
+        card.appendChild(fb);
+        container.appendChild(card);
+    });
+}
+
+function setupDropZone(zone, qid, slotEl = null) {
+    zone.addEventListener('dragover', e => {
+        e.preventDefault();
+        zone.classList.add('drag-over');
+    });
+    zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+    zone.addEventListener('drop', e => {
+        e.preventDefault();
+        zone.classList.remove('drag-over');
+        const chipId = e.dataTransfer.getData('text/plain');
+        const chip = document.getElementById(chipId);
+        if (chip && chip.dataset.qid === qid) {
+            (slotEl || zone).appendChild(chip);
+            chip.classList.remove('selected');
+            selectedChip = null;
+        }
+    });
+    zone.addEventListener('click', () => {
+        if (selectedChip && selectedChip.dataset.qid === qid) {
+            (slotEl || zone).appendChild(selectedChip);
+            selectedChip.classList.remove('selected');
+            selectedChip = null;
+        }
+    });
+}
+
+function checkQuiz() {
+    let score = 0;
+    quizData.forEach(q => {
+        const card = document.getElementById('card-' + q.id);
+        const fb = document.getElementById('fb-' + q.id);
+        let ok = false;
+
+        if (q.type === 'single') {
+            const labels = card.querySelectorAll('.quiz-option');
+            labels.forEach(l => l.classList.remove('is-correct', 'is-wrong'));
+            const checked = card.querySelector('input:checked');
+            if (checked) {
+                const val = parseInt(checked.value, 10);
+                ok = val === q.answer;
+                labels[val].classList.add(ok ? 'is-correct' : 'is-wrong');
+            }
+            if (!ok) labels[q.answer].classList.add('is-correct');
+        } else if (q.type === 'multi') {
+            const labels = card.querySelectorAll('.quiz-option');
+            labels.forEach(l => l.classList.remove('is-correct', 'is-wrong'));
+            const checkedVals = [...card.querySelectorAll('input:checked')].map(i => parseInt(i.value, 10)).sort();
+            const expected = [...q.answers].sort();
+            ok = checkedVals.length === expected.length && checkedVals.every((v, i) => v === expected[i]);
+            labels.forEach((l, idx) => {
+                const isExp = expected.includes(idx);
+                const isChk = checkedVals.includes(idx);
+                if (isExp) l.classList.add('is-correct');
+                else if (isChk) l.classList.add('is-wrong');
+            });
+        } else if (q.type === 'dnd') {
+            const targets = card.querySelectorAll('.dnd-target');
+            let placed = 0;
+            let allRight = true;
+            targets.forEach(t => {
+                t.classList.remove('is-correct', 'is-wrong');
+                const chips = t.querySelectorAll('.dnd-chip');
+                let boxOk = chips.length > 0;
+                chips.forEach(c => {
+                    placed++;
+                    if (c.dataset.target !== t.dataset.tid) boxOk = false;
+                });
+                if (!boxOk) allRight = false;
+                t.classList.add(boxOk ? 'is-correct' : 'is-wrong');
+            });
+            ok = placed === q.items.length && allRight;
+        }
+
+        if (ok) score++;
+        fb.className = 'quiz-feedback ' + (ok ? 'ok' : 'err');
+        fb.textContent = (ok ? '✓ Richtig! ' : '✗ Noch nicht ganz. ') + q.explanation;
+    });
+
+    const pct = Math.round((score / quizData.length) * 100);
+    const scoreBox = document.getElementById('quiz-score');
+    scoreBox.style.display = 'inline-block';
+    scoreBox.textContent = `Ergebnis: ${score} von ${quizData.length} Punkten (${pct}%)`;
+}
+
+function resetQuiz() {
+    document.getElementById('quiz-score').style.display = 'none';
+    renderQuiz();
+}
+
+renderQuiz();
+</script>
 
 </body>
 </html>
