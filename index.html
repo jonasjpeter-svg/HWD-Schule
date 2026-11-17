@@ -610,7 +610,7 @@
 <div class="subject-bar" role="tablist" aria-label="Fächer-Auswahl">
     <button type="button" class="subject-tab active" id="tab-vwl" onclick="switchSubject('vwl')">📊 VWL &amp; BWL <span class="subject-badge-soon">10 Blöcke + Quiz</span></button>
     <button type="button" class="subject-tab" id="tab-marketing" onclick="switchSubject('marketing')">📣 Marketing <span class="subject-badge-soon">3 Präsentationen + Quiz</span></button>
-    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">5 Blöcke + Quiz</span></button>
+    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">6 Blöcke + Quiz</span></button>
 </div>
 
 <nav id="nav-vwl">
@@ -640,6 +640,7 @@
     <a href="#rewe-block3">Block 3: Stille Reserven</a>
     <a href="#rewe-block4">Block 4: Nutzschwelle</a>
     <a href="#rewe-block5">Block 5: BAB &amp; Kalkulation</a>
+    <a href="#rewe-block6">Block 6: Handel &amp; Division</a>
     <a href="#rewe-quiz" style="background: linear-gradient(135deg,#8b5cf6,#6d28d9); color: #ffffff;">🎯 ReWe-Quiz &amp; Rangliste</a>
 </nav>
 
@@ -2460,11 +2461,86 @@
         </div>
     </section>
 
+    <!-- ==================== REWE BLOCK 6: HANDELS-, DIVISIONS- & NACHKALKULATION ==================== -->
+    <section id="rewe-block6">
+        <span class="block-badge">6. Block · 24.09.2026 &bull; Handelskalkulation, Divisions- &amp; Nachkalkulation</span>
+        <h2>6. Block: Handelskalkulation (3 Stufen), Divisionskalkulation &amp; Nachkalkulation</h2>
+
+        <div class="callout">
+            <strong>Drei zentrale Kalkulationsformen:</strong>
+            1. <strong>Handelskalkulation</strong> (Einkaufs- &rarr; Interne &rarr; Verkaufskalkulation).
+            2. <strong>Divisionskalkulation</strong> für Einproduktbetriebe (z.B. Glacestand, Kraftwerk) bzw. Sortenfertigung mit <strong>Äquivalenzziffern</strong>.
+            3. <strong>Vor- vs. Nachkalkulation</strong> im Industriebetrieb (Planzahlen vor Auftrag vs. Ist-Kosten &amp; Ist-Zuschlagssätze nach Abschluss).
+        </div>
+
+        <h3 style="margin-top:1.3rem;">6.1 Handelskalkulation &amp; Divisionskalkulation im Überblick</h3>
+        <div class="graphic-container">
+            <svg width="780" height="236" viewBox="0 0 780 236">
+                <text x="390" y="16" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">Handelskalkulation (links) &amp; Divisions- / Nachkalkulation (rechts)</text>
+
+                <!-- Links: Handelskalkulation -->
+                <rect x="15" y="28" width="365" height="196" rx="8" fill="#f8fafc" stroke="#5b2c6f" stroke-width="1.5"/>
+                <rect x="15" y="28" width="365" height="24" rx="6" fill="#5b2c6f"/>
+                <text x="197" y="44" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10.5">1. Handelskalkulation (3 Teilbereiche)</text>
+
+                <rect x="27" y="59" width="340" height="54" rx="5" fill="#dbeafe" stroke="#2563eb"/>
+                <text x="37" y="74" font-size="9.5" font-weight="bold" fill="#1e40af">A) Einkaufskalkulation (vom Hundert abwärts):</text>
+                <text x="37" y="89" font-size="9">Listenpreis &minus; Rabatt = NKAP &minus; Skonto = Zahlung (NBAP)</text>
+                <text x="37" y="103" font-size="9">+ Bezugskosten = <tspan font-weight="bold">Einstandspreis (EP)</tspan></text>
+
+                <rect x="27" y="119" width="340" height="44" rx="5" fill="#e8daef" stroke="#7c3aed"/>
+                <text x="37" y="134" font-size="9.5" font-weight="bold" fill="#5b2c6f">B) Interne Kalkulation (auf Hundert aufwärts):</text>
+                <text x="37" y="150" font-size="9">EP + GK-Zuschlag = <tspan font-weight="bold">Selbstkosten</tspan> + RG-Zuschlag = <tspan font-weight="bold">Nettoerlös</tspan></text>
+
+                <rect x="27" y="169" width="340" height="46" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+                <text x="37" y="184" font-size="9.5" font-weight="bold" fill="#166534">C) Verkaufskalkulation (im Hundert + MWST):</text>
+                <text x="37" y="200" font-size="9">NBVP + Skonto (i.H.) = NKVP + Rabatt (i.H.) + MWST = <tspan font-weight="bold">BKVP</tspan></text>
+
+                <!-- Rechts: Divisionskalkulation & Nachkalkulation -->
+                <rect x="400" y="28" width="365" height="196" rx="8" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+                <rect x="400" y="28" width="365" height="24" rx="6" fill="#16a34a"/>
+                <text x="582" y="44" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10.5">2. Divisionskalkulation &amp; Nachkalkulation</text>
+
+                <text x="414" y="71" font-size="9.8" font-weight="bold" fill="#166534">Einfache Divisionskalkulation (Einprodukt):</text>
+                <text x="414" y="86" font-size="9.2">Stückkosten = Totalkosten / Total Leistungseinheiten</text>
+
+                <text x="414" y="109" font-size="9.8" font-weight="bold" fill="#166534">Mit Äquivalenzziffern (Sortenfertigung):</text>
+                <text x="414" y="124" font-size="9.2">1. Menge &times; Äquivalenzziffer = Recheneinheiten (RE)</text>
+                <text x="414" y="139" font-size="9.2">2. Totalkosten / Total RE &times; Äqui-Ziffer = Stückkosten</text>
+
+                <text x="414" y="162" font-size="9.8" font-weight="bold" fill="#5b2c6f">Wichtige Prüfungs-Unterscheidung:</text>
+                <text x="414" y="177" font-size="9.2"><tspan font-weight="bold">Reingewinnzuschlag:</tspan> % auf Selbstkosten (auf Hundert)</text>
+                <text x="414" y="191" font-size="9.2"><tspan font-weight="bold">Gewinnmarge:</tspan> % vom Verkaufspreis (im Hundert)</text>
+                <text x="414" y="210" font-size="9" fill="#475569"><tspan font-weight="bold">Nachkalkulation:</tspan> Ist-Kosten &amp; Ist-Zuschlagssätze ermitteln</text>
+            </svg>
+        </div>
+
+        <h3 style="margin-top:1.3rem;">6.2 Praxisbeispiele (aus den Unterrichtslösungen)</h3>
+        <div class="grid-2">
+            <div class="card">
+                <h4>Handel: Macaroni Import AG (10'000 kg)</h4>
+                <ul>
+                    <li><strong>Einkauf (je 10'000 kg):</strong> Listenpreis <code>10'000</code> &minus; 20 % Rabatt (<code>2'000</code>) = <code>8'000</code> &minus; 2 % Skonto (<code>160</code>) = Zahlung <code>7'840</code> + 10 % Bezugskosten (<code>784</code>) = <strong>Einstandspreis 8'624</strong> (<code>CHF 1.08/kg</code> bei Kleinstmenge, bzw. <code>0.86/kg</code> bei 10t).</li>
+                    <li><strong>Intern (10'000 kg):</strong> EP <code>8'624</code> + 75 % GK (<code>6'468</code>) = <strong>Selbstkosten 15'092</strong> + 7 % Reingewinnzuschlag (<code>1'056.44</code>) = <strong>Nettoerlös 16'148.44</strong>.</li>
+                    <li><strong>Verkauf:</strong> + 1 % Skonto i.H. (<code>163.12</code>) = <code>16'311.56</code> + 5 % Rabatt i.H. (<code>858.50</code>) = <code>17'170.06</code> + 7.7 % MWST (<code>1'322.09</code>) = <strong>CHF 18'492.15</strong> (je 1 kg: <strong>CHF 2.30</strong>).</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Nachkalkulation RLI AG &amp; Einzelkalkulation Tisch</h4>
+                <ul>
+                    <li><strong>Nachkalkulation RLI AG:</strong> Ist-Einzelmaterial <code>750'000</code> + Mat.-GK <code>65'000</code> = <strong>8.66 %</strong> Mat.-Zuschlag; Einzellöhne <code>360'000</code> + FK1 <code>550'000</code> (<strong>152.77 %</strong>) + FK2 <code>727'500</code> (<strong>202.08 %</strong>) = HK <code>2'452'500</code>; VVGK <code>450'000</code> (<strong>18.35 %</strong>) = <strong>Selbstkosten 2'902'500</strong>.</li>
+                    <li><strong>Verkaufspreis RLI AG:</strong> + 15 % RG-Zuschlag (a.H. = <code>435'375</code>) &rarr; <code>3'337'875</code> + 2 % Skonto i.H. + 8 % Rabatt i.H. = <strong>CHF 3'987'235.35</strong>.</li>
+                    <li><strong>Einzelkalkulation 1 Tisch:</strong> Mat.-EK <code>250</code> + 15 % GK (<code>37.50</code>) + Fertigung <code>126</code> = HK <code>413.50</code> + 18 % V+V (<code>74.43</code>) = SK <code>487.93</code> + 10 % Gewinnmarge i.H. (<code>54.21</code>) = <strong>CHF 542.14</strong>.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- ==================== REWE QUIZ ==================== -->
     <section id="rewe-quiz">
         <span class="block-badge">Prüfungstraining Rechnungswesen</span>
         <h2>Interaktives Rechnungswesen-Quiz &amp; Rangliste</h2>
-        <p>72 rotierende Prüfungsfragen aus Block 1 bis Block 5 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen, Kennzahlen, Stille Reserven, Nutzschwelle &amp; BAB/Kalkulation). Deine Punkte zählen in die gemeinsame Rangliste!</p>
+        <p>84 rotierende Prüfungsfragen aus Block 1 bis Block 6 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen, Kennzahlen, Stille Reserven, Nutzschwelle, BAB, Handels-, Divisions- &amp; Nachkalkulation). Deine Punkte zählen in die gemeinsame Rangliste!</p>
 
         <div class="player-bar">
             <div class="player-login">
@@ -4946,6 +5022,161 @@ const reweQuestionBank = [
             { id: 'ah', label: 'Auf Hundert (a.H.) rechnen' }
         ],
         explanation: '+ im BAB = Abnahme, − im BAB = Zunahme; RG-Marge/Skonto/Rabatt = im Hundert; MWST = auf Hundert.'
+    },
+    {
+        id: 'rs27', type: 'single',
+        question: 'Worin liegt der Unterschied zwischen einem „Reingewinnzuschlag“ und einer „Gewinnmarge“ in der Kalkulation?',
+        options: [
+            { text: 'Reingewinnzuschlag wird auf die Selbstkosten (auf Hundert) gerechnet; Gewinnmarge vom Verkaufspreis (im Hundert)', ok: true },
+            { text: 'Beides ist exakt dasselbe und wird immer auf das Einzelmaterial gerechnet', ok: false },
+            { text: 'Gewinnmarge wird immer vor den Gemeinkosten addiert', ok: false },
+            { text: 'Reingewinnzuschlag wird erst nach der Mehrwertsteuer berechnet', ok: false }
+        ],
+        explanation: 'Reingewinnzuschlag (z.B. 7 % in der Handelskalkulation) bezieht sich auf die Selbstkosten (a.H.); die Gewinnmarge (z.B. 10 % beim Tisch) bezieht sich auf den Verkaufspreis (i.H.).'
+    },
+    {
+        id: 'rs28', type: 'single',
+        question: 'In welchen Betrieben wird die einfache Divisionskalkulation (Totalkosten / Total Leistungseinheiten) angewendet?',
+        options: [
+            { text: 'In Einproduktbetrieben (z.B. Glacestand, Elektrizitäts-/Kraftwerk)', ok: true },
+            { text: 'In einem Warenhaus mit 50’000 verschiedenen Artikeln', ok: false },
+            { text: 'Nur bei der Bewertung von stillen Reserven auf Rückstellungen', ok: false },
+            { text: 'Ausschliesslich für die Berechnung der Mehrwertsteuer-Zahllast', ok: false }
+        ],
+        explanation: 'Die einfache Divisionskalkulation eignet sich nur für homogene Massenproduktion in Einproduktbetrieben (Glacestand, Kraftwerk).'
+    },
+    {
+        id: 'rs29', type: 'single',
+        question: 'Wie berechnet man in der Handelskalkulation den Einstandspreis (EP) aus dem Listenpreis des Lieferanten?',
+        options: [
+            { text: 'Listenpreis − Rabatt = NKAP − Skonto = Zahlung an Lieferant + Bezugskosten = Einstandspreis', ok: true },
+            { text: 'Listenpreis + Rabatt + Skonto − Bezugskosten = Einstandspreis', ok: false },
+            { text: 'Listenpreis + Gemeinkostenzuschlag = Einstandspreis', ok: false },
+            { text: 'Listenpreis − Mehrwertsteuer = Einstandspreis', ok: false }
+        ],
+        explanation: 'Beim Einkauf werden Rabatt und Skonto vom Listenpreis abgezogen (vom Hundert) und anschliessend die Bezugskosten (Fracht, Zoll) addiert.'
+    },
+    {
+        id: 'rs30', type: 'single',
+        question: 'Wozu dient die Nachkalkulation (z.B. Aufgabe RLI AG) nach Abschluss eines Auftrags?',
+        options: [
+            { text: 'Ermittlung der tatsächlich angefallenen Ist-Kosten und Ist-Zuschlagssätze zur Kontrolle', ok: true },
+            { text: 'Erstellung eines unverbindlichen Schätzangebots vor Projektbeginn', ok: false },
+            { text: 'Ausschüttung von Dividenden ohne Erfolgsrechnung', ok: false },
+            { text: 'Umrechnung von Eigenkapital in Fremdkapital', ok: false }
+        ],
+        explanation: 'Vorkalkulation = Planwerte vor Auftrag; Nachkalkulation = Kontrolle anhand effektiver Ist-Kosten und Berechnung der Ist-Zuschlagssätze.'
+    },
+    {
+        id: 'rm25', type: 'multi',
+        question: 'Welche Schritte gehören zur Divisionskalkulation mit Äquivalenzziffern (Sortenfertigung)? (Mehrere richtig)',
+        options: [
+            { text: 'Jede Sorte erhält eine Äquivalenzziffer (Gewichtungsfaktor) aus der Aufgabenstellung', ok: true },
+            { text: 'Produktionsmenge × Äquivalenzziffer = Recheneinheiten (RE)', ok: true },
+            { text: 'Totalkosten / Total Recheneinheiten = Kosten je Recheneinheit', ok: true },
+            { text: 'Die Äquivalenzziffer wird einfach vom Nettoerlös abgezogen', ok: false }
+        ],
+        explanation: 'Menge × Äquivalenzziffer = RE; Totalkosten / Total RE = Kosten je RE; diese × jeweilige Äquivalenzziffer = Stückkosten der Sorte.'
+    },
+    {
+        id: 'rm26', type: 'multi',
+        question: 'Welche Teilbereiche bilden zusammen die vollständige Handelskalkulation? (Mehrere richtig)',
+        options: [
+            { text: 'Einkaufskalkulation (vom Listenpreis des Lieferanten zum Einstandspreis)', ok: true },
+            { text: 'Interne Kalkulation (vom Einstandspreis über Selbstkosten zum Nettoerlös)', ok: true },
+            { text: 'Verkaufskalkulation (vom Nettoerlös über Skonto & Rabatt zum Listenpreis inkl. MWST)', ok: true },
+            { text: 'Stille-Reserven-Kalkulation (vom Eigenkapital zum Anlagevermögen)', ok: false }
+        ],
+        explanation: 'Die Handelskalkulation gliedert sich in Einkaufs-, interne und Verkaufskalkulation.'
+    },
+    {
+        id: 'rm27', type: 'multi',
+        question: 'Aufgabe „Macaroni Import AG“ (10’000 kg): Welche Werte der Lösung stimmen? (Mehrere richtig)',
+        options: [
+            { text: 'Listenpreis 10’000 − 20 % Rabatt − 2 % Skonto + 10 % Bezugskosten = Einstandspreis CHF 8’624', ok: true },
+            { text: 'Einstandspreis 8’624 + 75 % GK = Selbstkosten CHF 15’092', ok: true },
+            { text: 'Gewinnzuschlag (7 %) wird auf die Selbstkosten aufgeschlagen (= Nettoerlös 16’148.44)', ok: true },
+            { text: 'Kundenskonto (1 %) und Kundenrabatt (5 %) werden vom Hundert von den Selbstkosten abgezogen', ok: false }
+        ],
+        explanation: 'Kundenskonto (1 %) und Kundenrabatt (5 %) in der Verkaufskalkulation werden aufwärts im Hundert (i.H.) hinzugerechnet!'
+    },
+    {
+        id: 'rm28', type: 'multi',
+        question: 'Nachkalkulation RLI AG: Wie berechnen sich die Ist-Zuschlagssätze? (Mehrere richtig)',
+        options: [
+            { text: 'Materialkostenzuschlag = Materialgemeinkosten / Einzelmaterial (65’000 / 750’000 = 8.66 %)', ok: true },
+            { text: 'Fertigungskostenzuschlag = Fertigungs-GK / Einzellöhne', ok: true },
+            { text: 'VVGK-Zuschlag = VVGK / Herstellkosten (450’000 / 2’452’500 = 18.35 %)', ok: true },
+            { text: 'Reingewinnzuschlag = Bezugskosten / Listenpreis', ok: false }
+        ],
+        explanation: 'Mat.-GK auf EM, Fert.-GK auf EL (oder Stunden), VVGK auf Herstellkosten – genau so werden die Ist-Sätze in der Nachkalkulation ermittelt.'
+    },
+    {
+        id: 'rdnd23', type: 'dnd',
+        question: 'Drag & Drop (Handelskalkulation): Ordne die Zwischenresultate der richtigen Stufe zu.',
+        items: [
+            { id: 'rhk1', text: 'Zahlung an Lieferant + Bezugskosten', target: 'ep' },
+            { id: 'rhk2', text: 'Einstandspreis + Gemeinkostenzuschlag', target: 'sk' },
+            { id: 'rhk3', text: 'Selbstkosten + Reingewinnzuschlag', target: 'ne' },
+            { id: 'rhk4', text: 'Listenpreis exkl. + MWST', target: 'lpm' }
+        ],
+        targets: [
+            { id: 'ep', label: 'Einstandspreis (Einkauf)' },
+            { id: 'sk', label: 'Selbstkosten (Intern)' },
+            { id: 'ne', label: 'Nettoerlös / NBVP (Intern)' },
+            { id: 'lpm', label: 'Listenpreis inkl. MWST (Verkauf)' }
+        ],
+        explanation: 'Einkauf endet beim Einstandspreis; Intern führt über Selbstkosten zum Nettoerlös; Verkauf endet beim Listenpreis inkl. MWST.'
+    },
+    {
+        id: 'rdnd24', type: 'dnd',
+        question: 'Drag & Drop (Kalkulationsarten): Ordne den Betriebstyp bzw. Zweck der passenden Methode zu.',
+        items: [
+            { id: 'rka1', text: 'Einproduktbetrieb (z.B. Kraftwerk / Glacestand)', target: 'div1' },
+            { id: 'rka2', text: 'Sortenfertigung mit Gewichtungsfaktor', target: 'div2' },
+            { id: 'rka3', text: 'Einzel-/Serienfertigung über EM, EL & GK-Sätze', target: 'zusch' },
+            { id: 'rka4', text: 'Kontrolle effektiver Ist-Kosten nach Auftrag', target: 'nach' }
+        ],
+        targets: [
+            { id: 'div1', label: 'Einfache Divisionskalkulation' },
+            { id: 'div2', label: 'Divisionskalkulation mit Äquivalenzziffern' },
+            { id: 'zusch', label: 'Zuschlagskalkulation' },
+            { id: 'nach', label: 'Nachkalkulation' }
+        ],
+        explanation: 'Einprodukt = einfache Division; Sorten = Äquivalenzziffern; Industrie mit verschiedenen Produkten = Zuschlagskalkulation; Ist-Kontrolle = Nachkalkulation.'
+    },
+    {
+        id: 'rdnd25', type: 'dnd',
+        question: 'Drag & Drop (Auf Hundert vs. Im Hundert vs. Vom Hundert): Ordne korrekt zu.',
+        items: [
+            { id: 'rrh1', text: 'Einkaufsrabatt & Einkaufsskonto vom Lieferanten-Listenpreis', target: 'vh' },
+            { id: 'rrh2', text: 'Gemeinkostenzuschlag auf EP & Reingewinnzuschlag auf SK', target: 'ah' },
+            { id: 'rrh3', text: 'Gewinnmarge, Verkaufsskonto & Verkaufsrabatt (aufwärts)', target: 'ih' },
+            { id: 'rrh4', text: 'Mehrwertsteuer am Schluss der Verkaufskalkulation', target: 'ah' }
+        ],
+        targets: [
+            { id: 'vh', label: 'Vom Hundert (abziehen)' },
+            { id: 'ah', label: 'Auf Hundert (aufschlagen)' },
+            { id: 'ih', label: 'Im Hundert (vom Endpreis)' }
+        ],
+        explanation: 'Einkauf = vom Hundert; GK-Zuschlag, RG-Zuschlag und MWST = auf Hundert; Gewinnmarge, Verkaufsskonto und -rabatt = im Hundert.'
+    },
+    {
+        id: 'rdnd26', type: 'dnd',
+        question: 'Drag & Drop (Zahlen-Beispiele Block 6): Ordne die Ergebnisse den Aufgaben zu.',
+        items: [
+            { id: 'rz6_1', text: 'Macaroni Import AG: Listenpreis inkl. 7.7 % MWST (1 kg)', target: '230' },
+            { id: 'rz6_2', text: 'Einzelkalkulation 1 Tisch: Verkaufspreis (10 % Marge i.H.)', target: '542' },
+            { id: 'rz6_3', text: 'Nachkalkulation RLI AG: Mat.-GK-Zuschlag (65’ / 750’)', target: '866' },
+            { id: 'rz6_4', text: 'Nachkalkulation RLI AG: VVGK-Zuschlag (450’ / 2’452.5’)', target: '1835' }
+        ],
+        targets: [
+            { id: '230', label: 'CHF 2.30 / kg' },
+            { id: '542', label: 'CHF 542.14 / Tisch' },
+            { id: '866', label: '8.66 %' },
+            { id: '1835', label: '18.35 %' }
+        ],
+        explanation: 'Macaroni = CHF 2.30/kg; Tisch = CHF 542.14; RLI AG: Mat.-Zuschlag = 8.66 %, VVGK-Zuschlag = 18.35 %.'
     }
 ];
 
