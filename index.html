@@ -521,6 +521,46 @@
             padding: 1.35rem;
         }
         .leaderboard-row-me td { background: rgba(139, 92, 246, 0.22) !important; font-weight: 700; color: #ffffff; }
+        /* Subject Switcher */
+        .subject-bar {
+            max-width: 1140px;
+            margin: 1.25rem auto 0;
+            padding: 0 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            justify-content: center;
+        }
+        .subject-tab {
+            background: var(--card-dark);
+            color: var(--lavender-bright);
+            border: 1px solid var(--border-dark);
+            border-radius: 14px;
+            padding: 0.65rem 1.35rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .subject-tab:hover { border-color: var(--lavender); transform: translateY(-1px); }
+        .subject-tab.active {
+            background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+            color: #ffffff;
+            border-color: var(--lavender);
+            box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+        }
+        .subject-badge-soon {
+            font-size: 0.68rem;
+            background: rgba(255,255,255,0.14);
+            padding: 0.12rem 0.45rem;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+        .subject-panel { display: none; }
+        .subject-panel.active { display: block; }
         @media (max-width: 740px) {
             .hero-grid { grid-template-columns: 1fr; }
             section { padding: 1.2rem; }
@@ -562,7 +602,13 @@
     </header>
 </div>
 
-<nav>
+<div class="subject-bar" role="tablist" aria-label="Fächer-Auswahl">
+    <button type="button" class="subject-tab active" id="tab-vwl" onclick="switchSubject('vwl')">📊 VWL &amp; BWL <span class="subject-badge-soon">10 Blöcke + Quiz</span></button>
+    <button type="button" class="subject-tab" id="tab-marketing" onclick="switchSubject('marketing')">📣 Marketing <span class="subject-badge-soon">Bereit für Stoff</span></button>
+    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">Bereit für Stoff</span></button>
+</div>
+
+<nav id="nav-vwl">
     <a href="#block1-2">Blöcke 1–2</a>
     <a href="#block3">Block 3</a>
     <a href="#block4-5">Blöcke 4–5</a>
@@ -575,6 +621,7 @@
 </nav>
 
 <div class="container">
+<div id="panel-vwl" class="subject-panel active">
 
     <!-- ==================== BLÖCKE 1 & 2 ==================== -->
     <section id="block1-2">
@@ -1472,6 +1519,58 @@
             <p style="font-size:0.8rem; color:var(--text-muted); margin:0.7rem 0 0;">Hinweis: Da dies eine statische Website ohne eigenen Server ist, werden die Ranglisten-Daten direkt in deinem Browser (<code>localStorage</code>) gespeichert.</p>
         </div>
     </section>
+
+</div><!-- Ende #panel-vwl -->
+
+<div id="panel-marketing" class="subject-panel">
+    <section>
+        <span class="block-badge">Fach: Marketing</span>
+        <h2>Marketing – Lernkompendium &amp; Prüfungsvorbereitung</h2>
+        <p>Dieser Bereich ist vorbereitet für deine Marketing-Unterlagen (Folien, Modelle, Grafiken &amp; eigenes Marketing-Quiz).</p>
+        <div class="grid-3">
+            <div class="card">
+                <h4>1. Marktforschung &amp; Zielgruppen</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Platzhalter für Primär-/Sekundärforschung, Segmentierung, Buyer Personas und Kaufverhalten.</p>
+            </div>
+            <div class="card">
+                <h4>2. Marketing-Mix (4 Ps / 7 Ps)</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Platzhalter für Product, Price, Place, Promotion sowie Dienstleistungsmarketing.</p>
+            </div>
+            <div class="card">
+                <h4>3. Markenführung &amp; Digital Marketing</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Platzhalter für Positionierung, Kampagnen, Kennzahlen (KPIs) &amp; Marketing-Quiz.</p>
+            </div>
+        </div>
+        <div class="callout">
+            <strong>Bereit für deinen Stoff:</strong> Sobald du mir die Marketing-Folien oder Zusammenfassungen schickst, baue ich hier die ausführliche Übersicht inkl. SVG-Grafiken und passendem Quiz ein.
+        </div>
+    </section>
+</div>
+
+<div id="panel-rechnungswesen" class="subject-panel">
+    <section>
+        <span class="block-badge">Fach: Rechnungswesen</span>
+        <h2>Rechnungswesen – Finanzbuchhaltung, Bilanz &amp; Kennzahlen</h2>
+        <p>Dieser Bereich ist vorbereitet für deine Rechnungswesen-Unterlagen (Buchungssätze, Jahresabschluss, Kalkulation &amp; eigenes Quiz).</p>
+        <div class="grid-3">
+            <div class="card">
+                <h4>1. Bilanz &amp; Erfolgsrechnung</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Platzhalter für Aktiven, Passiven, Kontenrahmen KMU, Aufwand &amp; Ertrag.</p>
+            </div>
+            <div class="card">
+                <h4>2. Buchungssätze &amp; Abschluss</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Platzhalter für Warenverkehr, Abschreibungen, Rückstellungen &amp; Abgrenzungen.</p>
+            </div>
+            <div class="card">
+                <h4>3. Betriebliches Rechnungswesen</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Platzhalter für Break-even, Deckungsbeitrag, Kalkulation &amp; Bilanzkennzahlen.</p>
+            </div>
+        </div>
+        <div class="callout">
+            <strong>Bereit für deinen Stoff:</strong> Sobald du mir die Rechnungswesen-Unterlagen schickst, ergänze ich hier alle Schemas, T-Konten/Grafiken und passende Übungsaufgaben.
+        </div>
+    </section>
+</div>
 
 </div>
 
@@ -2407,6 +2506,18 @@ function updateStickyScrollBar() {
 }
 window.addEventListener('scroll', updateStickyScrollBar, { passive: true });
 updateStickyScrollBar();
+
+function switchSubject(subject) {
+    document.querySelectorAll('.subject-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.subject-panel').forEach(p => p.classList.remove('active'));
+    const tab = document.getElementById('tab-' + subject);
+    const panel = document.getElementById('panel-' + subject);
+    if (tab) tab.classList.add('active');
+    if (panel) panel.classList.add('active');
+    const navVwl = document.getElementById('nav-vwl');
+    if (navVwl) navVwl.style.display = subject === 'vwl' ? 'flex' : 'none';
+    updateStickyScrollBar();
+}
 </script>
 
 </body>
