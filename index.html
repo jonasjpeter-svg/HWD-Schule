@@ -610,7 +610,7 @@
 <div class="subject-bar" role="tablist" aria-label="Fächer-Auswahl">
     <button type="button" class="subject-tab active" id="tab-vwl" onclick="switchSubject('vwl')">📊 VWL &amp; BWL <span class="subject-badge-soon">10 Blöcke + Quiz</span></button>
     <button type="button" class="subject-tab" id="tab-marketing" onclick="switchSubject('marketing')">📣 Marketing <span class="subject-badge-soon">3 Präsentationen + Quiz</span></button>
-    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">3 Blöcke + Quiz</span></button>
+    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">4 Blöcke + Quiz</span></button>
 </div>
 
 <nav id="nav-vwl">
@@ -638,6 +638,7 @@
     <a href="#rewe-block1">Block 1: Bilanz, ER &amp; Buchung</a>
     <a href="#rewe-block2">Block 2: Kennzahlen &amp; Analyse</a>
     <a href="#rewe-block3">Block 3: Stille Reserven</a>
+    <a href="#rewe-block4">Block 4: Nutzschwelle</a>
     <a href="#rewe-quiz" style="background: linear-gradient(135deg,#8b5cf6,#6d28d9); color: #ffffff;">🎯 ReWe-Quiz &amp; Rangliste</a>
 </nav>
 
@@ -2288,11 +2289,99 @@
         </div>
     </section>
 
+    <!-- ==================== REWE BLOCK 4: NUTZSCHWELLE / BREAK-EVEN ==================== -->
+    <section id="rewe-block4">
+        <span class="block-badge">4. Block · 10.09.2026 &bull; Nutzschwelle (Break-Even-Analyse)</span>
+        <h2>4. Block: Deckungsbeitrag &amp; Nutzschwelle (Mengen- &amp; Wertmässig)</h2>
+
+        <div class="callout">
+            <strong>Grundprinzip der Deckungsbeitragsrechnung (Teilkostenrechnung):</strong> Kosten werden in <strong>variable Kosten</strong> (Einzelkosten, z.B. Einstandspreis) und <strong>fixe Kosten</strong> (Gemeinkosten) aufgeteilt. <strong>Deckungsbeitrag (DB) = Nettoerlös &minus; variable Kosten</strong> (= Bruttogewinn im Handel). An der <strong>Nutzschwelle (Break-Even-Point)</strong> deckt der Deckungsbeitrag exakt die Fixkosten &rarr; <strong>Nettoerlös = Totalkosten</strong> und <strong>Gewinn = 0 CHF</strong>.
+        </div>
+
+        <h3 style="margin-top:1.3rem;">4.1 Break-Even-Diagramm &amp; Formeln</h3>
+        <div class="graphic-container">
+            <svg width="780" height="232" viewBox="0 0 780 232">
+                <text x="390" y="16" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">Break-Even-Point (Nutzschwelle) &amp; Formeln</text>
+
+                <!-- Koordinatensystem links -->
+                <rect x="15" y="28" width="405" height="190" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+                <!-- Achsen -->
+                <line x1="55" y1="192" x2="395" y2="192" stroke="#334155" stroke-width="1.8"/>
+                <line x1="55" y1="192" x2="55" y2="42" stroke="#334155" stroke-width="1.8"/>
+                <text x="395" y="207" text-anchor="end" font-size="9.5" fill="#334155" font-weight="bold">Menge (Stück)</text>
+                <text x="48" y="48" text-anchor="end" font-size="9.5" fill="#334155" font-weight="bold">CHF</text>
+
+                <!-- Verlust- und Gewinnflächen -->
+                <polygon points="55,192 55,142 225,108" fill="#fee2e2" opacity="0.85"/>
+                <polygon points="225,108 380,45 380,82" fill="#dcfce7" opacity="0.85"/>
+
+                <!-- Fixkostenlinie -->
+                <line x1="55" y1="142" x2="380" y2="142" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,4"/>
+                <text x="378" y="137" text-anchor="end" font-size="9" fill="#475569">Fixkosten (KF)</text>
+
+                <!-- Totalkostenlinie (startet bei KF 142, geht durch BEP 225,108 nach 380,82) -->
+                <line x1="55" y1="142" x2="380" y2="82" stroke="#dc2626" stroke-width="2.2"/>
+                <text x="378" y="96" text-anchor="end" font-size="9.5" fill="#991b1b" font-weight="bold">Totalkosten</text>
+
+                <!-- Umsatzlinie (startet bei 55,192, geht durch BEP 225,108 nach 380,45) -->
+                <line x1="55" y1="192" x2="380" y2="45" stroke="#16a34a" stroke-width="2.4"/>
+                <text x="295" y="56" font-size="9.5" fill="#166534" font-weight="bold">Nettoerlös</text>
+
+                <!-- BEP Punkt -->
+                <line x1="225" y1="108" x2="225" y2="192" stroke="#5b2c6f" stroke-width="1.5" stroke-dasharray="3,3"/>
+                <line x1="55" y1="108" x2="225" y2="108" stroke="#5b2c6f" stroke-width="1.5" stroke-dasharray="3,3"/>
+                <circle cx="225" cy="108" r="5" fill="#5b2c6f"/>
+                <rect x="165" y="78" width="120" height="20" rx="4" fill="#5b2c6f"/>
+                <text x="225" y="92" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="bold">Nutzschwelle (Gewinn = 0)</text>
+                <text x="225" y="206" text-anchor="middle" font-size="9" fill="#5b2c6f" font-weight="bold">MM-NS</text>
+                <text x="50" y="111" text-anchor="end" font-size="8.5" fill="#5b2c6f" font-weight="bold">WM-NS</text>
+
+                <text x="115" y="158" font-size="9.5" fill="#991b1b" font-weight="bold">Verlust</text>
+                <text x="342" y="70" font-size="9.5" fill="#166534" font-weight="bold">Gewinn</text>
+
+                <!-- Formelkasten rechts -->
+                <rect x="435" y="28" width="330" height="190" rx="8" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+                <rect x="435" y="28" width="330" height="26" rx="6" fill="#5b2c6f"/>
+                <text x="600" y="45" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">Die wichtigsten Nutzschwellen-Formeln</text>
+                <text x="447" y="72" font-size="9.8" font-weight="bold" fill="#2c1638">1. Deckungsbeitrag (DB) pro Stück:</text>
+                <text x="455" y="87" font-size="9.6">Nettoerlös/Stk. &minus; variable Kosten/Stk.</text>
+                <text x="447" y="109" font-size="9.8" font-weight="bold" fill="#2c1638">2. Mengenmässige Nutzschwelle (MM-NS):</text>
+                <text x="455" y="124" font-size="9.6">Fixkosten / DB pro Stück (= Stück, ggf. aufrunden)</text>
+                <text x="447" y="146" font-size="9.8" font-weight="bold" fill="#2c1638">3. Wertmässige Nutzschwelle (WM-NS):</text>
+                <text x="455" y="161" font-size="9.6">MM-NS &times; Netto-Verkaufspreis/Stk. (= CHF)</text>
+                <text x="447" y="183" font-size="9.8" font-weight="bold" fill="#2c1638">4. Zielgewinn-Absatzmenge:</text>
+                <text x="455" y="198" font-size="9.6">(Fixkosten + gewünschter Gewinn) / DB pro Stück</text>
+            </svg>
+        </div>
+
+        <h3 style="margin-top:1.3rem;">4.2 Praxisbeispiele (aus den Unterrichtslösungen)</h3>
+        <div class="grid-2">
+            <div class="card">
+                <h4>Beispiel 1: Vladi AG („Röteli Kirsch“)</h4>
+                <ul>
+                    <li><strong>Ausgangslage:</strong> 280'000 Stk., Bruttoumsatz CHF 2'744'000, 15 % Rabatt &rarr; <strong>Nettoerlös = CHF 2'332'400</strong> (<code>CHF 8.33/Stk.</code>). Einstandspreis = <code>CHF 1.50/Stk.</code> (var. Kosten CHF 420'000). Fixkosten = CHF 1'400'000.</li>
+                    <li><strong>Deckungsbeitrag:</strong> <code>8.33 &minus; 1.50 = CHF 6.83/Stk.</code> (Total DB CHF 1'912'400 &rarr; <strong>Gewinn CHF 512'400</strong>).</li>
+                    <li><strong>Mengenmässige NS:</strong> <code>1'400'000 / 6.83 = 204'978 Stück</code>.</li>
+                    <li><strong>Zielgewinn CHF 22 Mio.:</strong> <code>(1'400'000 + 22'000'000) / 6.83 = 3'426'061.5 Stück</code>.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Beispiel 2: 3-Tages-Seminar (Aufgabe 1 DB)</h4>
+                <ul>
+                    <li><strong>Fixkosten:</strong> Referenten (<code>3 &times; 1'300 = 3'900</code>) + Spesen (<code>1'450</code>) + Werbung (<code>5'000</code>) + Verwaltung (<code>2'300</code>) = <strong>CHF 12'650</strong>.</li>
+                    <li><strong>Variable Kosten / TN:</strong> Verpflegung/Übernachtung (<code>815</code>) + Unterlagen (<code>36</code>) = <strong>CHF 851</strong>.</li>
+                    <li><strong>Deckungsbeitrag / TN:</strong> Nettoerlös <code>1'250 &minus; 851</code> = <strong>CHF 399 / Teilnehmer</strong>.</li>
+                    <li><strong>Nutzschwelle:</strong> <code>12'650 / 399 = 31.70</code> &rarr; <strong>32 Teilnehmer</strong> nötig (aufrunden!).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- ==================== REWE QUIZ ==================== -->
     <section id="rewe-quiz">
         <span class="block-badge">Prüfungstraining Rechnungswesen</span>
         <h2>Interaktives Rechnungswesen-Quiz &amp; Rangliste</h2>
-        <p>48 rotierende Prüfungsfragen aus Block 1, Block 2 &amp; Block 3 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen, Kennzahlen &amp; Stille Reserven). Deine Punkte zählen in die gemeinsame Rangliste!</p>
+        <p>60 rotierende Prüfungsfragen aus Block 1 bis Block 4 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen, Kennzahlen, Stille Reserven &amp; Nutzschwelle). Deine Punkte zählen in die gemeinsame Rangliste!</p>
 
         <div class="player-bar">
             <div class="player-login">
@@ -4464,6 +4553,160 @@ const reweQuestionBank = [
             { id: 'vkr', label: 'Vollkostenrechnung' }
         ],
         explanation: 'Material + Fertigung = Herstellkosten; + VVGK = Selbstkosten; Deckungsbeitrag = Teilkosten; Zuschlagskalkulation = Vollkosten.'
+    },
+    {
+        id: 'rs19', type: 'single',
+        question: 'Was gilt exakt am Break-Even-Point (an der Nutzschwelle)?',
+        options: [
+            { text: 'Die Totalkosten entsprechen dem Nettoerlös (Deckungsbeitrag = Fixkosten, Gewinn = 0)', ok: true },
+            { text: 'Die variablen Kosten entsprechen den Fixkosten', ok: false },
+            { text: 'Der Nettoerlös entspricht genau dem Deckungsbeitrag', ok: false },
+            { text: 'Der Gewinn ist gleich hoch wie die Fixkosten', ok: false }
+        ],
+        explanation: 'An der Nutzschwelle gilt: Nettoerlös = Totalkosten (bzw. Deckungsbeitrag = Fixkosten), sodass der Gewinn genau 0 CHF beträgt.'
+    },
+    {
+        id: 'rs20', type: 'single',
+        question: 'Wie lautet die Formel für die mengenmässige Nutzschwelle?',
+        options: [
+            { text: 'Totalfixkosten / Deckungsbeitrag pro Stück', ok: true },
+            { text: 'Deckungsbeitrag pro Stück / Totalfixkosten', ok: false },
+            { text: 'Totalfixkosten × Verkaufspreis pro Stück', ok: false },
+            { text: 'Variable Kosten / Nettoerlös pro Stück', ok: false }
+        ],
+        explanation: 'Mengenmässige Nutzschwelle = Fixkosten / Deckungsbeitrag pro Stück.'
+    },
+    {
+        id: 'rs21', type: 'single',
+        question: 'Seminar-Aufgabe: Fixkosten = CHF 12’650, Nettoerlös/TN = CHF 1’250, variable Kosten/TN = CHF 851. Wie viele Teilnehmer sind mindestens nötig?',
+        options: [
+            { text: '32 Teilnehmer (12’650 / 399 = 31.70 → aufrunden)', ok: true },
+            { text: '31 Teilnehmer (abrunden)', ok: false },
+            { text: '15 Teilnehmer (12’650 / 851)', ok: false },
+            { text: '10 Teilnehmer (12’650 / 1’250)', ok: false }
+        ],
+        explanation: 'DB pro TN = 1’250 − 851 = 399 CHF. 12’650 / 399 = 31.70 → es braucht 32 ganze Teilnehmer, um die Fixkosten zu decken.'
+    },
+    {
+        id: 'rs22', type: 'single',
+        question: 'Wie berechnet man die Absatzmenge, um einen bestimmten Zielgewinn zu erreichen?',
+        options: [
+            { text: '(Fixkosten + gewünschter Gewinn) / Deckungsbeitrag pro Stück', ok: true },
+            { text: '(Fixkosten − gewünschter Gewinn) / variable Kosten pro Stück', ok: false },
+            { text: 'Gewünschter Gewinn / Verkaufspreis pro Stück', ok: false },
+            { text: '(Nettoerlös + Fixkosten) / Deckungsbeitrag pro Stück', ok: false }
+        ],
+        explanation: 'Der Deckungsbeitrag muss sowohl die Fixkosten als auch den gewünschten Gewinn abdecken: (FK + Zielgewinn) / DB pro Stück.'
+    },
+    {
+        id: 'rm17', type: 'multi',
+        question: 'Welche Aussagen zur Deckungsbeitrags- und Nutzschwellenrechnung stimmen? (Mehrere richtig)',
+        options: [
+            { text: 'Deckungsbeitrag = Nettoerlös − variable Kosten (Einstandspreis)', ok: true },
+            { text: 'Im Handelsbetrieb entspricht der Deckungsbeitrag dem Bruttogewinn', ok: true },
+            { text: 'Wertmässige Nutzschwelle = Mengenmässige Nutzschwelle × Netto-Verkaufspreis pro Stück', ok: true },
+            { text: 'Deckungsbeitrag und Fixkosten sind immer identisch', ok: false }
+        ],
+        explanation: 'Deckungsbeitrag und Fixkosten sind nur genau an der Nutzschwelle gleich gross – darüber hinaus erzielt man Gewinn, darunter Verlust.'
+    },
+    {
+        id: 'rm18', type: 'multi',
+        question: 'Welche Kosten gehören beim 3-Tages-Seminar zu den FIXKOSTEN? (Mehrere richtig)',
+        options: [
+            { text: 'Referentenhonorar pro Tag (3 × CHF 1’300) und Referentenspesen', ok: true },
+            { text: 'Ausgaben für Werbung (CHF 5’000) und Verwaltungsaufwand (CHF 2’300)', ok: true },
+            { text: 'Mahlzeiten und Übernachtungen pro Teilnehmer (CHF 815)', ok: false },
+            { text: 'Kursunterlagen pro Teilnehmer (CHF 36)', ok: false }
+        ],
+        explanation: 'Honorare, Spesen, Werbung und Verwaltung fallen unabhängig von der Teilnehmerzahl an (Fixkosten); Mahlzeiten und Unterlagen je TN sind variabel.'
+    },
+    {
+        id: 'rm19', type: 'multi',
+        question: 'Praxisbeispiel Vladi AG (Röteli Kirsch): Bruttoumsatz 2’744’000, 15 % Rabatt, 280’000 Stk., Einstand 1.50/Stk., Fixkosten 1’400’000. Was trifft zu? (Mehrere richtig)',
+        options: [
+            { text: 'Der Nettoerlös beträgt CHF 2’332’400 (85 % von 2’744’000 = CHF 8.33/Stk.)', ok: true },
+            { text: 'Der Deckungsbeitrag pro Stück beträgt CHF 6.83 (8.33 − 1.50)', ok: true },
+            { text: 'Der Gewinn beträgt CHF 512’400 (Total-DB 1’912’400 − Fixkosten 1’400’000)', ok: true },
+            { text: 'Die mengenmässige Nutzschwelle liegt bei 100’000 Stück', ok: false }
+        ],
+        explanation: 'MM-Nutzschwelle = 1’400’000 / 6.83 = 204’978 Stück. Alle anderen drei Aussagen stimmen exakt.'
+    },
+    {
+        id: 'rm20', type: 'multi',
+        question: 'Welche Zusammenhänge gelten im Break-Even-Diagramm? (Mehrere richtig)',
+        options: [
+            { text: 'Links vom Break-Even-Point liegt die Verlustzone (Totalkosten > Nettoerlös)', ok: true },
+            { text: 'Rechts vom Break-Even-Point liegt die Gewinnzone (Nettoerlös > Totalkosten)', ok: true },
+            { text: 'Die Totalkostenlinie startet bei Menge 0 auf Höhe der Fixkosten', ok: true },
+            { text: 'Die Umsatzlinie startet bei Menge 0 auf Höhe der Fixkosten', ok: false }
+        ],
+        explanation: 'Bei Absatzmenge 0 ist der Nettoerlös 0 CHF (Ursprung), während die Fixkosten bereits anfallen.'
+    },
+    {
+        id: 'rdnd15', type: 'dnd',
+        question: 'Drag & Drop (Nutzschwellen-Formeln): Ordne die Berechnungen den Begriffen zu.',
+        items: [
+            { id: 'rns1', text: 'Nettoerlös − variable Kosten', target: 'db' },
+            { id: 'rns2', text: 'Fixkosten / DB pro Stück', target: 'mm' },
+            { id: 'rns3', text: 'MM-Nutzschwelle × Netto-VP/Stk.', target: 'wm' },
+            { id: 'rns4', text: '(Fixkosten + Zielgewinn) / DB pro Stück', target: 'zg' }
+        ],
+        targets: [
+            { id: 'db', label: 'Deckungsbeitrag' },
+            { id: 'mm', label: 'Mengenmässige Nutzschwelle' },
+            { id: 'wm', label: 'Wertmässige Nutzschwelle' },
+            { id: 'zg', label: 'Zielgewinn-Menge' }
+        ],
+        explanation: 'DB = NE − var. Kosten; MM-NS = FK / DB pro Stk.; WM-NS = MM-NS × VP; Zielgewinn-Menge = (FK + Gewinn) / DB pro Stk.'
+    },
+    {
+        id: 'rdnd16', type: 'dnd',
+        question: 'Drag & Drop (Kostenarten im Break-Even): Ordne die Beispiele richtig zu.',
+        items: [
+            { id: 'rk4_1', text: 'Einstandspreis Handelsware pro Stück', target: 'var' },
+            { id: 'rk4_2', text: 'Werbebudget & Verwaltungspauschale', target: 'fix' },
+            { id: 'rk4_3', text: 'Mahlzeiten & Unterlagen je Teilnehmer', target: 'var' },
+            { id: 'rk4_4', text: 'Referentenhonorar pro Seminartag', target: 'fix' }
+        ],
+        targets: [
+            { id: 'var', label: 'Variable Kosten (Einzelkosten)' },
+            { id: 'fix', label: 'Fixe Kosten (Gemeinkosten)' }
+        ],
+        explanation: 'Mengenabhängige Kosten (Einstandspreis, Verpflegung/Unterlagen je TN) sind variabel; mengenunabhängige (Werbung, Verwaltung, Honorar) sind fix.'
+    },
+    {
+        id: 'rdnd17', type: 'dnd',
+        question: 'Drag & Drop (Zahlen-Staffel Nutzschwelle): Ordne die Werte aus der Übung zu.',
+        items: [
+            { id: 'rz1', text: 'Nettoerlös 10’000 − var. Kosten 6’000', target: 'db4' },
+            { id: 'rz2', text: 'Deckungsbeitrag 4’000 − Fixkosten 4’000', target: 'ns0' },
+            { id: 'rz3', text: 'Absatz < Nutzschwelle', target: 'verl' },
+            { id: 'rz4', text: 'Absatz > Nutzschwelle', target: 'gew' }
+        ],
+        targets: [
+            { id: 'db4', label: 'Deckungsbeitrag 4’000' },
+            { id: 'ns0', label: 'Nutzschwelle (Gewinn 0)' },
+            { id: 'verl', label: 'Verlustzone' },
+            { id: 'gew', label: 'Gewinnzone' }
+        ],
+        explanation: '10’000 − 6’000 = DB 4’000; minus Fixkosten 4’000 = Nutzschwelle (0); darunter Verlust, darüber Gewinn.'
+    },
+    {
+        id: 'rdnd18', type: 'dnd',
+        question: 'Drag & Drop (Vladi AG & Seminar): Ordne die Ergebnisse zu.',
+        items: [
+            { id: 'rvs1', text: 'Röteli Kirsch: DB pro Stück (8.33 − 1.50)', target: '683' },
+            { id: 'rvs2', text: 'Röteli Kirsch: MM-Nutzschwelle (1’400’000 / 6.83)', target: '204' },
+            { id: 'rvs3', text: 'Seminar: DB pro Teilnehmer (1’250 − 851)', target: '399' },
+            { id: 'rvs4', text: 'Seminar: Benötigte Teilnehmer (12’650 / 399)', target: '32' }
+        ],
+        targets: [
+            { id: '683', label: 'CHF 6.83 / Stück' },
+            { id: '204', label: '204’978 Stück' },
+            { id: '399', label: 'CHF 399 / Teilnehmer' },
+            { id: '32', label: '32 Teilnehmer' }
+        ],
+        explanation: 'Röteli Kirsch: DB = 6.83 CHF, MM-NS = 204’978 Stk.; Seminar: DB = 399 CHF, Nutzschwelle = 31.70 → 32 Teilnehmer.'
     }
 ];
 
