@@ -175,6 +175,24 @@
             color: #ffffff;
             border-color: var(--lavender);
         }
+        .sticky-scroll-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: rgba(15, 15, 24, 0.7);
+            z-index: 1100;
+            pointer-events: none;
+        }
+        .sticky-scroll-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #8b5cf6, #ec4899, #22c55e);
+            box-shadow: 0 0 12px rgba(139, 92, 246, 0.65);
+            border-radius: 0 999px 999px 0;
+            transition: width 0.08s linear;
+        }
         .container {
             max-width: 1140px;
             margin: 1.75rem auto;
@@ -510,6 +528,7 @@
     </style>
 </head>
 <body>
+<div class="sticky-scroll-bar"><div class="sticky-scroll-fill" id="sticky-scroll-fill"></div></div>
 
 <div class="hero-shell">
     <header class="hero-bento">
@@ -532,8 +551,8 @@
                 <div class="stat-lbl">Lernblöcke komplett</div>
             </div>
             <div class="bento-stat">
-                <div class="stat-val">24+</div>
-                <div class="stat-lbl">Rotierende Quizfragen</div>
+                <div class="stat-val">45</div>
+                <div class="stat-lbl">Rotierende Praxis-Quizfragen</div>
             </div>
             <div class="bento-stat">
                 <div class="stat-val" id="hero-player-count">0</div>
@@ -1765,6 +1784,269 @@ const questionBank = [
             { id: 'stag', label: 'Stagflation' }
         ],
         explanation: 'Inflation = Preissteigerung; Deflation = Preisrückgang mit Produktionsdrosselung; Stagflation = Stagnation + Inflation gleichzeitig.'
+    },
+    // --- PRAXISBEISPIELE: SINGLE CHOICE (10) ---
+    {
+        id: 'sc11', type: 'single',
+        question: 'Praxisbeispiel (SNB): Die Teuerung in der Schweiz steigt stark an. Die Schweizerische Nationalbank (SNB) erhöht den Leitzins deutlich. Was bezweckt sie damit?',
+        options: [
+            { text: 'Kredite werden teurer, die Geldmenge sinkt und die Inflation wird gebremst', ok: true },
+            { text: 'Geschäftsbanken vergeben mehr Kredite und die Geldmenge steigt', ok: false },
+            { text: 'Die Löhne steigen automatisch um denselben Prozentsatz', ok: false },
+            { text: 'Der Staat senkt im Gegenzug die Mehrwertsteuer', ok: false }
+        ],
+        explanation: 'Ein höherer Leitzins verteuert Kredite, dämpft die Geldschöpfung der Geschäftsbanken und bremst die Inflation.'
+    },
+    {
+        id: 'sc12', type: 'single',
+        question: 'Praxisbeispiel (Mietmarkt): Eine Stadt führt per Gesetz eine Obergrenze für Mieten ein, die deutlich unter dem bisherigen Marktpreis liegt. Welche Folge ist zu erwarten?',
+        options: [
+            { text: 'Nachfrageüberschuss: Viele suchen Wohnungen, aber es werden weniger angeboten', ok: true },
+            { text: 'Angebotsüberschuss: Viele Wohnungen stehen dauerhaft leer', ok: false },
+            { text: 'Es entstehen sofort höhere Investitionen in den Wohnungsbau', ok: false },
+            { text: 'Das Marktgleichgewicht verschiebt sich ohne Engpass nach oben', ok: false }
+        ],
+        explanation: 'Ein staatlicher Höchstpreis unter dem Gleichgewicht führt zu einem Nachfrageüberschuss (Wohnungsmangel).'
+    },
+    {
+        id: 'sc13', type: 'single',
+        question: 'Praxisbeispiel (Bäckerei): Der Preis für Butter steigt um 10%, worauf die Kunden 15% weniger Butter kaufen und auf Margarine ausweichen. Wie ist die Nachfrage nach Butter?',
+        options: [
+            { text: 'Preiselastisch (flache Nachfragekurve, weil es Ersatzprodukte gibt)', ok: true },
+            { text: 'Preisunelastisch (steile Nachfragekurve wie bei Grundnahrungsmitteln)', ok: false },
+            { text: 'Vollkommen starr (Menge ändert sich überhaupt nicht)', ok: false },
+            { text: 'Ein typisches Monopolgut ohne Alternativen', ok: false }
+        ],
+        explanation: 'Wenn eine 10%-Preiserhöhung zu 15% Mengenrückgang führt, reagiert die Nachfrage stark = preiselastisch.'
+    },
+    {
+        id: 'sc14', type: 'single',
+        question: 'Praxisbeispiel (SWOT / TOWS): Ein Schweizer Uhrenhersteller hat eine starke Marke (S) und erkennt im asiatischen Markt eine stark steigende Nachfrage (O). Welche TOWS-Strategie liegt vor?',
+        options: [
+            { text: 'SO-Strategie: Stärke einsetzen, um die Chance zu nutzen', ok: true },
+            { text: 'WT-Strategie: Schwäche minimieren, um Gefahr abzuwenden', ok: false },
+            { text: 'ST-Strategie: Stärke einsetzen, um Gefahr zu verringern', ok: false },
+            { text: 'WO-Strategie: Schwäche abbauen, um Chance zu nutzen', ok: false }
+        ],
+        explanation: 'Stärke (S) + Chance (O) = SO-Strategie (Ausbau-/Wachstumsstrategie).'
+    },
+    {
+        id: 'sc15', type: 'single',
+        question: 'Praxisbeispiel (Ansoff): Ein Schweizer Schokoladenproduzent verkauft seine bestehenden Tafeln neu auch in Japan. Welche Strategie ist das?',
+        options: [
+            { text: 'Marktentwicklung (bestehendes Produkt, neuer geografischer Markt)', ok: true },
+            { text: 'Produktentwicklung (neues Produkt, bestehender Markt)', ok: false },
+            { text: 'Marktdurchdringung (bestehendes Produkt, bestehender Markt)', ok: false },
+            { text: 'Diversifikation (neues Produkt, neuer Markt)', ok: false }
+        ],
+        explanation: 'Bestehendes Produkt auf einem neuen geografischen Markt = Marktentwicklung.'
+    },
+    {
+        id: 'sc16', type: 'single',
+        question: 'Praxisbeispiel (Porter): Ein Discounter erzielt durch riesige Einkaufsmengen und schlanke Prozesse die tiefsten Preise im Gesamtmarkt. Welche Wettbewerbsstrategie verfolgt er?',
+        options: [
+            { text: 'Kostenführerschaft', ok: true },
+            { text: 'Differenzierung durch Einzigartigkeit', ok: false },
+            { text: 'Nischenstrategie für Luxuskunden', ok: false },
+            { text: 'Holokratische Marktsegmentierung', ok: false }
+        ],
+        explanation: 'Kostenvorsprung im Gesamtmarkt (Skaleneffekte, Effizienz, tiefe Preise) = Kostenführerschaft nach Porter.'
+    },
+    {
+        id: 'sc17', type: 'single',
+        question: 'Praxisbeispiel (Externe Kosten): Eine Fabrik leitet ungefilterte Abgase in die Luft und verursacht Gesundheitsschäden bei Anwohnern, ohne dafür zu bezahlen. Wie kann der Staat diese externen Kosten internalisieren?',
+        options: [
+            { text: 'Durch eine Lenkungsabgabe (z.B. CO2-Abgabe) auf die Emissionen', ok: true },
+            { text: 'Durch eine Subvention für noch mehr Fabrikproduktion', ok: false },
+            { text: 'Durch Abschaffung aller Umweltgesetze (Deregulierung)', ok: false },
+            { text: 'Durch Einführung eines Höchstpreises für Fabrikprodukte', ok: false }
+        ],
+        explanation: 'Lenkungsabgaben machen Umweltschäden zum Kostenfaktor für den Verursacher (Internalisierung externer Kosten).'
+    },
+    {
+        id: 'sc18', type: 'single',
+        question: 'Praxisbeispiel (Versicherung): Ein Autobesitzer schliesst eine Vollkaskoversicherung ohne Selbstbehalt ab und parkiert danach deutlich unvorsichtiger. Welches Phänomen ist das?',
+        options: [
+            { text: 'Moral Hazard (verborgenes Verhalten nach Vertragsabschluss)', ok: true },
+            { text: 'Adverse Selektion (verborgene Eigenschaften vor Vertragsabschluss)', ok: false },
+            { text: 'Meritorisches Gut', ok: false },
+            { text: 'Sekundärverteilung', ok: false }
+        ],
+        explanation: 'Verborgenes, risikoreicheres Verhalten nach Vertragsabschluss nennt man Moral Hazard (Gegenmittel: Selbstbehalt / Bonus-Malus).'
+    },
+    {
+        id: 'sc19', type: 'single',
+        question: 'Praxisbeispiel (Liquidität): Ein junges Café hat im ersten Monat noch fast keine Gäste und null Umsatz, muss aber CHF 4’500 Ladenmiete und CHF 1’200 Leasing für die Kaffeemaschine zahlen. Worum geht es?',
+        options: [
+            { text: 'Fixe Kosten fallen auch ohne Umsatz an und belasten die Liquidität', ok: true },
+            { text: 'Variable Kosten steigen auch bei null Produktion', ok: false },
+            { text: 'Das Café hat bereits den Break-even-Point überschritten', ok: false },
+            { text: 'Es handelt sich um Vorleistungen des Staates', ok: false }
+        ],
+        explanation: 'Miete und Leasing sind fixe Kosten: Sie fallen unabhängig von der Menge an und können ohne Einnahmen zu Liquiditätsengpässen führen.'
+    },
+    {
+        id: 'sc20', type: 'single',
+        question: 'Praxisbeispiel (Wechselkurs): Der Euro schwächt sich gegenüber dem Schweizer Franken stark ab (1 EUR kostet weniger CHF). Wer profitiert in der Schweiz kurzfristig besonders davon?',
+        options: [
+            { text: 'Schweizer Importeure und Konsumenten beim Einkauf im Euro-Raum', ok: true },
+            { text: 'Schweizer Exportfirmen, die in den Euro-Raum verkaufen', ok: false },
+            { text: 'Schweizer Hotels, die auf Touristen aus Deutschland angewiesen sind', ok: false },
+            { text: 'Niemand, da Wechselkurse in Europa fix sind', ok: false }
+        ],
+        explanation: 'Ein starker CHF macht Importe und Einkäufe im Ausland günstiger, erschwert aber Schweizer Exporte und den Tourismus.'
+    },
+
+    // --- PRAXISBEISPIELE: MULTIPLE CHOICE (6) ---
+    {
+        id: 'mc9', type: 'multi',
+        question: 'Praxisbeispiel (Bauunternehmen in der Rezession): Das Schweizer BIP sinkt zwei Quartale in Folge. Welche Massnahmen des Staates wirken hier antizyklisch-expansiv?',
+        options: [
+            { text: 'Der Staat zieht Infrastrukturprojekte vor (erhöht Staatsausgaben)', ok: true },
+            { text: 'Der Staat senkt Einkommens- oder Gewinnsteuern', ok: true },
+            { text: 'Die Arbeitslosenversicherung (ALV) stützt die Einkommen', ok: true },
+            { text: 'Der Staat kürzt alle Bauaufträge und erhöht die Mehrwertsteuer', ok: false }
+        ],
+        explanation: 'In einer Rezession wirken höhere Staatsausgaben, Steuersenkungen und ALV-Leistungen expansiv und stützen die Gesamtnachfrage.'
+    },
+    {
+        id: 'mc10', type: 'multi',
+        question: 'Praxisbeispiel (Software-KMU): Ein IT-Unternehmen möchte seine Kostenstruktur senken. Welche der 4 Ansatzpunkte aus Block 9 sind echte Kostensenkungshebel?',
+        options: [
+            { text: 'Outsourcing (z.B. Buchhaltung oder Support auslagern)', ok: true },
+            { text: 'Kooperationen (Einkaufs- oder Entwicklungspartnerschaften)', ok: true },
+            { text: 'Mengenvorteile (Skaleneffekte bei Lizenzen/Servern)', ok: true },
+            { text: 'Verbundeffekte (gemeinsame Nutzung von Ressourcen)', ok: true },
+            { text: 'Erhöhung der Fixkosten durch ein teureres Büro', ok: false }
+        ],
+        explanation: 'Die 4 Ansatzpunkte zur Kostensenkung sind Mengenvorteile, Verbundeffekte, Kooperationen und Outsourcing.'
+    },
+    {
+        id: 'mc11', type: 'multi',
+        question: 'Praxisbeispiel (Umwelt & Produktion): Eine Möbelfabrik führt ein Ökologiemanagement nach ISO 14001 ein. Welche Punkte gehören zu den 4 Kernforderungen bzw. Massnahmen?',
+        options: [
+            { text: 'Rechtskonformität sicherstellen (Gesetze ermitteln & bewerten)', ok: true },
+            { text: 'Verhütung von Umweltbelastungen (Vermeiden vor Vermindern/Verwerten)', ok: true },
+            { text: 'Kontinuierliche Verbesserung über den PDCA-Zyklus', ok: true },
+            { text: 'Umweltschäden unkontrolliert auf die Nachbarschaft überwälzen', ok: false }
+        ],
+        explanation: 'ISO 14001 fordert Rechtskonformität, weitere Anspruchsgruppen-Forderungen, Verhütung von Belastungen und kontinuierliche Verbesserung (PDCA).'
+    },
+    {
+        id: 'mc12', type: 'multi',
+        question: 'Praxisbeispiel (Stakeholder): Beim Bau eines neuen Logistikzentrums protestieren Anwohner und Umwelt-NGOs, während Investoren schnelle Rendite fordern. Welche Aussagen nach SGMM stimmen?',
+        options: [
+            { text: 'Zwischen Anspruchsgruppen können Zielkonflikte (Widersprüche) entstehen', ok: true },
+            { text: 'Stakeholder mit hohem Einfluss und hohem Interesse erfordern Kooperation', ok: true },
+            { text: 'Öffentlichkeit / Medien / NGO gehören zu den 7 Anspruchsgruppen', ok: true },
+            { text: 'Nur Kapitalgeber sind relevant, alle anderen Gruppen können ignoriert werden', ok: false }
+        ],
+        explanation: 'Im SGMM bestehen zwischen den 7 Anspruchsgruppen oft Zielkonflikte; Gruppen mit hohem Einfluss & Interesse benötigen Kooperation.'
+    },
+    {
+        id: 'mc13', type: 'multi',
+        question: 'Praxisbeispiel (Organisation): Ein junges Tech-Unternehmen wechselt von einer strengen Linienorganisation zu einer holokratischen Struktur. Welche Effekte sind typisch?',
+        options: [
+            { text: 'Kürzere Entscheidungswege direkt in Rollen und Kreisen', ok: true },
+            { text: 'Höhere Flexibilität und stärkere Mitarbeitenden-Eigenverantwortung (Ownership)', ok: true },
+            { text: 'Risiko von hohem Abstimmungsbedarf und Meeting-Overload', ok: true },
+            { text: 'Strengere Top-down-Befehle über viele Hierarchiestufen', ok: false }
+        ],
+        explanation: 'Holokratie verteilt Autorität auf Kreise/Rollen (schnell & flexibel), birgt aber das Risiko von Überforderung und Meeting-Overload.'
+    },
+    {
+        id: 'mc14', type: 'multi',
+        question: 'Praxisbeispiel (BNE vs. Wohlstand): Warum misst das Bruttonationaleinkommen (BNE) nicht den gesamten Wohlstand eines Landes?',
+        options: [
+            { text: 'Unbezahlte Haushalts-, Erziehungs- und Pflegearbeit fehlt im BNE', ok: true },
+            { text: 'Ehrenamtliche Arbeit in Vereinen wird nicht im BNE erfasst', ok: true },
+            { text: 'Umweltschäden und Verkehrsunfälle werden im BNE nicht abgezogen', ok: true },
+            { text: 'Konsumgüter und Nettoinvestitionen sind im BNE überhaupt nicht enthalten', ok: false }
+        ],
+        explanation: 'Im BNE fehlen Gratisleistungen (Haus-/Pflegearbeit, Ehrenamt), während Schäden (Umwelt, Unfälle) nicht abgezogen werden.'
+    },
+
+    // --- PRAXISBEISPIELE: DRAG AND DROP (5) ---
+    {
+        id: 'dnd7', type: 'dnd',
+        question: 'Drag & Drop (Praxisbeispiel Stakeholder-Matrix): Ordne jede Gruppe dem richtigen Feld zu.',
+        items: [
+            { id: 'st1', text: 'Hauptinvestor & Schlüsselkunde (hoher Einfluss, hohes Interesse)', target: 'koop' },
+            { id: 'st2', text: 'Wichtige Behörde (hoher Einfluss, geringes Interesse)', target: 'zufr' },
+            { id: 'st3', text: 'Lokaler Fanclub (geringer Einfluss, hohes Interesse)', target: 'info' },
+            { id: 'st4', text: 'Unbeteiligte Passanten (geringer Einfluss, geringes Interesse)', target: 'beob' }
+        ],
+        targets: [
+            { id: 'koop', label: 'Kooperation (eng einbinden)' },
+            { id: 'zufr', label: 'Zufriedenstellen' },
+            { id: 'info', label: 'Regelmässig informieren' },
+            { id: 'beob', label: 'Beobachten / keine Aktivitäten' }
+        ],
+        explanation: 'Einfluss-Interessen-Matrix: Hoch/Hoch = Kooperation; Hoch/Gering = Zufriedenstellen; Gering/Hoch = Regelmässig informieren; Gering/Gering = Beobachten.'
+    },
+    {
+        id: 'dnd8', type: 'dnd',
+        question: 'Drag & Drop (Praxisbeispiel Value Proposition Design): Ein E-Bike-Pendler nutzt unser neues Leicht-E-Bike. Ordne zu!',
+        items: [
+            { id: 'vp1', text: 'Täglich trocken & pünktlich ins Büro fahren', target: 'aufg' },
+            { id: 'vp2', text: 'Schweres Rad die Treppe hochtragen & schwitzen', target: 'prob' },
+            { id: 'vp3', text: 'Ultraleichter 13-kg-Carbonrahmen', target: 'pl' },
+            { id: 'vp4', text: 'Integriertes GPS-Diebstahltracking per App', target: 'ge' }
+        ],
+        targets: [
+            { id: 'aufg', label: 'Kundenprofil: Aufgabe' },
+            { id: 'prob', label: 'Kundenprofil: Problem' },
+            { id: 'pl', label: 'Wertangebot: Problemlöser' },
+            { id: 'ge', label: 'Wertangebot: Gewinnerzeuger' }
+        ],
+        explanation: 'Aufgaben & Probleme stammen aus dem Kundenprofil; Problemlöser & Gewinnerzeuger aus dem Wertangebot.'
+    },
+    {
+        id: 'dnd9', type: 'dnd',
+        question: 'Drag & Drop (Praxisbeispiel Schweizer Vorsorge): Ordne die konkreten Fälle der richtigen Säule zu.',
+        items: [
+            { id: 'v1', text: 'Staatliche Grundrente zur Existenzsicherung (AHV)', target: 's1' },
+            { id: 'v2', text: 'Obligatorische Pensionskasse für Angestellte (BVG)', target: 's2' },
+            { id: 'v3', text: 'Freiwilliges, steuerbegünstigtes Konto Säule 3a', target: 's3' }
+        ],
+        targets: [
+            { id: 's1', label: '1. Säule (Umlageverfahren)' },
+            { id: 's2', label: '2. Säule (Kapitaldeckungsverfahren)' },
+            { id: 's3', label: '3. Säule (Privates Sparen)' }
+        ],
+        explanation: '1. Säule = AHV/IV/EL (Existenzbedarf), 2. Säule = BVG/Pensionskasse (Lebenshaltung), 3. Säule = privates Sparen (Komfort).'
+    },
+    {
+        id: 'dnd10', type: 'dnd',
+        question: 'Drag & Drop (Praxisbeispiel Konjunkturzyklus): Ordne die wirtschaftlichen Schlagzeilen der richtigen Phase zu.',
+        items: [
+            { id: 'kz1', text: 'Auftragsbücher füllen sich, Arbeitslosigkeit sinkt', target: 'auf' },
+            { id: 'kz2', text: 'Vollbeschäftigung, Überhitzung & steigende Inflation', target: 'boom' },
+            { id: 'kz3', text: 'BIP sinkt in 2 aufeinanderfolgenden Quartalen, Entlassungen', target: 'rez' }
+        ],
+        targets: [
+            { id: 'auf', label: '1. Aufschwung' },
+            { id: 'boom', label: '2. Hochkonjunktur (Boom)' },
+            { id: 'rez', label: '4. Rezession' }
+        ],
+        explanation: 'Aufschwung = wachsende Aufträge; Boom = Überhitzung/Inflation; Rezession = BIP sinkt in 2 Quartalen in Folge.'
+    },
+    {
+        id: 'dnd11', type: 'dnd',
+        question: 'Drag & Drop (Praxisbeispiel Staatsaktivitäten): Ordne die konkreten Massnahmen des Staates dem richtigen Bereich zu (Block 6/10).',
+        items: [
+            { id: 'sa1', text: 'WEKO verbietet Preisabsprache zwischen Mobilfunkanbietern', target: 'wett' },
+            { id: 'sa2', text: 'Staat finanziert Polizei, Gerichte & Grundlagenforschung', target: 'oeff' },
+            { id: 'sa3', text: 'CO2-Abgabe auf fossile Brennstoffe', target: 'umw' },
+            { id: 'sa4', text: 'Nährwert- und Herkunftsdeklaration auf Lebensmitteln vorschreiben', target: 'inf' }
+        ],
+        targets: [
+            { id: 'wett', label: '1. Wettbewerbspolitik' },
+            { id: 'inf', label: '2. Information & Prohibition' },
+            { id: 'umw', label: '4. Umweltpolitik' },
+            { id: 'oeff', label: '5. Öffentliche Güter' }
+        ],
+        explanation: 'WEKO = Wettbewerbspolitik; Deklarationspflicht = Information/Prohibition; CO2-Abgabe = Umweltpolitik; Polizei/Justiz = Öffentliche Güter.'
     }
 ];
 
@@ -2114,6 +2396,17 @@ renderQuiz = function() {
 renderQuiz();
 updatePlayerUI();
 renderLeaderboard();
+
+function updateStickyScrollBar() {
+    const doc = document.documentElement;
+    const scrollTop = window.scrollY || doc.scrollTop;
+    const maxScroll = doc.scrollHeight - window.innerHeight;
+    const pct = maxScroll > 0 ? Math.min(100, Math.max(0, (scrollTop / maxScroll) * 100)) : 0;
+    const fill = document.getElementById('sticky-scroll-fill');
+    if (fill) fill.style.width = pct + '%';
+}
+window.addEventListener('scroll', updateStickyScrollBar, { passive: true });
+updateStickyScrollBar();
 </script>
 
 </body>
