@@ -610,7 +610,7 @@
 <div class="subject-bar" role="tablist" aria-label="Fächer-Auswahl">
     <button type="button" class="subject-tab active" id="tab-vwl" onclick="switchSubject('vwl')">📊 VWL &amp; BWL <span class="subject-badge-soon">10 Blöcke + Quiz</span></button>
     <button type="button" class="subject-tab" id="tab-marketing" onclick="switchSubject('marketing')">📣 Marketing <span class="subject-badge-soon">3 Präsentationen + Quiz</span></button>
-    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">4 Blöcke + Quiz</span></button>
+    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">5 Blöcke + Quiz</span></button>
 </div>
 
 <nav id="nav-vwl">
@@ -639,6 +639,7 @@
     <a href="#rewe-block2">Block 2: Kennzahlen &amp; Analyse</a>
     <a href="#rewe-block3">Block 3: Stille Reserven</a>
     <a href="#rewe-block4">Block 4: Nutzschwelle</a>
+    <a href="#rewe-block5">Block 5: BAB &amp; Kalkulation</a>
     <a href="#rewe-quiz" style="background: linear-gradient(135deg,#8b5cf6,#6d28d9); color: #ffffff;">🎯 ReWe-Quiz &amp; Rangliste</a>
 </nav>
 
@@ -2377,11 +2378,93 @@
         </div>
     </section>
 
+    <!-- ==================== REWE BLOCK 5: BEBU / BAB & EINZELKALKULATION ==================== -->
+    <section id="rewe-block5">
+        <span class="block-badge">5. Block · 15.09.2026 &bull; Betriebsbuchhaltung (BAB) &amp; Kalkulation</span>
+        <h2>5. Block: Betriebsabrechnungsbogen (BAB) &amp; Zuschlagskalkulation</h2>
+
+        <div class="callout">
+            <strong>Tabellenförmige Betriebsbuchhaltung (BEBU):</strong> Der <strong>BAB</strong> ist das Gegenstück zum Kontenkreuz der FIBU. Er überführt den <strong>FIBU-Aufwand</strong> über <strong>zeitliche (ZA)</strong> und <strong>sachliche Abgrenzungen (SA)</strong> (stille Reserven, Unternehmerlohn, kalkulatorische Zinsen/Abschreibungen) in die <strong>Kostenarten</strong>, verteilt Gemeinkosten über <strong>Vor- und Hauptkostenstellen</strong> auf die <strong>Kostenträger</strong> und ermittelt die Zuschlagssätze für die <strong>Einzelkalkulation</strong>.
+        </div>
+
+        <h3 style="margin-top:1.3rem;">5.1 BAB-Ablauf &amp; Einzelkalkulation (Vollkostenrechnung)</h3>
+        <div class="graphic-container">
+            <svg width="780" height="236" viewBox="0 0 780 236">
+                <text x="390" y="16" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">BAB-Struktur (links) &amp; Zuschlagskalkulation (rechts)</text>
+
+                <!-- Links: BAB Ablauf -->
+                <rect x="15" y="28" width="365" height="195" rx="8" fill="#f8fafc" stroke="#5b2c6f" stroke-width="1.5"/>
+                <rect x="15" y="28" width="365" height="24" rx="6" fill="#5b2c6f"/>
+                <text x="197" y="44" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10.5">1. Betriebsabrechnungsbogen (BAB)</text>
+
+                <rect x="27" y="60" width="340" height="28" rx="4" fill="#e8daef"/>
+                <text x="197" y="78" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#2c1638">FIBU-Aufwand &plusmn; Abgrenzungen (ZA/SA) = Kostenarten</text>
+
+                <rect x="27" y="95" width="164" height="36" rx="4" fill="#dcfce7" stroke="#16a34a"/>
+                <text x="109" y="111" text-anchor="middle" font-size="9.2" font-weight="bold" fill="#166534">Einzelkosten (EM, EL)</text>
+                <text x="109" y="124" text-anchor="middle" font-size="8.8">&rarr; direkt auf Kostenträger</text>
+
+                <rect x="203" y="95" width="164" height="36" rx="4" fill="#fee2e2" stroke="#dc2626"/>
+                <text x="285" y="111" text-anchor="middle" font-size="9.2" font-weight="bold" fill="#991b1b">Gemeinkosten (GK)</text>
+                <text x="285" y="124" text-anchor="middle" font-size="8.8">&rarr; Vorkosten- &rarr; Haupt-KST</text>
+
+                <rect x="27" y="138" width="340" height="24" rx="4" fill="#f1f5f9" stroke="#94a3b8"/>
+                <text x="197" y="154" text-anchor="middle" font-size="9.2">HK Produktion &plusmn; Bestandesänderung HF/FF = HK Verkauf</text>
+
+                <rect x="27" y="168" width="340" height="22" rx="4" fill="#f1f5f9" stroke="#94a3b8"/>
+                <text x="197" y="183" text-anchor="middle" font-size="9.2">+ Umlage VVGK (% der HK Verkauf) = Selbstkosten</text>
+
+                <rect x="27" y="195" width="340" height="22" rx="4" fill="#2c1638"/>
+                <text x="197" y="210" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#fff">Nettoerlös &minus; Selbstkosten = Betriebserfolg</text>
+
+                <!-- Rechts: Kalkulationsschema -->
+                <rect x="400" y="28" width="365" height="195" rx="8" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+                <rect x="400" y="28" width="365" height="24" rx="6" fill="#16a34a"/>
+                <text x="582" y="44" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10.5">2. Zuschlagskalkulation (Einzelkalkulation)</text>
+
+                <text x="414" y="70" font-size="9.5">Einzelmaterial + Einzellöhne = <tspan font-weight="bold">Einzelkosten</tspan></text>
+                <text x="414" y="88" font-size="9.5">+ Material-GK (% EM) + Fertigungs-GK (% EL / Std.)</text>
+                <text x="414" y="105" font-size="9.8" font-weight="bold" fill="#5b2c6f">= Herstellkosten (HK)</text>
+                <text x="414" y="122" font-size="9.5">+ Verwaltungs- &amp; Vertriebs-GK (% der HK)</text>
+                <text x="414" y="139" font-size="9.8" font-weight="bold" fill="#5b2c6f">= Selbstkosten (SK)</text>
+                <text x="414" y="157" font-size="9.5">+ Reingewinn-Marge (<tspan font-weight="bold">im Hundert!</tspan>) = NBVP</text>
+                <text x="414" y="174" font-size="9.5">+ Skonto (<tspan font-weight="bold">i.H.</tspan>) = NKVP &rarr; + Rabatt (<tspan font-weight="bold">i.H.</tspan>) = BKVP exkl.</text>
+                <text x="414" y="191" font-size="9.8" font-weight="bold" fill="#166534">+ MWST (auf Hundert!) = BKVP inkl. MWST</text>
+                <rect x="412" y="198" width="340" height="20" rx="4" fill="#fef3c7" stroke="#d97706"/>
+                <text x="582" y="212" text-anchor="middle" font-size="8.8" font-weight="bold" fill="#92400e">Falle: RG-Marge, Skonto &amp; Rabatt = IM Hundert; MWST = AUF Hundert!</text>
+            </svg>
+        </div>
+
+        <h3 style="margin-top:1.3rem;">5.2 Praxisbeispiel (aus „BAB 2 + Einzelkalkulation einfach Lösung“)</h3>
+        <div class="grid-2">
+            <div class="card">
+                <h4>BAB-Umlagesätze &amp; Bestandesänderungen</h4>
+                <ul>
+                    <li><strong>Abgrenzungen (SA):</strong> Einzelmaterial (stille Reserven), Löhne (Unternehmerlohn), Zinsen (kalk. Zins auf betrieblichem Kapital), Abschreibungen (FIBU vs. BEBU), Übriges (betriebsfremder Aufwand).</li>
+                    <li><strong>Vorkostenstellen:</strong> Gebäude nach m&sup2; (<code>25'000 / 5'000 m&sup2; = 5/m&sup2;</code>); Fuhrpark nach km (40 % Material, 60 % VVGK).</li>
+                    <li><strong>Hauptkostenstellen:</strong> Material-GK = <code>10 % vom EM</code>; Fertigungs-GK I = <code>35 % der EL</code>; Fertigungs-GK II = <code>CHF 7.00 / Maschinenstunde</code>; VVGK = <code>22 % der HK Verkauf</code>.</li>
+                    <li><strong>Merke Bestandesänderung HF/FF:</strong> <code>+2</code> beim Kostenträger A bedeutet <strong>Bestandesabnahme</strong> (+ Kosten); <code>&minus;8</code> bei B bedeutet <strong>Bestandeszunahme</strong> (&minus; Kosten).</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Einzelkalkulation Produkt Y (inkl. 8 % MWST)</h4>
+                <ul>
+                    <li><strong>Einzelkosten:</strong> Material <code>820.00</code> + Löhne <code>180.00</code> = <strong>1'000.00</strong></li>
+                    <li><strong>+ GK:</strong> Mat.-GK 10 % (<code>82.00</code>) + Fert.-GK I 35 % (<code>63.00</code>) + Fert.-GK II 10h &times; 7 (<code>70.00</code>) = <strong>HK 1'215.00</strong></li>
+                    <li><strong>+ VVGK 22 % von HK:</strong> <code>267.30</code> = <strong>Selbstkosten 1'482.30</strong></li>
+                    <li><strong>+ RG-Marge 25 % i.H.</strong> (<code>&times; 25 / 75 = 494.10</code>) = <strong>NBVP 1'976.40</strong></li>
+                    <li><strong>+ Skonto 2 % i.H.</strong> (<code>40.33</code>) = <strong>NKVP 2'016.73</strong> &rarr; <strong>+ Rabatt 10 % i.H.</strong> (<code>224.08</code>) = <strong>BKVP exkl. 2'240.81</strong></li>
+                    <li><strong>+ MWST 8 % auf Hundert</strong> (<code>179.26</code>) = <strong>BKVP inkl. MWST: CHF 2'420.07</strong></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- ==================== REWE QUIZ ==================== -->
     <section id="rewe-quiz">
         <span class="block-badge">Prüfungstraining Rechnungswesen</span>
         <h2>Interaktives Rechnungswesen-Quiz &amp; Rangliste</h2>
-        <p>60 rotierende Prüfungsfragen aus Block 1 bis Block 4 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen, Kennzahlen, Stille Reserven &amp; Nutzschwelle). Deine Punkte zählen in die gemeinsame Rangliste!</p>
+        <p>72 rotierende Prüfungsfragen aus Block 1 bis Block 5 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen, Kennzahlen, Stille Reserven, Nutzschwelle &amp; BAB/Kalkulation). Deine Punkte zählen in die gemeinsame Rangliste!</p>
 
         <div class="player-bar">
             <div class="player-login">
@@ -4707,6 +4790,162 @@ const reweQuestionBank = [
             { id: '32', label: '32 Teilnehmer' }
         ],
         explanation: 'Röteli Kirsch: DB = 6.83 CHF, MM-NS = 204’978 Stk.; Seminar: DB = 399 CHF, Nutzschwelle = 31.70 → 32 Teilnehmer.'
+    },
+    {
+        id: 'rs23', type: 'single',
+        question: 'Welche Aufgabe hat die Abgrenzungsspalte (ZA / SA) am Anfang des Betriebsabrechnungsbogens (BAB)?',
+        options: [
+            { text: 'Sie überführt den FIBU-Aufwand über zeitliche und sachliche Korrekturen in die betrieblichen Kostenarten (BEBU)', ok: true },
+            { text: 'Sie berechnet direkt die Mehrwertsteuer für die ESTV', ok: false },
+            { text: 'Sie ersetzt die komplette Schlussbilanz 2', ok: false },
+            { text: 'Sie verteilt den Reingewinn als Dividende an die Aktionäre', ok: false }
+        ],
+        explanation: 'In der Abgrenzungsspalte werden stille Reserven, kalkulatorische Zinsen/Abschreibungen, Unternehmerlohn und betriebsfremde Aufwände bereinigt.'
+    },
+    {
+        id: 'rs24', type: 'single',
+        question: 'Was bedeutet im BAB bei der Bestandesänderung Halbfabrikate (HF) ein positiver Wert (+2) beim Kostenträger A?',
+        options: [
+            { text: 'Bestandesabnahme bei den Halbfabrikaten (Lagerabbau erhöht die Kosten der verkauften Produkte)', ok: true },
+            { text: 'Bestandeszunahme bei den Halbfabrikaten', ok: false },
+            { text: 'Einen Reingewinn von 2’000 CHF', ok: false },
+            { text: 'Eine Rückzahlung der Vorsteuer', ok: false }
+        ],
+        explanation: 'Im BAB-Kostenblock gilt: Bestandesabnahme = + (mehr verkauft als produziert), Bestandeszunahme = − (auf Lager produziert).'
+    },
+    {
+        id: 'rs25', type: 'single',
+        question: 'Wie werden Reingewinn-Marge (z.B. 25 %), Skonto (2 %) und Rabatt (10 %) in der Zuschlagskalkulation vom Selbstkostenpreis aufwärts gerechnet?',
+        options: [
+            { text: 'Im Hundert (z.B. Selbstkosten × 25 / 75 für 25 % RG-Marge)', ok: true },
+            { text: 'Auf Hundert (einfach 25 % auf die Selbstkosten aufschlagen)', ok: false },
+            { text: 'Vom Hundert abgezogen', ok: false },
+            { text: 'Sie werden alle direkt auf das Einzelmaterial gerechnet', ok: false }
+        ],
+        explanation: 'RG-Marge (vom NBVP), Skonto (vom NKVP) und Rabatt (vom BKVP exkl. MWST) werden im Hundert berechnet; nur die MWST wird auf Hundert aufgeschlagen.'
+    },
+    {
+        id: 'rs26', type: 'single',
+        question: 'Worauf wird der Verwaltungs- und Vertriebsgemeinkostenzuschlag (VVGK) im BAB und in der Kalkulation bezogen?',
+        options: [
+            { text: 'Auf die Herstellkosten (der verkauften Produkte)', ok: true },
+            { text: 'Nur auf das Einzelmaterial', ok: false },
+            { text: 'Auf die geleisteten Maschinenstunden', ok: false },
+            { text: 'Auf den Bruttokreditverkaufspreis inkl. MWST', ok: false }
+        ],
+        explanation: 'VVGK-Satz = VVGK / Herstellkosten des Verkaufs (%). Herstellkosten + VVGK = Selbstkosten.'
+    },
+    {
+        id: 'rm21', type: 'multi',
+        question: 'Welche Gründe können in der BEBU zu sachlichen Abgrenzungen (SA) zwischen FIBU und BAB führen? (Mehrere richtig)',
+        options: [
+            { text: 'Bildung oder Auflösung stiller Reserven (z.B. beim Einzelmaterial oder bei Abschreibungen)', ok: true },
+            { text: 'Kalkulatorischer Unternehmerlohn bei Einzelunternehmen / Personengesellschaften', ok: true },
+            { text: 'Kalkulatorische Zinsen auf dem gesamten betriebsnotwendigen Kapital', ok: true },
+            { text: 'Barverkäufe von Handelswaren an Laufkunden', ok: false }
+        ],
+        explanation: 'Stille Reserven, Unternehmerlohn, kalk. Zinsen und betriebsfremde Aufwände sind klassische sachliche Abgrenzungen.'
+    },
+    {
+        id: 'rm22', type: 'multi',
+        question: 'Welche Aussagen zur Kostenstellen-Umlage im BAB treffen zu? (Mehrere richtig)',
+        options: [
+            { text: 'Vorkostenstellen (z.B. Gebäude, Fuhrpark) werden zuerst auf die Hauptkostenstellen umgelegt', ok: true },
+            { text: 'Nach der Umlage stehen Vorkostenstellen auf 0', ok: true },
+            { text: 'Einzelkosten (Einzelmaterial, Einzellöhne) gehen direkt auf die Kostenträger', ok: true },
+            { text: 'Hauptkostenstellen werden zurück auf das Gebäude umgelegt', ok: false }
+        ],
+        explanation: 'Einzelkosten → direkt Kostenträger; Vorkostenstellen → Hauptkostenstellen (danach Saldo 0) → Kostenträger.'
+    },
+    {
+        id: 'rm23', type: 'multi',
+        question: 'Welche Schritte gehören zur Berechnung des Bruttokreditverkaufspreises (BKVP inkl. MWST) bei Produkt Y? (Mehrere richtig)',
+        options: [
+            { text: 'Einzelmaterial + Einzellöhne = Einzelkosten', ok: true },
+            { text: 'Einzelkosten + Material-GK + Fertigungs-GK = Herstellkosten', ok: true },
+            { text: 'Herstellkosten + VVGK = Selbstkosten', ok: true },
+            { text: 'Selbstkosten + MWST = Nettobarverkaufspreis', ok: false }
+        ],
+        explanation: 'Auf die Selbstkosten kommen zuerst RG-Marge (= NBVP), Skonto (= NKVP), Rabatt (= BKVP exkl.) und ganz am Schluss die MWST!'
+    },
+    {
+        id: 'rm24', type: 'multi',
+        question: 'Aufgabe Gartengeräte AG (BAB): Welche Umlageschlüssel werden typischerweise im BAB eingesetzt? (Mehrere richtig)',
+        options: [
+            { text: 'Gebäudekostenstelle nach m² bzw. gewichteter Fläche', ok: true },
+            { text: 'Materialgemeinkosten in % des Einzelmaterialverbrauchs', ok: true },
+            { text: 'Fertigungsgemeinkosten nach Einzellöhnen (%) oder Fertigungs-/Maschinenstunden', ok: true },
+            { text: 'VVGK in % der Herstellkosten', ok: true }
+        ],
+        explanation: 'Alle vier Schlüssel (Fläche für Gebäude, % EM für Material, % EL oder Stunden für Fertigung, % HK für VVGK) sind Standard im BAB.'
+    },
+    {
+        id: 'rdnd19', type: 'dnd',
+        question: 'Drag & Drop (Kalkulationsschema aufwärts): Ordne die Zwischensummen der Reihe nach zu.',
+        items: [
+            { id: 'rk5_1', text: 'Einzelkosten + Material-GK + Fertigungs-GK', target: 'hk' },
+            { id: 'rk5_2', text: 'Herstellkosten + VVGK', target: 'sk' },
+            { id: 'rk5_3', text: 'Selbstkosten + Reingewinn-Marge (i.H.)', target: 'nbvp' },
+            { id: 'rk5_4', text: 'BKVP exkl. MWST + MWST (auf Hundert)', target: 'bkvp' }
+        ],
+        targets: [
+            { id: 'hk', label: 'Herstellkosten (HK)' },
+            { id: 'sk', label: 'Selbstkosten (SK)' },
+            { id: 'nbvp', label: 'Nettobarverkaufspreis (NBVP)' },
+            { id: 'bkvp', label: 'BKVP inkl. MWST' }
+        ],
+        explanation: 'EK + Mat./Fert.-GK = HK; + VVGK = SK; + RG-Marge = NBVP; + Skonto = NKVP; + Rabatt = BKVP exkl.; + MWST = BKVP inkl.'
+    },
+    {
+        id: 'rdnd20', type: 'dnd',
+        question: 'Drag & Drop (BAB-Begriffe): Ordne die Bestandteile des BAB richtig zu.',
+        items: [
+            { id: 'rbab1', text: 'Gebäude & Fuhrpark', target: 'vkst' },
+            { id: 'rbab2', text: 'Material, Fertigung, Verwaltung & Vertrieb', target: 'hkst' },
+            { id: 'rbab3', text: 'Einzelmaterial & Einzellöhne', target: 'ekost' },
+            { id: 'rbab4', text: 'Produkte A & B (Kettensägen / Rasenmäher)', target: 'ktr' }
+        ],
+        targets: [
+            { id: 'vkst', label: 'Vorkostenstellen' },
+            { id: 'hkst', label: 'Hauptkostenstellen' },
+            { id: 'ekost', label: 'Einzelkosten' },
+            { id: 'ktr', label: 'Kostenträger' }
+        ],
+        explanation: 'Gebäude/Fuhrpark = Vorkostenstellen; Material/Fertigung/VV = Hauptkostenstellen; EM/EL = Einzelkosten; Produkte = Kostenträger.'
+    },
+    {
+        id: 'rdnd21', type: 'dnd',
+        question: 'Drag & Drop (Sachliche Abgrenzung): Ordne jeder Kostenart die typische Begründung zu.',
+        items: [
+            { id: 'rsa1', text: 'Einzelmaterial', target: 'sr' },
+            { id: 'rsa2', text: 'Löhne und Gehälter', target: 'ul' },
+            { id: 'rsa3', text: 'Kapitalzinsen', target: 'kz' },
+            { id: 'rsa4', text: 'Übriges / Diverses', target: 'bf' }
+        ],
+        targets: [
+            { id: 'sr', label: 'Stille Reserven / Verrechnungspreise' },
+            { id: 'ul', label: 'Kalkulatorischer Unternehmerlohn' },
+            { id: 'kz', label: 'Kalk. Zins auf betrieblichem Kapital' },
+            { id: 'bf', label: 'Betriebsfremde Aufwände / SR' }
+        ],
+        explanation: 'Direkt aus der Lösung zu BAB 2: EM → Stille Reserven; Löhne → Unternehmerlohn; Zinsen → kalk. Zinsen; Übriges → betriebsfremde Aufwände.'
+    },
+    {
+        id: 'rdnd22', type: 'dnd',
+        question: 'Drag & Drop (Bestandesänderung & Rechenart): Ordne korrekt zu.',
+        items: [
+            { id: 'rba1', text: '+2 beim Kostenträger A (HF)', target: 'abn' },
+            { id: 'rba2', text: '−8 beim Kostenträger B (HF)', target: 'zun' },
+            { id: 'rba3', text: 'RG-Marge 25 %, Skonto 2 %, Rabatt 10 %', target: 'ih' },
+            { id: 'rba4', text: 'Mehrwertsteuer (8 %)', target: 'ah' }
+        ],
+        targets: [
+            { id: 'abn', label: 'Bestandesabnahme (+ Kosten)' },
+            { id: 'zun', label: 'Bestandeszunahme (− Kosten)' },
+            { id: 'ih', label: 'Im Hundert (i.H.) rechnen' },
+            { id: 'ah', label: 'Auf Hundert (a.H.) rechnen' }
+        ],
+        explanation: '+ im BAB = Abnahme, − im BAB = Zunahme; RG-Marge/Skonto/Rabatt = im Hundert; MWST = auf Hundert.'
     }
 ];
 
