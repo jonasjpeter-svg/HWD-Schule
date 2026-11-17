@@ -604,7 +604,7 @@
 
 <div class="subject-bar" role="tablist" aria-label="Fächer-Auswahl">
     <button type="button" class="subject-tab active" id="tab-vwl" onclick="switchSubject('vwl')">📊 VWL &amp; BWL <span class="subject-badge-soon">10 Blöcke + Quiz</span></button>
-    <button type="button" class="subject-tab" id="tab-marketing" onclick="switchSubject('marketing')">📣 Marketing <span class="subject-badge-soon">Bereit für Stoff</span></button>
+    <button type="button" class="subject-tab" id="tab-marketing" onclick="switchSubject('marketing')">📣 Marketing <span class="subject-badge-soon">3 Präsentationen + Quiz</span></button>
     <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">Bereit für Stoff</span></button>
 </div>
 
@@ -618,6 +618,15 @@
     <a href="#block9">Block 9</a>
     <a href="#block10">Block 10</a>
     <a href="#quiz" style="background: linear-gradient(135deg,#8b5cf6,#6d28d9); color: #ffffff;">🎯 Prüfungs-Quiz &amp; Rangliste</a>
+</nav>
+
+<nav id="nav-marketing" style="display:none;">
+    <a href="#mkt-1-2">1–2: Grundlagen &amp; Markt</a>
+    <a href="#mkt-3">3: Marktforschung &amp; DSGVO</a>
+    <a href="#mkt-4">4: Ziele &amp; Strategien</a>
+    <a href="#mkt-5">5: Marketingmix (4P / 7P)</a>
+    <a href="#mkt-digital-ki">Digital &amp; KI</a>
+    <a href="#mkt-quiz" style="background: linear-gradient(135deg,#8b5cf6,#6d28d9); color: #ffffff;">🎯 Marketing-Quiz &amp; Rangliste</a>
 </nav>
 
 <div class="container">
@@ -1523,29 +1532,382 @@
 </div><!-- Ende #panel-vwl -->
 
 <div id="panel-marketing" class="subject-panel">
-    <section>
-        <span class="block-badge">Fach: Marketing</span>
-        <h2>Marketing – Lernkompendium &amp; Prüfungsvorbereitung</h2>
-        <p>Dieser Bereich ist vorbereitet für deine Marketing-Unterlagen (Folien, Modelle, Grafiken &amp; eigenes Marketing-Quiz).</p>
-        <div class="grid-3">
+
+    <!-- ==================== MARKETING 1–2: GRUNDLAGEN & MARKTSYSTEM ==================== -->
+    <section id="mkt-1-2">
+        <span class="block-badge">Marketing 01 · Grundlagen &amp; Marktsystem</span>
+        <h2>Marketing-Prozess, Marktsystem, Marktgrössen, Budget &amp; Customer Journey</h2>
+
+        <div class="callout">
+            <strong>Definition Marketing:</strong> Alle Tätigkeiten eines Unternehmens, um ein <strong>Bedürfnis des Marktes</strong> herauszufinden, in ein passendes Produkt/DL umzuwandeln und mit <strong>Gewinn zu verkaufen</strong>. Prozess: <code>Bedarf ermitteln &rarr; Nutzen generieren &rarr; Mehrwert kommunizieren &rarr; Leistung absetzen</code> (Kunden gewinnen &amp; binden).
+        </div>
+
+        <div class="grid-2">
             <div class="card">
-                <h4>1. Marktforschung &amp; Zielgruppen</h4>
-                <p style="color:var(--text-muted); font-size:0.9rem;">Platzhalter für Primär-/Sekundärforschung, Segmentierung, Buyer Personas und Kaufverhalten.</p>
+                <h4>Entwicklung &amp; Marktformen</h4>
+                <ul>
+                    <li><strong>1900–1950:</strong> Produktions-/Verkaufsorientierung (<em>Verkäufermarkt</em>: Nachfrage &gt; Angebot).</li>
+                    <li><strong>1950–1980:</strong> Marken-/Beziehungsorientierung (<em>Käufermarkt</em>: Angebot &gt; Nachfrage).</li>
+                    <li><strong>2000–2015:</strong> Digitales &amp; Social Media Marketing.</li>
+                    <li><strong>2015–2030:</strong> KI-, Daten- &amp; Purpose-getriebenes Marketing (Personalisierung, Automatisierung).</li>
+                    <li><strong>Marktformen:</strong> <em>Monopol</em> (1 Anbieter, z.B. Post/Wasserwerk), <em>Oligopol</em> (4–5 Anbieter, z.B. Telekom), <em>Polypol</em> (viele Anbieter, starker Wettbewerb).</li>
+                </ul>
             </div>
             <div class="card">
-                <h4>2. Marketing-Mix (4 Ps / 7 Ps)</h4>
-                <p style="color:var(--text-muted); font-size:0.9rem;">Platzhalter für Product, Price, Place, Promotion sowie Dienstleistungsmarketing.</p>
-            </div>
-            <div class="card">
-                <h4>3. Markenführung &amp; Digital Marketing</h4>
-                <p style="color:var(--text-muted); font-size:0.9rem;">Platzhalter für Positionierung, Kampagnen, Kennzahlen (KPIs) &amp; Marketing-Quiz.</p>
+                <h4>Marktsystem: Konsumgüter vs. Dienstleistungen</h4>
+                <ul>
+                    <li><strong>Konsumgüter:</strong> Unternehmen &amp; Konkurrenz &rarr; <em>Zwischenhandel</em> &rarr; Endkunden; beeinflusst durch <em>externe Beeinflusser</em> (z.B. Zahnarzt, Fachzeitschrift) &amp; <em>interne Beeinflusser</em> (Familie, Sekretärin).</li>
+                    <li><strong>Personalintensive Dienstleistungen:</strong> <em>Externes Marketing</em> (Unternehmen &rarr; Kunde), <em>Internes Marketing</em> (Unternehmen &rarr; Mitarbeitende) &amp; <em>Interaktives Marketing</em> (Mitarbeitende &harr; Kunde).</li>
+                    <li><strong>Umfeld:</strong> Politik, Wirtschaft, Gesellschaft, Technologie, Ökologie, Recht.</li>
+                </ul>
             </div>
         </div>
-        <div class="callout">
-            <strong>Bereit für deinen Stoff:</strong> Sobald du mir die Marketing-Folien oder Zusammenfassungen schickst, baue ich hier die ausführliche Übersicht inkl. SVG-Grafiken und passendem Quiz ein.
+
+        <h3>5 Marktgrössen (Beispiel Rasierer) &amp; Budgetierung</h3>
+        <div class="graphic-container">
+            <svg width="800" height="225" viewBox="0 0 800 225">
+                <!-- 5 Marktgrössen -->
+                <g transform="translate(10,10)">
+                    <text x="190" y="14" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">5 Marktgrössen (Bsp. Rasierer CH)</text>
+                    <rect x="10" y="28" width="350" height="24" rx="4" fill="#cbd5e1"/><text x="18" y="44" font-size="10.5" font-weight="bold">1. Marktkapazität: 3.8 Mio. (theor. Max.)</text>
+                    <rect x="10" y="58" width="245" height="24" rx="4" fill="#94a3b8"/><text x="18" y="74" font-size="10.5" font-weight="bold" fill="#fff">2. Marktpotenzial: 2.4 Mio. (realistisch)</text>
+                    <rect x="10" y="88" width="185" height="24" rx="4" fill="#5b2c6f"/><text x="18" y="104" font-size="10.5" font-weight="bold" fill="#fff">3. Marktvolumen: 1.8 Mio. (tatsächlich)</text>
+                    <rect x="10" y="124" width="140" height="28" rx="6" fill="#d1fae5" stroke="#16a34a"/><text x="80" y="142" text-anchor="middle" font-size="10" font-weight="bold" fill="#166534">4. Marktanteil = 15%</text>
+                    <rect x="165" y="124" width="195" height="28" rx="6" fill="#e8daef" stroke="#5b2c6f"/><text x="262" y="142" text-anchor="middle" font-size="10" font-weight="bold">5. Sättigungsgrad = 75%</text>
+                    <text x="10" y="174" font-size="10">Marktanteil = (Eigener Absatz &divide; Marktvolumen) &times; 100</text>
+                    <text x="10" y="192" font-size="10">Sättigungsgrad = (Marktvolumen &divide; Marktpotenzial) &times; 100</text>
+                </g>
+                <!-- Budgetierung & Marketingkonzept -->
+                <g transform="translate(405,10)">
+                    <text x="185" y="14" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">Budgetierung: Top-down vs. Bottom-up</text>
+                    <rect x="10" y="32" width="165" height="158" rx="8" fill="#f1f5f9" stroke="#475569"/>
+                    <text x="92" y="52" text-anchor="middle" font-size="11" font-weight="bold">Top-down</text>
+                    <text x="92" y="72" text-anchor="middle" font-size="9.5">Gesamtbudget (200k)</text>
+                    <text x="92" y="88" text-anchor="middle" font-size="12">&darr;</text>
+                    <text x="92" y="106" text-anchor="middle" font-size="9.5">auf Instrumente verteilen</text>
+                    <text x="92" y="124" text-anchor="middle" font-size="9">(Werbung 80k, VF 40k,</text>
+                    <text x="92" y="138" text-anchor="middle" font-size="9">Verkauf 50k, Rest 30k)</text>
+
+                    <rect x="195" y="32" width="175" height="158" rx="8" fill="#efe6f2" stroke="#5b2c6f"/>
+                    <text x="282" y="52" text-anchor="middle" font-size="11" font-weight="bold">Bottom-up</text>
+                    <text x="282" y="72" text-anchor="middle" font-size="9.5">Massnahmenkosten</text>
+                    <text x="282" y="88" text-anchor="middle" font-size="9.5">einzeln planen &amp; addieren</text>
+                    <text x="282" y="106" text-anchor="middle" font-size="12">&darr;</text>
+                    <text x="282" y="126" text-anchor="middle" font-size="9.5" font-weight="bold">ergibt Gesamtbudget</text>
+                    <text x="282" y="142" text-anchor="middle" font-size="9.5">(200'000 CHF)</text>
+                </g>
+            </svg>
+            <div class="graphic-caption">
+                <strong>6 Schritte Marketing-Konzept:</strong> 1. Analyse (SWOT) &rarr; 2. Ziele &rarr; 3. Strategie &rarr; 4. Umsetzung (Massnahmenplan) &rarr; 5. Budget (Kombination Top-down &amp; Bottom-up) &rarr; 6. Kontrolle.
+            </div>
+        </div>
+
+        <h3>Customer Journey (Touchpoints) vs. Customer Experience</h3>
+        <div class="graphic-container">
+            <svg width="780" height="140" viewBox="0 0 780 140">
+                <polygon points="10,45 140,45 160,70 140,95 10,95" fill="#e8daef" stroke="#5b2c6f"/><text x="78" y="67" text-anchor="middle" font-size="10.5" font-weight="bold">1. Awareness</text><text x="78" y="82" text-anchor="middle" font-size="9">(Anzeige/Empfehlung)</text>
+                <polygon points="155,45 290,45 310,70 290,95 155,95 175,70" fill="#d2b4de" stroke="#5b2c6f"/><text x="235" y="67" text-anchor="middle" font-size="10.5" font-weight="bold">2. Consideration</text><text x="235" y="82" text-anchor="middle" font-size="9">(Google/Reviews)</text>
+                <polygon points="305,45 440,45 460,70 440,95 305,95 325,70" fill="#bbf7d0" stroke="#16a34a"/><text x="385" y="67" text-anchor="middle" font-size="10.5" font-weight="bold">3. Purchase</text><text x="385" y="82" text-anchor="middle" font-size="9">(Shop/Angebot)</text>
+                <polygon points="455,45 595,45 615,70 595,95 455,95 475,70" fill="#dbeafe" stroke="#2563eb"/><text x="538" y="67" text-anchor="middle" font-size="10.5" font-weight="bold">4. Service/Retention</text><text x="538" y="82" text-anchor="middle" font-size="9">(Portal/Umfrage)</text>
+                <polygon points="610,45 755,45 775,70 755,95 610,95 630,70" fill="#8e5b8e" stroke="#2c1638"/><text x="692" y="67" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#fff">5. Loyalty/Advocacy</text><text x="692" y="82" text-anchor="middle" font-size="9" fill="#f3e8ff">(Stammkunde)</text>
+                <text x="390" y="22" text-anchor="middle" font-weight="bold" font-size="12" fill="#5b2c6f">Paradigmenwechsel: Früher Anbieter &rarr; Produkt &rarr; Kauf | Heute: Produkt &rarr; Anbieter &rarr; Kauf</text>
+                <text x="390" y="125" text-anchor="middle" font-size="10.5">Customer Journey = alle Touchpoints der Reise | Customer Experience = das Erlebnis dabei (Website, Kauf, Support)</text>
+            </svg>
         </div>
     </section>
-</div>
+
+    <!-- ==================== MARKETING 2: MARKTFORSCHUNG & DSGVO ==================== -->
+    <section id="mkt-3">
+        <span class="block-badge">Marketing 02 · Kapitel 3: Marktforschung &amp; DSGVO</span>
+        <h2>Erhebungsmethoden, Stichproben, Fragearten &amp; Datenschutz</h2>
+
+        <div class="grid-2">
+            <div class="card">
+                <h4>Grundgesamtheit, Stichprobe &amp; Auswahlverfahren</h4>
+                <ul>
+                    <li><strong>Grundgesamtheit (Universum):</strong> Alle Personen/Organisationen, die Infos liefern können.</li>
+                    <li><strong>Vollerhebung vs. Teilerhebung:</strong> Vollerhebung = alle (exakt, teuer, nur bei sehr kleiner Zahl wie 15 Grosskunden). Teilerhebung = <strong>Stichprobe</strong> (Normalfall, Ziel: <em>Repräsentativität</em>, Risiko: Stichprobenfehler).</li>
+                    <li><strong>Quota-Verfahren (bewusst):</strong> Stichprobe bildet Grundgesamtheit nach 3–4 Kriterien (Geschlecht, Alter, Zivilstand) exakt „im Kleinen“ ab.</li>
+                    <li><strong>Random-Verfahren (Zufall):</strong> Jedes Element hat die gleiche Chance (Voraussetzung: vollständige Liste/Kundendatei).</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Sekundär- vs. Primärforschung &amp; Spezielle Methoden</h4>
+                <ul>
+                    <li><strong>Sekundärforschung (Desk Research):</strong> Vorhandene Daten (intern: CRM, Deckungsbeiträge, Reklamationen; extern: BFS, SECO, Statista, WEMF). Günstig &amp; schnell, aber oft grob/veraltet.</li>
+                    <li><strong>Primärforschung (Field Research):</strong> <em>Qualitativ</em> (Warum? Tiefe statt Repräsentativität: Einzelexploration, Gruppendiskussion 6–10 Pers.) vs. <em>Quantitativ</em> (Wie viel? Persönlich, telefonisch, schriftlich, online).</li>
+                    <li><strong>Beobachtung:</strong> Erfasst reales Verhalten (manuell/apparativ z.B. Eye Tracker; Labor/Feld), aber Gründe bleiben verborgen (Bsp. Coop).</li>
+                    <li><strong>Test/Experiment:</strong> Ursache-Wirkung; <strong>Pretest</strong> (vor Lancierung, z.B. Nespresso-Spot) vs. <strong>Posttest</strong> (nach Lancierung).</li>
+                    <li><strong>Spezielle Methoden:</strong> <em>Omnibus</em> (Mehrthemen, geteilte Kosten), <em>Panel</em> (gleiche Stichprobe regelmässig), <em>Markttest</em>, <em>Mystery Research</em> (Scheinkunden).</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Fragebogen-Entwicklung, 6 Fragearten &amp; DSGVO</h3>
+        <div class="grid-2">
+            <div class="card">
+                <h4>Programmfragen &rarr; Testfragen &amp; 6 Fragearten</h4>
+                <ul>
+                    <li><strong>2 Schritte:</strong> 1. <em>Programmfragen</em> (Auftraggeber an Agentur: Informationslücke) &rarr; 2. <em>Testfragen</em> (Agentur an Stichprobe).</li>
+                    <li><strong>6 Fragearten:</strong> (a) <em>Offen</em> (frei, z.B. Weshalb?), (b) <em>Geschlossen</em> (Ja/Nein, Mehrfach), (c) <em>Halboffen</em> (Interviewer kreuzt Liste an), (d) <em>Skalafrage</em> (ideal ohne Mitte), (e) <em>Direkt</em> (Fakten), (f) <em>Indirekt</em> (heikle Themen über Umwege).</li>
+                    <li><strong>Strukturierung:</strong> Vollstrukturiert (nur geschlossen), Teilstrukturiert (halboffen+geschlossen), Nicht strukturiert / <em>Leitfaden</em> (qualitativ, offen).</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Datenschutz (DSGVO) – 5 Grundprinzipien</h4>
+                <ol>
+                    <li><strong>Rechtmässigkeit, Transparenz, Zweckbindung</strong> (freiwillige, widerrufbare Einwilligung)</li>
+                    <li><strong>Datenminimierung</strong> (nur Nötigstes erheben)</li>
+                    <li><strong>Richtigkeit &amp; Aktualität</strong></li>
+                    <li><strong>Speicherbegrenzung</strong> (nicht länger als nötig)</li>
+                    <li><strong>Integrität &amp; Vertraulichkeit</strong> (Anonymisieren/Pseudonymisieren, Auftragsverarbeitungsvertrag, Recht auf Vergessenwerden, Rechenschaftspflicht).</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MARKETING 3: ZIELE, SEGMENTIERUNG & STRATEGIEN ==================== -->
+    <section id="mkt-4">
+        <span class="block-badge">Marketing 02 · Kapitel 4: Ziele, Zielgruppen &amp; Strategien</span>
+        <h2>Zielpyramide, 6-W &amp; SMART, Segmentierung, CI/Image &amp; Positionierung</h2>
+
+        <div class="graphic-container">
+            <svg width="780" height="220" viewBox="0 0 780 220">
+                <!-- Zielpyramide -->
+                <g transform="translate(15,10)">
+                    <text x="165" y="14" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">Zielpyramide (4 Ebenen)</text>
+                    <polygon points="165,28 215,72 115,72" fill="#efe6f2" stroke="#5b2c6f"/><text x="165" y="62" text-anchor="middle" font-size="9.5" font-weight="bold">Unternehmensziele (&ge;5 J.)</text>
+                    <polygon points="115,72 215,72 250,112 80,112" fill="#d2b4de" stroke="#5b2c6f"/><text x="165" y="96" text-anchor="middle" font-size="10" font-weight="bold">Strategische Ziele (3–5 Jahre)</text>
+                    <polygon points="80,112 250,112 285,152 45,152" fill="#b392b5" stroke="#5b2c6f"/><text x="165" y="136" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Operative Ziele (1–3 Jahre)</text>
+                    <polygon points="45,152 285,152 320,192 10,192" fill="#5b2c6f" stroke="#2c1638"/><text x="165" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Taktische Ziele (&le; 1 Jahr)</text>
+                </g>
+                <!-- Zielbeziehungen -->
+                <g transform="translate(385,10)">
+                    <text x="190" y="14" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">Zielbeziehungen im Marketing</text>
+                    <rect x="0" y="28" width="380" height="50" rx="8" fill="#fef2f2" stroke="#dc2626"/>
+                    <text x="12" y="47" font-weight="bold" font-size="11" fill="#991b1b">Zielkonflikt (wichtigste Beziehung!)</text>
+                    <text x="12" y="65" font-size="10">Verhindern sich: Bekanntheit erhöhen &harr; Kosten senken | Marktanteil &harr; Preis rauf</text>
+                    <rect x="0" y="86" width="380" height="50" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+                    <text x="12" y="105" font-weight="bold" font-size="11" fill="#166534">Zielkongruenz</text>
+                    <text x="12" y="123" font-size="10">Verstärken sich: Mitarbeiterzufriedenheit &harr; Kundenzufriedenheit</text>
+                    <rect x="0" y="144" width="380" height="50" rx="8" fill="#f1f5f9" stroke="#64748b"/>
+                    <text x="12" y="163" font-weight="bold" font-size="11" fill="#334155">Zielindifferenz</text>
+                    <text x="12" y="181" font-size="10">Tangieren sich nicht: Distributionsgrad USA &harr; Reklamation Italien</text>
+                </g>
+            </svg>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h4>Qualitative vs. Quantitative Ziele, SMART &amp; 6 W's</h4>
+                <ul>
+                    <li><strong>Qualitativ (vorökonomisch – zuerst erreichen!):</strong> Bekanntheit, Image, Wissen, Einstellungen, Verhalten. Erst danach folgen <strong>Quantitative (ökonomisch):</strong> Umsatz, Absatz, Deckungsbeitrag, Gewinn, Distributionsgrad.</li>
+                    <li><strong>SMART-Formel:</strong> <strong>S</strong>pecific (konkret), <strong>M</strong>easurable (messbar), <strong>A</strong>chievable (erreichbar), <strong>R</strong>esult-oriented (ergebnisorientiert: Was, nicht Wie), <strong>T</strong>ime-related (termingebunden).</li>
+                    <li><strong>6 W-Fragen:</strong> <em>Was?</em> (Zielinhalt), <em>Wie viel?</em> (Wert), <em>Wann?</em> (Periode), <em>Wo?</em> (Markt), <em>Wer?</em> (Verantwortlich), <em>Wem?</em> (Zielgruppe/Segment).</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Segmentierung (B2C / B2B) &amp; Persona</h4>
+                <ul>
+                    <li><strong>Segment:</strong> In sich <em>homogen</em> (gleichartig), nach aussen <em>heterogen</em> (andersartig).</li>
+                    <li><strong>B2C-Kriterien:</strong> Geografisch, Demografisch (allein unzureichend! Bsp. King Charles vs. Ozzy Osbourne), Psychografisch (Lebensstil), Verhaltensbezogen.</li>
+                    <li><strong>Persona:</strong> Fiktive Person (z.B. Sandra Koblet) mit Zitat, Haltung, <strong>Pains</strong> (Probleme) &amp; <strong>Gains</strong> (Ziele/Motivation).</li>
+                    <li><strong>B2B:</strong> Demografisch, Operativ, Beschaffungsorientiert, Kaufsituation, Personenbedingt; Kaufentscheid oft im <strong>Buying Center</strong>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Corporate Identity vs. Image, USP/UAP &amp; Positionierungskreuz</h3>
+        <div class="graphic-container">
+            <svg width="780" height="225" viewBox="0 0 780 225">
+                <!-- CI vs Image -->
+                <g transform="translate(15,10)">
+                    <text x="165" y="14" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">Corporate Identity (Eigenbild) &harr; Image</text>
+                    <circle cx="120" cy="115" r="80" fill="#e8daef" stroke="#5b2c6f"/>
+                    <circle cx="120" cy="115" r="32" fill="#5b2c6f"/><text x="120" y="112" text-anchor="middle" fill="#fff" font-size="9.5" font-weight="bold">Corporate</text><text x="120" y="124" text-anchor="middle" fill="#fff" font-size="9.5" font-weight="bold">Identity</text>
+                    <text x="120" y="54" text-anchor="middle" font-size="9.5" font-weight="bold">Design</text>
+                    <text x="120" y="182" text-anchor="middle" font-size="9.5" font-weight="bold">Communication</text>
+                    <text x="64" y="118" text-anchor="middle" font-size="9" font-weight="bold">Behaviour</text>
+                    <text x="176" y="118" text-anchor="middle" font-size="9" font-weight="bold">Culture</text>
+                    <line x1="205" y1="115" x2="245" y2="115" stroke="#1f2937" stroke-width="2"/>
+                    <circle cx="295" cy="115" r="46" fill="#94a3b8" stroke="#1f2937"/><text x="295" y="110" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">Corporate</text><text x="295" y="124" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">Image</text>
+                    <text x="295" y="176" text-anchor="middle" font-size="9.5" font-weight="bold">Fremdbild (Ziel: deckungsgleich!)</text>
+                </g>
+                <!-- Positionierungskreuz -->
+                <g transform="translate(415,10)">
+                    <text x="175" y="14" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">Positionierungskreuz (Bsp. Möbelhäuser)</text>
+                    <line x1="35" y1="115" x2="315" y2="115" stroke="#1f2937" stroke-width="1.8"/>
+                    <line x1="175" y1="28" x2="175" y2="202" stroke="#1f2937" stroke-width="1.8"/>
+                    <text x="175" y="25" text-anchor="middle" font-size="9.5" font-weight="bold">Individualität</text>
+                    <text x="175" y="214" text-anchor="middle" font-size="9.5" font-weight="bold">Alltagsmöbel</text>
+                    <text x="5" y="112" font-size="9" font-weight="bold">Preiswürdigkeit</text>
+                    <text x="275" y="112" font-size="9" font-weight="bold">Exklusivität</text>
+                    <circle cx="75" cy="168" r="14" fill="#cbd5e1" stroke="#475569"/><text x="75" y="172" text-anchor="middle" font-size="8.5" font-weight="bold">LIPO</text>
+                    <circle cx="108" cy="158" r="15" fill="#cbd5e1" stroke="#475569"/><text x="108" y="162" text-anchor="middle" font-size="8.5" font-weight="bold">IKEA</text>
+                    <circle cx="145" cy="144" r="17" fill="#cbd5e1" stroke="#475569"/><text x="145" y="148" text-anchor="middle" font-size="8.5" font-weight="bold">Micasa</text>
+                    <circle cx="175" cy="115" r="16" fill="#cbd5e1" stroke="#475569"/><text x="175" y="119" text-anchor="middle" font-size="8" font-weight="bold">Mömax</text>
+                    <circle cx="240" cy="82" r="20" fill="#e8daef" stroke="#5b2c6f"/><text x="240" y="80" text-anchor="middle" font-size="8" font-weight="bold">Möbel</text><text x="240" y="90" text-anchor="middle" font-size="8" font-weight="bold">Hubacher</text>
+                    <circle cx="290" cy="52" r="8" fill="#5b2c6f"/><text x="278" y="40" text-anchor="middle" font-size="8.5" font-weight="bold">Wohnbauschreinerei</text>
+                </g>
+            </svg>
+            <div class="graphic-caption">
+                <strong>USP (Unique Selling Proposition):</strong> Objektiver Produktvorteil (z.B. Apple: intuitives Bedienkonzept). <strong>UAP (Unique Advertising Proposition):</strong> Subjektiver Werbevorteil/Claim (z.B. «Miele. Immer besser.»). <strong>Push vs. Pull:</strong> Push = Produkt über POS-Aktionen in den Markt drücken; Pull = Nachfragesog durch TV/Social Media erzeugen. <strong>Distribution:</strong> Direkt (Hersteller &rarr; Kunde) vs. Indirekt (exklusiv 1–2, selektiv 4–5, intensiv möglichst viele Händler).
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MARKETING 3: MARKETINGMIX 4P / 7P ==================== -->
+    <section id="mkt-5">
+        <span class="block-badge">Marketing 03 · Kapitel 5: Marketingmix (4P &amp; 7P)</span>
+        <h2>Outside-in, NPS, die 7 P, Produktlebenszyklus, Marken, Break-even &amp; AIDA</h2>
+
+        <div class="callout">
+            <strong>Outside-in &amp; Net Promoter Score (NPS):</strong> Statt <em>Inside-out</em> (Produkt entwickeln &rarr; verkaufen) steht heute <em>Outside-in</em> (Kundenbedürfnis zuerst) im Zentrum. Messung mit <strong>NPS</strong> (Frage 0–10): <code>NPS = % Promotoren (9–10) &minus; % Kritiker (0–6)</code> (Passive = 7–8; Bereich &minus;100 bis +100). <em>Merke:</em> <strong>Ein Marketingmix ist so stark wie sein schwächstes P!</strong> (Bsp. Luxusparfum «Élégance Cannes»: Top-Duft/Preis/Werbung, aber unfreundliche Verkäuferin = <em>People</em> zerstört Wirkung).
+        </div>
+
+        <div class="grid-3">
+            <div class="card">
+                <h4>Product (Produktpolitik)</h4>
+                <ul>
+                    <li>Innovation, Variation, Differenzierung, Eliminierung, Sortiment, Verpackung, Service.</li>
+                    <li><strong>Marken-Stufen:</strong> bekannt &rarr; vertraut &rarr; <strong>Love Brand</strong>.</li>
+                    <li><strong>Markenarten:</strong> <em>Herstellermarke</em> (Nivea, Swatch), <em>Handels-/Eigenmarke</em> (Fust, Naturaplan), <em>Einzelmarke</em> (Sprite), <em>Markenfamilie</em> (Nivea Sun), <em>Dachmarke</em> (Nestlé), <em>No-Name</em> (Prix Garantie).</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Price (Preis) &amp; Place (Vertrieb)</h4>
+                <ul>
+                    <li><strong>Price:</strong> Preisgestaltung, Skonto, Boni, Konditionen. <em>Verkaufsförderung</em> = temporär (Rabattcode/Flash-Sale), ändert langfristige Preispositionierung nicht!</li>
+                    <li><strong>Place:</strong> Überbrückt räumliche/zeitliche Distanz; Absatzkanalanalyse, Logistikkennzahlen (Lieferzeit, Lagerumschlag), Standortanalyse.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Promotion &amp; die +3 Service-P</h4>
+                <ul>
+                    <li><strong>Promotion:</strong> Werbung, PR, Messen/Events (Budget: Location, Catering, Programm, Komm. vorher/nachher + <strong>10% Reserve</strong>), Sponsoring (Hauptsponsor, Gold, Silber, Bronze).</li>
+                    <li><strong>People:</strong> Schulungen, Mystery Shopping, Befragungen.</li>
+                    <li><strong>Process:</strong> Customer Journey Mapping (Touchpoints vs. Schwachstellen), SLA.</li>
+                    <li><strong>Physical Evidence:</strong> Räume, Website, Designmanual/CI, Bewertungen.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="graphic-container">
+            <svg width="820" height="230" viewBox="0 0 820 230">
+                <!-- Break-even Spiegelschrank -->
+                <g transform="translate(10,10)">
+                    <text x="180" y="14" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">Break-even-Analyse (Bsp. Spiegelschrank)</text>
+                    <line x1="50" y1="185" x2="335" y2="185" stroke="#1f2937" stroke-width="2"/>
+                    <line x1="50" y1="185" x2="50" y2="30" stroke="#1f2937" stroke-width="2"/>
+                    <text x="12" y="40" font-size="9.5" font-weight="bold">CHF</text>
+                    <text x="310" y="202" font-size="9.5" font-weight="bold">Stück</text>
+                    <line x1="50" y1="145" x2="320" y2="145" stroke="#94a3b8" stroke-dasharray="4"/><text x="12" y="148" font-size="9">50'000 Fix</text>
+                    <line x1="50" y1="145" x2="320" y2="62" stroke="#b45309" stroke-width="2.5"/><text x="275" y="92" font-size="9.5" fill="#b45309" font-weight="bold">Gesamtkosten</text>
+                    <line x1="50" y1="185" x2="320" y2="36" stroke="#2563eb" stroke-width="2.5"/><text x="275" y="45" font-size="9.5" fill="#2563eb" font-weight="bold">Umsatz</text>
+                    <circle cx="185" cy="106" r="5" fill="#16a34a"/>
+                    <line x1="185" y1="106" x2="185" y2="185" stroke="#16a34a" stroke-dasharray="3"/>
+                    <text x="185" y="200" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#166534">500 Stk (BEP)</text>
+                    <text x="120" y="165" font-size="9" fill="#dc2626" font-weight="bold">Verlust</text>
+                    <text x="245" y="65" font-size="9" fill="#16a34a" font-weight="bold">Gewinn</text>
+                </g>
+                <!-- AIDA Trichter -->
+                <g transform="translate(415,10)">
+                    <text x="185" y="14" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">AIDA-Modell (Werbewirkung)</text>
+                    <polygon points="30,30 340,30 315,66 55,66" fill="#cbd5e1" stroke="#475569"/><text x="185" y="52" text-anchor="middle" font-size="11" font-weight="bold">A – Attention (Aufmerksamkeit: Google-Anzeige)</text>
+                    <polygon points="60,72 310,72 285,108 85,108" fill="#94a3b8" stroke="#475569"/><text x="185" y="94" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">I – Interest (Interesse: Website &amp; Varianten)</text>
+                    <polygon points="90,114 280,114 255,150 115,150" fill="#5b2c6f" stroke="#2c1638"/><text x="185" y="136" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">D – Desire (Verlangen: Konfigurator)</text>
+                    <polygon points="120,156 250,156 225,192 145,192" fill="#16a34a" stroke="#14532d"/><text x="185" y="178" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">A – Action (Kauf / Beratung)</text>
+                </g>
+            </svg>
+            <div class="graphic-caption">
+                <strong>Break-even-Formel:</strong> <code>Fixkosten &divide; (Preis &minus; variable Kosten pro Stück)</code> = <code>50'000 &divide; (250 &minus; 150) = 500 Stück</code>. <strong>Deckungsbeitrag pro Stück:</strong> <code>CHF 250 &minus; CHF 150 = CHF 100</code>.
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MARKETING DIGITAL & KI ==================== -->
+    <section id="mkt-digital-ki">
+        <span class="block-badge">Marketing 01–03 · Digital, Omnichannel &amp; KI-Praxisimpulse</span>
+        <h2>Omnichannel, Digital-Instrumente (SEO/SEA, Wireframe, Social) &amp; KI-Prompting</h2>
+
+        <div class="grid-3">
+            <div class="card">
+                <h4>Multi- &rarr; Omni- &rarr; No-Line-Handel</h4>
+                <ul>
+                    <li><strong>Multi-Channel:</strong> Filiale &amp; Webshop getrennt.</li>
+                    <li><strong>Omnichannel:</strong> Alle Kanäle vernetzt (Click &amp; Collect); Kunden geben Schnitt ~<strong>20% mehr</strong> aus.</li>
+                    <li><strong>No-Line-Handel:</strong> Trennung online/offline komplett aufgehoben.</li>
+                    <li><strong>E-Commerce:</strong> B2C, B2B, <strong>D2C</strong> (Direct-to-Consumer ohne Zwischenhändler).</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Website, SEM (SEO/SEA) &amp; Automation</h4>
+                <ul>
+                    <li><strong>Wireframe:</strong> Struktur- &amp; Seitenaufteilung vor dem Design.</li>
+                    <li><strong>SEM = SEA + SEO:</strong> <em>SEA</em> = bezahlte Anzeigen (CPC, sofort sichtbar); <em>SEO</em> = organische Treffer (nachhaltig, braucht Zeit).</li>
+                    <li><strong>E-Mail &amp; Automation:</strong> Stand-alone vs. Newsletter; triggerbasierte Erinnerungen (z.B. Optiker nach 2 Wochen).</li>
+                    <li><strong>Social Media:</strong> TikTok (18–24), Instagram (25–34), YouTube (25–44), Facebook/Pinterest (35–54), LinkedIn (25–54, B2B).</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>KI im Marketing &amp; Prompt-Formel</h4>
+                <ul>
+                    <li><strong>6 Prompt-Bausteine:</strong> 1. Aufgabe, 2. Kontext, 3. Zielgruppe, 4. Format, 5. Ton &amp; Stil, 6. Material/Beispiele.</li>
+                    <li><strong>Bild-Formel (7 Bausteine):</strong> Perspektive, Brennweite, Blende, Licht, Stimmung, Textur, Komposition (Zahlen/Texte selbst setzen!).</li>
+                    <li><strong>Risiken:</strong> Datenschutz, <strong>Bias</strong> (systematische Verzerrung), Halluzinationen/Fehler, Urheberrecht (Verantwortung bleibt beim Menschen).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MARKETING QUIZ ==================== -->
+    <section id="mkt-quiz">
+        <span class="block-badge">Prüfungstraining Marketing</span>
+        <h2>Interaktives Marketing-Quiz &amp; Rangliste</h2>
+        <p>Rotierende Prüfungsfragen inkl. Praxisbeispielen aus allen 3 Marketing-Präsentationen! Deine Punkte zählen direkt in die gemeinsame Rangliste.</p>
+
+        <div class="player-bar">
+            <div class="player-login">
+                <input type="text" id="mkt-player-name-input" class="player-input" placeholder="Dein Name (z.B. Jonas)" maxlength="24">
+                <button type="button" class="quiz-btn" style="padding:0.52rem 1.1rem; font-size:0.86rem;" onclick="loginPlayerFrom('mkt-player-name-input')">Anmelden / Wechseln</button>
+            </div>
+            <div class="player-stats-mini">
+                <span class="stat-pill" id="mkt-pill-player">Spieler: Gast</span>
+                <span class="stat-pill" id="mkt-pill-points">Punkte: 0</span>
+                <span class="stat-pill" id="mkt-pill-runs">Gelöste Quizze: 0</span>
+            </div>
+        </div>
+
+        <div class="quiz-progress-wrap" title="Beantwortete Fragen">
+            <div class="quiz-progress-fill" id="mkt-quiz-progress-fill"></div>
+        </div>
+
+        <div id="mkt-quiz-container"></div>
+
+        <div class="quiz-actions">
+            <button type="button" class="quiz-btn" onclick="checkMktQuiz()">Antworten prüfen &amp; Punkte sichern</button>
+            <button type="button" class="quiz-btn secondary" onclick="resetMktQuiz()">Neue Fragen / Nächste Runde</button>
+        </div>
+
+        <div id="mkt-motivation-banner" class="motivation-banner"></div>
+
+        <div class="leaderboard-box">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.8rem;">
+                <h3 style="margin:0;">🏆 Gemeinsame Rangliste (VWL/BWL &amp; Marketing)</h3>
+                <button type="button" class="quiz-btn secondary" style="padding:0.35rem 0.85rem; font-size:0.78rem;" onclick="clearLeaderboard()">Rangliste zurücksetzen</button>
+            </div>
+            <div class="table-wrap" style="margin:0;">
+                <table>
+                    <thead>
+                        <tr><th>Platz</th><th>Name</th><th>Gesamtpunkte</th><th>Gelöste Quizze</th><th>Bestwert</th><th>Ø-Quote</th></tr>
+                    </thead>
+                    <tbody id="mkt-leaderboard-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+</div><!-- Ende #panel-marketing -->
 
 <div id="panel-rechnungswesen" class="subject-panel">
     <section>
@@ -2437,25 +2799,50 @@ function updatePlayerUI() {
     document.getElementById('pill-player').textContent = `Spieler: ${currentPlayer}`;
     document.getElementById('pill-points').textContent = `Punkte: ${p.points}`;
     document.getElementById('pill-runs').textContent = `Gelöste Quizze: ${p.runs}`;
+    const mp = document.getElementById('mkt-pill-player');
+    if (mp) {
+        mp.textContent = `Spieler: ${currentPlayer}`;
+        document.getElementById('mkt-pill-points').textContent = `Punkte: ${p.points}`;
+        document.getElementById('mkt-pill-runs').textContent = `Gelöste Quizze: ${p.runs}`;
+    }
     document.getElementById('hero-player-count').textContent = Object.keys(players).length;
+}
+
+function loginPlayerFrom(inputId) {
+    const inp = document.getElementById(inputId);
+    const name = inp.value.trim();
+    if (!name) return;
+    currentPlayer = name;
+    localStorage.setItem(STORAGE_CURRENT, currentPlayer);
+    const players = getPlayers();
+    if (!players[currentPlayer]) {
+        players[currentPlayer] = { points: 0, runs: 0, best: 0, totalPossible: 0 };
+        savePlayers(players);
+    }
+    inp.value = '';
+    updatePlayerUI();
+    renderLeaderboard();
 }
 
 function renderLeaderboard() {
     const players = getPlayers();
     const sorted = Object.entries(players).sort((a, b) => b[1].points - a[1].points || b[1].best - a[1].best);
-    const tbody = document.getElementById('leaderboard-body');
-    tbody.innerHTML = '';
-    if (sorted.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; color:var(--text-muted);">Noch keine Einträge – melde dich oben an und löse deine erste Runde!</td></tr>';
-        return;
-    }
-    sorted.forEach(([name, st], idx) => {
-        const tr = document.createElement('tr');
-        if (name === currentPlayer) tr.className = 'leaderboard-row-me';
-        const medal = idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : `${idx + 1}.`;
-        const avg = st.totalPossible ? Math.round((st.points / st.totalPossible) * 100) : 0;
-        tr.innerHTML = `<td>${medal}</td><td>${name}</td><td><strong>${st.points}</strong></td><td>${st.runs}</td><td>${st.best} / 12</td><td>${avg}%</td>`;
-        tbody.appendChild(tr);
+    ['leaderboard-body', 'mkt-leaderboard-body'].forEach(bodyId => {
+        const tbody = document.getElementById(bodyId);
+        if (!tbody) return;
+        tbody.innerHTML = '';
+        if (sorted.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; color:var(--text-muted);">Noch keine Einträge – melde dich oben an und löse deine erste Runde!</td></tr>';
+            return;
+        }
+        sorted.forEach(([name, st], idx) => {
+            const tr = document.createElement('tr');
+            if (name === currentPlayer) tr.className = 'leaderboard-row-me';
+            const medal = idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : `${idx + 1}.`;
+            const avg = st.totalPossible ? Math.round((st.points / st.totalPossible) * 100) : 0;
+            tr.innerHTML = `<td>${medal}</td><td>${name}</td><td><strong>${st.points}</strong></td><td>${st.runs}</td><td>${st.best} / 12</td><td>${avg}%</td>`;
+            tbody.appendChild(tr);
+        });
     });
 }
 
@@ -2515,9 +2902,542 @@ function switchSubject(subject) {
     if (tab) tab.classList.add('active');
     if (panel) panel.classList.add('active');
     const navVwl = document.getElementById('nav-vwl');
+    const navMkt = document.getElementById('nav-marketing');
     if (navVwl) navVwl.style.display = subject === 'vwl' ? 'flex' : 'none';
+    if (navMkt) navMkt.style.display = subject === 'marketing' ? 'flex' : 'none';
     updateStickyScrollBar();
 }
+
+// ==================== MARKETING QUIZ (24 FRAGEN POOL) ====================
+const mktQuestionBank = [
+    {
+        id: 'msc1', type: 'single',
+        question: 'Praxisbeispiel (MX-Küchen AG): 50 % der Kunden sind Promotoren (9–10), 30 % Passive (7–8) und 20 % Kritiker (0–6). Wie hoch ist der Net Promoter Score (NPS)?',
+        options: [
+            { text: '+30 (50 % Promotoren minus 20 % Kritiker)', ok: true },
+            { text: '+50 (nur Promotoren zählen)', ok: false },
+            { text: '+80 (Promotoren plus Passive)', ok: false },
+            { text: '+10 (Promotoren minus Passive)', ok: false }
+        ],
+        explanation: 'NPS = % Promotoren − % Kritiker. Passive (7–8) fliessen nicht direkt in die Differenz ein: 50 − 20 = +30.'
+    },
+    {
+        id: 'msc2', type: 'single',
+        question: 'Praxisbeispiel (Élégance Cannes): Top-Parfum, Luxuspreis CHF 280, edle Verpackung, gute Parfümerien – aber eine unfreundliche Verkäuferin berät nicht. Welches P schwächt den ganzen Mix?',
+        options: [
+            { text: 'People (Personalpolitik)', ok: true },
+            { text: 'Physical Evidence (Ausstattungspolitik)', ok: false },
+            { text: 'Process (Prozesspolitik)', ok: false },
+            { text: 'Place (Distributionspolitik)', ok: false }
+        ],
+        explanation: 'Ein Marketingmix ist nur so stark wie sein schwächstes P – hier versagt People (Kundenkontakt).'
+    },
+    {
+        id: 'msc3', type: 'single',
+        question: 'Praxisbeispiel (Velohelme): Alle Marken verkaufen 800\'000 Helme/Jahr, realistisch wären 1 Mio. möglich, theoretisch 4 Mio., deine Marke verkauft 160\'000. Wie hoch ist dein Marktanteil?',
+        options: [
+            { text: '20 % (160\'000 ÷ 800\'000 × 100)', ok: true },
+            { text: '16 % (160\'000 ÷ 1\'000\'000 × 100)', ok: false },
+            { text: '80 % (800\'000 ÷ 1\'000\'000 × 100)', ok: false },
+            { text: '4 % (160\'000 ÷ 4\'000\'000 × 100)', ok: false }
+        ],
+        explanation: 'Marktanteil = Eigener Absatz ÷ Marktvolumen × 100 = 160\'000 ÷ 800\'000 × 100 = 20 %.'
+    },
+    {
+        id: 'msc4', type: 'single',
+        question: 'Praxisbeispiel (Keller Spiegelschränke): Fixkosten CHF 50\'000, Verkaufspreis CHF 250, variable Kosten CHF 150. Ab welcher Stückzahl ist der Break-even erreicht?',
+        options: [
+            { text: '500 Stück', ok: true },
+            { text: '200 Stück', ok: false },
+            { text: '333 Stück', ok: false },
+            { text: '1\'000 Stück', ok: false }
+        ],
+        explanation: 'Break-even = Fixkosten ÷ (Preis − var. Kosten) = 50\'000 ÷ (250 − 150) = 500 Stück.'
+    },
+    {
+        id: 'msc5', type: 'single',
+        question: 'Was unterscheidet einen Pretest von einem Posttest in der Marktforschung (Bsp. Nespresso)?',
+        options: [
+            { text: 'Der Pretest prüft vor der Lancierung (noch änderbar); der Posttest misst nach der Lancierung den Erfolg', ok: true },
+            { text: 'Der Pretest ist immer telefonisch, der Posttest immer persönlich', ok: false },
+            { text: 'Der Posttest findet vor dem Produktlaunch statt', ok: false },
+            { text: 'Es gibt keinen Unterschied', ok: false }
+        ],
+        explanation: 'Pretest = Wirkungskontrolle vor Lancierung; Posttest = Erfolgskontrolle nach Lancierung.'
+    },
+    {
+        id: 'msc6', type: 'single',
+        question: 'Praxisbeispiel (Markenarten): «Prix Garantie» bei Coop steht für schlichte Verpackung, keine Werbung und günstigen Preis. Welche Markenart ist das?',
+        options: [
+            { text: 'No-Name-Produkt', ok: true },
+            { text: 'Herstellermarke', ok: false },
+            { text: 'Dachmarke', ok: false },
+            { text: 'Markenfamilie', ok: false }
+        ],
+        explanation: 'Prix Garantie ist ein klassisches No-Name-Produkt (günstiger Preis, ohne klassischen Markenauftritt).'
+    },
+    {
+        id: 'msc7', type: 'single',
+        question: 'Warum reicht es oft nicht, nur nach demografischen Kriterien zu segmentieren (Bsp. King Charles vs. Ozzy Osbourne)?',
+        options: [
+            { text: 'Gleiche Demografie (Alter, Land, Einkommen) bedeutet noch lange nicht denselben Lebensstil oder Kaufverhalten', ok: true },
+            { text: 'Demografische Daten sind nach DSGVO komplett verboten', ok: false },
+            { text: 'Demografische Kriterien gelten nur im B2B-Bereich', ok: false },
+            { text: 'Psychografische Daten sind immer günstiger als demografische', ok: false }
+        ],
+        explanation: 'Beide sind 1948 in England geboren, wohlhabend und Hundeliebhaber – haben aber völlig unterschiedliche Lebensstile (Psychografie).'
+    },
+    {
+        id: 'msc8', type: 'single',
+        question: 'Was unterscheidet Verkaufsförderung (z.B. Wochenend-Rabattcode) von Preispolitik?',
+        options: [
+            { text: 'Verkaufsförderung setzt temporäre Anreize zur Kommunikation; Preispolitik legt das langfristige Preisniveau fest', ok: true },
+            { text: 'Verkaufsförderung erhöht dauerhaft den Listenpreis', ok: false },
+            { text: 'Preispolitik darf nur im B2B eingesetzt werden', ok: false },
+            { text: 'Beide Begriffe bedeuten exakt dasselbe', ok: false }
+        ],
+        explanation: 'Ein Rabattcode verändert die grundsätzliche Preispositionierung nicht – er beschleunigt nur kurzfristig den Kauf.'
+    },
+    {
+        id: 'msc9', type: 'single',
+        question: 'Praxisbeispiel (Optiker): Ein Newsletter geht an Vorjahreskunden; wer ihn innert 2 Wochen nicht öffnet, erhält automatisch eine Erinnerung. Welches Instrument ist das?',
+        options: [
+            { text: 'Marketing-Automatisierung (triggerbasierte Kommunikation)', ok: true },
+            { text: 'Omnibus-Befragung', ok: false },
+            { text: 'Mystery Shopping', ok: false },
+            { text: 'Top-down-Budgetierung', ok: false }
+        ],
+        explanation: 'Marketing-Automation nutzt Trigger-Regeln entlang der Customer Journey ohne manuellen Zusatzaufwand.'
+    },
+    {
+        id: 'msc10', type: 'single',
+        question: 'Was bedeutet «Bias» beim Einsatz von KI im Marketing?',
+        options: [
+            { text: 'Eine systematische Verzerrung, bei der bestimmte Gruppen benachteiligt werden', ok: true },
+            { text: 'Ein kostenloses Branding durch Google Ads', ok: false },
+            { text: 'Die optimale Kombination der 7 P', ok: false },
+            { text: 'Die Anonymisierung von Umfragedaten nach DSGVO', ok: false }
+        ],
+        explanation: 'Bias bezeichnet systematische Verzerrungen in KI-Modellen (z.B. bei Zielgruppenwerbung oder Bildgenerierung).'
+    },
+    // --- MULTIPLE CHOICE (8) ---
+    {
+        id: 'mmc1', type: 'multi',
+        question: 'Welche drei zusätzlichen P erweitern das 4P-Modell bei Dienstleistungen zum 7P-Modell?',
+        options: [
+            { text: 'People (Personalpolitik)', ok: true },
+            { text: 'Process (Prozesspolitik)', ok: true },
+            { text: 'Physical Evidence (Ausstattungspolitik)', ok: true },
+            { text: 'Profit (Gewinnpolitik)', ok: false },
+            { text: 'Publicity (Pressepolitik)', ok: false }
+        ],
+        explanation: 'Die 3 Service-P sind People, Process und Physical Evidence.'
+    },
+    {
+        id: 'mmc2', type: 'multi',
+        question: 'Welche der 5 Grundprinzipien gehören zur DSGVO in der Marktforschung?',
+        options: [
+            { text: 'Rechtmässigkeit, Transparenz & Zweckbindung', ok: true },
+            { text: 'Datenminimierung & Speicherbegrenzung', ok: true },
+            { text: 'Richtigkeit, Aktualität, Integrität & Vertraulichkeit', ok: true },
+            { text: 'Möglichst alle privaten Kundendaten unbegrenzt ohne Einwilligung speichern', ok: false }
+        ],
+        explanation: 'Die 5 DSGVO-Prinzipien: Rechtmässigkeit/Transparenz/Zweckbindung, Datenminimierung, Richtigkeit/Aktualität, Speicherbegrenzung, Integrität/Vertraulichkeit.'
+    },
+    {
+        id: 'mmc3', type: 'multi',
+        question: 'Praxisbeispiel (Coop Beobachtung): Welche Aussagen zu Vor- und Nachteilen einer Beobachtung treffen zu?',
+        options: [
+            { text: 'Vorteil: Erfasst das reale Verhalten objektiv (z.B. Laufwege per Kamera/Eye Tracker)', ok: true },
+            { text: 'Nachteil: Die Gründe/Motive des Konsumverhaltens bleiben verborgen', ok: true },
+            { text: 'Nachteil: Die beobachteten Personen bleiben meist anonym', ok: true },
+            { text: 'Vorteil: Beantwortet direkt alle «Warum?»-Fragen ohne Befragung', ok: false }
+        ],
+        explanation: 'Beobachtung zeigt reales Verhalten objektiv, kann aber die inneren Gründe («Warum?») nicht erklären.'
+    },
+    {
+        id: 'mmc4', type: 'multi',
+        question: 'Worin unterscheiden sich SEO und SEA im Suchmaschinenmarketing (SEM = SEA + SEO)?',
+        options: [
+            { text: 'SEA sind bezahlte Anzeigen (oft Abrechnung pro Klick / CPC) und sofort sichtbar', ok: true },
+            { text: 'SEO optimiert für organische (unbezahlte) Treffer und wirkt nachhaltig, braucht aber Zeit', ok: true },
+            { text: 'SEA bietet «kostenloses Branding», wenn eine Anzeige gesehen, aber nicht geklickt wird', ok: true },
+            { text: 'SEO ist eine bezahlte Werbeanzeige ganz oben mit «Gesponsert»', ok: false }
+        ],
+        explanation: 'SEA = bezahlte Suchmaschinenwerbung (sofort sichtbar); SEO = organische Suchmaschinenoptimierung (nachhaltig).'
+    },
+    {
+        id: 'mmc5', type: 'multi',
+        question: 'Welche Punkte gehören zu den 4 Elementen der Corporate Identity (Eigenbild)?',
+        options: [
+            { text: 'Corporate Design (Logo, Farben, Schrift, Website)', ok: true },
+            { text: 'Corporate Culture (Philosophie, Leitbild, Werte)', ok: true },
+            { text: 'Corporate Behaviour (Verhalten, Beziehungen, Services)', ok: true },
+            { text: 'Corporate Communication (Web, Social, Print, TV)', ok: true },
+            { text: 'Corporate Price (Tiefpreisgarantie)', ok: false }
+        ],
+        explanation: 'CI besteht aus Design, Culture, Behaviour und Communication; das Fremdbild von aussen ist das Corporate Image.'
+    },
+    {
+        id: 'mmc6', type: 'multi',
+        question: 'Welche Kriterien zählen zur Zielformulierung mit den 6 W-Fragen?',
+        options: [
+            { text: 'Was? (Zielinhalt) & Wie viel? (Quantifizierung)', ok: true },
+            { text: 'Wann? (Zielperiode) & Wo? (Zielmarkt)', ok: true },
+            { text: 'Wer? (Verantwortlichkeit) & Wem? (Zielgruppe/Segment)', ok: true },
+            { text: 'Warum? (Privates Motiv des Konkurrenten)', ok: false }
+        ],
+        explanation: 'Die 6 W-Fragen sind: Was, Wie viel, Wann, Wo, Wer, Wem.'
+    },
+    {
+        id: 'mmc7', type: 'multi',
+        question: 'Was sind die Besonderheiten von Dienstleistungen im Vergleich zu Sachgütern?',
+        options: [
+            { text: 'Sie sind immateriell und meist nicht lagerfähig', ok: true },
+            { text: 'Produktion und Konsum fallen oft zusammen (Kunde wirkt als externer Faktor mit)', ok: true },
+            { text: 'Die Qualität hängt stark an den Mitarbeitenden (People) und wird durch Physical Evidence sichtbar', ok: true },
+            { text: 'Sie können vor dem Kauf immer problemlos im Regal angefasst und getestet werden', ok: false }
+        ],
+        explanation: 'Dienstleistungen sind immateriell, nicht lagerfähig und der Kunde wirkt mit – darum die Erweiterung auf 7P.'
+    },
+    {
+        id: 'mmc8', type: 'multi',
+        question: 'Welche Bausteine gehören zu einem guten KI-Prompt im Marketing?',
+        options: [
+            { text: 'Aufgabe & Kontext', ok: true },
+            { text: 'Zielgruppe & Format', ok: true },
+            { text: 'Ton/Stil & Material (Beispiele/Dokumente)', ok: true },
+            { text: 'Geheime Kundendaten und Passwörter direkt einfügen', ok: false }
+        ],
+        explanation: 'Die 6 Prompt-Bausteine: Aufgabe, Kontext, Zielgruppe, Format, Ton & Stil, Material. Vertrauliche Daten gehören nie in den Prompt!'
+    },
+    // --- DRAG AND DROP (6) ---
+    {
+        id: 'mdnd1', type: 'dnd',
+        question: 'Drag & Drop (Übung Folie 37): Ordne jedes Praxisbeispiel dem richtigen P der 7P zu.',
+        items: [
+            { id: 'mp1', text: 'Bäckerei bringt glutenfreies Brot heraus', target: 'prod' },
+            { id: 'mp2', text: 'Velohändler gewährt 2 % Skonto innert 10 Tagen', target: 'price' },
+            { id: 'mp3', text: 'Getränkehersteller eröffnet eigenen Online-Shop', target: 'place' },
+            { id: 'mp4', text: 'Hotel führt Online-Check-in per App ein', target: 'proc' },
+            { id: 'mp5', text: 'Zahnarztpraxis zeigt Zertifikate im Wartezimmer', target: 'phys' }
+        ],
+        targets: [
+            { id: 'prod', label: 'Product' },
+            { id: 'price', label: 'Price' },
+            { id: 'place', label: 'Place' },
+            { id: 'proc', label: 'Process' },
+            { id: 'phys', label: 'Physical Evidence' }
+        ],
+        explanation: 'Neues Brot = Product, Skonto = Price, Online-Shop = Place, App-Check-in = Process, Zertifikate = Physical Evidence.'
+    },
+    {
+        id: 'mdnd2', type: 'dnd',
+        question: 'Drag & Drop (Übung Folie 21): Ordne die Markenbeispiele der richtigen Markenart zu.',
+        items: [
+            { id: 'mb1', text: 'Sprite (eine Marke pro Produkt)', target: 'einz' },
+            { id: 'mb2', text: 'Nivea Sun (Marke für Produktgruppe)', target: 'fam' },
+            { id: 'mb3', text: 'Nestlé (eine Marke über allen Produkten)', target: 'dach' },
+            { id: 'mb4', text: 'Naturaplan bei Coop (Händlermarke)', target: 'hand' }
+        ],
+        targets: [
+            { id: 'einz', label: 'Einzelmarke' },
+            { id: 'fam', label: 'Markenfamilie' },
+            { id: 'dach', label: 'Dachmarke' },
+            { id: 'hand', label: 'Handels- / Eigenmarke' }
+        ],
+        explanation: 'Sprite = Einzelmarke, Nivea Sun = Markenfamilie, Nestlé = Dachmarke, Naturaplan = Handels-/Eigenmarke.'
+    },
+    {
+        id: 'mdnd3', type: 'dnd',
+        question: 'Drag & Drop (Übung Folie 25): Ordne die Testfragen aus der Marktforschung der richtigen Frageart zu.',
+        items: [
+            { id: 'mf1', text: '«Weshalb haben Sie sich für uns entschieden?»', target: 'offen' },
+            { id: 'mf2', text: '«Haben Sie bestellt? Ja / Nein»', target: 'geschl' },
+            { id: 'mf3', text: '«Wie beurteilen Sie? sehr gut – gut – nicht gut»', target: 'skala' },
+            { id: 'mf4', text: '«Was meinen Sie: Wie viel geben Nachbarn für Ferien aus?»', target: 'indir' }
+        ],
+        targets: [
+            { id: 'offen', label: 'Offene Frage' },
+            { id: 'geschl', label: 'Geschlossene Frage' },
+            { id: 'skala', label: 'Skalafrage' },
+            { id: 'indir', label: 'Indirekte Frage' }
+        ],
+        explanation: 'Weshalb = offen, Ja/Nein = geschlossen, Abstufung = Skalafrage, Frage über Nachbarn = indirekte Frage.'
+    },
+    {
+        id: 'mdnd4', type: 'dnd',
+        question: 'Drag & Drop (Übung Folie 63): Ordne die Wachstumsstrategien nach Ansoff den Beispielen zu.',
+        items: [
+            { id: 'ma1', text: 'Velohändler gibt Stammkunden 15 % Rabatt auf Zubehör', target: 'pen' },
+            { id: 'ma2', text: 'Bäckerei in Luzern bietet neu glutenfreies Brot an', target: 'pe' },
+            { id: 'ma3', text: 'Zürcher Treuhandbüro eröffnet Filiale in Lugano', target: 'me' },
+            { id: 'ma4', text: 'Schreinereibetrieb baut Ferienresort im Tessin auf', target: 'div' }
+        ],
+        targets: [
+            { id: 'pen', label: 'Marktpenetration' },
+            { id: 'pe', label: 'Produktentwicklung' },
+            { id: 'me', label: 'Marktentwicklung' },
+            { id: 'div', label: 'Diversifikation' }
+        ],
+        explanation: 'Alt/Alt = Marktpenetration, Neu/Alt = Produktentwicklung, Alt/Neu = Marktentwicklung, Neu/Neu = Diversifikation.'
+    },
+    {
+        id: 'mdnd5', type: 'dnd',
+        question: 'Drag & Drop: Ordne die speziellen Erhebungsmethoden der Marktforschung richtig zu.',
+        items: [
+            { id: 'ms1', text: 'Mehrere Auftraggeber teilen sich eine Befragung', target: 'omni' },
+            { id: 'ms2', text: 'Gleiche Stichprobe wird regelmässig befragt/beobachtet', target: 'pan' },
+            { id: 'ms3', text: 'Geschulte Scheinkunden testen den Kundenkontakt', target: 'myst' }
+        ],
+        targets: [
+            { id: 'omni', label: 'Omnibus' },
+            { id: 'pan', label: 'Panel' },
+            { id: 'myst', label: 'Mystery Research' }
+        ],
+        explanation: 'Omnibus = Mehrthemenbefragung, Panel = gleiche Stichprobe über Zeit, Mystery Research = Scheinkunden.'
+    },
+    {
+        id: 'mdnd6', type: 'dnd',
+        question: 'Drag & Drop (AIDA-Modell): Bringe die 4 Werbewirkungs-Stufen beim Keller Spiegelschrank in die richtige Zuordnung.',
+        items: [
+            { id: 'ai1', text: 'Google-Anzeige bei Suche nach «Spiegelschrank Bad»', target: 'att' },
+            { id: 'ai2', text: 'Website zeigt LED-Technik und Badbeispiele', target: 'int' },
+            { id: 'ai3', text: 'Konfigurator & Bewertungen wecken den Wunsch', target: 'des' },
+            { id: 'ai4', text: 'Fachhändler finden und Beratung buchen', target: 'act' }
+        ],
+        targets: [
+            { id: 'att', label: 'A – Attention' },
+            { id: 'int', label: 'I – Interest' },
+            { id: 'des', label: 'D – Desire' },
+            { id: 'act', label: 'A – Action' }
+        ],
+        explanation: 'AIDA = Attention (Anzeige) → Interest (Infos) → Desire (Konfigurator) → Action (Beratung/Kauf).'
+    }
+];
+
+let activeMktQuiz = [];
+let mktUsedIds = new Set();
+let mktRoundScored = false;
+
+function pickFromMktPool(type, count) {
+    const all = mktQuestionBank.filter(q => q.type === type);
+    let fresh = all.filter(q => !mktUsedIds.has(q.id));
+    if (fresh.length < count) {
+        all.forEach(q => mktUsedIds.delete(q.id));
+        fresh = all;
+    }
+    const chosen = shuffle(fresh).slice(0, count);
+    chosen.forEach(q => mktUsedIds.add(q.id));
+    return chosen.map(q => (q.type === 'single' || q.type === 'multi') ? { ...q, shuffledOptions: shuffle(q.options) } : q);
+}
+
+function renderMktQuiz() {
+    const container = document.getElementById('mkt-quiz-container');
+    if (!container) return;
+    container.innerHTML = '';
+    selectedChip = null;
+    mktRoundScored = false;
+
+    activeMktQuiz = [
+        ...pickFromMktPool('single', 5),
+        ...pickFromMktPool('multi', 4),
+        ...pickFromMktPool('dnd', 3)
+    ];
+
+    activeMktQuiz.forEach((q, qIdx) => {
+        const card = document.createElement('div');
+        card.className = 'quiz-question';
+        card.id = 'card-' + q.id;
+
+        const badge = document.createElement('span');
+        badge.className = 'quiz-type-tag';
+        badge.textContent = q.type === 'single' ? 'Single Choice' : (q.type === 'multi' ? 'Multiple Choice' : 'Drag & Drop');
+        card.appendChild(badge);
+
+        const title = document.createElement('h4');
+        title.textContent = `${qIdx + 1}. ${q.question}`;
+        card.appendChild(title);
+
+        if (q.type === 'single' || q.type === 'multi') {
+            q.shuffledOptions.forEach((opt, idx) => {
+                const label = document.createElement('label');
+                label.className = 'quiz-option';
+                const inp = document.createElement('input');
+                inp.type = q.type === 'single' ? 'radio' : 'checkbox';
+                inp.name = q.id;
+                inp.value = idx;
+                label.appendChild(inp);
+                const span = document.createElement('span');
+                span.textContent = opt.text;
+                label.appendChild(span);
+                card.appendChild(label);
+            });
+        } else if (q.type === 'dnd') {
+            const pool = document.createElement('div');
+            pool.className = 'dnd-pool';
+            pool.id = 'pool-' + q.id;
+            setupDropZone(pool, q.id);
+
+            shuffle(q.items).forEach(item => {
+                const chip = document.createElement('div');
+                chip.className = 'dnd-chip';
+                chip.textContent = item.text;
+                chip.draggable = true;
+                chip.id = item.id;
+                chip.dataset.qid = q.id;
+                chip.dataset.target = item.target;
+
+                chip.addEventListener('dragstart', e => {
+                    e.dataTransfer.setData('text/plain', chip.id);
+                    selectedChip = chip;
+                });
+                chip.addEventListener('click', e => {
+                    e.stopPropagation();
+                    if (selectedChip === chip) {
+                        chip.classList.remove('selected');
+                        selectedChip = null;
+                    } else {
+                        document.querySelectorAll('.dnd-chip').forEach(c => c.classList.remove('selected'));
+                        selectedChip = chip;
+                        chip.classList.add('selected');
+                    }
+                });
+                pool.appendChild(chip);
+            });
+            card.appendChild(pool);
+
+            const targetsWrap = document.createElement('div');
+            targetsWrap.className = 'dnd-targets';
+            q.targets.forEach(t => {
+                const box = document.createElement('div');
+                box.className = 'dnd-target';
+                box.dataset.tid = t.id;
+                box.dataset.qid = q.id;
+                const lbl = document.createElement('div');
+                lbl.className = 'dnd-target-label';
+                lbl.textContent = t.label;
+                box.appendChild(lbl);
+                const slot = document.createElement('div');
+                slot.className = 'dnd-slot';
+                box.appendChild(slot);
+                setupDropZone(box, q.id, slot);
+                targetsWrap.appendChild(box);
+            });
+            card.appendChild(targetsWrap);
+        }
+
+        const fb = document.createElement('div');
+        fb.className = 'quiz-feedback';
+        fb.id = 'fb-' + q.id;
+        card.appendChild(fb);
+        container.appendChild(card);
+    });
+    updateMktProgress();
+}
+
+function updateMktProgress() {
+    let answered = 0;
+    activeMktQuiz.forEach(q => {
+        const card = document.getElementById('card-' + q.id);
+        if (!card) return;
+        if (q.type === 'single' || q.type === 'multi') {
+            if (card.querySelector('input:checked')) answered++;
+        } else if (q.type === 'dnd') {
+            if (card.querySelectorAll('.dnd-target .dnd-chip').length > 0) answered++;
+        }
+    });
+    const pct = activeMktQuiz.length ? Math.round((answered / activeMktQuiz.length) * 100) : 0;
+    const fill = document.getElementById('mkt-quiz-progress-fill');
+    if (fill) fill.style.width = pct + '%';
+}
+
+const mktCont = document.getElementById('mkt-quiz-container');
+if (mktCont) {
+    mktCont.addEventListener('change', updateMktProgress);
+    mktCont.addEventListener('click', () => setTimeout(updateMktProgress, 40));
+    mktCont.addEventListener('drop', () => setTimeout(updateMktProgress, 40));
+}
+
+function checkMktQuiz() {
+    let score = 0;
+    activeMktQuiz.forEach(q => {
+        const card = document.getElementById('card-' + q.id);
+        const fb = document.getElementById('fb-' + q.id);
+        let ok = false;
+
+        if (q.type === 'single') {
+            const labels = card.querySelectorAll('.quiz-option');
+            labels.forEach(l => l.classList.remove('is-correct', 'is-wrong'));
+            const correctIdx = q.shuffledOptions.findIndex(o => o.ok);
+            const checked = card.querySelector('input:checked');
+            if (checked) {
+                const val = parseInt(checked.value, 10);
+                ok = val === correctIdx;
+                labels[val].classList.add(ok ? 'is-correct' : 'is-wrong');
+            }
+            if (!ok) labels[correctIdx].classList.add('is-correct');
+        } else if (q.type === 'multi') {
+            const labels = card.querySelectorAll('.quiz-option');
+            labels.forEach(l => l.classList.remove('is-correct', 'is-wrong'));
+            const checkedVals = [...card.querySelectorAll('input:checked')].map(i => parseInt(i.value, 10)).sort();
+            const expected = q.shuffledOptions.map((o, i) => o.ok ? i : -1).filter(i => i !== -1);
+            ok = checkedVals.length === expected.length && checkedVals.every((v, i) => v === expected[i]);
+            labels.forEach((l, idx) => {
+                const isExp = expected.includes(idx);
+                const isChk = checkedVals.includes(idx);
+                if (isExp) l.classList.add('is-correct');
+                else if (isChk) l.classList.add('is-wrong');
+            });
+        } else if (q.type === 'dnd') {
+            const targets = card.querySelectorAll('.dnd-target');
+            let placed = 0;
+            let allRight = true;
+            targets.forEach(t => {
+                t.classList.remove('is-correct', 'is-wrong');
+                const chips = t.querySelectorAll('.dnd-chip');
+                let boxOk = chips.length > 0;
+                chips.forEach(c => {
+                    placed++;
+                    if (c.dataset.target !== t.dataset.tid) boxOk = false;
+                });
+                if (!boxOk) allRight = false;
+                t.classList.add(boxOk ? 'is-correct' : 'is-wrong');
+            });
+            ok = placed === q.items.length && allRight;
+        }
+
+        if (ok) score++;
+        card.classList.remove('card-ok', 'card-err');
+        card.classList.add(ok ? 'card-ok' : 'card-err');
+        fb.className = 'quiz-feedback ' + (ok ? 'ok' : 'err');
+        fb.textContent = (ok ? '✓ Richtig! ' : '✗ Falsch! ') + q.explanation;
+    });
+
+    const pct = Math.round((score / activeMktQuiz.length) * 100);
+    const banner = document.getElementById('mkt-motivation-banner');
+    let msg = '';
+    let cls = 'keepgoing';
+    if (pct >= 85) { cls = 'great'; msg = `🏆 Überragend! ${score} von ${activeMktQuiz.length} Punkten (${pct}%) – Du bist topfit für die Marketing-Prüfung!`; }
+    else if (pct >= 65) { cls = 'good'; msg = `🚀 Stark gemacht! ${score} von ${activeMktQuiz.length} Punkten (${pct}%) – Noch eine Runde bis zur 90%-Marke!`; }
+    else { cls = 'keepgoing'; msg = `💪 Weiter so! ${score} von ${activeMktQuiz.length} Punkten (${pct}%) – Lies die roten Erklärungen und starte direkt die nächste Runde!`; }
+    banner.className = 'motivation-banner ' + cls;
+    banner.textContent = msg;
+
+    if (!mktRoundScored) {
+        mktRoundScored = true;
+        saveScore(score, activeMktQuiz.length);
+    }
+}
+
+function resetMktQuiz() {
+    document.getElementById('mkt-motivation-banner').className = 'motivation-banner';
+    renderMktQuiz();
+}
+
+renderMktQuiz();
+updatePlayerUI();
+renderLeaderboard();
 </script>
 
 </body>
