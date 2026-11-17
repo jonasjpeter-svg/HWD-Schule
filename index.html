@@ -3,321 +3,964 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HWD VWL & BWL – Gesamtes Lernkompendium (Blöcke 1–10)</title>
+    <title>HWD VWL & BWL – Ausführliches Lernkompendium (Blöcke 1–10)</title>
     <style>
         :root {
-            --primary: #4a154b;
-            --secondary: #2b102f;
-            --accent: #e0a80d;
-            --bg: #f8f9fa;
+            --primary: #5b2c6f;
+            --primary-light: #e8daef;
+            --primary-soft: #f4ecf7;
+            --secondary: #2c1638;
+            --accent: #d4ac0d;
+            --bg: #f6f7fb;
             --card-bg: #ffffff;
-            --text: #333333;
+            --text: #1f2937;
+            --muted: #64748b;
             --border: #e2e8f0;
+            --green: #16a34a;
+            --red: #dc2626;
+            --amber: #d97706;
         }
+        * { box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.65;
         }
         header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 2.5rem 1rem;
+            color: #ffffff;
+            padding: 2.75rem 1.5rem;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 16px rgba(44, 22, 56, 0.25);
         }
         header h1 {
             margin: 0;
-            font-size: 2.2rem;
+            font-size: 2.25rem;
+            letter-spacing: -0.02em;
         }
         header p {
-            margin: 0.5rem 0 0;
-            font-size: 1.1rem;
-            opacity: 0.85;
+            margin: 0.6rem auto 0;
+            max-width: 720px;
+            font-size: 1.05rem;
+            opacity: 0.9;
         }
         nav {
             background-color: #ffffff;
-            padding: 1rem;
+            padding: 0.85rem 1rem;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.45rem;
+            border-bottom: 1px solid var(--border);
         }
         nav a {
             color: var(--primary);
-            background-color: #f1f5f9;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
+            background-color: var(--primary-soft);
+            padding: 0.45rem 0.9rem;
+            border-radius: 999px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             transition: all 0.2s ease;
         }
         nav a:hover {
             background-color: var(--primary);
-            color: white;
+            color: #ffffff;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1120px;
             margin: 2rem auto;
-            padding: 0 1.5rem;
+            padding: 0 1.25rem;
         }
         section {
             background: var(--card-bg);
-            border-radius: 10px;
+            border-radius: 12px;
             padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2.25rem;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
             border: 1px solid var(--border);
+        }
+        .block-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: #ffffff;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.25rem 0.7rem;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
         }
         h2 {
             color: var(--primary);
             border-bottom: 3px solid var(--accent);
             padding-bottom: 0.5rem;
-            margin-top: 0;
+            margin: 0.25rem 0 1rem;
+            font-size: 1.6rem;
         }
         h3 {
             color: var(--secondary);
-            margin-top: 1.5rem;
+            margin-top: 1.75rem;
+            margin-bottom: 0.6rem;
+            font-size: 1.2rem;
         }
-        ul {
-            padding-left: 1.5rem;
+        h4 {
+            color: var(--primary);
+            margin: 1rem 0 0.4rem;
         }
-        li {
-            margin-bottom: 0.5rem;
+        ul, ol {
+            padding-left: 1.35rem;
+            margin-top: 0.4rem;
+        }
+        li { margin-bottom: 0.4rem; }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.25rem;
+            margin: 1.25rem 0;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1rem;
+            margin: 1.25rem 0;
+        }
+        .card {
+            background: #faf9fc;
+            border: 1px solid #e5d9ee;
+            border-radius: 10px;
+            padding: 1.15rem;
+        }
+        .card h4 { margin-top: 0; }
+        .callout {
+            background-color: var(--primary-soft);
+            border-left: 4px solid var(--primary);
+            padding: 1rem 1.2rem;
+            margin: 1.1rem 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.96rem;
+        }
+        .callout.warn {
+            background-color: #fef2f2;
+            border-left-color: var(--red);
+        }
+        .callout.tip {
+            background-color: #f0fdf4;
+            border-left-color: var(--green);
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1.5rem 0;
+            margin: 1.25rem 0;
+            font-size: 0.94rem;
         }
         th, td {
             border: 1px solid var(--border);
-            padding: 0.75rem;
+            padding: 0.7rem 0.85rem;
             text-align: left;
+            vertical-align: top;
         }
         th {
-            background-color: #f1f5f9;
-            color: var(--primary);
+            background-color: var(--primary-soft);
+            color: var(--secondary);
+            font-weight: 700;
+        }
+        tr:nth-child(even) td {
+            background-color: #fcfcfd;
         }
         .graphic-container {
             background: #ffffff;
             border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1rem;
-            margin: 1.5rem 0;
+            border-radius: 10px;
+            padding: 1.25rem;
+            margin: 1.4rem 0;
             text-align: center;
+            overflow-x: auto;
         }
         .graphic-container svg {
             max-width: 100%;
             height: auto;
+            display: block;
+            margin: 0 auto;
         }
-        .explanation {
-            background-color: #f8fafc;
-            border-left: 4px solid var(--primary);
-            padding: 1rem;
-            margin-top: 1rem;
-            font-size: 0.95rem;
+        .graphic-caption {
+            margin-top: 0.85rem;
+            text-align: left;
+            background: #f8fafc;
+            border-left: 4px solid var(--accent);
+            padding: 0.75rem 1rem;
+            font-size: 0.92rem;
             border-radius: 0 6px 6px 0;
         }
+        .tag {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .tag-green { background: #dcfce7; color: #166534; }
+        .tag-red { background: #fee2e2; color: #991b1b; }
+        .tag-gray { background: #e2e8f0; color: #334155; }
         footer {
             text-align: center;
-            padding: 2rem;
-            color: #64748b;
+            padding: 2rem 1rem;
+            color: var(--muted);
             font-size: 0.9rem;
+        }
+        @media (max-width: 640px) {
+            section { padding: 1.25rem; }
+            header h1 { font-size: 1.7rem; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>HWD VWL & BWL – Gesamtkompendium</h1>
-    <p>Chronologische Lernzusammenfassung mit allen Modellen, Grafiken & Erklärungen (Blöcke 1 bis 10)</p>
+    <h1>HWD VWL &amp; BWL – Gesamtkompendium</h1>
+    <p>Ausführliche Prüfungsvorbereitung (DP / ZP) mit allen Modellen, Grafiken, Formeln und Zusammenhängen aus den Blöcken 1 bis 10</p>
 </header>
 
 <nav>
-    <a href="#block1">Block 1</a>
-    <a href="#block2">Block 2</a>
-    <a href="#block3">Block 3</a>
-    <a href="#block4">Block 4</a>
-    <a href="#block5">Block 5</a>
-    <a href="#block6">Block 6</a>
-    <a href="#block7">Block 7</a>
-    <a href="#block8">Block 8</a>
-    <a href="#block9">Block 9</a>
-    <a href="#block10">Block 10</a>
+    <a href="#block1-2">Blöcke 1–2: Märkte &amp; Elastizität</a>
+    <a href="#block3-5">Blöcke 3–5: SGMM &amp; Strategie</a>
+    <a href="#block6">Block 6: Staat &amp; Sozialpolitik</a>
+    <a href="#block7">Block 7: Ethik, Risiko &amp; Ökologie</a>
+    <a href="#block8">Block 8: Int. Org. &amp; Business Plan</a>
+    <a href="#block9">Block 9: Ertrags- &amp; Kostenmodell</a>
+    <a href="#block10">Block 10: Magisches 6-Eck, Konjunktur &amp; TQM</a>
 </nav>
 
 <div class="container">
 
-    <!-- BLOCK 1 -->
-    <section id="block1">
-        <h2>Block 1: Einführung, Bedürfnisse, Märkte & Elastizitäten</h2>
-        <p>Grundlagen des wirtschaftlichen Handelns, Güterarten, das ökonomische Prinzip sowie Preis- und Nachfrageanalysen.</p>
-        
-        <h3>Bedürfnisse & Konsumwünsche</h3>
-        <p>Der Mensch strebt nach der Behebung von Mängeln. Da Ressourcen (Geld, Zeit) knapp sind, entsteht das ökonomische Problem: <strong>Knappe Güter vs. unendliche Bedürfnisse</strong>.</p>
+    <!-- ==================== BLÖCKE 1 & 2 ==================== -->
+    <section id="block1-2">
+        <span class="block-badge">Blöcke 1 &amp; 2 (inkl. Repetition)</span>
+        <h2>Märkte, Preisbildung, Elastizitäten &amp; Marktformen</h2>
 
-        <h3>Das Marktgleichgewicht</h3>
+        <div class="grid-2">
+            <div class="card">
+                <h4>Bedürfnisse, Güter &amp; Ökonomisches Prinzip</h4>
+                <ul>
+                    <li><strong>Knappheit:</strong> Unbegrenzte Bedürfnisse treffen auf knappe Güter und Ressourcen.</li>
+                    <li><strong>Maslow-Pyramide:</strong> 1. Physiologische Grundbedürfnisse &rarr; 2. Sicherheit &rarr; 3. Soziale Bedürfnisse &rarr; 4. Wertschätzung &rarr; 5. Selbstverwirklichung.</li>
+                    <li><strong>Güterarten:</strong> Freie Güter vs. wirtschaftliche Güter; Konsum- vs. Investitionsgüter; Sachgüter vs. Dienstleistungen; Individual- vs. Kollektivgüter.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Staatseingriffe in den Preis</h4>
+                <ul>
+                    <li><strong>Höchstpreis:</strong> Liegt <em>unter</em> dem Gleichgewichtspreis (z.B. Mietpreisdeckel). Folge: <strong>Nachfrageüberschuss / Mangel</strong>.</li>
+                    <li><strong>Mindestpreis:</strong> Liegt <em>über</em> dem Gleichgewichtspreis (z.B. Agrarpreise, Mindestlohn). Folge: <strong>Angebotsüberschuss</strong>.</li>
+                    <li><strong>Kurvenverschiebung:</strong> Drängen <em>weniger Anbieter</em> auf den Markt, sinkt das Angebot &rarr; Angebotskurve verschiebt sich nach links &rarr; Preis steigt, Menge sinkt.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Preis-/Mengen-Diagramm &amp; Preiselastizität (Butter vs. Brot)</h3>
         <div class="graphic-container">
-            <svg width="400" height="250" viewBox="0 0 400 250">
-                <line x1="50" y1="200" x2="350" y2="200" stroke="#333" stroke-width="2"/>
-                <line x1="50" y1="200" x2="50" y2="30" stroke="#333" stroke-width="2"/>
-                <text x="350" y="220" font-size="12">Menge</text>
-                <text x="20" y="40" font-size="12">Preis</text>
-                <!-- Nachfragekurve -->
-                <path d="M 80 50 Q 200 150 320 180" fill="none" stroke="#8b5cf6" stroke-width="3"/>
-                <text x="230" y="110" font-size="11" fill="#8b5cf6">Nachfrage</text>
-                <!-- Angebotskurve -->
-                <path d="M 80 180 Q 200 150 320 50" fill="none" stroke="#475569" stroke-width="3"/>
-                <text x="230" y="180" font-size="11" fill="#475569">Angebot</text>
-                <!-- Schnittpunkt -->
-                <circle cx="200" cy="135" r="5" fill="#dc2626"/>
-                <line x1="50" y1="135" x2="200" y2="135" stroke="#94a3b8" stroke-dasharray="4"/>
-                <line x1="200" y1="135" x2="200" y2="200" stroke="#94a3b8" stroke-dasharray="4"/>
-                <text x="10" y="140" font-size="10">Gleichgewichtspreis</text>
-                <text x="180" y="215" font-size="10">Gleichgewichtsmenge</text>
+            <svg width="860" height="270" viewBox="0 0 860 270">
+                <!-- 1. Marktgleichgewicht -->
+                <g transform="translate(10,10)">
+                    <text x="130" y="16" text-anchor="middle" font-weight="bold" font-size="13" fill="#5b2c6f">1. Marktgleichgewicht</text>
+                    <line x1="45" y1="220" x2="255" y2="220" stroke="#1f2937" stroke-width="2"/>
+                    <line x1="45" y1="220" x2="45" y2="30" stroke="#1f2937" stroke-width="2"/>
+                    <text x="245" y="238" font-size="11" font-weight="bold">Menge</text>
+                    <text x="12" y="38" font-size="11" font-weight="bold">Preis</text>
+                    <path d="M 75 50 Q 130 140 235 195" fill="none" stroke="#7c3aed" stroke-width="3"/>
+                    <text x="195" y="182" font-size="11" fill="#7c3aed" font-weight="bold">Nachfrage</text>
+                    <path d="M 75 195 Q 150 150 220 48" fill="none" stroke="#475569" stroke-width="3"/>
+                    <text x="175" y="65" font-size="11" fill="#475569" font-weight="bold">Angebot</text>
+                    <circle cx="145" cy="134" r="5" fill="#dc2626"/>
+                    <line x1="45" y1="134" x2="145" y2="134" stroke="#94a3b8" stroke-dasharray="4"/>
+                    <line x1="145" y1="134" x2="145" y2="220" stroke="#94a3b8" stroke-dasharray="4"/>
+                    <text x="4" y="138" font-size="10">GG-Preis</text>
+                    <text x="115" y="236" font-size="10">GG-Menge</text>
+                </g>
+
+                <!-- 2. Elastische Nachfrage (Butter) -->
+                <g transform="translate(295,10)">
+                    <text x="135" y="16" text-anchor="middle" font-weight="bold" font-size="13" fill="#5b2c6f">2. Elastisch (z.B. Butter)</text>
+                    <line x1="45" y1="220" x2="255" y2="220" stroke="#1f2937" stroke-width="2"/>
+                    <line x1="45" y1="220" x2="45" y2="30" stroke="#1f2937" stroke-width="2"/>
+                    <text x="240" y="238" font-size="11" font-weight="bold">Menge</text>
+                    <text x="12" y="38" font-size="11" font-weight="bold">Preis</text>
+                    <path d="M 70 65 Q 150 120 240 155" fill="none" stroke="#7c3aed" stroke-width="3"/>
+                    <line x1="45" y1="125" x2="195" y2="125" stroke="#94a3b8" stroke-dasharray="4"/>
+                    <line x1="45" y1="100" x2="135" y2="100" stroke="#94a3b8" stroke-dasharray="4"/>
+                    <line x1="195" y1="125" x2="195" y2="220" stroke="#94a3b8" stroke-dasharray="4"/>
+                    <line x1="135" y1="100" x2="135" y2="220" stroke="#94a3b8" stroke-dasharray="4"/>
+                    <text x="22" y="128" font-size="10">P1</text>
+                    <text x="22" y="103" font-size="10">P2</text>
+                    <text x="188" y="236" font-size="10">M1</text>
+                    <text x="128" y="236" font-size="10">M2</text>
+                    <text x="60" y="88" font-size="10" fill="#dc2626" font-weight="bold">+10% Preis</text>
+                    <text x="137" y="190" font-size="10" fill="#dc2626" font-weight="bold">&minus;15% Menge</text>
+                </g>
+
+                <!-- 3. Unelastische Nachfrage (Brot) -->
+                <g transform="translate(580,10)">
+                    <text x="135" y="16" text-anchor="middle" font-weight="bold" font-size="13" fill="#5b2c6f">3. Unelastisch (z.B. Brot)</text>
+                    <line x1="45" y1="220" x2="255" y2="220" stroke="#1f2937" stroke-width="2"/>
+                    <line x1="45" y1="220" x2="45" y2="30" stroke="#1f2937" stroke-width="2"/>
+                    <text x="240" y="238" font-size="11" font-weight="bold">Menge</text>
+                    <text x="12" y="38" font-size="11" font-weight="bold">Preis</text>
+                    <path d="M 125 50 Q 150 130 180 195" fill="none" stroke="#7c3aed" stroke-width="3"/>
+                    <line x1="45" y1="128" x2="152" y2="128" stroke="#94a3b8" stroke-dasharray="4"/>
+                    <line x1="45" y1="98" x2="141" y2="98" stroke="#94a3b8" stroke-dasharray="4"/>
+                    <line x1="152" y1="128" x2="152" y2="220" stroke="#94a3b8" stroke-dasharray="4"/>
+                    <line x1="141" y1="98" x2="141" y2="220" stroke="#94a3b8" stroke-dasharray="4"/>
+                    <text x="22" y="131" font-size="10">P1</text>
+                    <text x="22" y="101" font-size="10">P2</text>
+                    <text x="155" y="236" font-size="10">M1</text>
+                    <text x="130" y="236" font-size="10">M2</text>
+                    <text x="60" y="88" font-size="10" fill="#16a34a" font-weight="bold">+10% Preis</text>
+                    <text x="165" y="165" font-size="10" fill="#16a34a" font-weight="bold">geringe Abnahme</text>
+                </g>
             </svg>
-            <div class="explanation">
-                <strong>Erklärung:</strong> Der Schnittpunkt von Angebots- und Nachfragekurve bestimmt den Marktpreis. Bei diesem Preis stimmen Verkaufs- und Kaufbereitschaft überein.
+            <div class="graphic-caption">
+                <strong>Elastizität:</strong> Flache Kurve = hohe Preiselastizität (Substitutionsgüter wie Butter/Margarine). Steile Kurve = geringe Preiselastizität (Grundnahrungsmittel wie Brot oder lebensnotwendige Güter).
+            </div>
+        </div>
+
+        <h3>Marktformen &amp; Wettbewerbsintensität</h3>
+        <table>
+            <tr>
+                <th>Marktform</th>
+                <th>Merkmale / Voraussetzungen</th>
+                <th>Wettbewerb</th>
+            </tr>
+            <tr>
+                <td><strong>Vollständige Konkurrenz</strong></td>
+                <td>Zahlreiche Teilnehmer, homogene (gleichartige) Güter, vollständige Information, keine Markthindernisse.</td>
+                <td>Maximaler Wettbewerb (Preisnehmer)</td>
+            </tr>
+            <tr>
+                <td><strong>Monopolistische Konkurrenz</strong></td>
+                <td>Viele Anbieter, aber differenzierte Produkte (Marken/Qualität) und unvollständige Information.</td>
+                <td>Eingeschränkt durch Differenzierung</td>
+            </tr>
+            <tr>
+                <td><strong>Oligopol / Kartell</strong></td>
+                <td>Wenige Konkurrenten und/oder Markthindernisse; bei Kartellen verbotene Preis-/Mengenabsprachen.</td>
+                <td>Stark eingeschränkt</td>
+            </tr>
+            <tr>
+                <td><strong>Monopol</strong></td>
+                <td>Ein einziger Anbieter beherrscht den Markt (hohe Markteintrittsbarrieren).</td>
+                <td>Kein direkter Wettbewerb</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- ==================== BLÖCKE 3–5 ==================== -->
+    <section id="block3-5">
+        <span class="block-badge">Blöcke 3, 4 &amp; 5 (inkl. Repetition)</span>
+        <h2>St. Galler Management-Modell, Analysetools, Strategie &amp; Marketing</h2>
+
+        <h3>St. Galler Management-Modell (SGMM)</h3>
+        <div class="graphic-container">
+            <svg width="720" height="310" viewBox="0 0 720 310">
+                <!-- Umweltsphären (Ringe) -->
+                <ellipse cx="360" cy="155" rx="340" ry="145" fill="#faf9fc" stroke="#94a3b8" stroke-width="1.5"/>
+                <ellipse cx="360" cy="155" rx="305" ry="125" fill="#f3eef8" stroke="#94a3b8" stroke-width="1.2"/>
+                <ellipse cx="360" cy="155" rx="270" ry="105" fill="#e8daef" stroke="#7c3aed" stroke-width="1.5"/>
+                <text x="360" y="26" text-anchor="middle" font-size="11" font-weight="bold" fill="#334155">Umweltsphären: Natur &bull; Gesellschaft &bull; Technologie &bull; Wirtschaft</text>
+                <text x="360" y="286" text-anchor="middle" font-size="11" fill="#475569">Interaktionsthemen: Ressourcen &bull; Normen und Werte &bull; Anliegen und Interessen</text>
+
+                <!-- Anspruchsgruppen -->
+                <rect x="40" y="65" width="110" height="28" rx="6" fill="#5b2c6f"/><text x="95" y="83" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Konkurrenz</text>
+                <rect x="20" y="140" width="110" height="28" rx="6" fill="#5b2c6f"/><text x="75" y="158" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Lieferanten</text>
+                <rect x="45" y="215" width="110" height="28" rx="6" fill="#5b2c6f"/><text x="100" y="233" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Staat</text>
+                <rect x="570" y="65" width="110" height="28" rx="6" fill="#5b2c6f"/><text x="625" y="83" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Kapitalgeber</text>
+                <rect x="590" y="140" width="110" height="28" rx="6" fill="#5b2c6f"/><text x="645" y="158" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Kunden</text>
+                <rect x="565" y="215" width="110" height="28" rx="6" fill="#5b2c6f"/><text x="620" y="233" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Mitarbeitende</text>
+                <rect x="275" y="242" width="170" height="26" rx="6" fill="#5b2c6f"/><text x="360" y="259" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Öffentlichkeit / Medien / NGO</text>
+
+                <!-- Kern: Ordnungsmomente & Prozesse -->
+                <rect x="225" y="75" width="270" height="145" rx="8" fill="#ffffff" stroke="#5b2c6f" stroke-width="2"/>
+                <rect x="225" y="75" width="270" height="34" rx="6" fill="#d4ac0d" opacity="0.3"/>
+                <text x="360" y="96" text-anchor="middle" font-size="11" font-weight="bold" fill="#2c1638">Ordnungsmomente: Strategie | Strukturen | Kultur</text>
+                <line x1="225" y1="109" x2="495" y2="109" stroke="#5b2c6f"/>
+                <text x="330" y="132" text-anchor="middle" font-size="11" font-weight="bold">Managementprozesse</text>
+                <line x1="225" y1="144" x2="435" y2="144" stroke="#cbd5e1"/>
+                <text x="330" y="167" text-anchor="middle" font-size="11" font-weight="bold">Geschäftsprozesse</text>
+                <line x1="225" y1="179" x2="435" y2="179" stroke="#cbd5e1"/>
+                <text x="330" y="202" text-anchor="middle" font-size="11" font-weight="bold">Unterstützungsprozesse</text>
+                <line x1="435" y1="109" x2="435" y2="220" stroke="#5b2c6f"/>
+                <text x="465" y="150" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#5b2c6f">Optimie-</text>
+                <text x="465" y="162" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#5b2c6f">rung &amp;</text>
+                <text x="465" y="174" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#5b2c6f">Erneue-</text>
+                <text x="465" y="186" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#5b2c6f">rung</text>
+            </svg>
+            <div class="graphic-caption">
+                <strong>SGMM im Überblick:</strong> Zeigt das Zusammenspiel zwischen Umweltsphären, Anspruchsgruppen (inkl. möglichen Zielkonflikten/Widersprüchen), Interaktionsthemen, Ordnungsmomenten, Prozessebenen und Entwicklungsmodi (Optimierung vs. Erneuerung).
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h4>SWOT / TOWS-Analyse (Strategie-Matrix)</h4>
+                <table>
+                    <tr><th></th><th>Chancen (O)</th><th>Gefahren (T)</th></tr>
+                    <tr><td><strong>Stärken (S)</strong></td><td><strong>SO:</strong> Stärken nutzen, um Chancen zu ergreifen.</td><td><strong>ST:</strong> Stärken nutzen, um Gefahren abzuwehren.</td></tr>
+                    <tr><td><strong>Schwächen (W)</strong></td><td><strong>WO:</strong> Schwächen abbauen, um Chancen zu nutzen.</td><td><strong>WT:</strong> Schwächen minimieren, Gefahren abwenden.</td></tr>
+                </table>
+            </div>
+            <div class="card">
+                <h4>Ansoff-Matrix (Produkt-Markt-Strategien)</h4>
+                <table>
+                    <tr><th>Markt \ Produkt</th><th>Gegenwärtig</th><th>Zukünftig</th></tr>
+                    <tr><td><strong>Gegenwärtig</strong></td><td><strong>Marktdurchdringung</strong><br>(mehr Absatz im bestehenden Markt)</td><td><strong>Produktentwicklung</strong><br>(neue Produkte im alten Markt)</td></tr>
+                    <tr><td><strong>Zukünftig</strong></td><td><strong>Marktentwicklung</strong><br>(alte Produkte in neuen Märkten)</td><td><strong>Diversifikation</strong><br>(neue Produkte in neuen Märkten)</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h4>BCG-Matrix &amp; Produktlebenszyklus</h4>
+                <ul>
+                    <li><strong>Question Marks</strong> (hohes Wachstum / tiefer Anteil): Selektiv investieren oder aufgeben.</li>
+                    <li><strong>Stars</strong> (hohes Wachstum / hoher Anteil): Weiter investieren, Marktposition halten.</li>
+                    <li><strong>Cash Cows</strong> (tiefes Wachstum / hoher Anteil): Erträge abschöpfen.</li>
+                    <li><strong>Poor Dogs</strong> (tiefes Wachstum / tiefer Anteil): Desinvestieren / aussteigen.</li>
+                    <li><strong>Lebenszyklus-Phasen:</strong> Entwicklung &rarr; Einführung &rarr; Wachstum (<em>Break-even-Point = Gewinnschwelle</em>) &rarr; Reife &rarr; Sättigung &rarr; Rückgang/Degeneration &rarr; Nachlauf.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Marktforschung, 4 Ps &amp; Marktkenngrössen</h4>
+                <ul>
+                    <li><strong>Primäre Marktforschung (Field Research):</strong> Befragungen, Beobachtungen, Experimente.</li>
+                    <li><strong>Sekundäre Marktforschung (Desk Research):</strong> Interne Umsatzdaten, externe Statistiken/Verbände.</li>
+                    <li><strong>Marketing-Mix (4 Ps):</strong> <em>Product</em> (Qualität, Design), <em>Price</em> (Preis-/Konditionenpolitik), <em>Place</em> (Absatzweg, Logistik, Franchising), <em>Promotion</em> (Werbung, PR, Sponsoring, Events).</li>
+                    <li><strong>Marktanteil:</strong> (Unternehmensumsatz / Marktvolumen) &times; 100</li>
+                    <li><strong>Sättigungsgrad:</strong> (Marktvolumen / Marktpotenzial) &times; 100</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- BLOCK 2 -->
-    <section id="block2">
-        <h2>Block 2: Marktformen, Staatseingriffe & Geld</h2>
-        <p>Vollständige Konkurrenz, Monopole, Höchst-/Mindestpreise, Steuern, Subventionen sowie die Rolle der Notenbank (SNB).</p>
-        
-        <h3>Höchst- und Mindestpreise</h3>
-        <ul>
-            <li><strong>Höchstpreis:</strong> Liegt unter dem Gleichgewichtspreis (Schutz der Konsumenten, z.B. Mietpreisdeckelung). Resultat: <em>Nachfrageüberschuss / Mangel</em>.</li>
-            <li><strong>Mindestpreis:</strong> Liegt über dem Gleichgewichtspreis (Schutz der Produzenten, z.B. Mindestlohn). Resultat: <em>Angebotsüberschuss / Überschuss</em>.</li>
-        </ul>
-    </section>
-
-    <!-- BLOCK 3 -->
-    <section id="block3">
-        <h2>Block 3: St. Galler Management-Modell (SGMM) & Wertschöpfung</h2>
-        <p>Unternehmensstrukturen, Umweltsphären, Anspruchsgruppen sowie die Wertkette nach Porter.</p>
-        
-        <h3>Wertkette nach Michael Porter</h3>
-        <table>
-            <tr>
-                <th>Aktivitätentyp</th>
-                <th>Beispiele</th>
-            </tr>
-            <tr>
-                <td><strong>Primäre Aktivitäten</strong></td>
-                <td>Eingangslogistik, Produktion, Ausgangslogistik, Marketing & Verkauf, Service</td>
-            </tr>
-            <tr>
-                <td><strong>Unterstützende Aktivitäten</strong></td>
-                <td>Unternehmensinfrastructure, Personalmanagement, Technologiemanagement, Beschaffung</td>
-            </tr>
-        </table>
-    </section>
-
-    <!-- BLOCK 4 -->
-    <section id="block4">
-        <h2>Block 4: Strategisches Management & Marktanalyse</h2>
-        <p>SWOT-Analyse, PESTEL, Porter's 5 Forces und quantitative Marktkenngrössen.</p>
-        
-        <h3>Marktkenngrössen (Formeln)</h3>
-        <ul>
-            <li><strong>Marktkapazität:</strong> Maximal mögliche Absatzmenge im Gesamtmarkt.</li>
-            <li><strong>Marktpotenzial:</strong> Maximal möglicher Gesamtumsatz aller Anbieter.</li>
-            <li><strong>Marktvolumen:</strong> Tatsächlich realisierter Gesamtumsatz aller Anbieter.</li>
-            <li><strong>Marktanteil:</strong> $(\text{Einfacher Unternehmensumsatz} / \text{Marktvolumen}) \times 100$</li>
-            <li><strong>Sättigungsgrad:</strong> $(\text{Marktvolumen} / \text{Marktpotenzial}) \times 100$</li>
-        </ul>
-    </section>
-
-    <!-- BLOCK 5 -->
-    <section id="block5">
-        <h2>Block 5: Strategieauswahl & Umsetzung</h2>
-        <p>Ansoff-Matrix, BCG-Matrix, Porter Wettbewerbsstrategien, SMART-Formel und Balanced Scorecard.</p>
-        
-        <h3>Die BCG-Matrix (Boston Consulting Group)</h3>
-        <ul>
-            <li><strong>Question Marks:</strong> Hohes Marktwachstum, geringer Marktanteil (Investieren oder abstossen).</li>
-            <li><strong>Stars:</strong> Hohes Marktwachstum, hoher Marktanteil (Marktposition ausbauen).</li>
-            <li><strong>Cash Cows:</strong> Geringes Marktwachstum, hoher Marktanteil (Erträge abschöpfen).</li>
-            <li><strong>Poor Dogs:</strong> Geringes Marktwachstum, geringer Marktanteil (Desinvestition / Ausstieg).</li>
-        </ul>
-    </section>
-
-    <!-- BLOCK 6 -->
+    <!-- ==================== BLOCK 6 ==================== -->
     <section id="block6">
-        <h2>Block 6: Gesamtwirtschaftliche Daten & Sozialpolitik</h2>
-        <p>BIP, BNE, Arbeitslosigkeit, Inflation, Lorenz-Kurve und das Schweizer Sozialversicherungssystem (3-Säulen-Prinzip).</p>
-        
-        <h3>Das 3-Säulen-Prinzip der Vorsorge</h3>
+        <span class="block-badge">Block 6</span>
+        <h2>Gesamtwirtschaft, Marktversagen, Sozialpolitik &amp; Staatsversagen</h2>
+
+        <h3>BIP &amp; Geldwertstörungen</h3>
+        <div class="callout">
+            <strong>Bruttoinlandprodukt (BIP):</strong> Wert aller Waren und Dienstleistungen, die in einem Land von Staat und Unternehmen während eines Jahres hergestellt werden, abzüglich der Vorleistungen (inkl. Abzug der Importe).
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <h4>Inflation</h4>
+                <p>Allgemeiner Anstieg der Preise &rarr; <strong>Geldentwertung / Kaufkraft sinkt</strong>. Firmen produzieren mehr, erzielen höhere Gewinne.</p>
+            </div>
+            <div class="card">
+                <h4>Deflation</h4>
+                <p>Allgemeiner Preisrückgang &rarr; Kaufkraft steigt, aber Firmen drosseln die Produktion wegen sinkender Gewinne (Abwärtsspirale).</p>
+            </div>
+            <div class="card">
+                <h4>Stagflation</h4>
+                <p>Wirtschaft stagniert (kein Wachstum / hohe Arbeitslosigkeit) und Preise steigen gleichzeitig &rarr; schwierige Lage für den Staat.</p>
+            </div>
+        </div>
+
+        <h3>Marktversagen &amp; Die 6 Staatsaktivitäten zur Korrektur</h3>
+        <p>Wo der Markt versagt (z.B. durch <strong>externe Kosten</strong> wie Umweltverschmutzung oder zu wenig Produktion bei Gütern mit <strong>externem Nutzen</strong> durch Trittbrettfahrer), greift der Staat im Interesse des Gemeinwohls ein:</p>
+        <div class="graphic-container">
+            <svg width="780" height="340" viewBox="0 0 780 340">
+                <!-- Verbindungslinien -->
+                <line x1="390" y1="170" x2="230" y2="65" stroke="#475569" stroke-width="2"/>
+                <line x1="390" y1="170" x2="550" y2="65" stroke="#475569" stroke-width="2"/>
+                <line x1="390" y1="170" x2="120" y2="170" stroke="#475569" stroke-width="2"/>
+                <line x1="390" y1="170" x2="660" y2="170" stroke="#475569" stroke-width="2"/>
+                <line x1="390" y1="170" x2="230" y2="275" stroke="#475569" stroke-width="2"/>
+                <line x1="390" y1="170" x2="550" y2="275" stroke="#475569" stroke-width="2"/>
+
+                <!-- Zentrum Hexagon -->
+                <polygon points="390,105 460,138 460,202 390,235 320,202 320,138" fill="#8e5b8e" stroke="#2c1638" stroke-width="2"/>
+                <text x="390" y="158" text-anchor="middle" fill="#fff" font-weight="bold" font-size="12">Staatsaktivitäten</text>
+                <text x="390" y="175" text-anchor="middle" fill="#fff" font-size="11">zur Korrektur von</text>
+                <text x="390" y="191" text-anchor="middle" fill="#fff" font-size="11">Marktversagen</text>
+
+                <!-- 1 -->
+                <rect x="465" y="12" width="230" height="82" rx="8" fill="#efe6f2" stroke="#5b2c6f"/>
+                <text x="477" y="32" font-weight="bold" font-size="12" fill="#2c1638">1. Wettbewerbspolitik</text>
+                <text x="477" y="50" font-size="10.5">Verhindert Monopole &amp; Kartelle,</text>
+                <text x="477" y="65" font-size="10.5">schützt Güterversorgung &amp; faire Preise.</text>
+
+                <!-- 2 -->
+                <rect x="555" y="125" width="215" height="90" rx="8" fill="#efe6f2" stroke="#5b2c6f"/>
+                <text x="567" y="145" font-weight="bold" font-size="12" fill="#2c1638">2. Information &amp; Prohibition</text>
+                <text x="567" y="163" font-size="10.5">Gesetze für mehr Markttransparenz,</text>
+                <text x="567" y="178" font-size="10.5">Kontroll- und Informationsaufgaben.</text>
+
+                <!-- 3 -->
+                <rect x="465" y="242" width="230" height="82" rx="8" fill="#efe6f2" stroke="#5b2c6f"/>
+                <text x="477" y="262" font-weight="bold" font-size="12" fill="#2c1638">3. Konjunkturpolitik</text>
+                <text x="477" y="280" font-size="10.5">Mildert Rezessionen/Arbeitslosigkeit</text>
+                <text x="477" y="295" font-size="10.5">und dämpft Inflations-Booms.</text>
+
+                <!-- 4 -->
+                <rect x="85" y="242" width="230" height="82" rx="8" fill="#efe6f2" stroke="#5b2c6f"/>
+                <text x="97" y="262" font-weight="bold" font-size="12" fill="#2c1638">4. Umweltpolitik</text>
+                <text x="97" y="280" font-size="10.5">Schützt Natur &amp; Lebensgrundlagen</text>
+                <text x="97" y="295" font-size="10.5">(Gebote, Verbote, Lenkungsabgaben).</text>
+
+                <!-- 5 -->
+                <rect x="10" y="120" width="215" height="98" rx="8" fill="#efe6f2" stroke="#5b2c6f"/>
+                <text x="22" y="140" font-weight="bold" font-size="12" fill="#2c1638">5. Öffentliche Güter</text>
+                <text x="22" y="158" font-size="10.5">Produktion/Finanzierung nicht</text>
+                <text x="22" y="173" font-size="10.5">gewinnbringender Güter (Justiz,</text>
+                <text x="22" y="188" font-size="10.5">Polizei, Grundlagenforschung).</text>
+
+                <!-- 6 -->
+                <rect x="85" y="12" width="230" height="82" rx="8" fill="#efe6f2" stroke="#5b2c6f"/>
+                <text x="97" y="32" font-weight="bold" font-size="12" fill="#2c1638">6. Sozialpolitik</text>
+                <text x="97" y="50" font-size="10.5">Schutz vor Risiken, Hilfe für Arme,</text>
+                <text x="97" y="65" font-size="10.5">Einkommens- &amp; Chancenausgleich.</text>
+            </svg>
+        </div>
+
+        <h3>Sozialpolitik, Gerechtigkeit &amp; Schweizer Vorsorge (3-Säulen-Prinzip)</h3>
+        <div class="grid-3">
+            <div class="card">
+                <h4>3 Ziele der Sozialpolitik</h4>
+                <ol>
+                    <li><strong>Hilfe für die Arme:</strong> Menschenwürdiger Platz in der Gesellschaft.</li>
+                    <li><strong>Schutz vor Risiken:</strong> Absicherung bei unverschuldeter Not &amp; Strukturwandel.</li>
+                    <li><strong>Sozialer Ausgleich:</strong> Gleichmässigere Verteilung von Einkommen, Vermögen &amp; Chancen.</li>
+                </ol>
+            </div>
+            <div class="card">
+                <h4>3 Gerechtigkeitsprinzipien</h4>
+                <ul>
+                    <li><strong>Leistungsgerechtigkeit:</strong> Belohnung entspricht der erbrachten Leistung.</li>
+                    <li><strong>Bedarfsgerechtigkeit:</strong> Anrecht auf gesicherten Minimalbedarf (EL, AHV, Sozialhilfe).</li>
+                    <li><strong>Gleichheit:</strong> Gleiche Rechte &amp; Chancengleichheit (zu viele Eingriffe senken evtl. Leistungsbereitschaft).</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Soziales Netz &amp; Umverteilung</h4>
+                <ul>
+                    <li><strong>4 Pfeiler:</strong> Sozialversicherungen, Gesetzlicher Schutz, Hilfe mit meritorischen Gütern (Spitäler, Schulen, Wohnbau), Sozialhilfe.</li>
+                    <li><strong>Primärverteilung:</strong> Durch Marktkräfte.</li>
+                    <li><strong>Sekundärverteilung:</strong> Nach Steuern, Sozialleistungen &amp; Realtransfers.</li>
+                </ul>
+            </div>
+        </div>
+
         <table>
             <tr>
                 <th>Säule</th>
-                <th>Ziel / Zweck</th>
-                <th>Finanzierung</th>
+                <th>Bezeichnung</th>
+                <th>Ziel</th>
+                <th>Versicherte &amp; Finanzierung</th>
             </tr>
             <tr>
-                <td><strong>1. Säule (AHV/IV/EL)</strong></td>
-                <td>Existenzbedarf sichern (Staatlich)</td>
-                <td>Umlageverfahren (Beiträge von Versicherten + Staat)</td>
+                <td><strong>1. Säule</strong></td>
+                <td>AHV / IV / EL (Staatlich)</td>
+                <td>Existenzbedarf sichern</td>
+                <td>Alle; Umlageverfahren (Versicherte + Staat)</td>
             </tr>
             <tr>
-                <td><strong>2. Säule (Pensionskasse - BVG)</strong></td>
-                <td>Fortführung gewohnter Lebenshaltung</td>
-                <td>Kapitaldeckungsverfahren (Obligatorisch für Arbeitnehmende)</td>
+                <td><strong>2. Säule</strong></td>
+                <td>Pensionskasse / BVG (Beruflich)</td>
+                <td>Fortführung gewohnter Lebenshaltung (1.+2. &approx; 60% des Einkommens)</td>
+                <td>Obligatorisch für Lohnempfänger, freiwillig für Selbstständige; Kapitaldeckungsverfahren</td>
             </tr>
             <tr>
-                <td><strong>3. Säule (Privates Sparen)</strong></td>
-                <td>Komfortbedarf im Alter (Steuerprivilegiert)</td>
-                <td>Individuell & freiwillig</td>
+                <td><strong>3. Säule</strong></td>
+                <td>Privates Sparen (Säule 3a / 3b)</td>
+                <td>Komfortbedarf im Alter</td>
+                <td>Individuell &amp; freiwillig (3a steuerprivilegiert)</td>
             </tr>
         </table>
+
+        <h3>Gemischte Wirtschaftsordnung &amp; Staatsversagen</h3>
+        <div class="graphic-container">
+            <svg width="780" height="250" viewBox="0 0 780 250">
+                <!-- Faktormärkte & Gütermärkte -->
+                <rect x="290" y="10" width="200" height="44" rx="6" fill="#e8daef" stroke="#5b2c6f"/>
+                <text x="390" y="29" text-anchor="middle" font-weight="bold" font-size="11">Faktormärkte</text>
+                <text x="390" y="44" text-anchor="middle" font-size="10">Ressourcen gegen Lohn/Zins/Gewinn</text>
+
+                <rect x="290" y="196" width="200" height="44" rx="6" fill="#e8daef" stroke="#5b2c6f"/>
+                <text x="390" y="215" text-anchor="middle" font-weight="bold" font-size="11">Gütermärkte</text>
+                <text x="390" y="230" text-anchor="middle" font-size="10">Güter gegen Preis</text>
+
+                <!-- Akteure -->
+                <ellipse cx="90" cy="125" rx="60" ry="26" fill="#f1f5f9" stroke="#334155"/>
+                <text x="90" y="129" text-anchor="middle" font-weight="bold" font-size="12">Ausland</text>
+
+                <ellipse cx="255" cy="125" rx="65" ry="30" fill="#efe6f2" stroke="#5b2c6f"/>
+                <text x="255" y="129" text-anchor="middle" font-weight="bold" font-size="12">Unternehmen</text>
+
+                <ellipse cx="420" cy="125" rx="55" ry="26" fill="#d4ac0d" opacity="0.25" stroke="#5b2c6f"/>
+                <text x="420" y="129" text-anchor="middle" font-weight="bold" font-size="12">Staat</text>
+
+                <ellipse cx="620" cy="125" rx="65" ry="30" fill="#efe6f2" stroke="#5b2c6f"/>
+                <text x="620" y="129" text-anchor="middle" font-weight="bold" font-size="12">Haushalte</text>
+
+                <!-- Pfeile -->
+                <line x1="150" y1="118" x2="190" y2="118" stroke="#1f2937" stroke-width="1.5"/>
+                <text x="170" y="112" text-anchor="middle" font-size="9.5">Importe</text>
+                <line x1="190" y1="132" x2="150" y2="132" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="3"/>
+                <text x="170" y="146" text-anchor="middle" font-size="9.5">Exporte</text>
+
+                <line x1="320" y1="125" x2="365" y2="125" stroke="#7c3aed" stroke-width="1.5"/>
+                <text x="342" y="116" text-anchor="middle" font-size="9">Steuern</text>
+                <line x1="475" y1="125" x2="555" y2="125" stroke="#1f2937" stroke-width="1.5"/>
+                <text x="515" y="116" text-anchor="middle" font-size="9">staatl. Leistungen</text>
+                <text x="515" y="140" text-anchor="middle" font-size="9" fill="#7c3aed">Steuern</text>
+
+                <path d="M 255 95 Q 260 40 290 32" fill="none" stroke="#1f2937" stroke-width="1.5"/>
+                <path d="M 490 32 Q 610 40 620 95" fill="none" stroke="#1f2937" stroke-width="1.5"/>
+                <path d="M 255 155 Q 260 210 290 218" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+                <path d="M 490 218 Q 610 210 620 155" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+            </svg>
+            <div class="graphic-caption">
+                <strong>Staatsversagen &amp; Deregulierung:</strong> Staatseingriffe können selbst versagen durch <em>Sonderinteressen</em> (Politikversagen), <em>Informationsprobleme</em> und <em>unverhältnismässigen Aufwand</em> (Bürokratieversagen). Gegenmassnahmen sind <strong>Deregulierung</strong>, Privatisierung, mehr Wettbewerb und weniger Formalitäten.
+            </div>
+        </div>
     </section>
 
-    <!-- BLOCK 7 -->
+    <!-- ==================== BLOCK 7 ==================== -->
     <section id="block7">
-        <h2>Block 7: Nachhaltigkeit, Risikomanagement & Globalisierung</h2>
-        <p>Corporate Social Responsibility (CSR), ESG-Kriterien, Ökologiemanagement (ISO 14001, Ökobilanz) sowie Freihandel vs. Protektionismus.</p>
-    </section>
+        <span class="block-badge">Block 7</span>
+        <h2>Globalisierung, Ethik/CSR, Risiko-, Ökologie-, Technologie- &amp; Wissensmanagement</h2>
 
-    <!-- BLOCK 8 -->
-    <section id="block8">
-        <h2>Block 8: Internationale Organisationen & Business Plan</h2>
-        <p>G7, G20, BRICS, Welthandel, Wechselkurse, Euro-Zone sowie Aufbau und Struktur eines Business Plans.</p>
-    </section>
+        <div class="grid-2">
+            <div class="card">
+                <h4>Chancen des Freihandels</h4>
+                <ul>
+                    <li>Spezialisierung auf die günstigsten Produkte (Wohlstandsgewinne).</li>
+                    <li>Grosse Produktvielfalt &amp; Massenproduktion.</li>
+                    <li>Verschärfter Wettbewerb &rarr; bessere Ressourcennutzung.</li>
+                    <li>Weltweiter Austausch von Ideen und Wissen.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Risiken / Argumente für Protektionismus</h4>
+                <ul>
+                    <li>Gewinner und Verlierer (Gefahr struktureller Arbeitslosigkeit).</li>
+                    <li>Mehr Verkehr &rarr; höhere Umweltschäden (CO<sub>2</sub>-Abgabe nötig).</li>
+                    <li>Einseitige Spezialisierung &rarr; hohe Abhängigkeit von wenigen Produkten.</li>
+                    <li>Erschwert den Aufbau neuer, einträglicher Branchen.</li>
+                </ul>
+            </div>
+        </div>
 
-    <!-- BLOCK 9 -->
-    <section id="block9">
-        <h2>Block 9: Ertragsmodelle & Kostenstruktur</h2>
-        <p>Fixe und variable Kosten, Kostensenkungspotenziale sowie zentrale Fragen zur Einnahmengestaltung.</p>
-    </section>
-
-    <!-- BLOCK 10 -->
-    <section id="block10">
-        <h2>Block 10: Konjunkturpolitik, Marktversagen & Qualitätsmanagement</h2>
-        <p>Magisches Sechseck, antizyklische Konjunkturpolitik (Rezession vs. Hochkonjunktur), Qualitätsmanagement (PDCA-Zyklus) und TQM.</p>
-        
-        <h3>Antizyklische Konjunkturpolitik</h3>
+        <h3>Ethik, CSR, ESG &amp; Compliance</h3>
+        <div class="callout">
+            <strong>Moral vs. Ethik:</strong> Moral beschreibt, <em>was</em> richtig oder falsch ist; Ethik <em>begründet</em>, warum ein Verhalten richtig oder falsch ist. <strong>CSR (Corporate Social Responsibility)</strong> ist der freiwillige Beitrag von Unternehmen zu einer nachhaltigen Entwicklung über die drei <strong>ESG-Ebenen</strong>: <strong>Ökologie</strong> (Ressourcenschonung), <strong>Soziales</strong> (faire Bedingungen für alle Anspruchsgruppen) und <strong>Corporate Governance</strong> (transparente Unternehmensführung).
+        </div>
         <ul>
-            <li><strong>In einer Rezession:</strong> Staat erhöht Ausgaben, senkt Steuern $\rightarrow$ Gesamtnachfrage wird stimuliert.</li>
-            <li><strong>In einer Hochkonjunktur:</strong> Staat senkt Ausgaben, erhöht Steuern $\rightarrow$ Überhitzung wird gebremst.</li>
+            <li><strong>Steuerungsinstrumente:</strong> Unternehmensleitbild (Vision/Mission/Werte), Verhaltenskodex (freiwillige Selbstverpflichtung), Unternehmenskultur (gelebte Werte).</li>
+            <li><strong>Compliance:</strong> Vermeidung von Regelverstössen &amp; Imageschäden durch Schulungen, klare Sanktionen, Vertragsbestandteile, Personalrotation, Geschenkregelungen und Compliance-Beauftragte.</li>
         </ul>
+
+        <h3>Risikomanagement &amp; Ökologiemanagement (ISO 14001 &amp; Ökobilanz)</h3>
+        <div class="grid-2">
+            <div class="graphic-container">
+                <svg width="360" height="230" viewBox="0 0 360 230">
+                    <text x="180" y="18" text-anchor="middle" font-weight="bold" font-size="13" fill="#5b2c6f">Risiko-Portfolio</text>
+                    <line x1="65" y1="195" x2="345" y2="195" stroke="#1f2937" stroke-width="2"/>
+                    <line x1="65" y1="195" x2="65" y2="30" stroke="#1f2937" stroke-width="2"/>
+                    <text x="10" y="38" font-size="10" font-weight="bold">Tragweite</text>
+                    <text x="195" y="216" font-size="10" font-weight="bold">Eintrittswahrscheinlichkeit &rarr;</text>
+                    <rect x="75" y="135" width="88" height="55" fill="#e8daef" stroke="#fff"/>
+                    <rect x="163" y="135" width="88" height="55" fill="#d2b4de" stroke="#fff"/>
+                    <rect x="251" y="135" width="88" height="55" fill="#bb8fce" stroke="#fff"/>
+                    <rect x="75" y="85" width="88" height="50" fill="#d2b4de" stroke="#fff"/>
+                    <rect x="163" y="85" width="88" height="50" fill="#bb8fce" stroke="#fff"/>
+                    <rect x="251" y="85" width="88" height="50" fill="#9b59b6" stroke="#fff"/>
+                    <rect x="75" y="35" width="88" height="50" fill="#bb8fce" stroke="#fff"/>
+                    <rect x="163" y="35" width="88" height="50" fill="#9b59b6" stroke="#fff"/>
+                    <rect x="251" y="35" width="88" height="50" fill="#6c3483" stroke="#fff"/>
+                    <text x="119" y="167" text-anchor="middle" font-size="10" font-weight="bold">Mit Risiko leben</text>
+                    <text x="207" y="114" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">evtl. bearbeiten</text>
+                    <text x="295" y="64" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Risiko bearbeiten</text>
+                </svg>
+                <div class="graphic-caption">
+                    <strong>4 Schritte:</strong> 1. Risiken erkennen &rarr; 2. Bewerten (Tragweite &times; Wahrscheinlichkeit) &rarr; 3. Bewältigen (vermeiden, vermindern, überwälzen, tragen) &rarr; 4. Überwachen.
+                </div>
+            </div>
+            <div class="card">
+                <h4>Ökologiemanagement &amp; Ökobilanz</h4>
+                <ul>
+                    <li><strong>Massnahmen-Hierarchie:</strong> 1. Vermeiden &rarr; 2. Vermindern &rarr; 3. Verwerten (Recycling) &rarr; 4. Entsorgen.</li>
+                    <li><strong>Recht &amp; Norm:</strong> BV Art. 74, Schweizer Umweltschutzgesetz, Zertifizierung nach <strong>ISO 14001</strong> (Rechtskonformität, andere Forderungen, Verhütung von Belastungen, kontinuierliche Verbesserung über PDCA).</li>
+                    <li><strong>Ökobilanz (Lebenszyklus):</strong> Rohstoffbeschaffung &rarr; Produktion &rarr; Transport &rarr; Benützung &rarr; Recycling/Entsorgung.</li>
+                    <li><strong>4 Phasen der Ökobilanz:</strong> 1. Zieldefinition &amp; Systemgrenzen &rarr; 2. Sachbilanz &rarr; 3. Wirkungsabschätzung &rarr; 4. Auswertung.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h4>Technologiemanagement</h4>
+                <p><strong>Lebenszyklus:</strong> Zukunftstechnologien &rarr; Schrittmachertechnologien &rarr; Schlüsseltechnologien &rarr; Basistechnologien.</p>
+                <p><strong>Prozess:</strong> 1. Ideengewinnung &rarr; 2. Ideenbewertung &rarr; 3. Ideenauswahl &rarr; 4. Umsetzung &rarr; 5. Markteinführung &rarr; 6. Controlling.</p>
+            </div>
+            <div class="card">
+                <h4>Wissensmanagement &amp; Archivierung</h4>
+                <p><strong>Aufgaben:</strong> Wissen identifizieren, analysieren, entwickeln, verteilen/nutzen, bewahren und bewerten.</p>
+                <p><strong>Gesetzliche Grundlagen:</strong> Aufbewahrungspflicht (Art. 958 ff. OR), Geschäftsbücherverordnung, Editionspflicht (z.B. bei Gerichtsfällen).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BLOCK 8 ==================== -->
+    <section id="block8">
+        <span class="block-badge">Block 8</span>
+        <h2>Internationale Organisationen, Währungen &amp; Business Plan</h2>
+
+        <h3>Ziele &amp; Überblick: G7, G20 und BRICS</h3>
+        <p>Internationale Organisationen beseitigen Handelshemmnisse (WTO, WCO), harmonisieren die Wirtschaftspolitik (IWF, BIZ, OECD, G20) und fördern Entwicklungszusammenarbeit (Weltbank, UNCTAD, UN).</p>
+        <table>
+            <tr>
+                <th>Merkmal</th>
+                <th>G7 (Gruppe der Sieben)</th>
+                <th>G20 (Gruppe der Zwanzig)</th>
+                <th>BRICS</th>
+            </tr>
+            <tr>
+                <td><strong>Gründung</strong></td>
+                <td>1975 (G6), seit 1976 G7</td>
+                <td>1999</td>
+                <td>2006 als BRIC, ab 2010/11 BRICS (Erweiterung 2024/25)</td>
+            </tr>
+            <tr>
+                <td><strong>Mitglieder</strong></td>
+                <td>DE, FR, UK, IT, JP, CA, USA (+ EU als Teilnehmerin)</td>
+                <td>19 Staaten + EU &amp; Afrikanische Union</td>
+                <td>BR, RU, IN, CN, ZA + Ägypten, Äthiopien, Iran, VAE, Indonesien (Saudi-Arabien teils als Mitglied/eingeladen)</td>
+            </tr>
+            <tr>
+                <td><strong>Fokus &amp; Bedeutung für CH</strong></td>
+                <td>Westliche Industriestaaten; wichtige Handelspartner der Schweiz.</td>
+                <td>Industrie- &amp; Schwellenländer (~85% Welt-BIP); zentrales Forum für globale Wirtschaftsabstimmung.</td>
+                <td>Stärkung des globalen Südens; wachsende Absatz- &amp; Beschaffungsmärkte. <em>Hinweis: Die Schweiz ist in keinem der 3 Gremien Mitglied.</em></td>
+            </tr>
+        </table>
+
+        <div class="grid-2">
+            <div class="card">
+                <h4>Wechselkurse &amp; Euro-Zone</h4>
+                <ul>
+                    <li><strong>Devisenmarkt:</strong> Angebot und Nachfrage bestimmen den Wechselkurs (z.B. CHF &harr; EUR / USD). Hohe Nachfrage = Kurs steigt.</li>
+                    <li><strong>Euro-Zone:</strong> Umfasst 21 europäische Länder (EU: 27 Länder).</li>
+                    <li><strong>EZB:</strong> Die Europäische Zentralbank (Frankfurt am Main) steuert die Euro-Geldpolitik.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Business Plan – Ziele &amp; Aufbau</h4>
+                <p>Überführt Strategie in Entscheidungsgrundlagen (auch für Kapitalbeschaffung). Zieltrias: <strong>Finanzziele</strong> (Liquidität, Rentabilität, Sicherheit), <strong>Marktziele</strong>, <strong>Nachhaltigkeitsziele</strong>.</p>
+                <p><strong>8 Bestandteile:</strong> 1. Unternehmen/Projekt &bull; 2. Markt heute/Zukunft &bull; 3. Strategie &bull; 4. Infrastruktur &amp; Organisation &bull; 5. Zeitplan &amp; Umsetzung &bull; 6. Finanzplanung &bull; 7. Finanzierung &bull; 8. Management Summary.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BLOCK 9 ==================== -->
+    <section id="block9">
+        <span class="block-badge">Block 9</span>
+        <h2>Geschäftsmodelle, Ertragsmodelle &amp; Kostenstruktur</h2>
+        <p><strong>Grundformel:</strong> <code>Erträge &minus; Kosten = Gewinn</code>. Im Geschäftsmodell stehen sich auf der Unterseite die <strong>Kostenstruktur</strong> (Herstellung/Aktivitäten/Ressourcen) und die <strong>Einnahmequellen</strong> (Wertangebote/Kunden/Kanäle) gegenüber.</p>
+
+        <div class="grid-2">
+            <div class="card">
+                <h4>Variable vs. Fixe Kosten</h4>
+                <table>
+                    <tr><th>Kostenart</th><th>Definition &amp; Beispiele</th></tr>
+                    <tr>
+                        <td><strong>Variable Kosten</strong></td>
+                        <td>Hängen von der Produktionsmenge ab (bei 0 Produktion = 0 Kosten).<br><em>Beispiele:</em> Energie/Strom, Material &amp; Hilfsstoffe, Akkordlohn, Provisionen, Transportkosten.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fixe Kosten</strong></td>
+                        <td>Fallen immer an, unabhängig von der Menge (Achtung: <strong>Liquidität</strong>, auch ohne Einnahmen!).<br><em>Beispiele:</em> Miete, Leasing, Grundgehälter, Kreditzinsen.</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card">
+                <h4>Kostensenkung &amp; 5 Fragen zu Einnahmen</h4>
+                <p><strong>4 Ansatzpunkte zur Kostensenkung:</strong></p>
+                <ol>
+                    <li>Mengenvorteile (Skaleneffekte)</li>
+                    <li>Verbundeffekte</li>
+                    <li>Kooperationen</li>
+                    <li>Outsourcing</li>
+                </ol>
+                <p><strong>5 Fragen zu Einnahmequellen:</strong> Welcher konkrete Nutzen wird bezahlt? Wofür zahlt der Kunde genau? In welcher Form erfolgt die Zahlung? Welche Zahlungsform wird bevorzugt? Wie viel trägt jede Quelle zum Gesamtumsatz bei?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BLOCK 10 ==================== -->
+    <section id="block10">
+        <span class="block-badge">Block 10</span>
+        <h2>Magisches Sechseck, Konjunkturzyklus &amp; Total Quality Management</h2>
+
+        <h3>1. Das Magische Sechseck &amp; Zielbeziehungen</h3>
+        <div class="graphic-container">
+            <svg width="780" height="310" viewBox="0 0 780 310">
+                <!-- Hexagon -->
+                <g transform="translate(15,10)">
+                    <text x="180" y="15" text-anchor="middle" font-weight="bold" font-size="13" fill="#5b2c6f">Magisches Sechseck</text>
+                    <!-- Verbindungen -->
+                    <line x1="180" y1="50" x2="65" y2="115" stroke="#475569" stroke-width="1.5"/>
+                    <line x1="180" y1="50" x2="295" y2="115" stroke="#475569" stroke-width="1.5"/>
+                    <line x1="65" y1="115" x2="65" y2="205" stroke="#475569" stroke-width="1.5"/>
+                    <line x1="295" y1="115" x2="295" y2="205" stroke="#475569" stroke-width="1.5"/>
+                    <line x1="65" y1="205" x2="180" y2="265" stroke="#475569" stroke-width="1.5"/>
+                    <line x1="295" y1="205" x2="180" y2="265" stroke="#475569" stroke-width="1.5"/>
+                    <line x1="180" y1="50" x2="180" y2="265" stroke="#94a3b8" stroke-width="1.2"/>
+                    <line x1="65" y1="115" x2="295" y2="205" stroke="#94a3b8" stroke-width="1.2"/>
+                    <line x1="295" y1="115" x2="65" y2="205" stroke="#94a3b8" stroke-width="1.2"/>
+                    <line x1="65" y1="115" x2="295" y2="115" stroke="#94a3b8" stroke-width="1.2"/>
+                    <line x1="65" y1="205" x2="295" y2="205" stroke="#94a3b8" stroke-width="1.2"/>
+
+                    <rect x="115" y="30" width="130" height="32" rx="6" fill="#efe6f2" stroke="#5b2c6f"/>
+                    <text x="180" y="50" text-anchor="middle" font-size="11" font-weight="bold">Wachstum</text>
+
+                    <rect x="0" y="95" width="135" height="38" rx="6" fill="#efe6f2" stroke="#5b2c6f"/>
+                    <text x="67" y="111" text-anchor="middle" font-size="10.5" font-weight="bold">Umwelt- und</text>
+                    <text x="67" y="125" text-anchor="middle" font-size="10.5" font-weight="bold">Ressourcenschutz</text>
+
+                    <rect x="225" y="95" width="135" height="38" rx="6" fill="#efe6f2" stroke="#5b2c6f"/>
+                    <text x="292" y="118" text-anchor="middle" font-size="10.5" font-weight="bold">Vollbeschäftigung</text>
+
+                    <rect x="0" y="185" width="135" height="38" rx="6" fill="#efe6f2" stroke="#5b2c6f"/>
+                    <text x="67" y="208" text-anchor="middle" font-size="10.5" font-weight="bold">Sozialer Ausgleich</text>
+
+                    <rect x="225" y="185" width="135" height="38" rx="6" fill="#efe6f2" stroke="#5b2c6f"/>
+                    <text x="292" y="208" text-anchor="middle" font-size="10.5" font-weight="bold">Preisstabilität</text>
+
+                    <rect x="95" y="248" width="170" height="36" rx="6" fill="#efe6f2" stroke="#5b2c6f"/>
+                    <text x="180" y="264" text-anchor="middle" font-size="10.5" font-weight="bold">Aussenwirtschaftliches</text>
+                    <text x="180" y="277" text-anchor="middle" font-size="10.5" font-weight="bold">Gleichgewicht</text>
+                </g>
+
+                <!-- Zielbeziehungen -->
+                <g transform="translate(415,20)">
+                    <text x="170" y="5" text-anchor="middle" font-weight="bold" font-size="13" fill="#5b2c6f">Beziehungen zwischen den Zielen</text>
+                    <rect x="0" y="25" width="340" height="72" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+                    <text x="15" y="45" font-weight="bold" font-size="12" fill="#166534">Zielharmonie (beide Ziele fördern sich)</text>
+                    <text x="15" y="64" font-size="11">z.B. Wirtschaftswachstum &harr; Vollbeschäftigung</text>
+                    <text x="15" y="81" font-size="11">z.B. Wirtschaftswachstum &harr; Sozialer Ausgleich</text>
+
+                    <rect x="0" y="108" width="340" height="72" rx="8" fill="#fef2f2" stroke="#dc2626"/>
+                    <text x="15" y="128" font-weight="bold" font-size="12" fill="#991b1b">Zielkonflikt (ein Ziel schadet dem anderen)</text>
+                    <text x="15" y="147" font-size="11">z.B. Wirtschaftswachstum &harr; Umweltschutz</text>
+                    <text x="15" y="164" font-size="11">z.B. Vollbeschäftigung &harr; Preisstabilität (Inflation)</text>
+
+                    <rect x="0" y="191" width="340" height="65" rx="8" fill="#f1f5f9" stroke="#64748b"/>
+                    <text x="15" y="211" font-weight="bold" font-size="12" fill="#334155">Zielneutralität (kein direkter Einfluss)</text>
+                    <text x="15" y="230" font-size="11">z.B. Preisstabilität &harr; Umwelt / Ausgeglichene Ertragsbilanz</text>
+                </g>
+            </svg>
+        </div>
+
+        <h3>2. Konjunkturzyklus &amp; Antizyklische Konjunkturpolitik</h3>
+        <div class="callout">
+            <strong>Definition Rezession:</strong> Sinkt das BIP in <strong>2 aufeinanderfolgenden Quartalen</strong>, spricht man von einer Rezession. Eine lang anhaltende, schwere Rezession nennt man <strong>Depression</strong>.
+        </div>
+        <div class="graphic-container">
+            <svg width="780" height="250" viewBox="0 0 780 250">
+                <!-- Achsen -->
+                <line x1="50" y1="205" x2="730" y2="205" stroke="#1f2937" stroke-width="2"/>
+                <line x1="50" y1="205" x2="50" y2="25" stroke="#1f2937" stroke-width="2"/>
+                <text x="18" y="34" font-weight="bold" font-size="11">BIP</text>
+                <text x="735" y="209" font-weight="bold" font-size="11">Zeit</text>
+
+                <!-- Trendwachstum -->
+                <line x1="50" y1="155" x2="700" y2="45" stroke="#475569" stroke-width="2"/>
+                <text x="640" y="42" font-size="11" font-weight="bold" fill="#475569">Trendwachstum</text>
+
+                <!-- Konjunkturkurve in 4 Phasen -->
+                <path d="M 50 155 Q 80 185 115 170" fill="none" stroke="#dc2626" stroke-width="4"/>
+                <path d="M 115 170 Q 175 140 220 125" fill="none" stroke="#f59e0b" stroke-width="4"/>
+                <path d="M 220 125 Q 280 55 340 55" fill="none" stroke="#84cc16" stroke-width="4"/>
+                <path d="M 340 55 Q 405 55 460 85" fill="none" stroke="#8b5cf6" stroke-width="4"/>
+                <path d="M 460 85 Q 525 120 585 108" fill="none" stroke="#ec4899" stroke-width="4"/>
+                <path d="M 585 108 Q 645 92 695 55" fill="none" stroke="#f59e0b" stroke-width="4"/>
+
+                <!-- Wendepunkte & Phasen -->
+                <circle cx="115" cy="170" r="4.5" fill="#1f2937"/>
+                <circle cx="340" cy="55" r="4.5" fill="#1f2937"/>
+                <circle cx="585" cy="108" r="4.5" fill="#1f2937"/>
+                <text x="340" y="40" text-anchor="middle" font-size="10.5" font-weight="bold">Oberer Wendepunkt</text>
+                <text x="115" y="232" text-anchor="middle" font-size="10">Unterer Wendepunkt</text>
+                <text x="585" y="232" text-anchor="middle" font-size="10">Unterer Wendepunkt</text>
+
+                <text x="170" y="195" text-anchor="middle" font-size="11" font-weight="bold" fill="#b45309">1. Aufschwung</text>
+                <text x="285" y="195" text-anchor="middle" font-size="11" font-weight="bold" fill="#4d7c0f">2. Boom</text>
+                <text x="405" y="195" text-anchor="middle" font-size="11" font-weight="bold" fill="#6d28d9">3. Abschwung</text>
+                <text x="525" y="195" text-anchor="middle" font-size="11" font-weight="bold" fill="#be185d">4. Rezession</text>
+            </svg>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h4>Expansive Politik (in einer Rezession)</h4>
+                <ul>
+                    <li><strong>Staatsausgaben erhöhen</strong> (Investitionen, Aufträge).</li>
+                    <li><strong>Steuern senken</strong> + Arbeitslosenkasse stützt Einkommen.</li>
+                    <li><strong>Ziel:</strong> Kaufkraft stützen &rarr; ungenügende Gesamtnachfrage steigt.</li>
+                    <li><em>Risiko:</em> Höhere Staatsschulden (Zinslast, geringere Handlungsfähigkeit, Last für künftige Generationen).</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Restriktive Politik (in einer Hochkonjunktur)</h4>
+                <ul>
+                    <li><strong>Staatsausgaben senken</strong>.</li>
+                    <li><strong>Steuereinnahmen erhöhen</strong>.</li>
+                    <li><strong>Ziel:</strong> Kaufkraft verringern &rarr; Überhitzung und Inflation werden gebremst.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>3. Total Quality Management (TQM) &amp; PDCA-Zyklus</h3>
+        <div class="grid-2">
+            <div class="card">
+                <h4>Die 4 Bausteine von TQM</h4>
+                <ol>
+                    <li><strong>Kundenorientierung:</strong> Konsequente Ausrichtung an Kundenbedürfnissen.</li>
+                    <li><strong>Nullfehlerprinzip:</strong> Prozesse so beherrschen, dass keine Mängel auftreten.</li>
+                    <li><strong>Ständige Verbesserung (Kaizen):</strong> Laufende kleine Verbesserungen unter Einbezug aller Mitarbeitenden (Qualitätszirkel, Vorschlagswesen).</li>
+                    <li><strong>Interne Kunden/Lieferanten:</strong> Auch interne Abteilungen liefern einander höchste Qualität.</li>
+                </ol>
+            </div>
+            <div class="graphic-container" style="margin:0;">
+                <svg width="340" height="220" viewBox="0 0 340 220">
+                    <text x="170" y="18" text-anchor="middle" font-weight="bold" font-size="13" fill="#5b2c6f">PDCA-Zyklus</text>
+                    <circle cx="170" cy="118" r="68" fill="none" stroke="#9b59b6" stroke-width="3"/>
+                    <rect x="120" y="34" width="100" height="28" rx="6" fill="#8e5b8e"/>
+                    <text x="170" y="52" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Planen (Plan)</text>
+                    <rect x="228" y="104" width="105" height="28" rx="6" fill="#8e5b8e"/>
+                    <text x="280" y="122" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Entscheiden (Do)</text>
+                    <rect x="115" y="176" width="110" height="28" rx="6" fill="#8e5b8e"/>
+                    <text x="170" y="194" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Umsetzen (Check)</text>
+                    <rect x="6" y="104" width="112" height="28" rx="6" fill="#8e5b8e"/>
+                    <text x="62" y="122" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Kontrollieren (Act)</text>
+                </svg>
+            </div>
+        </div>
     </section>
 
 </div>
 
 <footer>
-    <p>&copy; 2026 HWD Lernkompendium – Erstellt für die Prüfungsvorbereitung</p>
+    <p>&copy; 2026 HWD Lernkompendium VWL &amp; BWL (Blöcke 1–10) &bull; Bereit für DP/ZP Prüfungsvorbereitung</p>
 </footer>
 
 </body>
