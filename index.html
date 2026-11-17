@@ -610,7 +610,7 @@
 <div class="subject-bar" role="tablist" aria-label="Fächer-Auswahl">
     <button type="button" class="subject-tab active" id="tab-vwl" onclick="switchSubject('vwl')">📊 VWL &amp; BWL <span class="subject-badge-soon">10 Blöcke + Quiz</span></button>
     <button type="button" class="subject-tab" id="tab-marketing" onclick="switchSubject('marketing')">📣 Marketing <span class="subject-badge-soon">3 Präsentationen + Quiz</span></button>
-    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">6 Blöcke + Quiz</span></button>
+    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">7 Blöcke + Quiz</span></button>
 </div>
 
 <nav id="nav-vwl">
@@ -641,6 +641,7 @@
     <a href="#rewe-block4">Block 4: Nutzschwelle</a>
     <a href="#rewe-block5">Block 5: BAB &amp; Kalkulation</a>
     <a href="#rewe-block6">Block 6: Handel &amp; Division</a>
+    <a href="#rewe-block7">Block 7: Investition &amp; Mehrst. DBR</a>
     <a href="#rewe-quiz" style="background: linear-gradient(135deg,#8b5cf6,#6d28d9); color: #ffffff;">🎯 ReWe-Quiz &amp; Rangliste</a>
 </nav>
 
@@ -2536,11 +2537,95 @@
         </div>
     </section>
 
+    <!-- ==================== REWE BLOCK 7: INVESTITIONSRECHNUNG & MEHRSTUFIGE DBR ==================== -->
+    <section id="rewe-block7">
+        <span class="block-badge">7. Block · 15.10.2026 &bull; Statische Investitionsrechnung &amp; Mehrstufige DBR</span>
+        <h2>7. Block: Investitionsrechnung (Statisch) &amp; Mehrstufige Deckungsbeitragsrechnung</h2>
+
+        <div class="callout">
+            <strong>Zwei zentrale Führungsinstrumente:</strong>
+            1. Die <strong>statische Investitionsrechnung</strong> bewertet Investitionen anhand von Durchschnittsgrössen pro Jahr (Kosten-, Gewinn-, Rentabilitäts- und Amortisationsrechnung) &ndash; im Gegensatz zur <strong>dynamischen Rechnung</strong>, die Zahlungszeitpunkte abzinst.
+            2. Die <strong>mehrstufige Deckungsbeitragsrechnung (DBR)</strong> teilt variable Kosten (z.B. Warenaufwand vs. Verkaufsprovision) und Fixkosten (Artikel- vs. Unternehmensfixkosten) stufenweise auf, um fundierte <strong>Sortimentsentscheidungen</strong> zu treffen.
+        </div>
+
+        <h3 style="margin-top:1.3rem;">7.1 Statische Investitionsrechnung &amp; Mehrstufige DBR im Überblick</h3>
+        <div class="graphic-container">
+            <svg width="780" height="236" viewBox="0 0 780 236">
+                <text x="390" y="16" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">Statische Investitionsrechnung (links) &amp; Mehrstufige DBR (rechts)</text>
+
+                <!-- Links: Statische Investitionsrechnung -->
+                <rect x="15" y="28" width="365" height="196" rx="8" fill="#f8fafc" stroke="#5b2c6f" stroke-width="1.5"/>
+                <rect x="15" y="28" width="365" height="24" rx="6" fill="#5b2c6f"/>
+                <text x="197" y="44" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10.5">1. Statische Investitionsrechnung (4 Verfahren)</text>
+
+                <rect x="27" y="59" width="340" height="36" rx="5" fill="#dbeafe" stroke="#2563eb"/>
+                <text x="37" y="74" font-size="9.5" font-weight="bold" fill="#1e40af">1. Kostenvergleich (geringste Durchschnittskosten):</text>
+                <text x="37" y="88" font-size="8.8">Betriebskosten + jährl. Abschreibung + kalk. Zins auf &Oslash;-Kapital</text>
+
+                <rect x="27" y="100" width="340" height="36" rx="5" fill="#e8daef" stroke="#7c3aed"/>
+                <text x="37" y="115" font-size="9.5" font-weight="bold" fill="#5b2c6f">2. Gewinnvergleich (grösster Jahresgewinn):</text>
+                <text x="37" y="129" font-size="8.8">Jährlicher Erlös &minus; jährliche Gesamtkosten (gegenüber Cashflow)</text>
+
+                <rect x="27" y="141" width="340" height="36" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+                <text x="37" y="156" font-size="9.5" font-weight="bold" fill="#166534">3. Rentabilitätsrechnung (höchste Rendite):</text>
+                <text x="37" y="170" font-size="8.8">(Gewinn + kalk. Zins) / durchschnittlicher Kapitaleinsatz (%)</text>
+
+                <rect x="27" y="182" width="340" height="36" rx="5" fill="#fef3c7" stroke="#d97706"/>
+                <text x="37" y="197" font-size="9.5" font-weight="bold" fill="#92400e">4. Amortisationsrechnung (kürzeste Payback-Zeit):</text>
+                <text x="37" y="211" font-size="8.8">Kapitaleinsatz / jährl. Rückfluss (Gewinn + Abschr. = Jahre)</text>
+
+                <!-- Rechts: Mehrstufige DBR -->
+                <rect x="400" y="28" width="365" height="196" rx="8" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+                <rect x="400" y="28" width="365" height="24" rx="6" fill="#16a34a"/>
+                <text x="582" y="44" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10.5">2. Mehrstufige Deckungsbeitragsrechnung</text>
+
+                <rect x="414" y="60" width="337" height="22" rx="4" fill="#e8daef"/>
+                <text x="582" y="75" text-anchor="middle" font-size="9.5"><tspan font-weight="bold">Nettoerlös</tspan> &minus; Variable Kosten 1 (Waren/Material)</text>
+
+                <rect x="414" y="87" width="337" height="24" rx="4" fill="#d2b4de"/>
+                <text x="582" y="103" text-anchor="middle" font-size="9.5"><tspan font-weight="bold">= DB 1</tspan> &minus; Variable Kosten 2 (z.B. Provision Verkäufer)</text>
+
+                <rect x="414" y="116" width="337" height="24" rx="4" fill="#5b2c6f"/>
+                <text x="582" y="132" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="bold">= DB 2 &minus; Artikelfixkosten (Abschr., Zinsen Artikel)</text>
+
+                <rect x="414" y="145" width="337" height="24" rx="4" fill="#16a34a"/>
+                <text x="582" y="161" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="bold">= DB 3 (Deckungsbeitrag pro Produkt / Sparte)</text>
+
+                <rect x="414" y="174" width="337" height="20" rx="4" fill="#f1f5f9" stroke="#94a3b8"/>
+                <text x="582" y="188" text-anchor="middle" font-size="9.2">Total DB 3 &minus; Unternehmensfixkosten (Miete, Pers., Div.)</text>
+
+                <rect x="414" y="198" width="337" height="20" rx="4" fill="#2c1638"/>
+                <text x="582" y="212" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="bold">= Betriebserfolg (Gewinn / Verlust)</text>
+            </svg>
+        </div>
+
+        <h3 style="margin-top:1.3rem;">7.2 Praxisbeispiel &amp; Wichtige Formeln</h3>
+        <div class="grid-2">
+            <div class="card">
+                <h4>Formeln Statische Investitionsrechnung</h4>
+                <ul>
+                    <li><strong>Jährliche Abschreibung:</strong> <code>(Investitionskosten &minus; Liquidationserlös) / Nutzungsdauer</code></li>
+                    <li><strong>Durchschnittlicher Kapitaleinsatz:</strong> <code>(Investitionskosten + Liquidationserlös) / 2</code></li>
+                    <li><strong>Kalkulatorischer Zins:</strong> <code>Durchschnittskapital &times; Zinssatz</code></li>
+                    <li><strong>Amortisationsdauer:</strong> <code>Kapitaleinsatz / (Jahresgewinn + jährl. Abschreibungen)</code> (Nettoeinnahmen bzw. Cashflow).</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Mehrstufige DBR: ReDi AG (in 1'000 CHF)</h4>
+                <ul>
+                    <li><strong>Produkte (DB 3):</strong> Fleisch <code>+400</code> &bull; Suppe <code>+200</code> &bull; Brot <code>+300</code> &bull; Gemüse: NE <code>2'000</code> &minus; Var.1 (<code>1'500</code>) = DB1 <code>500</code> &minus; Var.2 (<code>500</code>) = <strong>DB2 <code>0</code></strong> &minus; Artikelfixkosten (<code>400</code>) = <strong>DB3 <code>&minus;400</code></strong>.</li>
+                    <li><strong>Gesamtergebnis:</strong> Total DB3 = <code>500</code> &minus; Unternehmensfixkosten (Miete <code>100</code> + Personal <code>150</code> + Div. <code>120</code> = <code>370</code>) = <strong>Erfolg +130</strong>.</li>
+                    <li><strong>Sortimentsentscheid Gemüse:</strong> Da <code>DB 2 = 0</code> und <code>DB 3 = &minus;400</code>, lohnt sich eine Elimination nur, wenn die <strong>Artikelfixkosten (400) abgebaut</strong> werden können!</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- ==================== REWE QUIZ ==================== -->
     <section id="rewe-quiz">
         <span class="block-badge">Prüfungstraining Rechnungswesen</span>
         <h2>Interaktives Rechnungswesen-Quiz &amp; Rangliste</h2>
-        <p>84 rotierende Prüfungsfragen aus Block 1 bis Block 6 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen, Kennzahlen, Stille Reserven, Nutzschwelle, BAB, Handels-, Divisions- &amp; Nachkalkulation). Deine Punkte zählen in die gemeinsame Rangliste!</p>
+        <p>96 rotierende Prüfungsfragen aus Block 1 bis Block 7 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen, Kennzahlen, Stille Reserven, Nutzschwelle, BAB, Kalkulation, Investitionsrechnung &amp; Mehrstufige DBR). Deine Punkte zählen in die gemeinsame Rangliste!</p>
 
         <div class="player-bar">
             <div class="player-login">
@@ -5177,6 +5262,162 @@ const reweQuestionBank = [
             { id: '1835', label: '18.35 %' }
         ],
         explanation: 'Macaroni = CHF 2.30/kg; Tisch = CHF 542.14; RLI AG: Mat.-Zuschlag = 8.66 %, VVGK-Zuschlag = 18.35 %.'
+    },
+    {
+        id: 'rs31', type: 'single',
+        question: 'Welches Entscheidungskriterium gilt bei der statischen Kostenvergleichsrechnung?',
+        options: [
+            { text: 'Man wählt die Investition mit den geringsten jährlichen Durchschnittskosten', ok: true },
+            { text: 'Man wählt die Investition mit den höchsten jährlichen Abschreibungen', ok: false },
+            { text: 'Man wählt immer die Investition mit dem höchsten Anschaffungspreis', ok: false },
+            { text: 'Man ignoriert Zinsen und Betriebskosten komplett', ok: false }
+        ],
+        explanation: 'Kostenvergleich: Summe aus jährlichen Betriebskosten, jährlicher Abschreibung und kalk. Zins auf dem Durchschnittskapital minimieren.'
+    },
+    {
+        id: 'rs32', type: 'single',
+        question: 'Wie berechnet man in der statischen Investitionsrechnung das durchschnittlich gebundene Kapital (mit Liquidationserlös)?',
+        options: [
+            { text: '(Investitionskosten + Liquidationserlös) / 2', ok: true },
+            { text: '(Investitionskosten − Liquidationserlös) / Nutzungsdauer', ok: false },
+            { text: 'Investitionskosten × Zinssatz', ok: false },
+            { text: 'Kapitaleinsatz / Jahresgewinn', ok: false }
+        ],
+        explanation: 'Durchschnittlicher Kapitaleinsatz = (Anschaffungs-/Investitionskosten + Liquidationserlös) / 2.'
+    },
+    {
+        id: 'rs33', type: 'single',
+        question: 'Wie lautet die Formel für die statische Rentabilitätsrechnung (ROI)?',
+        options: [
+            { text: '(Jahresgewinn + kalkulatorischer Zins) / durchschnittlicher Kapitaleinsatz × 100 %', ok: true },
+            { text: 'Durchschnittlicher Kapitaleinsatz / Jahresgewinn', ok: false },
+            { text: 'Jährliche Betriebskosten / Liquidationserlös', ok: false },
+            { text: 'Kapitaleinsatz / jährliche Abschreibungen', ok: false }
+        ],
+        explanation: 'In der statischen Rentabilitätsrechnung werden Gewinn + kalkulatorischer Zins ins Verhältnis zum Ø-Kapitaleinsatz gesetzt.'
+    },
+    {
+        id: 'rs34', type: 'single',
+        question: 'ReDi AG (Mehrstufige DBR): Das Produkt Gemüse hat DB 1 = 500, DB 2 = 0 und nach Abzug der Artikelfixkosten (400) einen DB 3 = −400. Wann lohnt sich die Elimination?',
+        options: [
+            { text: 'Nur, wenn die Artikelfixkosten von 400 durch die Elimination tatsächlich abgebaut werden können', ok: true },
+            { text: 'Sofort auf jeden Fall, auch wenn die Artikelfixkosten weiterlaufen', ok: false },
+            { text: 'Nie, weil DB 1 negativ ist', ok: false },
+            { text: 'Nur, wenn dadurch die Unternehmensfixkosten steigen', ok: false }
+        ],
+        explanation: 'Da DB 2 = 0 ist, trägt Gemüse nichts zur Deckung der Artikelfixkosten bei – aber fallen die 400 nicht weg, bleiben sie als Belastung bestehen.'
+    },
+    {
+        id: 'rm29', type: 'multi',
+        question: 'Welche 4 Verfahren gehören zur statischen Investitionsrechnung? (Mehrere richtig)',
+        options: [
+            { text: 'Kostenvergleichsrechnung', ok: true },
+            { text: 'Gewinnvergleichsrechnung', ok: true },
+            { text: 'Rentabilitätsrechnung', ok: true },
+            { text: 'Amortisationsrechnung (Wiedergewinnungszeit / Payback)', ok: true }
+        ],
+        explanation: 'Alle vier (Kosten-, Gewinn-, Rentabilitäts- und Amortisationsrechnung) bilden die klassischen statischen Investitionsrechnungsverfahren.'
+    },
+    {
+        id: 'rm30', type: 'multi',
+        question: 'Was berücksichtigt die Amortisationsrechnung (Payback)? (Mehrere richtig)',
+        options: [
+            { text: 'Wie schnell der Kapitaleinsatz durch jährliche Nettoeinnahmen (Cashflow) zurückbezahlt wird', ok: true },
+            { text: 'Gewählt wird die Investition mit der kürzesten Wiedergewinnungszeit', ok: true },
+            { text: 'Jährlicher Rückfluss entspricht Gewinn + Abschreibungen (ohne kalk. Zinsen)', ok: true },
+            { text: 'Gewählt wird die Investition mit der längsten Rückzahlungsdauer', ok: false }
+        ],
+        explanation: 'Amortisationsdauer = Kapitaleinsatz / jährlicher Cashflow (Gewinn + Abschreibungen); je kürzer, desto geringer das Risiko.'
+    },
+    {
+        id: 'rm31', type: 'multi',
+        question: 'Welche Stufen gehören zur mehrstufigen Deckungsbeitragsrechnung (mit Aufteilung variabler Kosten)? (Mehrere richtig)',
+        options: [
+            { text: 'Nettoerlös − Variable Kosten 1 (z.B. Warenaufwand / Einzelmaterial) = DB 1', ok: true },
+            { text: 'DB 1 − Variable Kosten 2 (z.B. Verkaufsprovision) = DB 2', ok: true },
+            { text: 'DB 2 − Artikelfixkosten (Abschreibungen/Zinsen auf Artikel) = DB 3', ok: true },
+            { text: 'Total DB 3 − Unternehmensfixkosten (Miete, Verwaltung) = Betriebserfolg', ok: true }
+        ],
+        explanation: 'Genau dieser 4-stufige Aufbau (DB 1 → DB 2 → DB 3 → Betriebserfolg) bildet die mehrstufige DBR aus den Unterrichtsunterlagen.'
+    },
+    {
+        id: 'rm32', type: 'multi',
+        question: 'ReDi AG (Praxisbeispiel DBR): Welche Zahlen aus der Gesamtlösung stimmen? (Mehrere richtig)',
+        options: [
+            { text: 'Total Nettoerlös = 13’000 (Fleisch 3’000, Suppe 2’000, Gemüse 2’000, Brot 6’000)', ok: true },
+            { text: 'Total DB 1 = 5’500; Total DB 2 = 3’000; Total DB 3 = 500', ok: true },
+            { text: 'Abzüglich Unternehmensfixkosten 370 (Miete 100, Personal 150, Div. 120) = Erfolg 130', ok: true },
+            { text: 'Die ReDi AG macht einen Gesamtverlust von −400', ok: false }
+        ],
+        explanation: 'Total DB 3 beträgt +500; nach Abzug der 370 Unternehmensfixkosten bleibt ein Betriebsgewinn von +130.'
+    },
+    {
+        id: 'rdnd27', type: 'dnd',
+        question: 'Drag & Drop (Statische Investitionsrechnung): Ordne jedem Verfahren das Auswahlkriterium zu.',
+        items: [
+            { id: 'rin1', text: 'Kostenvergleichsrechnung', target: 'mink' },
+            { id: 'rin2', text: 'Gewinnvergleichsrechnung', target: 'maxg' },
+            { id: 'rin3', text: 'Rentabilitätsrechnung', target: 'maxr' },
+            { id: 'rin4', text: 'Amortisationsrechnung', target: 'minz' }
+        ],
+        targets: [
+            { id: 'mink', label: 'Geringste jährl. Durchschnittskosten' },
+            { id: 'maxg', label: 'Grösster Jahresgewinn' },
+            { id: 'maxr', label: 'Höchste Rendite (%)' },
+            { id: 'minz', label: 'Kürzeste Wiedergewinnungszeit' }
+        ],
+        explanation: 'Kosten minimieren, Gewinn und Rendite maximieren, Amortisationszeit minimieren.'
+    },
+    {
+        id: 'rdnd28', type: 'dnd',
+        question: 'Drag & Drop (Investitions-Formeln): Ordne jede Formel dem gesuchten Begriff zu.',
+        items: [
+            { id: 'rif1', text: '(Investition − Liquidationserlös) / Nutzungsdauer', target: 'abs' },
+            { id: 'rif2', text: '(Investition + Liquidationserlös) / 2', target: 'dkap' },
+            { id: 'rif3', text: '(Gewinn + kalk. Zins) / Ø Kapitaleinsatz', target: 'roi' },
+            { id: 'rif4', text: 'Kapitaleinsatz / jährl. Nettoeinnahmen', target: 'amo' }
+        ],
+        targets: [
+            { id: 'abs', label: 'Jährliche Abschreibung' },
+            { id: 'dkap', label: 'Durchschnittlicher Kapitaleinsatz' },
+            { id: 'roi', label: 'Rentabilität (ROI)' },
+            { id: 'amo', label: 'Amortisationsdauer (Jahre)' }
+        ],
+        explanation: 'Abschreibung verteilt Wertverlust auf Jahre; Ø-Kapital = Mittelwert; ROI = (Gewinn+Zins)/Ø-Kapital; Payback = Kapital/Cashflow.'
+    },
+    {
+        id: 'rdnd29', type: 'dnd',
+        question: 'Drag & Drop (Mehrstufige DBR – Kostenarten ReDi AG): Ordne die Posten der richtigen Stufe zu.',
+        items: [
+            { id: 'rdbr1', text: 'Warenaufwand / Einzelmaterial & Einzellöhne', target: 'vk1' },
+            { id: 'rdbr2', text: 'Provision Verkäufer', target: 'vk2' },
+            { id: 'rdbr3', text: 'Abschreibungen & Zinsen auf Artikel', target: 'afix' },
+            { id: 'rdbr4', text: 'Miete, Verwaltungspersonal, div. Kosten', target: 'ufix' }
+        ],
+        targets: [
+            { id: 'vk1', label: 'Variable Kosten 1 (vor DB 1)' },
+            { id: 'vk2', label: 'Variable Kosten 2 (vor DB 2)' },
+            { id: 'afix', label: 'Artikelfixkosten (vor DB 3)' },
+            { id: 'ufix', label: 'Unternehmensfixkosten (nach Total DB 3)' }
+        ],
+        explanation: 'Warenaufwand = Var.1; Provision = Var.2; Artikel-Abschr./Zinsen = Artikelfixkosten; Miete/Personal/Div. = Unternehmensfixkosten.'
+    },
+    {
+        id: 'rdnd30', type: 'dnd',
+        question: 'Drag & Drop (ReDi AG Ergebnisse): Ordne die DB-3-Werte bzw. das Gesamtergebnis zu.',
+        items: [
+            { id: 'rrg1', text: 'Produkt Fleisch (DB 3)', target: '400' },
+            { id: 'rrg2', text: 'Produkt Gemüse (DB 3)', target: 'm400' },
+            { id: 'rrg3', text: 'Total DB 3 aller 4 Produkte', target: '500' },
+            { id: 'rrg4', text: 'Betriebserfolg (nach 370 Unternehmensfixkosten)', target: '130' }
+        ],
+        targets: [
+            { id: '400', label: '+400 (CHF 400’000)' },
+            { id: 'm400', label: '−400 (CHF −400’000)' },
+            { id: '500', label: '+500 (CHF 500’000)' },
+            { id: '130', label: '+130 (CHF 130’000)' }
+        ],
+        explanation: 'Fleisch +400, Suppe +200, Gemüse −400, Brot +300 → Total DB 3 = 500; minus 370 = Betriebserfolg +130.'
     }
 ];
 
