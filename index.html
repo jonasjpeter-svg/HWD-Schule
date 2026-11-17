@@ -610,7 +610,7 @@
 <div class="subject-bar" role="tablist" aria-label="Fächer-Auswahl">
     <button type="button" class="subject-tab active" id="tab-vwl" onclick="switchSubject('vwl')">📊 VWL &amp; BWL <span class="subject-badge-soon">10 Blöcke + Quiz</span></button>
     <button type="button" class="subject-tab" id="tab-marketing" onclick="switchSubject('marketing')">📣 Marketing <span class="subject-badge-soon">3 Präsentationen + Quiz</span></button>
-    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">8 Blöcke + Quiz</span></button>
+    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">9 Blöcke + Quiz</span></button>
 </div>
 
 <nav id="nav-vwl">
@@ -643,6 +643,7 @@
     <a href="#rewe-block6">Block 6: Handel &amp; Division</a>
     <a href="#rewe-block7">Block 7: Investition &amp; Mehrst. DBR</a>
     <a href="#rewe-block8">Block 8: Dyn. Investition</a>
+    <a href="#rewe-block9">Block 9: Fixkostenschichten</a>
     <a href="#rewe-quiz" style="background: linear-gradient(135deg,#8b5cf6,#6d28d9); color: #ffffff;">🎯 ReWe-Quiz &amp; Rangliste</a>
 </nav>
 
@@ -2700,11 +2701,83 @@
         </div>
     </section>
 
+    <!-- ==================== REWE BLOCK 9: FIXKOSTENSCHICHTEN & DB-SÄTZE ==================== -->
+    <section id="rewe-block9">
+        <span class="block-badge">9. Block · 24.11.2026 &bull; Fixkostendeckungsrechnung &amp; DB-Sätze</span>
+        <h2>9. Block: Mehrstufige DBR nach Fixkostenschichten &amp; DB-Sätzen</h2>
+
+        <div class="callout">
+            <strong>Fixkosten stufenweise zuordnen (nicht pauschal in einen Topf!):</strong> In der erweiterten mehrstufigen DBR werden die Fixkosten verursachungsgerecht in Schichten unterteilt: <strong>Artikelfixkosten</strong> (einem Produkt direkt zurechenbar) &rarr; <strong>Gruppen-/Abteilungsfixkosten</strong> (einer Produktgruppe zurechenbar) &rarr; <strong>Unternehmensfixkosten</strong> (Rest für den Gesamtbetrieb). Die relativen <strong>DB-Sätze</strong> (<code>DB / Nettoerlös</code> in %) zeigen die Ertragskraft unabhängig vom Umsatzvolumen.
+        </div>
+
+        <h3 style="margin-top:1.3rem;">9.1 Fixkostenstufen &amp; DB-Sätze im Überblick</h3>
+        <div class="graphic-container">
+            <svg width="780" height="236" viewBox="0 0 780 236">
+                <text x="390" y="16" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">4-stufige Fixkostendeckungsrechnung (links) &amp; DB-Sätze (rechts)</text>
+
+                <!-- Links: 4 Stufen -->
+                <rect x="15" y="28" width="365" height="196" rx="8" fill="#f8fafc" stroke="#5b2c6f" stroke-width="1.5"/>
+                <rect x="15" y="28" width="365" height="24" rx="6" fill="#5b2c6f"/>
+                <text x="197" y="44" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10.5">1. Fixkostenschichten (DB 1 bis DB 4)</text>
+
+                <rect x="27" y="60" width="340" height="24" rx="4" fill="#e8daef"/>
+                <text x="197" y="76" text-anchor="middle" font-size="9.5"><tspan font-weight="bold">Nettoerlös &minus; Variable Kosten = DB 1</tspan></text>
+
+                <rect x="27" y="90" width="340" height="28" rx="4" fill="#dbeafe" stroke="#2563eb"/>
+                <text x="197" y="108" text-anchor="middle" font-size="9.3"><tspan font-weight="bold">DB 1 &minus; Artikelfixkosten = DB 2</tspan> (je Produkt)</text>
+
+                <rect x="27" y="124" width="340" height="28" rx="4" fill="#dcfce7" stroke="#16a34a"/>
+                <text x="197" y="142" text-anchor="middle" font-size="9.3"><tspan font-weight="bold">Total DB 2 &minus; Gruppenfixkosten = DB 3</tspan> (je Abteilung)</text>
+
+                <rect x="27" y="158" width="340" height="28" rx="4" fill="#2c1638"/>
+                <text x="197" y="176" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="bold">Total DB 3 &minus; Unternehmensfixkosten = DB 4 (Gewinn)</text>
+
+                <text x="197" y="206" text-anchor="middle" font-size="9" fill="#475569">Jede Stufe prüft: Trägt das Produkt/die Abteilung ihre eigenen Fixkosten?</text>
+
+                <!-- Rechts: DB-Sätze & Sortimentssteuerung -->
+                <rect x="400" y="28" width="365" height="196" rx="8" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+                <rect x="400" y="28" width="365" height="24" rx="6" fill="#16a34a"/>
+                <text x="582" y="44" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10.5">2. DB-Sätze (%) &amp; Sortimentssteuerung</text>
+
+                <text x="414" y="72" font-size="9.8" font-weight="bold" fill="#166534">Formel DB-Satz (Deckungsbeitragsmarge):</text>
+                <text x="414" y="88" font-size="9.4">DB-Satz n (%) = (DB n / Nettoerlös) &times; 100 %</text>
+
+                <text x="414" y="112" font-size="9.8" font-weight="bold" fill="#5b2c6f">Beispiele für Fixkostenschichten:</text>
+                <text x="414" y="128" font-size="9.1">&bull; <tspan font-weight="bold">Artikelfix:</tspan> Produktwerbung, Spezialmaschine</text>
+                <text x="414" y="143" font-size="9.1">&bull; <tspan font-weight="bold">Gruppenfix:</tspan> Abteilungsleitung, Gruppenlager</text>
+                <text x="414" y="158" font-size="9.1">&bull; <tspan font-weight="bold">Unternehmensfix:</tspan> Geschäftsleitung, zentrale Miete</text>
+
+                <rect x="412" y="172" width="340" height="40" rx="5" fill="#fef3c7" stroke="#d97706"/>
+                <text x="582" y="188" text-anchor="middle" font-size="9" font-weight="bold" fill="#92400e">Sortiments-Rangliste: Absolut vs. Prozentual!</text>
+                <text x="582" y="203" text-anchor="middle" font-size="8.6" fill="#92400e">Kleiner Umsatz kann hohen DB-Satz (%) haben (z.B. A2 mit 46.7 % DB-Satz 2).</text>
+            </svg>
+        </div>
+
+        <h3 style="margin-top:1.3rem;">9.2 Praxisbeispiel (Buch-Aufgabe: Produktgruppe A &amp; B)</h3>
+        <div class="grid-2">
+            <div class="card">
+                <h4>Produktgruppe A (A1, A2, A3) &amp; Gruppe B (B1, B2)</h4>
+                <ul>
+                    <li><strong>Gruppe A (NE 289'000):</strong> Var. Kosten <code>145'700</code> &rarr; <strong>DB 1 = 143'300</strong> (<code>49.6 %</code>) &minus; Artikelfixkosten <code>40'000</code> (A1: 25', A3: 15') = <strong>DB 2 = 103'300</strong> &minus; Gruppenfixkosten <code>36'000</code> = <strong>DB 3 = 67'300</strong> (<code>23.3 %</code>).</li>
+                    <li><strong>Gruppe B (NE 1'545'000):</strong> Var. Kosten <code>850'000</code> &rarr; <strong>DB 1 = 695'000</strong> (<code>45.0 %</code>) &minus; Artikelfixkosten <code>38'000</code> (nur B2) = <strong>DB 2 = 657'000</strong> &minus; Gruppenfixkosten <code>180'000</code> = <strong>DB 3 = 477'000</strong> (<code>30.9 %</code>).</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Gesamtergebnis &amp; DB-Sätze Total</h4>
+                <ul>
+                    <li><strong>Total A+B (NE 1'834'000):</strong> DB 1 = <code>838'300</code> (<code>45.7 %</code>) &rarr; DB 2 = <code>760'300</code> (<code>41.5 %</code>) &rarr; DB 3 = <code>544'300</code> (<code>29.7 %</code>).</li>
+                    <li><strong>&minus; Unternehmensfixkosten (130'000):</strong> <strong>DB 4 (Betriebserfolg) = CHF 414'300</strong> (<strong>DB-Satz 4 = 22.6 %</strong>).</li>
+                    <li><strong>Rangliste nach absolutem DB 1:</strong> 1. B2 (<code>375'</code>), 2. B1 (<code>320'</code>), 3. A1 (<code>70'</code>), 4. A2 (<code>49'</code>), 5. A3 (<code>24.3'</code>).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- ==================== REWE QUIZ ==================== -->
     <section id="rewe-quiz">
         <span class="block-badge">Prüfungstraining Rechnungswesen</span>
         <h2>Interaktives Rechnungswesen-Quiz &amp; Rangliste</h2>
-        <p>108 rotierende Prüfungsfragen aus Block 1 bis Block 8 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen, Kennzahlen, Stille Reserven, Nutzschwelle, BAB, Kalkulation, Statische &amp; Dynamische Investitionsrechnung, Mehrstufige DBR). Deine Punkte zählen in die gemeinsame Rangliste!</p>
+        <p>120 rotierende Prüfungsfragen aus Block 1 bis Block 9 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen, Kennzahlen, Stille Reserven, Nutzschwelle, BAB, Kalkulation, Statische &amp; Dynamische Investitionsrechnung, Mehrstufige DBR &amp; Fixkostenschichten). Deine Punkte zählen in die gemeinsame Rangliste!</p>
 
         <div class="player-bar">
             <div class="player-login">
@@ -5651,6 +5724,162 @@ const reweQuestionBank = [
             { id: 'dyn', label: 'Dynamische Investitionsrechnung' }
         ],
         explanation: 'Statisch = Durchschnittsjahr mit Abschreibungen & Ø-Kapital; dynamisch = gesamte Nutzungsdauer mit abgezinsten Cashflows.'
+    },
+    {
+        id: 'rs39', type: 'single',
+        question: 'Welche Fixkosten werden in der mehrstufigen Fixkostendeckungsrechnung vom DB 2 einer Produktgruppe abgezogen, um den DB 3 zu erhalten?',
+        options: [
+            { text: 'Gruppen- bzw. Abteilungsfixkosten', ok: true },
+            { text: 'Variable Kosten der Produktion', ok: false },
+            { text: 'Unternehmensfixkosten (z.B. Geschäftsleitung)', ok: false },
+            { text: 'Direkte Steuern vom Vorjahr', ok: false }
+        ],
+        explanation: 'DB 1 − Artikelfixkosten = DB 2; Total DB 2 − Gruppenfixkosten = DB 3; Total DB 3 − Unternehmensfixkosten = DB 4 (Betriebserfolg).'
+    },
+    {
+        id: 'rs40', type: 'single',
+        question: 'Wie berechnet man den DB-Satz 2 (in %) eines Produkts?',
+        options: [
+            { text: '(DB 2 / Nettoerlös) × 100 %', ok: true },
+            { text: '(Nettoerlös / DB 2) × 100 %', ok: false },
+            { text: '(Artikelfixkosten / Variable Kosten) × 100 %', ok: false },
+            { text: '(DB 2 / Unternehmensfixkosten) × 100 %', ok: false }
+        ],
+        explanation: 'Jeder DB-Satz setzt den jeweiligen Deckungsbeitrag ins Verhältnis zum Nettoerlös: DB n / Nettoerlös.'
+    },
+    {
+        id: 'rs41', type: 'single',
+        question: 'Buch-Aufgabe (Gruppe A+B): Total DB 3 beträgt CHF 544’300, die Unternehmensfixkosten betragen CHF 130’000. Wie hoch ist DB 4 (Betriebserfolg)?',
+        options: [
+            { text: 'CHF 414’300', ok: true },
+            { text: 'CHF 674’300', ok: false },
+            { text: 'CHF 130’000', ok: false },
+            { text: 'CHF 544’300', ok: false }
+        ],
+        explanation: 'DB 4 = Total DB 3 (544’300) − Unternehmensfixkosten (130’000) = CHF 414’300.'
+    },
+    {
+        id: 'rs42', type: 'single',
+        question: 'Warum hat Produkt A2 in der Buch-Aufgabe einen DB 2 = DB 1 (beide CHF 49’000)?',
+        options: [
+            { text: 'Weil für Produkt A2 keine Artikelfixkosten (CHF 0) anfallen', ok: true },
+            { text: 'Weil Produkt A2 keine variablen Kosten hat', ok: false },
+            { text: 'Weil die Unternehmensfixkosten dort abgezogen wurden', ok: false },
+            { text: 'Weil der Nettoerlös 0 beträgt', ok: false }
+        ],
+        explanation: 'DB 2 = DB 1 − Artikelfixkosten. Sind die Artikelfixkosten 0 (wie bei A2 und B1), bleibt DB 2 gleich DB 1.'
+    },
+    {
+        id: 'rm37', type: 'multi',
+        question: 'Welche Aussagen zu den 3 Fixkostenschichten der mehrstufigen DBR stimmen? (Mehrere richtig)',
+        options: [
+            { text: 'Artikelfixkosten sind einem einzelnen Produkt direkt zurechenbar (z.B. Spezialmaschine, Produktwerbung)', ok: true },
+            { text: 'Gruppenfixkosten fallen für eine ganze Produktgruppe/Abteilung an (z.B. Abteilungsleitung)', ok: true },
+            { text: 'Unternehmensfixkosten betreffen das Gesamtunternehmen (z.B. Geschäftsleitung, zentrale Miete)', ok: true },
+            { text: 'Variable Kosten werden erst beim DB 4 am Ende abgezogen', ok: false }
+        ],
+        explanation: 'Variable Kosten werden direkt ganz oben vom Nettoerlös abgezogen (→ DB 1). Danach folgen die 3 Fixkostenschichten.'
+    },
+    {
+        id: 'rm38', type: 'multi',
+        question: 'Welche DB-Sätze gehören zur Buch-Aufgabe (Total A+B, Nettoerlös 1’834’000)? (Mehrere richtig)',
+        options: [
+            { text: 'DB-Satz 1 = 45.7 % (838’300 / 1’834’000)', ok: true },
+            { text: 'DB-Satz 2 = 41.5 % (760’300 / 1’834’000)', ok: true },
+            { text: 'DB-Satz 3 = 29.7 % (544’300 / 1’834’000)', ok: true },
+            { text: 'DB-Satz 4 = 22.6 % (414’300 / 1’834’000)', ok: true }
+        ],
+        explanation: 'Alle vier DB-Sätze beziehen den jeweiligen DB auf den Gesamt-Nettoerlös von CHF 1’834’000.'
+    },
+    {
+        id: 'rm39', type: 'multi',
+        question: 'Was zeigt der Vergleich zwischen absolutem DB und prozentualem DB-Satz im Sortiment? (Mehrere richtig)',
+        options: [
+            { text: 'Ein Produkt mit kleinem Umsatz (z.B. A2) kann trotzdem einen sehr hohen DB-Satz (%) erzielen', ok: true },
+            { text: 'Grosse Umsatzträger (z.B. B2, B1) liefern oft die höchsten absoluten Deckungsbeiträge in CHF', ok: true },
+            { text: 'Beide Kennzahlen zusammen helfen bei Preis-, Rabatt- und Sortimentsentscheiden', ok: true },
+            { text: 'Produkte mit kleinerem DB-Satz müssen immer sofort gestrichen werden, auch wenn der absolute DB positiv ist', ok: false }
+        ],
+        explanation: 'Solange der DB positiv ist, trägt das Produkt zur Fixkostendeckung bei! Ranglisten nach absolutem DB und DB-Satz ergänzen sich.'
+    },
+    {
+        id: 'rm40', type: 'multi',
+        question: 'Welche Zahlen der Produktgruppe A (A1, A2, A3) in der Buch-Aufgabe sind korrekt? (Mehrere richtig)',
+        options: [
+            { text: 'Nettoerlös Gruppe A = CHF 289’000; Variable Kosten = CHF 145’700 → DB 1 = CHF 143’300', ok: true },
+            { text: 'Artikelfixkosten Gruppe A = CHF 40’000 (A1: 25’000, A3: 15’000) → DB 2 = CHF 103’300', ok: true },
+            { text: 'Gruppenfixkosten A = CHF 36’000 → DB 3 Gruppe A = CHF 67’300', ok: true },
+            { text: 'DB 3 Gruppe A beträgt CHF 477’000', ok: false }
+        ],
+        explanation: 'CHF 477’000 ist der DB 3 der grösseren Produktgruppe B; Gruppe A erzielt einen DB 3 von CHF 67’300.'
+    },
+    {
+        id: 'rdnd35', type: 'dnd',
+        question: 'Drag & Drop (Fixkostenschichten): Ordne jede Stufe der passenden Formel zu.',
+        items: [
+            { id: 'rfx1', text: 'Nettoerlös − Variable Kosten', target: 'db1' },
+            { id: 'rfx2', text: 'DB 1 − Artikelfixkosten', target: 'db2' },
+            { id: 'rfx3', text: 'Total DB 2 − Gruppenfixkosten', target: 'db3' },
+            { id: 'rfx4', text: 'Total DB 3 − Unternehmensfixkosten', target: 'db4' }
+        ],
+        targets: [
+            { id: 'db1', label: 'DB 1' },
+            { id: 'db2', label: 'DB 2 (Produktebene)' },
+            { id: 'db3', label: 'DB 3 (Abteilungsebene)' },
+            { id: 'db4', label: 'DB 4 (Betriebserfolg)' }
+        ],
+        explanation: 'Stufenweise Fixkostendeckung: Var. Kosten → DB 1; Artikelfix → DB 2; Gruppenfix → DB 3; Unternehmensfix → DB 4.'
+    },
+    {
+        id: 'rdnd36', type: 'dnd',
+        question: 'Drag & Drop (Fixkosten-Beispiele): Ordne die Kosten der richtigen Schicht zu.',
+        items: [
+            { id: 'rfk1', text: 'Spezialmaschine nur für Produkt A1', target: 'art' },
+            { id: 'rfk2', text: 'Gehalt Abteilungsleiter Produktgruppe B', target: 'grp' },
+            { id: 'rfk3', text: 'Honorar der zentralen Geschäftsleitung', target: 'unt' },
+            { id: 'rfk4', text: 'Einzelmaterial für Produkt B2', target: 'var' }
+        ],
+        targets: [
+            { id: 'art', label: 'Artikelfixkosten' },
+            { id: 'grp', label: 'Gruppenfixkosten' },
+            { id: 'unt', label: 'Unternehmensfixkosten' },
+            { id: 'var', label: 'Variable Kosten' }
+        ],
+        explanation: 'Einzelmaterial = variabel; Spezialmaschine = Artikelfix; Abteilungsleitung = Gruppenfix; Geschäftsleitung = Unternehmensfix.'
+    },
+    {
+        id: 'rdnd37', type: 'dnd',
+        question: 'Drag & Drop (Buch-Aufgabe Zahlen): Ordne die Summen der Ebene „Total A+B“ zu.',
+        items: [
+            { id: 'rbt9_1', text: 'Total Nettoerlös (A + B)', target: '1834' },
+            { id: 'rbt9_2', text: 'Total DB 1 (45.7 %)', target: '838' },
+            { id: 'rbt9_3', text: 'Total DB 3 nach Gruppenfixkosten', target: '544' },
+            { id: 'rbt9_4', text: 'DB 4 Betriebserfolg (22.6 %)', target: '414' }
+        ],
+        targets: [
+            { id: '1834', label: 'CHF 1’834’000' },
+            { id: '838', label: 'CHF 838’300' },
+            { id: '544', label: 'CHF 544’300' },
+            { id: '414', label: 'CHF 414’300' }
+        ],
+        explanation: 'NE 1’834’000 → DB1 838’300 → DB2 760’300 → DB3 544’300 → DB4 414’300.'
+    },
+    {
+        id: 'rdnd38', type: 'dnd',
+        question: 'Drag & Drop (DB 1 Rangliste in der Buch-Aufgabe): Ordne die Produkte ihrem Rang zu.',
+        items: [
+            { id: 'rrg9_1', text: 'Produkt B2 (DB 1 = CHF 375’000)', target: 'r1' },
+            { id: 'rrg9_2', text: 'Produkt B1 (DB 1 = CHF 320’000)', target: 'r2' },
+            { id: 'rrg9_3', text: 'Produkt A1 (DB 1 = CHF 70’000)', target: 'r3' },
+            { id: 'rrg9_4', text: 'Produkt A3 (DB 1 = CHF 24’300)', target: 'r5' }
+        ],
+        targets: [
+            { id: 'r1', label: 'Rang 1' },
+            { id: 'r2', label: 'Rang 2' },
+            { id: 'r3', label: 'Rang 3' },
+            { id: 'r5', label: 'Rang 5' }
+        ],
+        explanation: 'Nach absolutem DB 1: 1. B2 (375’), 2. B1 (320’), 3. A1 (70’), 4. A2 (49’), 5. A3 (24.3’).'
     }
 ];
 
