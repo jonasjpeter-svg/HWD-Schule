@@ -12,13 +12,8 @@
             --bg: #f8f9fa;
             --card-bg: #ffffff;
             --text: #333333;
-            --muted: #64748b;
             --border: #e2e8f0;
         }
-
-        * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg);
@@ -27,7 +22,6 @@
             padding: 0;
             line-height: 1.6;
         }
-
         header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
@@ -35,20 +29,15 @@
             text-align: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
-
         header h1 {
             margin: 0;
-            font-size: clamp(1.8rem, 4vw, 2.6rem);
-            line-height: 1.2;
+            font-size: 2.2rem;
         }
-
         header p {
-            margin: 0.7rem auto 0;
-            font-size: clamp(0.95rem, 2vw, 1.1rem);
-            opacity: 0.9;
-            max-width: 760px;
+            margin: 0.5rem 0 0;
+            font-size: 1.1rem;
+            opacity: 0.85;
         }
-
         nav {
             background-color: #ffffff;
             padding: 1rem;
@@ -61,78 +50,63 @@
             flex-wrap: wrap;
             gap: 0.5rem;
         }
-
         nav a {
             color: var(--primary);
             background-color: #f1f5f9;
-            padding: 0.55rem 0.9rem;
+            padding: 0.5rem 1rem;
             border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             transition: all 0.2s ease;
-            border: 1px solid transparent;
         }
-
         nav a:hover {
             background-color: var(--primary);
             color: white;
-            border-color: var(--primary);
         }
-
         .container {
             max-width: 1000px;
             margin: 2rem auto;
-            padding: 0 1.25rem 2rem;
+            padding: 0 1.5rem;
         }
-
         section {
             background: var(--card-bg);
             border-radius: 10px;
-            padding: clamp(1.2rem, 2vw, 2rem);
+            padding: 2rem;
             margin-bottom: 2rem;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border: 1px solid var(--border);
         }
-
         h2 {
             color: var(--primary);
             border-bottom: 3px solid var(--accent);
             padding-bottom: 0.5rem;
             margin-top: 0;
-            font-size: clamp(1.4rem, 3vw, 2rem);
-            line-height: 1.25;
         }
-
         h3 {
             color: var(--secondary);
             margin-top: 1.5rem;
-            font-size: clamp(1.05rem, 2vw, 1.35rem);
         }
-
-        p { font-size: 1rem; }
-        ul { padding-left: 1.5rem; }
-        li { margin-bottom: 0.5rem; }
-
+        ul {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 1.5rem 0;
-            font-size: 0.95rem;
         }
-
         th, td {
             border: 1px solid var(--border);
-            padding: 0.8rem 0.75rem;
+            padding: 0.75rem;
             text-align: left;
-            vertical-align: top;
         }
-
         th {
             background-color: #f1f5f9;
             color: var(--primary);
         }
-
         .graphic-container {
             background: #ffffff;
             border: 1px solid var(--border);
@@ -141,14 +115,10 @@
             margin: 1.5rem 0;
             text-align: center;
         }
-
         .graphic-container svg {
             max-width: 100%;
             height: auto;
-            display: block;
-            margin: 0 auto;
         }
-
         .explanation {
             background-color: #f8fafc;
             border-left: 4px solid var(--primary);
@@ -156,30 +126,20 @@
             margin-top: 1rem;
             font-size: 0.95rem;
             border-radius: 0 6px 6px 0;
-            text-align: left;
         }
-
         footer {
             text-align: center;
-            padding: 2rem 1rem;
-            color: var(--muted);
+            padding: 2rem;
+            color: #64748b;
             font-size: 0.9rem;
-        }
-
-        @media (max-width: 640px) {
-            nav { justify-content: flex-start; }
-            nav a { flex: 1 1 calc(50% - 0.5rem); text-align: center; }
-            .container { padding: 0 0.9rem 1.5rem; }
-            section { padding: 1rem; }
-            table { display: block; overflow-x: auto; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>HWD VWL &amp; BWL – Gesamtkompendium</h1>
-    <p>Chronologische Lernzusammenfassung mit allen Modellen, Grafiken &amp; Erklärungen (Blöcke 1 bis 10)</p>
+    <h1>HWD VWL & BWL – Gesamtkompendium</h1>
+    <p>Chronologische Lernzusammenfassung mit allen Modellen, Grafiken & Erklärungen (Blöcke 1 bis 10)</p>
 </header>
 
 <nav>
@@ -197,24 +157,28 @@
 
 <div class="container">
 
+    <!-- BLOCK 1 -->
     <section id="block1">
-        <h2>Block 1: Einführung, Bedürfnisse, Märkte &amp; Elastizitäten</h2>
+        <h2>Block 1: Einführung, Bedürfnisse, Märkte & Elastizitäten</h2>
         <p>Grundlagen des wirtschaftlichen Handelns, Güterarten, das ökonomische Prinzip sowie Preis- und Nachfrageanalysen.</p>
-
-        <h3>Bedürfnisse &amp; Konsumwünsche</h3>
+        
+        <h3>Bedürfnisse & Konsumwünsche</h3>
         <p>Der Mensch strebt nach der Behebung von Mängeln. Da Ressourcen (Geld, Zeit) knapp sind, entsteht das ökonomische Problem: <strong>Knappe Güter vs. unendliche Bedürfnisse</strong>.</p>
 
         <h3>Das Marktgleichgewicht</h3>
         <div class="graphic-container">
-            <svg width="400" height="250" viewBox="0 0 400 250" role="img" aria-label="Marktgleichgewicht mit Angebot und Nachfrage">
+            <svg width="400" height="250" viewBox="0 0 400 250">
                 <line x1="50" y1="200" x2="350" y2="200" stroke="#333" stroke-width="2"/>
                 <line x1="50" y1="200" x2="50" y2="30" stroke="#333" stroke-width="2"/>
                 <text x="350" y="220" font-size="12">Menge</text>
                 <text x="20" y="40" font-size="12">Preis</text>
+                <!-- Nachfragekurve -->
                 <path d="M 80 50 Q 200 150 320 180" fill="none" stroke="#8b5cf6" stroke-width="3"/>
                 <text x="230" y="110" font-size="11" fill="#8b5cf6">Nachfrage</text>
+                <!-- Angebotskurve -->
                 <path d="M 80 180 Q 200 150 320 50" fill="none" stroke="#475569" stroke-width="3"/>
                 <text x="230" y="180" font-size="11" fill="#475569">Angebot</text>
+                <!-- Schnittpunkt -->
                 <circle cx="200" cy="135" r="5" fill="#dc2626"/>
                 <line x1="50" y1="135" x2="200" y2="135" stroke="#94a3b8" stroke-dasharray="4"/>
                 <line x1="200" y1="135" x2="200" y2="200" stroke="#94a3b8" stroke-dasharray="4"/>
@@ -227,9 +191,11 @@
         </div>
     </section>
 
+    <!-- BLOCK 2 -->
     <section id="block2">
-        <h2>Block 2: Marktformen, Staatseingriffe &amp; Geld</h2>
+        <h2>Block 2: Marktformen, Staatseingriffe & Geld</h2>
         <p>Vollständige Konkurrenz, Monopole, Höchst-/Mindestpreise, Steuern, Subventionen sowie die Rolle der Notenbank (SNB).</p>
+        
         <h3>Höchst- und Mindestpreise</h3>
         <ul>
             <li><strong>Höchstpreis:</strong> Liegt unter dem Gleichgewichtspreis (Schutz der Konsumenten, z.B. Mietpreisdeckelung). Resultat: <em>Nachfrageüberschuss / Mangel</em>.</li>
@@ -237,33 +203,48 @@
         </ul>
     </section>
 
+    <!-- BLOCK 3 -->
     <section id="block3">
-        <h2>Block 3: St. Galler Management-Modell (SGMM) &amp; Wertschöpfung</h2>
+        <h2>Block 3: St. Galler Management-Modell (SGMM) & Wertschöpfung</h2>
         <p>Unternehmensstrukturen, Umweltsphären, Anspruchsgruppen sowie die Wertkette nach Porter.</p>
+        
         <h3>Wertkette nach Michael Porter</h3>
         <table>
-            <tr><th>Aktivitätentyp</th><th>Beispiele</th></tr>
-            <tr><td><strong>Primäre Aktivitäten</strong></td><td>Eingangslogistik, Produktion, Ausgangslogistik, Marketing &amp; Verkauf, Service</td></tr>
-            <tr><td><strong>Unterstützende Aktivitäten</strong></td><td>Unternehmensinfrastructure, Personalmanagement, Technologiemanagement, Beschaffung</td></tr>
+            <tr>
+                <th>Aktivitätentyp</th>
+                <th>Beispiele</th>
+            </tr>
+            <tr>
+                <td><strong>Primäre Aktivitäten</strong></td>
+                <td>Eingangslogistik, Produktion, Ausgangslogistik, Marketing & Verkauf, Service</td>
+            </tr>
+            <tr>
+                <td><strong>Unterstützende Aktivitäten</strong></td>
+                <td>Unternehmensinfrastructure, Personalmanagement, Technologiemanagement, Beschaffung</td>
+            </tr>
         </table>
     </section>
 
+    <!-- BLOCK 4 -->
     <section id="block4">
-        <h2>Block 4: Strategisches Management &amp; Marktanalyse</h2>
+        <h2>Block 4: Strategisches Management & Marktanalyse</h2>
         <p>SWOT-Analyse, PESTEL, Porter's 5 Forces und quantitative Marktkenngrössen.</p>
+        
         <h3>Marktkenngrössen (Formeln)</h3>
         <ul>
             <li><strong>Marktkapazität:</strong> Maximal mögliche Absatzmenge im Gesamtmarkt.</li>
             <li><strong>Marktpotenzial:</strong> Maximal möglicher Gesamtumsatz aller Anbieter.</li>
             <li><strong>Marktvolumen:</strong> Tatsächlich realisierter Gesamtumsatz aller Anbieter.</li>
-            <li><strong>Marktanteil:</strong> (Unternehmensumsatz / Marktvolumen) × 100</li>
-            <li><strong>Sättigungsgrad:</strong> (Marktvolumen / Marktpotenzial) × 100</li>
+            <li><strong>Marktanteil:</strong> $(\text{Einfacher Unternehmensumsatz} / \text{Marktvolumen}) \times 100$</li>
+            <li><strong>Sättigungsgrad:</strong> $(\text{Marktvolumen} / \text{Marktpotenzial}) \times 100$</li>
         </ul>
     </section>
 
+    <!-- BLOCK 5 -->
     <section id="block5">
-        <h2>Block 5: Strategieauswahl &amp; Umsetzung</h2>
+        <h2>Block 5: Strategieauswahl & Umsetzung</h2>
         <p>Ansoff-Matrix, BCG-Matrix, Porter Wettbewerbsstrategien, SMART-Formel und Balanced Scorecard.</p>
+        
         <h3>Die BCG-Matrix (Boston Consulting Group)</h3>
         <ul>
             <li><strong>Question Marks:</strong> Hohes Marktwachstum, geringer Marktanteil (Investieren oder abstossen).</li>
@@ -273,40 +254,63 @@
         </ul>
     </section>
 
+    <!-- BLOCK 6 -->
     <section id="block6">
-        <h2>Block 6: Gesamtwirtschaftliche Daten &amp; Sozialpolitik</h2>
+        <h2>Block 6: Gesamtwirtschaftliche Daten & Sozialpolitik</h2>
         <p>BIP, BNE, Arbeitslosigkeit, Inflation, Lorenz-Kurve und das Schweizer Sozialversicherungssystem (3-Säulen-Prinzip).</p>
+        
         <h3>Das 3-Säulen-Prinzip der Vorsorge</h3>
         <table>
-            <tr><th>Säule</th><th>Ziel / Zweck</th><th>Finanzierung</th></tr>
-            <tr><td><strong>1. Säule (AHV/IV/EL)</strong></td><td>Existenzbedarf sichern (Staatlich)</td><td>Umlageverfahren (Beiträge von Versicherten + Staat)</td></tr>
-            <tr><td><strong>2. Säule (Pensionskasse - BVG)</strong></td><td>Fortführung gewohnter Lebenshaltung</td><td>Kapitaldeckungsverfahren (Obligatorisch für Arbeitnehmende)</td></tr>
-            <tr><td><strong>3. Säule (Privates Sparen)</strong></td><td>Komfortbedarf im Alter (Steuerprivilegiert)</td><td>Individuell &amp; freiwillig</td></tr>
+            <tr>
+                <th>Säule</th>
+                <th>Ziel / Zweck</th>
+                <th>Finanzierung</th>
+            </tr>
+            <tr>
+                <td><strong>1. Säule (AHV/IV/EL)</strong></td>
+                <td>Existenzbedarf sichern (Staatlich)</td>
+                <td>Umlageverfahren (Beiträge von Versicherten + Staat)</td>
+            </tr>
+            <tr>
+                <td><strong>2. Säule (Pensionskasse - BVG)</strong></td>
+                <td>Fortführung gewohnter Lebenshaltung</td>
+                <td>Kapitaldeckungsverfahren (Obligatorisch für Arbeitnehmende)</td>
+            </tr>
+            <tr>
+                <td><strong>3. Säule (Privates Sparen)</strong></td>
+                <td>Komfortbedarf im Alter (Steuerprivilegiert)</td>
+                <td>Individuell & freiwillig</td>
+            </tr>
         </table>
     </section>
 
+    <!-- BLOCK 7 -->
     <section id="block7">
-        <h2>Block 7: Nachhaltigkeit, Risikomanagement &amp; Globalisierung</h2>
+        <h2>Block 7: Nachhaltigkeit, Risikomanagement & Globalisierung</h2>
         <p>Corporate Social Responsibility (CSR), ESG-Kriterien, Ökologiemanagement (ISO 14001, Ökobilanz) sowie Freihandel vs. Protektionismus.</p>
     </section>
 
+    <!-- BLOCK 8 -->
     <section id="block8">
-        <h2>Block 8: Internationale Organisationen &amp; Business Plan</h2>
+        <h2>Block 8: Internationale Organisationen & Business Plan</h2>
         <p>G7, G20, BRICS, Welthandel, Wechselkurse, Euro-Zone sowie Aufbau und Struktur eines Business Plans.</p>
     </section>
 
+    <!-- BLOCK 9 -->
     <section id="block9">
-        <h2>Block 9: Ertragsmodelle &amp; Kostenstruktur</h2>
+        <h2>Block 9: Ertragsmodelle & Kostenstruktur</h2>
         <p>Fixe und variable Kosten, Kostensenkungspotenziale sowie zentrale Fragen zur Einnahmengestaltung.</p>
     </section>
 
+    <!-- BLOCK 10 -->
     <section id="block10">
-        <h2>Block 10: Konjunkturpolitik, Marktversagen &amp; Qualitätsmanagement</h2>
+        <h2>Block 10: Konjunkturpolitik, Marktversagen & Qualitätsmanagement</h2>
         <p>Magisches Sechseck, antizyklische Konjunkturpolitik (Rezession vs. Hochkonjunktur), Qualitätsmanagement (PDCA-Zyklus) und TQM.</p>
+        
         <h3>Antizyklische Konjunkturpolitik</h3>
         <ul>
-            <li><strong>In einer Rezession:</strong> Staat erhöht Ausgaben, senkt Steuern → Gesamtnachfrage wird stimuliert.</li>
-            <li><strong>In einer Hochkonjunktur:</strong> Staat senkt Ausgaben, erhöht Steuern → Überhitzung wird gebremst.</li>
+            <li><strong>In einer Rezession:</strong> Staat erhöht Ausgaben, senkt Steuern $\rightarrow$ Gesamtnachfrage wird stimuliert.</li>
+            <li><strong>In einer Hochkonjunktur:</strong> Staat senkt Ausgaben, erhöht Steuern $\rightarrow$ Überhitzung wird gebremst.</li>
         </ul>
     </section>
 
