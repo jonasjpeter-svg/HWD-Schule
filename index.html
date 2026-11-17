@@ -610,7 +610,7 @@
 <div class="subject-bar" role="tablist" aria-label="Fächer-Auswahl">
     <button type="button" class="subject-tab active" id="tab-vwl" onclick="switchSubject('vwl')">📊 VWL &amp; BWL <span class="subject-badge-soon">10 Blöcke + Quiz</span></button>
     <button type="button" class="subject-tab" id="tab-marketing" onclick="switchSubject('marketing')">📣 Marketing <span class="subject-badge-soon">3 Präsentationen + Quiz</span></button>
-    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">Bereit für Stoff</span></button>
+    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">Block 1 + Quiz</span></button>
 </div>
 
 <nav id="nav-vwl">
@@ -632,6 +632,15 @@
     <a href="#mkt-5">5: Marketingmix (4P / 7P)</a>
     <a href="#mkt-digital-ki">Digital &amp; KI</a>
     <a href="#mkt-quiz" style="background: linear-gradient(135deg,#8b5cf6,#6d28d9); color: #ffffff;">🎯 Marketing-Quiz &amp; Rangliste</a>
+</nav>
+
+<nav id="nav-rechnungswesen" style="display:none;">
+    <a href="#rewe-1">1. Bilanz &amp; Konten</a>
+    <a href="#rewe-2">2. Mehrstufige ER</a>
+    <a href="#rewe-3">3. Buchungsregeln</a>
+    <a href="#rewe-4">4. Liq. vs. Erfolg</a>
+    <a href="#rewe-5">5. MWST &amp; Abschreibung</a>
+    <a href="#rewe-quiz" style="background: linear-gradient(135deg,#8b5cf6,#6d28d9); color: #ffffff;">🎯 ReWe-Quiz &amp; Rangliste</a>
 </nav>
 
 <div class="container">
@@ -1915,29 +1924,279 @@
 </div><!-- Ende #panel-marketing -->
 
 <div id="panel-rechnungswesen" class="subject-panel">
-    <section>
-        <span class="block-badge">Fach: Rechnungswesen</span>
-        <h2>Rechnungswesen – Finanzbuchhaltung, Bilanz &amp; Kennzahlen</h2>
-        <p>Dieser Bereich ist vorbereitet für deine Rechnungswesen-Unterlagen (Buchungssätze, Jahresabschluss, Kalkulation &amp; eigenes Quiz).</p>
-        <div class="grid-3">
-            <div class="card">
-                <h4>1. Bilanz &amp; Erfolgsrechnung</h4>
-                <p style="color:var(--text-muted); font-size:0.9rem;">Platzhalter für Aktiven, Passiven, Kontenrahmen KMU, Aufwand &amp; Ertrag.</p>
-            </div>
-            <div class="card">
-                <h4>2. Buchungssätze &amp; Abschluss</h4>
-                <p style="color:var(--text-muted); font-size:0.9rem;">Platzhalter für Warenverkehr, Abschreibungen, Rückstellungen &amp; Abgrenzungen.</p>
-            </div>
-            <div class="card">
-                <h4>3. Betriebliches Rechnungswesen</h4>
-                <p style="color:var(--text-muted); font-size:0.9rem;">Platzhalter für Break-even, Deckungsbeitrag, Kalkulation &amp; Bilanzkennzahlen.</p>
-            </div>
-        </div>
+
+    <!-- ==================== REWE 1: BILANZ & KONTEN ==================== -->
+    <section id="rewe-1">
+        <span class="block-badge">Rechnungswesen Block 1 · Grundlagen &amp; Bilanz</span>
+        <h2>Aufgaben des Rechnungswesens, Inventar, Kontenplan &amp; Bilanzaufbau</h2>
+
         <div class="callout">
-            <strong>Bereit für deinen Stoff:</strong> Sobald du mir die Rechnungswesen-Unterlagen schickst, ergänze ich hier alle Schemas, T-Konten/Grafiken und passende Übungsaufgaben.
+            <strong>Jahresrechnung &amp; Grundlagen:</strong> Vergangenheitsrechnung (FIBU) vs. Zukunftsrechnung (Planungsrechnung). <strong>Zeitpunktrechnung = Bilanz</strong> (Stichtag), <strong>Zeitraumrechnung = Erfolgsrechnung</strong> (Periode), plus <strong>Geldflussrechnung</strong>. Basis des Jahresabschlusses ist das <strong>Inventar</strong> (sämtliche Vermögens- und Schuldenpositionen). <em>Wichtig:</em> <strong>Kontenrahmen</strong> (allgemeines Schema, z.B. KMU) &ne; <strong>Kontenplan</strong> (individuelles Verzeichnis des Betriebs).
+        </div>
+
+        <div class="graphic-container">
+            <svg width="780" height="250" viewBox="0 0 780 250">
+                <text x="390" y="16" text-anchor="middle" font-weight="bold" font-size="13" fill="#5b2c6f">Aufbau der Bilanz (Aktiven = Passiven &bull; 11 Untergruppen)</text>
+                <!-- Aktiven -->
+                <rect x="20" y="28" width="355" height="205" rx="8" fill="#f8fafc" stroke="#5b2c6f" stroke-width="1.5"/>
+                <rect x="20" y="28" width="355" height="28" rx="6" fill="#5b2c6f"/>
+                <text x="197" y="47" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11.5">AKTIVEN (Vermögen / Mittelverwendung)</text>
+
+                <rect x="32" y="64" width="330" height="76" rx="6" fill="#e8daef" stroke="#7c3aed"/>
+                <text x="42" y="81" font-weight="bold" font-size="10.5" fill="#2c1638">1. Umlaufvermögen (UV) – nach Liquidität</text>
+                <text x="42" y="98" font-size="10">&bull; Flüssige Mittel (Kasse, Post, Bank)</text>
+                <text x="42" y="113" font-size="10">&bull; Forderungen (Debitoren / FLL)</text>
+                <text x="42" y="128" font-size="10">&bull; Vorräte (Handelswaren, Rohstoffe)</text>
+
+                <rect x="32" y="148" width="330" height="76" rx="6" fill="#d2b4de" stroke="#7c3aed"/>
+                <text x="42" y="165" font-weight="bold" font-size="10.5" fill="#2c1638">2. Anlagevermögen (AV) – langfristig</text>
+                <text x="42" y="182" font-size="10">&bull; Finanzielles AV (Beteiligungen, Wertschriften)</text>
+                <text x="42" y="197" font-size="10">&bull; Materielles AV (Immobilien, Maschinen, Fahrzeuge)</text>
+                <text x="42" y="212" font-size="10">&bull; Immaterielles AV (Patente, Lizenzen, Goodwill)</text>
+
+                <!-- Passiven -->
+                <rect x="405" y="28" width="355" height="205" rx="8" fill="#f8fafc" stroke="#5b2c6f" stroke-width="1.5"/>
+                <rect x="405" y="28" width="355" height="28" rx="6" fill="#5b2c6f"/>
+                <text x="582" y="47" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11.5">PASSIVEN (Kapital / Mittelherkunft)</text>
+
+                <rect x="417" y="64" width="330" height="76" rx="6" fill="#fee2e2" stroke="#dc2626"/>
+                <text x="427" y="81" font-weight="bold" font-size="10.5" fill="#991b1b">3. Fremdkapital (FK / Schulden)</text>
+                <text x="427" y="100" font-size="10">&bull; Kurzfristiges FK (Kreditoren/VLL, Bankkredite, TP)</text>
+                <text x="427" y="116" font-size="10">&bull; Langfristiges FK (Darlehen, Hypotheken)</text>
+                <text x="427" y="131" font-size="9.5" fill="#991b1b" font-weight="bold">&bull; Achtung: Rückstellungen gehören zum FK (nicht EK!)</text>
+
+                <rect x="417" y="148" width="330" height="76" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+                <text x="427" y="165" font-weight="bold" font-size="10.5" fill="#166534">4. Eigenkapital (EK / Reinvermögen)</text>
+                <text x="427" y="182" font-size="10">&bull; Aktienkapital (AG) / Stammkapital (GmbH) / EK</text>
+                <text x="427" y="197" font-size="10">&bull; Kapitalreserven (Zuwachskapital)</text>
+                <text x="427" y="212" font-size="10">&bull; Gewinnreserven (Zuwachskapital) &amp; Gewinnvortrag</text>
+            </svg>
+            <div class="graphic-caption">
+                <strong>Prüfungstipps Bilanz:</strong> Die Bilanz gibt Hinweise auf die <strong>Rechtsform</strong> (z.B. Aktienkapital = AG). Bilanzkonten werden am Periodenanfang mit dem Anfangsbestand eröffnet. <strong>Schlussbilanz 1</strong> = Erfolgsermittlungsbilanz (vor Gewinnverwendung); <strong>Schlussbilanz 2</strong> = nach Gewinnverwendung. <strong>Stille Reserven</strong> sind gemäss Buchführungsvorschriften ausdrücklich erlaubt!
+            </div>
         </div>
     </section>
-</div>
+
+    <!-- ==================== REWE 2: ERFOLGSRECHNUNG ==================== -->
+    <section id="rewe-2">
+        <span class="block-badge">Rechnungswesen Block 1 · Erfolgsrechnung (OR 959b)</span>
+        <h2>Gliederung der Erfolgsrechnung: 3-stufig &amp; Mehrstufig (EBITDA / EBIT)</h2>
+
+        <div class="grid-2">
+            <div class="card">
+                <h4>Unterteilung nach OR 959b &amp; Betrieb/Neutral</h4>
+                <ul>
+                    <li><strong>Hauptbetrieb (Kernbereich):</strong> Warenertrag / Warenaufwand, Personal- &amp; Mietaufwand.</li>
+                    <li><strong>Nebenbetrieb (Profit Center):</strong> z.B. Geschäftsliegenschaft, Wertschriften, Beteiligungen.</li>
+                    <li><strong>Betriebsfremd (wiederkehrend, nicht betriebstypisch):</strong> z.B. vermietete Wohnliegenschaft.</li>
+                    <li><strong>Ausserordentlich (nicht wiederkehrend &amp; wesentlich):</strong> Einmaliger Schaden, einmalige Veräusserung, periodenfremd.</li>
+                    <li><strong>Merke:</strong> „Erfolg“ in der ER kann sowohl <strong>Gewinn</strong> (Ertragsüberschuss) als auch <strong>Verlust</strong> (Aufwandsüberschuss) bedeuten!</li>
+                </ul>
+            </div>
+            <div class="graphic-container" style="margin:0;">
+                <svg width="360" height="250" viewBox="0 0 360 250">
+                    <text x="180" y="15" text-anchor="middle" font-weight="bold" font-size="12" fill="#5b2c6f">Mehrstufige ER (Kontenklassen 3–8)</text>
+                    <rect x="20" y="26" width="320" height="24" rx="4" fill="#e8daef"/><text x="30" y="42" font-size="10" font-weight="bold">Warenertrag (Kl. 3) &minus; Warenaufwand (Kl. 4)</text>
+                    <rect x="20" y="54" width="320" height="24" rx="4" fill="#d2b4de"/><text x="30" y="70" font-size="10" font-weight="bold">= Bruttogewinn &minus; Personal (5) &minus; übr. Aufwand (60–67)</text>
+                    <rect x="20" y="82" width="320" height="26" rx="4" fill="#5b2c6f"/><text x="30" y="99" font-size="10.5" font-weight="bold" fill="#fff">= EBITDA (vor Zinsen, Steuern &amp; Abschreibung)</text>
+                    <rect x="20" y="112" width="320" height="22" rx="4" fill="#f1f5f9" stroke="#cbd5e1"/><text x="30" y="127" font-size="10">&minus; Abschreibungen (Kl. 68)</text>
+                    <rect x="20" y="138" width="320" height="26" rx="4" fill="#16a34a"/><text x="30" y="155" font-size="10.5" font-weight="bold" fill="#fff">= EBIT (Betriebsergebnis vor Zinsen &amp; Steuern)</text>
+                    <rect x="20" y="168" width="320" height="22" rx="4" fill="#f1f5f9" stroke="#cbd5e1"/><text x="30" y="183" font-size="9.5">+/&minus; Finanz (69) +/&minus; Nebenbetrieb (7) +/&minus; Betr.fremd/AO (8)</text>
+                    <rect x="20" y="194" width="320" height="22" rx="4" fill="#f1f5f9" stroke="#cbd5e1"/><text x="30" y="209" font-size="10">&minus; Direkte Steuern (89)</text>
+                    <rect x="20" y="220" width="320" height="24" rx="4" fill="#2c1638"/><text x="30" y="236" font-size="10.5" font-weight="bold" fill="#fff">= Unternehmungserfolg (Reingewinn / -verlust)</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== REWE 3: BUCHUNGSREGELN & T-KONTEN ==================== -->
+    <section id="rewe-3">
+        <span class="block-badge">Rechnungswesen Block 1 · Doppelte Buchhaltung</span>
+        <h2>Buchungsregeln, T-Konten (Soll / Haben) &amp; Warenverkehr</h2>
+
+        <div class="graphic-container">
+            <svg width="780" height="175" viewBox="0 0 780 175">
+                <text x="390" y="16" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">Die 4 Kontenarten: Soll (links) &amp; Haben (rechts)</text>
+                <!-- Aktiv -->
+                <g transform="translate(15,28)">
+                    <rect x="0" y="0" width="175" height="130" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+                    <text x="87" y="20" text-anchor="middle" font-weight="bold" font-size="11" fill="#166534">Aktivkonto (Vermögen)</text>
+                    <line x1="10" y1="30" x2="165" y2="30" stroke="#16a34a" stroke-width="2"/>
+                    <line x1="87" y1="30" x2="87" y2="120" stroke="#16a34a" stroke-width="2"/>
+                    <text x="45" y="52" text-anchor="middle" font-size="11" font-weight="bold">Soll (+)</text>
+                    <text x="45" y="70" text-anchor="middle" font-size="9.5">AB / Zunahme</text>
+                    <text x="130" y="52" text-anchor="middle" font-size="11" font-weight="bold">Haben (&minus;)</text>
+                    <text x="130" y="70" text-anchor="middle" font-size="9.5">Abnahme / SB</text>
+                </g>
+                <!-- Passiv -->
+                <g transform="translate(205,28)">
+                    <rect x="0" y="0" width="175" height="130" rx="8" fill="#fef2f2" stroke="#dc2626"/>
+                    <text x="87" y="20" text-anchor="middle" font-weight="bold" font-size="11" fill="#991b1b">Passivkonto (Kapital)</text>
+                    <line x1="10" y1="30" x2="165" y2="30" stroke="#dc2626" stroke-width="2"/>
+                    <line x1="87" y1="30" x2="87" y2="120" stroke="#dc2626" stroke-width="2"/>
+                    <text x="45" y="52" text-anchor="middle" font-size="11" font-weight="bold">Soll (&minus;)</text>
+                    <text x="45" y="70" text-anchor="middle" font-size="9.5">Abnahme / SB</text>
+                    <text x="130" y="52" text-anchor="middle" font-size="11" font-weight="bold">Haben (+)</text>
+                    <text x="130" y="70" text-anchor="middle" font-size="9.5">AB / Zunahme</text>
+                </g>
+                <!-- Aufwand -->
+                <g transform="translate(395,28)">
+                    <rect x="0" y="0" width="175" height="130" rx="8" fill="#fef3c7" stroke="#d97706"/>
+                    <text x="87" y="20" text-anchor="middle" font-weight="bold" font-size="11" fill="#92400e">Aufwandkonto</text>
+                    <line x1="10" y1="30" x2="165" y2="30" stroke="#d97706" stroke-width="2"/>
+                    <line x1="87" y1="30" x2="87" y2="120" stroke="#d97706" stroke-width="2"/>
+                    <text x="45" y="52" text-anchor="middle" font-size="11" font-weight="bold">Soll (+)</text>
+                    <text x="45" y="70" text-anchor="middle" font-size="9.5">Aufwand-Zunahme</text>
+                    <text x="130" y="52" text-anchor="middle" font-size="11" font-weight="bold">Haben (&minus;)</text>
+                    <text x="130" y="70" text-anchor="middle" font-size="9.5">Minderung / Saldo</text>
+                </g>
+                <!-- Ertrag -->
+                <g transform="translate(585,28)">
+                    <rect x="0" y="0" width="175" height="130" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+                    <text x="87" y="20" text-anchor="middle" font-weight="bold" font-size="11" fill="#1e40af">Ertragskonto</text>
+                    <line x1="10" y1="30" x2="165" y2="30" stroke="#2563eb" stroke-width="2"/>
+                    <line x1="87" y1="30" x2="87" y2="120" stroke="#2563eb" stroke-width="2"/>
+                    <text x="45" y="52" text-anchor="middle" font-size="11" font-weight="bold">Soll (&minus;)</text>
+                    <text x="45" y="70" text-anchor="middle" font-size="9.5">Minderung / Saldo</text>
+                    <text x="130" y="52" text-anchor="middle" font-size="11" font-weight="bold">Haben (+)</text>
+                    <text x="130" y="70" text-anchor="middle" font-size="9.5">Ertrags-Zunahme</text>
+                </g>
+            </svg>
+            <div class="graphic-caption">
+                <strong>Warenverkehr (Laufende Inventur vs. Ohne laufende Inventur):</strong> Mit laufender Inventur bucht man Einkäufe direkt auf <code>Warenbestand / Bank</code>. Ohne laufende Inventur bucht man auf <code>Warenaufwand / Bank</code> und macht am Jahresende eine Bestandeskorrektur (<code>Warenbestand / Warenaufwand</code> bzw. umgekehrt). <strong>Aktivminuskonten</strong> (z.B. Wertberichtigung / Delkredere) stehen in Kontenklasse 1 und nehmen im Haben zu!
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== REWE 4: LIQUIDITÄTSWIRKSAM VS ERFOLGSWIRKSAM ==================== -->
+    <section id="rewe-4">
+        <span class="block-badge">Rechnungswesen Block 1 · Prüfungs-Klassiker</span>
+        <h2>Liquiditätswirksam vs. Erfolgswirksam (4-Felder-Matrix)</h2>
+        <p><strong>Faustregel:</strong> <em>Liquiditätswirksam</em> = betrifft flüssige Mittel (Kasse, Post, Bank). <em>Erfolgswirksam</em> = betrifft ein Aufwand- oder Ertragskonto (verändert den Gewinn/Verlust).</p>
+
+        <div class="grid-2">
+            <div class="card" style="border-color: #22c55e;">
+                <h4>1. Liquiditäts- &amp; Erfolgswirksam (Beides X)</h4>
+                <ul>
+                    <li>Banküberweisung der Löhne / Überstunden (<code>Personalaufwand / Bank</code>)</li>
+                    <li>Überweisung der Miete / Barzahlung Reparatur</li>
+                    <li>Barverkäufe von Handelswaren (<code>Kasse / Warenertrag</code>)</li>
+                    <li>Tilgung/Bezahlung von Zinsen (<code>Zinsaufwand / Bank</code>)</li>
+                    <li>Barverkauf Fahrzeug mit Gewinn oder Buchverlust</li>
+                </ul>
+            </div>
+            <div class="card" style="border-color: #3b82f6;">
+                <h4>2. Nur Liquiditätswirksam (Erfolgsneutral)</h4>
+                <ul>
+                    <li>Barkauf Lieferwagen / Anlage / Immobilie (<code>Fahrzeuge / Kasse</code>)</li>
+                    <li>Erhöhung Aktienkapital durch Banküberweisung (<code>Bank / Aktienkapital</code>)</li>
+                    <li>Wertschriftenkauf / Tilgung einer Hypothekarschuld</li>
+                    <li>Überweisung geschuldeter MWST an ESTV / direkter Steuern vom Vorjahr</li>
+                    <li>Kostenvorschuss an Betreibungsamt (Forderung/Vorschuss)</li>
+                </ul>
+            </div>
+            <div class="card" style="border-color: #f59e0b;">
+                <h4>3. Nur Erfolgswirksam (Nicht liquiditätswirksam)</h4>
+                <ul>
+                    <li>Abschreibung auf Fahrzeugen / Immobilien (<code>Abschreibung / Fahrzeug</code>)</li>
+                    <li>Erhöhung der Garantierückstellung (<code>Aufwand / Rückstellungen</code>)</li>
+                    <li>Lieferantenrechnung für Handelswaren auf Kredit (<code>Warenaufwand / Kreditoren</code>)</li>
+                </ul>
+            </div>
+            <div class="card" style="border-color: #94a3b8;">
+                <h4>4. Weder noch (Kein X)</h4>
+                <ul>
+                    <li>Zuweisung des Gewinns / Gewinnverbuchung (<code>Erfolgsrechnung / Gewinnvortrag oder Reserven</code>)</li>
+                    <li>Nicht-finanzielle Ereignisse wie Mitarbeitergespräche</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== REWE 5: MWST & ABSCHREIBUNGEN ==================== -->
+    <section id="rewe-5">
+        <span class="block-badge">Rechnungswesen Block 1 · MWST, Abschreibungen &amp; Theorie-Fallen</span>
+        <h2>Mehrwertsteuer (MWST), Abschreibungsarten &amp; Wichtige Theorie-Regeln</h2>
+
+        <div class="grid-2">
+            <div class="card">
+                <h4>Mehrwertsteuer (MWST)</h4>
+                <ul>
+                    <li><strong>Vorsteuer (Debitoren / Einkauf):</strong> Aktivkonto, Forderung gegenüber ESTV.</li>
+                    <li><strong>Umsatzsteuer (Kreditoren / Verkauf):</strong> Passivkonto, Schuld gegenüber ESTV.</li>
+                    <li><strong>Abrechnung:</strong> Quartalsweise Verrechnungsbuchung &amp; Zahlung der Zahllast an die ESTV.</li>
+                    <li><em>Achtung:</em> Die <strong>Verrechnungssteuer</strong> (35 % auf Zinsen/Dividenden) hat <strong>nichts</strong> mit der MWST zu tun!</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Abschreibungen (Pflicht, nicht freiwillig!)</h4>
+                <ul>
+                    <li><strong>Zweck:</strong> Wertberichtigung des Anlagevermögens &amp; <strong>Refinanzierung</strong> des Anlagevermögens.</li>
+                    <li><strong>Direkte Abschreibung:</strong> <code>Abschreibungen / Anlagekonto</code> (Buchwert direkt reduziert).</li>
+                    <li><strong>Indirekte Abschreibung:</strong> <code>Abschreibungen / WB Anlage</code> (Wertberichtigungskonto in Kontenklasse 1).</li>
+                    <li><strong>Linear vs. Degressiv:</strong> Linear = gleicher Betrag vom Anschaffungswert; Degressiv = gleicher Prozentsatz vom aktuellen Buchwert.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout">
+            <strong>Häufige Prüfungs-Fallen (aus Zusatzaufgaben Theorie):</strong>
+            1. <em>Gewinnausschüttungen</em> werden aufgrund der <strong>Finanzbuchhaltung</strong> beschlossen (nicht Betriebsbuchhaltung!). &bull;
+            2. Nach OR buchführungspflichtige Unternehmen müssen <strong>nicht</strong> automatisch eine Betriebsbuchhaltung führen. &bull;
+            3. Das Konto <em>Wertschriftenerfolg</em> kann Gewinn oder Verlust (Ertrag oder Aufwand) ausweisen. &bull;
+            4. <em>EBIT</em> berücksichtigt bereits sämtliche Konten bis Klasse 6 (inkl. 68 Abschreibungen, aber vor 69 Finanzerfolg). &bull;
+            5. <em>Teilkostenrechnung</em> = Deckungsbeitragsrechnung; <em>Vollkostenrechnung</em> = Zuschlagskalkulation (Einzel- &amp; Gemeinkosten; Material + Fertigung = Herstellkosten; + VVGK = Selbstkosten).
+        </div>
+    </section>
+
+    <!-- ==================== REWE QUIZ ==================== -->
+    <section id="rewe-quiz">
+        <span class="block-badge">Prüfungstraining Rechnungswesen</span>
+        <h2>Interaktives Rechnungswesen-Quiz &amp; Rangliste</h2>
+        <p>24 rotierende Prüfungsfragen aus Block 1 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen &amp; Theorie-Fallen). Deine Punkte zählen in die gemeinsame Rangliste!</p>
+
+        <div class="player-bar">
+            <div class="player-login">
+                <input type="text" id="rewe-player-name-input" class="player-input" placeholder="Dein Name (z.B. Jonas)" maxlength="24">
+                <button type="button" class="quiz-btn" style="padding:0.52rem 1.1rem; font-size:0.86rem;" onclick="loginPlayerFrom('rewe-player-name-input')">Anmelden / Wechseln</button>
+            </div>
+            <div class="player-stats-mini">
+                <span class="stat-pill" id="rewe-pill-player">Spieler: Gast</span>
+                <span class="stat-pill" id="rewe-pill-points">Punkte: 0</span>
+                <span class="stat-pill" id="rewe-pill-runs">Gelöste Quizze: 0</span>
+            </div>
+        </div>
+
+        <div class="quiz-progress-wrap" title="Beantwortete Fragen">
+            <div class="quiz-progress-fill" id="rewe-quiz-progress-fill"></div>
+        </div>
+
+        <div id="rewe-quiz-container"></div>
+
+        <div class="quiz-actions">
+            <button type="button" class="quiz-btn" onclick="checkReweQuiz()">Antworten prüfen &amp; Punkte sichern</button>
+            <button type="button" class="quiz-btn secondary" onclick="resetReweQuiz()">Neue Fragen / Nächste Runde</button>
+        </div>
+
+        <div id="rewe-motivation-banner" class="motivation-banner"></div>
+
+        <div class="leaderboard-box">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.8rem;">
+                <h3 style="margin:0;">🏆 Gemeinsame Rangliste (VWL/BWL, Marketing &amp; ReWe)</h3>
+                <button type="button" class="quiz-btn secondary" style="padding:0.35rem 0.85rem; font-size:0.78rem;" onclick="clearLeaderboard()">Rangliste zurücksetzen</button>
+            </div>
+            <div class="table-wrap" style="margin:0;">
+                <table>
+                    <thead>
+                        <tr><th>Platz</th><th>Name</th><th>Gesamtpunkte</th><th>Gelöste Quizze</th><th>Bestwert</th><th>Ø-Quote</th></tr>
+                    </thead>
+                    <tbody id="rewe-leaderboard-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+</div><!-- Ende #panel-rechnungswesen -->
 
 </div>
 
@@ -2810,6 +3069,12 @@ function updatePlayerUI() {
         document.getElementById('mkt-pill-points').textContent = `Punkte: ${p.points}`;
         document.getElementById('mkt-pill-runs').textContent = `Gelöste Quizze: ${p.runs}`;
     }
+    const rp = document.getElementById('rewe-pill-player');
+    if (rp) {
+        rp.textContent = `Spieler: ${currentPlayer}`;
+        document.getElementById('rewe-pill-points').textContent = `Punkte: ${p.points}`;
+        document.getElementById('rewe-pill-runs').textContent = `Gelöste Quizze: ${p.runs}`;
+    }
     document.getElementById('hero-player-count').textContent = Object.keys(players).length;
 }
 
@@ -2832,7 +3097,7 @@ function loginPlayerFrom(inputId) {
 function renderLeaderboard() {
     const players = getPlayers();
     const sorted = Object.entries(players).sort((a, b) => b[1].points - a[1].points || b[1].best - a[1].best);
-    ['leaderboard-body', 'mkt-leaderboard-body'].forEach(bodyId => {
+    ['leaderboard-body', 'mkt-leaderboard-body', 'rewe-leaderboard-body'].forEach(bodyId => {
         const tbody = document.getElementById(bodyId);
         if (!tbody) return;
         tbody.innerHTML = '';
@@ -2908,8 +3173,10 @@ function switchSubject(subject) {
     if (panel) panel.classList.add('active');
     const navVwl = document.getElementById('nav-vwl');
     const navMkt = document.getElementById('nav-marketing');
+    const navRewe = document.getElementById('nav-rechnungswesen');
     if (navVwl) navVwl.style.display = subject === 'vwl' ? 'flex' : 'none';
     if (navMkt) navMkt.style.display = subject === 'marketing' ? 'flex' : 'none';
+    if (navRewe) navRewe.style.display = subject === 'rechnungswesen' ? 'flex' : 'none';
     updateStickyScrollBar();
 }
 
@@ -3441,6 +3708,534 @@ function resetMktQuiz() {
 }
 
 renderMktQuiz();
+
+// ==================== RECHNUNGSWESEN QUIZ (24 FRAGEN POOL) ====================
+const reweQuestionBank = [
+    // --- SINGLE CHOICE (10) ---
+    {
+        id: 'rsc1', type: 'single',
+        question: 'Welcher Geschäftsfall ist NUR liquiditätswirksam (und erfolgsneutral)?',
+        options: [
+            { text: 'Barkauf eines neuen Lieferwagens (Fahrzeuge / Kasse)', ok: true },
+            { text: 'Banküberweisung der Löhne an die Mitarbeitenden', ok: false },
+            { text: 'Abschreibung einer Immobilie', ok: false },
+            { text: 'Erhöhung der Garantierückstellung', ok: false }
+        ],
+        explanation: 'Beim Barkauf eines Fahrzeugs fliesst zwar Geld ab (liquiditätswirksam), es wird aber nur ein Aktivkonto gegen ein anderes getauscht (erfolgsneutral).'
+    },
+    {
+        id: 'rsc2', type: 'single',
+        question: 'Welcher Geschäftsfall ist NUR erfolgswirksam (und nicht liquiditätswirksam)?',
+        options: [
+            { text: 'Abschreibung auf den Fahrzeugen', ok: true },
+            { text: 'Barverkauf von Handelswaren', ok: false },
+            { text: 'Erhöhung des Aktienkapitals durch Banküberweisung', ok: false },
+            { text: 'Tilgung einer Hypothekarschuld per Bank', ok: false }
+        ],
+        explanation: 'Abschreibungen senken den Gewinn (Aufwand), lösen aber keinen Geldfluss aus (nicht liquiditätswirksam).'
+    },
+    {
+        id: 'rsc3', type: 'single',
+        question: 'Zu welcher Bilanzgruppe gehören «Rückstellungen» (z.B. Garantierückstellung)?',
+        options: [
+            { text: 'Fremdkapital (Schulden)', ok: true },
+            { text: 'Eigenkapital (Reserven)', ok: false },
+            { text: 'Umlaufvermögen', ok: false },
+            { text: 'Anlagevermögen', ok: false }
+        ],
+        explanation: 'Reserven gehören zum Eigenkapital, Rückstellungen hingegen zum Fremdkapital!'
+    },
+    {
+        id: 'rsc4', type: 'single',
+        question: 'Wie lautet der Unterschied zwischen Kontenrahmen und Kontenplan?',
+        options: [
+            { text: 'Der Kontenrahmen ist das allgemeine Branchenschema (z.B. KMU); der Kontenplan ist das individuelle Verzeichnis des Betriebs', ok: true },
+            { text: 'Beide Begriffe bedeuten exakt dasselbe', ok: false },
+            { text: 'Der Kontenplan gilt nur für die Betriebsbuchhaltung', ok: false },
+            { text: 'Der Kontenrahmen enthält nur Aufwand- und Ertragskonten', ok: false }
+        ],
+        explanation: 'Der Kontenplan ist das auf das einzelne Unternehmen zugeschnittene Kontenverzeichnis auf Basis des Kontenrahmens.'
+    },
+    {
+        id: 'rsc5', type: 'single',
+        question: 'Was bedeutet EBIT in der mehrstufigen Erfolgsrechnung?',
+        options: [
+            { text: 'Betriebsergebnis vor Zinsen und Steuern (nach Abzug der Abschreibungen Kl. 68)', ok: true },
+            { text: 'Betriebsergebnis vor Zinsen, Steuern und Abschreibungen', ok: false },
+            { text: 'Unternehmungserfolg nach direkten Steuern', ok: false },
+            { text: 'Bruttogewinn vor Personalaufwand', ok: false }
+        ],
+        explanation: 'EBITDA = vor Abschreibungen (68); nach Abzug der Abschreibungen erhält man den EBIT (Earnings Before Interest and Taxes).'
+    },
+    {
+        id: 'rsc6', type: 'single',
+        question: 'In welcher Kontenklasse stehen Wertberichtigungskonten (z.B. WB Fahrzeuge / Delkredere)?',
+        options: [
+            { text: 'Kontenklasse 1 (als Aktivminuskonto bei den Aktiven)', ok: true },
+            { text: 'Kontenklasse 2 (als Eigenkapital)', ok: false },
+            { text: 'Kontenklasse 6 (als Abschreibungsaufwand)', ok: false },
+            { text: 'Kontenklasse 8 (als ausserordentlicher Erfolg)', ok: false }
+        ],
+        explanation: 'Wertberichtigungskonten gehören zur Kontenklasse 1 (Aktivminuskonten).'
+    },
+    {
+        id: 'rsc7', type: 'single',
+        question: 'Was ist eine andere Bezeichnung für die «Schlussbilanz 1»?',
+        options: [
+            { text: 'Erfolgsermittlungsbilanz (vor Gewinnverwendung)', ok: true },
+            { text: 'Eröffnungsbilanz', ok: false },
+            { text: 'Schlussbilanz 2 (nach Gewinnverwendung)', ok: false },
+            { text: 'Geldflussrechnung', ok: false }
+        ],
+        explanation: 'Die Schlussbilanz 1 heisst Erfolgsermittlungsbilanz; die Schlussbilanz 2 entsteht nach der Gewinnverwendung.'
+    },
+    {
+        id: 'rsc8', type: 'single',
+        question: 'Wofür ist das «Inventar» beim Jahresabschluss die Basis?',
+        options: [
+            { text: 'Es umfasst sämtliche Vermögens- und Schuldenpositionen zu einem Stichtag', ok: true },
+            { text: 'Es zeigt nur die geplanten Budgets der nächsten 3 Jahre', ok: false },
+            { text: 'Es erfasst ausschliesslich die Mehrwertsteuer', ok: false },
+            { text: 'Es ist ein reines Verkaufsgesprächs-Protokoll', ok: false }
+        ],
+        explanation: 'Das Inventar verzeichnet alle Vermögens- und Schuldenpositionen und bildet die Basis für Bilanz und Jahresabschluss.'
+    },
+    {
+        id: 'rsc9', type: 'single',
+        question: 'Was gilt für «Stille Reserven» in der Schweiz gemäss Buchführungsvorschriften?',
+        options: [
+            { text: 'Sie sind gemäss Buchführungsvorschriften ausdrücklich erlaubt', ok: true },
+            { text: 'Sie sind in der Schweiz generell verboten', ok: false },
+            { text: 'Sie dürfen nur im Personalaufwand gebildet werden', ok: false },
+            { text: 'Sie müssen zwingend als Fremdkapital im Umlaufvermögen stehen', ok: false }
+        ],
+        explanation: 'Stille Reserven (Unterbewertung Aktiven / Überbewertung Passiven) sind in der Schweiz ausdrücklich erlaubt.'
+    },
+    {
+        id: 'rsc10', type: 'single',
+        question: 'Praxisbeispiel (Warenverkehr mit laufender Inventur): Wie bucht das Unternehmen den Einkauf von Handelswaren gegen Bankzahlung?',
+        options: [
+            { text: 'Warenbestand / Bank', ok: true },
+            { text: 'Warenaufwand / Bank', ok: false },
+            { text: 'Bank / Warenertrag', ok: false },
+            { text: 'Kreditoren / Warenbestand', ok: false }
+        ],
+        explanation: 'Mit laufender Inventur wird direkt auf das Bestandeskonto (Warenbestand / Bank) gebucht; ohne laufende Inventur auf Warenaufwand / Bank.'
+    },
+    // --- MULTIPLE CHOICE (8) ---
+    {
+        id: 'rmc1', type: 'multi',
+        question: 'Welche Geschäftsfälle sind SOWOHL liquiditäts- als auch erfolgswirksam?',
+        options: [
+            { text: 'Überweisung der Miete für die Geschäftsräume', ok: true },
+            { text: 'Barverkauf eines Geschäftsfahrzeuges mit Veräusserungsgewinn', ok: true },
+            { text: 'Tilgung/Zahlung von Zinsen per Bank', ok: true },
+            { text: 'Abschreibung einer Immobilie', ok: false },
+            { text: 'Überweisung der geschuldeten MWST an die ESTV', ok: false }
+        ],
+        explanation: 'Miete, Zinszahlung und Barverkauf mit Gewinn/Verlust verändern sowohl flüssige Mittel als auch den Erfolg.'
+    },
+    {
+        id: 'rmc2', type: 'multi',
+        question: 'Welche Aussagen zur Erfolgsrechnung (ER) und Bilanz sind RICHTIG?',
+        options: [
+            { text: 'Die Bilanz ist eine Zeitpunktrechnung, die Erfolgsrechnung eine Zeitraumrechnung', ok: true },
+            { text: 'In der Bilanz findet man Hinweise auf die Rechtsform einer Unternehmung', ok: true },
+            { text: 'Bilanzkonten werden am Periodenanfang mit dem Anfangsbestand eröffnet', ok: true },
+            { text: 'Nicht-liquide Vorgänge (z.B. Abschreibungen) werden in der ER nicht berücksichtigt', ok: false }
+        ],
+        explanation: 'Bilanz = Zeitpunkt, ER = Zeitraum (inkl. nicht-liquide Vorgänge); Rechtsform zeigt sich beim Eigenkapital in der Bilanz.'
+    },
+    {
+        id: 'rmc3', type: 'multi',
+        question: 'Welche Aussagen zu Abschreibungen sind RICHTIG?',
+        options: [
+            { text: 'Abschreibungen sind Pflicht (nicht freiwillig)', ok: true },
+            { text: 'Abschreibungen dienen der Refinanzierung des Anlagevermögens', ok: true },
+            { text: 'Bei indirekter Abschreibung bucht man: Abschreibungen / WB Anlage', ok: true },
+            { text: 'Degressive Abschreibung bedeutet jedes Jahr exakt derselbe CHF-Betrag', ok: false }
+        ],
+        explanation: 'Abschreibungen sind Pflicht und dienen Wertberichtigung & Refinanzierung; linear = gleicher Betrag, degressiv = gleicher % vom Buchwert.'
+    },
+    {
+        id: 'rmc4', type: 'multi',
+        question: 'Welche Aussagen zur Mehrwertsteuer (MWST) stimmen?',
+        options: [
+            { text: 'Die MWST wird in der Regel quartalsweise abgerechnet', ok: true },
+            { text: 'Vorsteuer (Einkauf) ist ein Aktivkonto / Forderung gegenüber ESTV', ok: true },
+            { text: 'Umsatzsteuer (Verkauf) ist eine Schuld gegenüber der ESTV', ok: true },
+            { text: 'Die Verrechnungssteuer ist ein Teil der MWST', ok: false }
+        ],
+        explanation: 'Die Verrechnungssteuer (auf Zinsen/Dividenden) hat nichts mit der MWST zu tun!'
+    },
+    {
+        id: 'rmc5', type: 'multi',
+        question: 'Welche Punkte gehören zu den 3 Untergruppen des Umlaufvermögens (UV)?',
+        options: [
+            { text: 'Flüssige Mittel (Kasse, Post, Bank)', ok: true },
+            { text: 'Forderungen (Debitoren)', ok: true },
+            { text: 'Vorräte', ok: true },
+            { text: 'Immobilien & Maschinen', ok: false },
+            { text: 'Aktienkapital & Gewinnreserven', ok: false }
+        ],
+        explanation: 'Das Umlaufvermögen besteht aus Flüssigen Mitteln, Forderungen und Vorräten.'
+    },
+    {
+        id: 'rmc6', type: 'multi',
+        question: 'Welche Aussagen zur Betriebsbuchhaltung & Kalkulation sind RICHTIG (Theorie-Zusatzaufgaben)?',
+        options: [
+            { text: 'Die Deckungsbeitragsrechnung ist eine Teilkostenrechnung', ok: true },
+            { text: 'Die Zuschlagskalkulation ist eine Vollkostenrechnung (Einzel- & Gemeinkosten)', ok: true },
+            { text: 'Herstellkosten + Verwaltungs-/Vertriebsgemeinkosten = Selbstkosten', ok: true },
+            { text: 'Gewinnausschüttungen werden aufgrund der Betriebsbuchhaltung beschlossen', ok: false }
+        ],
+        explanation: 'Gewinnausschüttungen basieren auf der Finanzbuchhaltung (OR), nicht auf der internen Betriebsbuchhaltung.'
+    },
+    {
+        id: 'rmc7', type: 'multi',
+        question: 'Welche Konten nehmen im SOLL zu (+)?',
+        options: [
+            { text: 'Aktivkonten (z.B. Bank, Kasse, Debitoren, Fahrzeuge)', ok: true },
+            { text: 'Aufwandkonten (z.B. Warenaufwand, Personalaufwand, Miete)', ok: true },
+            { text: 'Passivkonten (z.B. Kreditoren, Hypotheken)', ok: false },
+            { text: 'Ertragskonten (z.B. Warenertrag)', ok: false }
+        ],
+        explanation: 'Aktivkonten und Aufwandkonten nehmen im Soll zu (+) und im Haben ab (−).'
+    },
+    {
+        id: 'rmc8', type: 'multi',
+        question: 'Welche Konten gehören zum Eigenkapital (Reinvermögen) auf der Passivseite?',
+        options: [
+            { text: 'Aktienkapital / Stammkapital / Eigenkapital', ok: true },
+            { text: 'Kapitalreserven (Zuwachskapital)', ok: true },
+            { text: 'Gewinnreserven (Zuwachskapital)', ok: true },
+            { text: 'Kreditoren & Hypothekarschulden', ok: false }
+        ],
+        explanation: 'Eigenkapital umfasst Grund-/Aktienkapital sowie Kapital- und Gewinnreserven.'
+    },
+    // --- DRAG AND DROP (6) ---
+    {
+        id: 'rdnd1', type: 'dnd',
+        question: 'Drag & Drop (Bilanzgliederung): Ordne die Konten der richtigen Bilanzgruppe zu.',
+        items: [
+            { id: 'rb1', text: 'Bank, Debitoren, Vorräte', target: 'uv' },
+            { id: 'rb2', text: 'Maschinen, Fahrzeuge, Patente', target: 'av' },
+            { id: 'rb3', text: 'Kreditoren, Hypothek, Rückstellungen', target: 'fk' },
+            { id: 'rb4', text: 'Aktienkapital, Gewinnreserven', target: 'ek' }
+        ],
+        targets: [
+            { id: 'uv', label: 'Umlaufvermögen (UV)' },
+            { id: 'av', label: 'Anlagevermögen (AV)' },
+            { id: 'fk', label: 'Fremdkapital (FK)' },
+            { id: 'ek', label: 'Eigenkapital (EK)' }
+        ],
+        explanation: 'UV = Bank/Debitoren/Vorräte; AV = Maschinen/Fahrzeuge/Patente; FK = Kreditoren/Hypothek/Rückstellungen; EK = Aktienkapital/Reserven.'
+    },
+    {
+        id: 'rdnd2', type: 'dnd',
+        question: 'Drag & Drop (Praxisaufgabe Liquidität vs. Erfolg): Ordne jeden Geschäftsfall richtig zu.',
+        items: [
+            { id: 'rl1', text: 'Überweisung Miete für Geschäftsräume', target: 'both' },
+            { id: 'rl2', text: 'Barkauf eines neuen Lieferwagens', target: 'liq' },
+            { id: 'rl3', text: 'Abschreibung auf den Fahrzeugen', target: 'erf' },
+            { id: 'rl4', text: 'Gewinnverbuchung (Zuweisung Gewinn)', target: 'none' }
+        ],
+        targets: [
+            { id: 'both', label: 'Liquiditäts- & Erfolgswirksam' },
+            { id: 'liq', label: 'Nur Liquiditätswirksam' },
+            { id: 'erf', label: 'Nur Erfolgswirksam' },
+            { id: 'none', label: 'Weder noch' }
+        ],
+        explanation: 'Miete = beides; Barkauf Fahrzeug = nur Liquidität; Abschreibung = nur Erfolg; Gewinnverbuchung = weder noch.'
+    },
+    {
+        id: 'rdnd3', type: 'dnd',
+        question: 'Drag & Drop (Mehrstufige ER): Ordne die Stufen der richtigen Kontenklasse/Grösse zu.',
+        items: [
+            { id: 're1', text: 'Warenertrag (Kl. 3) minus Warenaufwand (Kl. 4)', target: 'bg' },
+            { id: 're2', text: 'Nach Abzug Personal (5) & übriger Betriebsaufwand (60–67)', target: 'ebitda' },
+            { id: 're3', text: 'Nach Abzug der Abschreibungen (Kl. 68)', target: 'ebit' },
+            { id: 're4', text: 'Nach Finanz (69), Neutral (7/8) & Direkten Steuern (89)', target: 'rein' }
+        ],
+        targets: [
+            { id: 'bg', label: 'Bruttogewinn' },
+            { id: 'ebitda', label: 'EBITDA' },
+            { id: 'ebit', label: 'EBIT' },
+            { id: 'rein', label: 'Unternehmungserfolg (Reingewinn)' }
+        ],
+        explanation: '3−4 = Bruttogewinn; −5−(60–67) = EBITDA; −68 = EBIT; +/−69/7/8 −89 = Unternehmungserfolg.'
+    },
+    {
+        id: 'rdnd4', type: 'dnd',
+        question: 'Drag & Drop (Buchungsregeln): Ordne jedes Konto der Seite zu, auf der es ZUNIMMT (+).',
+        items: [
+            { id: 'rk1', text: 'Aktivkonto (z.B. Bank, Vorräte)', target: 'soll' },
+            { id: 'rk2', text: 'Aufwandkonto (z.B. Lohn, Miete)', target: 'soll' },
+            { id: 'rk3', text: 'Passivkonto (z.B. Kreditoren, Darlehen)', target: 'haben' },
+            { id: 'rk4', text: 'Ertragskonto (z.B. Warenertrag)', target: 'haben' }
+        ],
+        targets: [
+            { id: 'soll', label: 'Zunahme (+) im SOLL (links)' },
+            { id: 'haben', label: 'Zunahme (+) im HABEN (rechts)' }
+        ],
+        explanation: 'Aktiven & Aufwand nehmen im Soll (+) zu; Passiven & Ertrag nehmen im Haben (+) zu.'
+    },
+    {
+        id: 'rdnd5', type: 'dnd',
+        question: 'Drag & Drop (ER Gliederung OR 959b): Ordne die Beispiele dem richtigen Bereich zu.',
+        items: [
+            { id: 'rg1', text: 'Warenertrag & Warenaufwand im Kerngeschäft', target: 'haupt' },
+            { id: 'rg2', text: 'Geschäftsliegenschaft / Beteiligungen', target: 'neben' },
+            { id: 'rg3', text: 'Vermietete Wohnliegenschaft (wiederkehrend)', target: 'fremd' },
+            { id: 'rg4', text: 'Einmaliger Schaden / periodenfremd', target: 'ao' }
+        ],
+        targets: [
+            { id: 'haupt', label: 'Hauptbetrieb' },
+            { id: 'neben', label: 'Nebenbetrieb' },
+            { id: 'fremd', label: 'Betriebsfremd' },
+            { id: 'ao', label: 'Ausserordentlich' }
+        ],
+        explanation: 'Kerngeschäft = Hauptbetrieb; Profit Center/Wertschriften = Nebenbetrieb; Wohnliegenschaft = betriebsfremd; einmalig/wesentlich = ausserordentlich.'
+    },
+    {
+        id: 'rdnd6', type: 'dnd',
+        question: 'Drag & Drop (MWST & Abschreibung): Ordne die Begriffe richtig zu.',
+        items: [
+            { id: 'rm1', text: 'MWST bei Einkauf (Forderung an ESTV)', target: 'vor' },
+            { id: 'rm2', text: 'MWST bei Verkauf (Schuld an ESTV)', target: 'ums' },
+            { id: 'rm3', text: 'Abschreibungen / Anlagekonto', target: 'dir' },
+            { id: 'rm4', text: 'Abschreibungen / WB Anlage (Kl. 1)', target: 'ind' }
+        ],
+        targets: [
+            { id: 'vor', label: 'Vorsteuer (Debitoren)' },
+            { id: 'ums', label: 'Umsatzsteuer (Kreditoren)' },
+            { id: 'dir', label: 'Direkte Abschreibung' },
+            { id: 'ind', label: 'Indirekte Abschreibung' }
+        ],
+        explanation: 'Einkauf = Vorsteuer, Verkauf = Umsatzsteuer; direkt = direkt aufs Anlagekonto, indirekt = aufs Wertberichtigungskonto (WB).'
+    }
+];
+
+let activeReweQuiz = [];
+let reweUsedIds = new Set();
+let reweRoundScored = false;
+
+function pickFromRewePool(type, count) {
+    const all = reweQuestionBank.filter(q => q.type === type);
+    let fresh = all.filter(q => !reweUsedIds.has(q.id));
+    if (fresh.length < count) {
+        all.forEach(q => reweUsedIds.delete(q.id));
+        fresh = all;
+    }
+    const chosen = shuffle(fresh).slice(0, count);
+    chosen.forEach(q => reweUsedIds.add(q.id));
+    return chosen.map(q => (q.type === 'single' || q.type === 'multi') ? { ...q, shuffledOptions: shuffle(q.options) } : q);
+}
+
+function renderReweQuiz() {
+    const container = document.getElementById('rewe-quiz-container');
+    if (!container) return;
+    container.innerHTML = '';
+    selectedChip = null;
+    reweRoundScored = false;
+
+    activeReweQuiz = [
+        ...pickFromRewePool('single', 5),
+        ...pickFromRewePool('multi', 4),
+        ...pickFromRewePool('dnd', 3)
+    ];
+
+    activeReweQuiz.forEach((q, qIdx) => {
+        const card = document.createElement('div');
+        card.className = 'quiz-question';
+        card.id = 'card-' + q.id;
+
+        const badge = document.createElement('span');
+        badge.className = 'quiz-type-tag';
+        badge.textContent = q.type === 'single' ? 'Single Choice' : (q.type === 'multi' ? 'Multiple Choice' : 'Drag & Drop');
+        card.appendChild(badge);
+
+        const title = document.createElement('h4');
+        title.textContent = `${qIdx + 1}. ${q.question}`;
+        card.appendChild(title);
+
+        if (q.type === 'single' || q.type === 'multi') {
+            q.shuffledOptions.forEach((opt, idx) => {
+                const label = document.createElement('label');
+                label.className = 'quiz-option';
+                const inp = document.createElement('input');
+                inp.type = q.type === 'single' ? 'radio' : 'checkbox';
+                inp.name = q.id;
+                inp.value = idx;
+                label.appendChild(inp);
+                const span = document.createElement('span');
+                span.textContent = opt.text;
+                label.appendChild(span);
+                card.appendChild(label);
+            });
+        } else if (q.type === 'dnd') {
+            const pool = document.createElement('div');
+            pool.className = 'dnd-pool';
+            pool.id = 'pool-' + q.id;
+            setupDropZone(pool, q.id);
+
+            shuffle(q.items).forEach(item => {
+                const chip = document.createElement('div');
+                chip.className = 'dnd-chip';
+                chip.textContent = item.text;
+                chip.draggable = true;
+                chip.id = item.id;
+                chip.dataset.qid = q.id;
+                chip.dataset.target = item.target;
+
+                chip.addEventListener('dragstart', e => {
+                    e.dataTransfer.setData('text/plain', chip.id);
+                    selectedChip = chip;
+                });
+                chip.addEventListener('click', e => {
+                    e.stopPropagation();
+                    if (selectedChip === chip) {
+                        chip.classList.remove('selected');
+                        selectedChip = null;
+                    } else {
+                        document.querySelectorAll('.dnd-chip').forEach(c => c.classList.remove('selected'));
+                        selectedChip = chip;
+                        chip.classList.add('selected');
+                    }
+                });
+                pool.appendChild(chip);
+            });
+            card.appendChild(pool);
+
+            const targetsWrap = document.createElement('div');
+            targetsWrap.className = 'dnd-targets';
+            q.targets.forEach(t => {
+                const box = document.createElement('div');
+                box.className = 'dnd-target';
+                box.dataset.tid = t.id;
+                box.dataset.qid = q.id;
+                const lbl = document.createElement('div');
+                lbl.className = 'dnd-target-label';
+                lbl.textContent = t.label;
+                box.appendChild(lbl);
+                const slot = document.createElement('div');
+                slot.className = 'dnd-slot';
+                box.appendChild(slot);
+                setupDropZone(box, q.id, slot);
+                targetsWrap.appendChild(box);
+            });
+            card.appendChild(targetsWrap);
+        }
+
+        const fb = document.createElement('div');
+        fb.className = 'quiz-feedback';
+        fb.id = 'fb-' + q.id;
+        card.appendChild(fb);
+        container.appendChild(card);
+    });
+    updateReweProgress();
+}
+
+function updateReweProgress() {
+    let answered = 0;
+    activeReweQuiz.forEach(q => {
+        const card = document.getElementById('card-' + q.id);
+        if (!card) return;
+        if (q.type === 'single' || q.type === 'multi') {
+            if (card.querySelector('input:checked')) answered++;
+        } else if (q.type === 'dnd') {
+            if (card.querySelectorAll('.dnd-target .dnd-chip').length > 0) answered++;
+        }
+    });
+    const pct = activeReweQuiz.length ? Math.round((answered / activeReweQuiz.length) * 100) : 0;
+    const fill = document.getElementById('rewe-quiz-progress-fill');
+    if (fill) fill.style.width = pct + '%';
+}
+
+const reweCont = document.getElementById('rewe-quiz-container');
+if (reweCont) {
+    reweCont.addEventListener('change', updateReweProgress);
+    reweCont.addEventListener('click', () => setTimeout(updateReweProgress, 40));
+    reweCont.addEventListener('drop', () => setTimeout(updateReweProgress, 40));
+}
+
+function checkReweQuiz() {
+    let score = 0;
+    activeReweQuiz.forEach(q => {
+        const card = document.getElementById('card-' + q.id);
+        const fb = document.getElementById('fb-' + q.id);
+        let ok = false;
+
+        if (q.type === 'single') {
+            const labels = card.querySelectorAll('.quiz-option');
+            labels.forEach(l => l.classList.remove('is-correct', 'is-wrong'));
+            const correctIdx = q.shuffledOptions.findIndex(o => o.ok);
+            const checked = card.querySelector('input:checked');
+            if (checked) {
+                const val = parseInt(checked.value, 10);
+                ok = val === correctIdx;
+                labels[val].classList.add(ok ? 'is-correct' : 'is-wrong');
+            }
+            if (!ok) labels[correctIdx].classList.add('is-correct');
+        } else if (q.type === 'multi') {
+            const labels = card.querySelectorAll('.quiz-option');
+            labels.forEach(l => l.classList.remove('is-correct', 'is-wrong'));
+            const checkedVals = [...card.querySelectorAll('input:checked')].map(i => parseInt(i.value, 10)).sort();
+            const expected = q.shuffledOptions.map((o, i) => o.ok ? i : -1).filter(i => i !== -1);
+            ok = checkedVals.length === expected.length && checkedVals.every((v, i) => v === expected[i]);
+            labels.forEach((l, idx) => {
+                const isExp = expected.includes(idx);
+                const isChk = checkedVals.includes(idx);
+                if (isExp) l.classList.add('is-correct');
+                else if (isChk) l.classList.add('is-wrong');
+            });
+        } else if (q.type === 'dnd') {
+            const targets = card.querySelectorAll('.dnd-target');
+            let placed = 0;
+            let allRight = true;
+            targets.forEach(t => {
+                t.classList.remove('is-correct', 'is-wrong');
+                const chips = t.querySelectorAll('.dnd-chip');
+                let boxOk = chips.length > 0;
+                chips.forEach(c => {
+                    placed++;
+                    if (c.dataset.target !== t.dataset.tid) boxOk = false;
+                });
+                if (!boxOk) allRight = false;
+                t.classList.add(boxOk ? 'is-correct' : 'is-wrong');
+            });
+            ok = placed === q.items.length && allRight;
+        }
+
+        if (ok) score++;
+        card.classList.remove('card-ok', 'card-err');
+        card.classList.add(ok ? 'card-ok' : 'card-err');
+        fb.className = 'quiz-feedback ' + (ok ? 'ok' : 'err');
+        fb.textContent = (ok ? '✓ Richtig! ' : '✗ Falsch! ') + q.explanation;
+    });
+
+    const pct = Math.round((score / activeReweQuiz.length) * 100);
+    const banner = document.getElementById('rewe-motivation-banner');
+    let msg = '';
+    let cls = 'keepgoing';
+    if (pct >= 85) { cls = 'great'; msg = `🏆 Überragend! ${score} von ${activeReweQuiz.length} Punkten (${pct}%) – Du hast Rechnungswesen Block 1 voll im Griff!`; }
+    else if (pct >= 65) { cls = 'good'; msg = `🚀 Stark gemacht! ${score} von ${activeReweQuiz.length} Punkten (${pct}%) – Noch eine Runde bis zur 90%-Marke!`; }
+    else { cls = 'keepgoing'; msg = `💪 Weiter so! ${score} von ${activeReweQuiz.length} Punkten (${pct}%) – Schau dir die Erklärungen an und starte direkt die nächste Runde!`; }
+    banner.className = 'motivation-banner ' + cls;
+    banner.textContent = msg;
+
+    if (!reweRoundScored) {
+        reweRoundScored = true;
+        saveScore(score, activeReweQuiz.length);
+    }
+}
+
+function resetReweQuiz() {
+    document.getElementById('rewe-motivation-banner').className = 'motivation-banner';
+    renderReweQuiz();
+}
+
+renderReweQuiz();
 updatePlayerUI();
 renderLeaderboard();
 </script>
