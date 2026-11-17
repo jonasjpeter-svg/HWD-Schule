@@ -308,6 +308,11 @@
             font-size: 0.91rem;
             border-radius: 0 8px 8px 0;
         }
+        .graphic-caption code {
+            background: rgba(109, 40, 217, 0.14);
+            color: #4c1d95;
+            font-weight: 700;
+        }
         footer {
             text-align: center;
             padding: 2.25rem 1rem;
@@ -578,7 +583,7 @@
         </div>
         <div class="hero-grid">
             <div>
-                <h1>} HWD Lernkompendium<br>&amp; Prüfungs-Arena</h1>
+                <h1>HWD Lernkompendium<br>&amp; Prüfungs-Arena</h1>
             </div>
             <div>
                 <p class="hero-sub">Alle 10 Blöcke kompakt mit Grafiken, Formeln und einem interaktiven Prüfungs-Quiz inklusive Rangliste.</p>
@@ -1571,7 +1576,7 @@
                     <text x="190" y="14" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">5 Marktgrössen (Bsp. Rasierer CH)</text>
                     <rect x="10" y="28" width="350" height="24" rx="4" fill="#cbd5e1"/><text x="18" y="44" font-size="10.5" font-weight="bold">1. Marktkapazität: 3.8 Mio. (theor. Max.)</text>
                     <rect x="10" y="58" width="245" height="24" rx="4" fill="#94a3b8"/><text x="18" y="74" font-size="10.5" font-weight="bold" fill="#fff">2. Marktpotenzial: 2.4 Mio. (realistisch)</text>
-                    <rect x="10" y="88" width="185" height="24" rx="4" fill="#5b2c6f"/><text x="18" y="104" font-size="10.5" font-weight="bold" fill="#fff">3. Marktvolumen: 1.8 Mio. (tatsächlich)</text>
+                    <rect x="10" y="88" width="185" height="24" rx="4" fill="#5b2c6f"/><text x="18" y="104" font-size="10.5" font-weight="bold" fill="#fff">3. Marktvolumen: 1.8 Mio.</text><text x="202" y="104" font-size="10" font-weight="bold" fill="#334155">(tatsächlich)</text>
                     <rect x="10" y="124" width="140" height="28" rx="6" fill="#d1fae5" stroke="#16a34a"/><text x="80" y="142" text-anchor="middle" font-size="10" font-weight="bold" fill="#166534">4. Marktanteil = 15%</text>
                     <rect x="165" y="124" width="195" height="28" rx="6" fill="#e8daef" stroke="#5b2c6f"/><text x="262" y="142" text-anchor="middle" font-size="10" font-weight="bold">5. Sättigungsgrad = 75%</text>
                     <text x="10" y="174" font-size="10">Marktanteil = (Eigener Absatz &divide; Marktvolumen) &times; 100</text>
@@ -1676,10 +1681,10 @@
                 <!-- Zielpyramide -->
                 <g transform="translate(15,10)">
                     <text x="165" y="14" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">Zielpyramide (4 Ebenen)</text>
-                    <polygon points="165,28 215,72 115,72" fill="#efe6f2" stroke="#5b2c6f"/><text x="165" y="62" text-anchor="middle" font-size="9.5" font-weight="bold">Unternehmensziele (&ge;5 J.)</text>
-                    <polygon points="115,72 215,72 250,112 80,112" fill="#d2b4de" stroke="#5b2c6f"/><text x="165" y="96" text-anchor="middle" font-size="10" font-weight="bold">Strategische Ziele (3–5 Jahre)</text>
-                    <polygon points="80,112 250,112 285,152 45,152" fill="#b392b5" stroke="#5b2c6f"/><text x="165" y="136" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Operative Ziele (1–3 Jahre)</text>
-                    <polygon points="45,152 285,152 320,192 10,192" fill="#5b2c6f" stroke="#2c1638"/><text x="165" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Taktische Ziele (&le; 1 Jahr)</text>
+                    <polygon points="165,24 235,76 95,76" fill="#efe6f2" stroke="#5b2c6f"/><text x="165" y="56" text-anchor="middle" font-size="9" font-weight="bold">Unternehmens-</text><text x="165" y="68" text-anchor="middle" font-size="8.5" font-weight="bold">ziele (&ge;5 J.)</text>
+                    <polygon points="95,76 235,76 270,114 60,114" fill="#d2b4de" stroke="#5b2c6f"/><text x="165" y="99" text-anchor="middle" font-size="9.5" font-weight="bold">Strategische Ziele (3–5 J.)</text>
+                    <polygon points="60,114 270,114 300,154 30,154" fill="#b392b5" stroke="#5b2c6f"/><text x="165" y="138" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Operative Ziele (1–3 Jahre)</text>
+                    <polygon points="30,154 300,154 330,194 0,194" fill="#5b2c6f" stroke="#2c1638"/><text x="165" y="178" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Taktische Ziele (&le; 1 Jahr)</text>
                 </g>
                 <!-- Zielbeziehungen -->
                 <g transform="translate(385,10)">
@@ -1796,27 +1801,27 @@
             <svg width="820" height="230" viewBox="0 0 820 230">
                 <!-- Break-even Spiegelschrank -->
                 <g transform="translate(10,10)">
-                    <text x="180" y="14" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">Break-even-Analyse (Bsp. Spiegelschrank)</text>
-                    <line x1="50" y1="185" x2="335" y2="185" stroke="#1f2937" stroke-width="2"/>
-                    <line x1="50" y1="185" x2="50" y2="30" stroke="#1f2937" stroke-width="2"/>
-                    <text x="12" y="40" font-size="9.5" font-weight="bold">CHF</text>
-                    <text x="310" y="202" font-size="9.5" font-weight="bold">Stück</text>
-                    <line x1="50" y1="145" x2="320" y2="145" stroke="#94a3b8" stroke-dasharray="4"/><text x="12" y="148" font-size="9">50'000 Fix</text>
-                    <line x1="50" y1="145" x2="320" y2="62" stroke="#b45309" stroke-width="2.5"/><text x="275" y="92" font-size="9.5" fill="#b45309" font-weight="bold">Gesamtkosten</text>
-                    <line x1="50" y1="185" x2="320" y2="36" stroke="#2563eb" stroke-width="2.5"/><text x="275" y="45" font-size="9.5" fill="#2563eb" font-weight="bold">Umsatz</text>
-                    <circle cx="185" cy="106" r="5" fill="#16a34a"/>
-                    <line x1="185" y1="106" x2="185" y2="185" stroke="#16a34a" stroke-dasharray="3"/>
-                    <text x="185" y="200" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#166534">500 Stk (BEP)</text>
-                    <text x="120" y="165" font-size="9" fill="#dc2626" font-weight="bold">Verlust</text>
-                    <text x="245" y="65" font-size="9" fill="#16a34a" font-weight="bold">Gewinn</text>
+                    <text x="185" y="14" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">Break-even-Analyse (Bsp. Spiegelschrank)</text>
+                    <line x1="65" y1="185" x2="345" y2="185" stroke="#1f2937" stroke-width="2"/>
+                    <line x1="65" y1="185" x2="65" y2="30" stroke="#1f2937" stroke-width="2"/>
+                    <text x="24" y="40" font-size="9.5" font-weight="bold">CHF</text>
+                    <text x="320" y="202" font-size="9.5" font-weight="bold">Stück</text>
+                    <line x1="65" y1="145" x2="330" y2="145" stroke="#94a3b8" stroke-dasharray="4"/><text x="4" y="148" font-size="9">50'000 Fix</text>
+                    <line x1="65" y1="145" x2="330" y2="62" stroke="#b45309" stroke-width="2.5"/><text x="278" y="92" font-size="9.5" fill="#b45309" font-weight="bold">Gesamtkosten</text>
+                    <line x1="65" y1="185" x2="330" y2="36" stroke="#2563eb" stroke-width="2.5"/><text x="245" y="44" font-size="9.5" fill="#2563eb" font-weight="bold">Umsatz</text>
+                    <circle cx="195" cy="108" r="5" fill="#16a34a"/>
+                    <line x1="195" y1="108" x2="195" y2="185" stroke="#16a34a" stroke-dasharray="3"/>
+                    <text x="195" y="200" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#166534">500 Stk (BEP)</text>
+                    <text x="130" y="165" font-size="9" fill="#dc2626" font-weight="bold">Verlust</text>
+                    <text x="255" y="68" font-size="9" fill="#16a34a" font-weight="bold">Gewinn</text>
                 </g>
                 <!-- AIDA Trichter -->
                 <g transform="translate(415,10)">
                     <text x="185" y="14" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">AIDA-Modell (Werbewirkung)</text>
-                    <polygon points="30,30 340,30 315,66 55,66" fill="#cbd5e1" stroke="#475569"/><text x="185" y="52" text-anchor="middle" font-size="11" font-weight="bold">A – Attention (Aufmerksamkeit: Google-Anzeige)</text>
-                    <polygon points="60,72 310,72 285,108 85,108" fill="#94a3b8" stroke="#475569"/><text x="185" y="94" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">I – Interest (Interesse: Website &amp; Varianten)</text>
-                    <polygon points="90,114 280,114 255,150 115,150" fill="#5b2c6f" stroke="#2c1638"/><text x="185" y="136" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">D – Desire (Verlangen: Konfigurator)</text>
-                    <polygon points="120,156 250,156 225,192 145,192" fill="#16a34a" stroke="#14532d"/><text x="185" y="178" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">A – Action (Kauf / Beratung)</text>
+                    <polygon points="15,30 355,30 330,66 40,66" fill="#cbd5e1" stroke="#475569"/><text x="185" y="52" text-anchor="middle" font-size="10.5" font-weight="bold">A – Attention (Google-Anzeige)</text>
+                    <polygon points="40,72 330,72 305,108 65,108" fill="#94a3b8" stroke="#475569"/><text x="185" y="94" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#fff">I – Interest (Website &amp; Varianten)</text>
+                    <polygon points="65,114 305,114 280,150 90,150" fill="#5b2c6f" stroke="#2c1638"/><text x="185" y="136" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#fff">D – Desire (Konfigurator)</text>
+                    <polygon points="90,156 280,156 255,192 115,192" fill="#16a34a" stroke="#14532d"/><text x="185" y="178" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#fff">A – Action (Kauf / Beratung)</text>
                 </g>
             </svg>
             <div class="graphic-caption">
