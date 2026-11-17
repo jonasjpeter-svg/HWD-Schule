@@ -610,7 +610,7 @@
 <div class="subject-bar" role="tablist" aria-label="Fächer-Auswahl">
     <button type="button" class="subject-tab active" id="tab-vwl" onclick="switchSubject('vwl')">📊 VWL &amp; BWL <span class="subject-badge-soon">10 Blöcke + Quiz</span></button>
     <button type="button" class="subject-tab" id="tab-marketing" onclick="switchSubject('marketing')">📣 Marketing <span class="subject-badge-soon">3 Präsentationen + Quiz</span></button>
-    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">7 Blöcke + Quiz</span></button>
+    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">8 Blöcke + Quiz</span></button>
 </div>
 
 <nav id="nav-vwl">
@@ -642,6 +642,7 @@
     <a href="#rewe-block5">Block 5: BAB &amp; Kalkulation</a>
     <a href="#rewe-block6">Block 6: Handel &amp; Division</a>
     <a href="#rewe-block7">Block 7: Investition &amp; Mehrst. DBR</a>
+    <a href="#rewe-block8">Block 8: Dyn. Investition</a>
     <a href="#rewe-quiz" style="background: linear-gradient(135deg,#8b5cf6,#6d28d9); color: #ffffff;">🎯 ReWe-Quiz &amp; Rangliste</a>
 </nav>
 
@@ -2621,11 +2622,89 @@
         </div>
     </section>
 
+    <!-- ==================== REWE BLOCK 8: DYNAMISCHE INVESTITIONSRECHNUNG ==================== -->
+    <section id="rewe-block8">
+        <span class="block-badge">8. Block · 12.11.2026 &bull; Dynamische Investitionsrechnung (ZP2)</span>
+        <h2>8. Block: Dynamische Investitionsrechnung (Kapitalwert, Annuität &amp; Dyn. Payback)</h2>
+
+        <div class="callout">
+            <strong>Ganzheitliche Betrachtung über die gesamte Nutzungsdauer:</strong> Im Gegensatz zur statischen Rechnung berücksichtigt die <strong>dynamische Investitionsrechnung</strong> den genauen zeitlichen Anfall jeder Zahlung mittels <strong>Aufzinsung</strong> und <strong>Abzinsung</strong>. <em>Begriffe:</em> <strong>Zeitwert</strong> = Zahlung zu einem Zeitpunkt &bull; <strong>Barwert</strong> = abgezinster Wert heute (t=0) &bull; <strong>Rente</strong> = jährlich gleichbleibende Zahlung (<em>vorschüssig vs. nachschüssig</em> beachten!).
+        </div>
+
+        <h3 style="margin-top:1.3rem;">8.1 Faktoren &amp; Dynamische Verfahren</h3>
+        <div class="graphic-container">
+            <svg width="780" height="236" viewBox="0 0 780 236">
+                <text x="390" y="16" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">Finanzmathematische Faktoren (links) &amp; Dynamische Verfahren (rechts)</text>
+
+                <!-- Links: 4 Faktoren -->
+                <rect x="15" y="28" width="365" height="196" rx="8" fill="#f8fafc" stroke="#5b2c6f" stroke-width="1.5"/>
+                <rect x="15" y="28" width="365" height="24" rx="6" fill="#5b2c6f"/>
+                <text x="197" y="44" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10.5">1. Die 4 Faktoren (Auf- &amp; Abzinsen)</text>
+
+                <rect x="27" y="59" width="340" height="36" rx="5" fill="#dbeafe" stroke="#2563eb"/>
+                <text x="37" y="74" font-size="9.5" font-weight="bold" fill="#1e40af">Abzinsungsfaktor (einzelne Zahlung &rarr; heute):</text>
+                <text x="37" y="88" font-size="8.8">Für ungleiche jährliche Cashflows &amp; Liquidationserlös</text>
+
+                <rect x="27" y="100" width="340" height="36" rx="5" fill="#e8daef" stroke="#7c3aed"/>
+                <text x="37" y="115" font-size="9.5" font-weight="bold" fill="#5b2c6f">Rentenbarwertfaktor (RBF &ndash; gleiche Renten &rarr; heute):</text>
+                <text x="37" y="129" font-size="8.8">Für jedes Jahr gleichbleibende Cashflows (Achtung: vor-/nachschüssig)</text>
+
+                <rect x="27" y="141" width="340" height="36" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+                <text x="37" y="156" font-size="9.5" font-weight="bold" fill="#166534">Aufzinsungsfaktor &amp; Rentenendwertfaktor:</text>
+                <text x="37" y="170" font-size="8.8">Zahlungen vor Inbetriebnahme hochrechnen / auf Endwert</text>
+
+                <rect x="27" y="182" width="340" height="36" rx="5" fill="#fef3c7" stroke="#d97706"/>
+                <text x="37" y="197" font-size="9.5" font-weight="bold" fill="#92400e">Merksatz (Barwert vs. Zeitwert):</text>
+                <text x="37" y="211" font-size="8.8">Späterer Franken ist heute weniger wert &rarr; Abzinsen auf t = 0!</text>
+
+                <!-- Rechts: Verfahren -->
+                <rect x="400" y="28" width="365" height="196" rx="8" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+                <rect x="400" y="28" width="365" height="24" rx="6" fill="#16a34a"/>
+                <text x="582" y="44" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10.5">2. Prüfungsrelevante Dynamische Verfahren</text>
+
+                <rect x="412" y="60" width="340" height="44" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+                <text x="422" y="76" font-size="9.8" font-weight="bold" fill="#166534">Kapitalwertmethode (Net Present Value):</text>
+                <text x="422" y="91" font-size="9">Kapitalwert = Barwert aller Cashflows &minus; Kapitaleinsatz (&ge; 0 = gut!)</text>
+
+                <rect x="412" y="110" width="340" height="44" rx="5" fill="#e8daef" stroke="#7c3aed"/>
+                <text x="422" y="126" font-size="9.8" font-weight="bold" fill="#5b2c6f">Annuitätenmethode (= dynam. Gewinnvergleich):</text>
+                <text x="422" y="141" font-size="9">Kapitalwert auf Jahre verteilen (&ge; 0 = gut; höherer Wert gewinnt)</text>
+
+                <rect x="412" y="160" width="340" height="36" rx="5" fill="#dbeafe" stroke="#2563eb"/>
+                <text x="422" y="175" font-size="9.8" font-weight="bold" fill="#1e40af">Dynamisierte Payback-Methode:</text>
+                <text x="422" y="189" font-size="9">Wie statische Amortisation, jedoch mit abgezinsten Cashflows</text>
+
+                <rect x="412" y="201" width="340" height="18" rx="4" fill="#fee2e2" stroke="#dc2626"/>
+                <text x="582" y="213" text-anchor="middle" font-size="8.8" font-weight="bold" fill="#991b1b">Hinweis Unterricht: Interner Ertragssatz (IRR) nicht prüfungsrelevant!</text>
+            </svg>
+        </div>
+
+        <h3 style="margin-top:1.3rem;">8.2 Praxis-Check &amp; Entscheidungsregeln</h3>
+        <div class="grid-2">
+            <div class="card">
+                <h4>Kapitalwert-Rechnung (Ablauf)</h4>
+                <ul>
+                    <li><strong>1. Cashflows pro Jahr bestimmen:</strong> Jährliche Einzahlungen &minus; Auszahlungen (ohne Abschreibungen/kalk. Zinsen!).</li>
+                    <li><strong>2. Barwert ermitteln:</strong> Bei gleichen Cashflows mit <strong>Rentenbarwertfaktor (RBF)</strong> multiplizieren; bei ungleichen Cashflows + <strong>Liquidationserlös</strong> jedes Jahr einzeln mit dem <strong>Abzinsungsfaktor</strong> multiplizieren.</li>
+                    <li><strong>3. Kapitalwert (NPV):</strong> <code>Summe Barwerte &minus; Kapitaleinsatz</code>.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Wann wird investiert? (Entscheidungsregeln)</h4>
+                <ul>
+                    <li><strong>Einzelinvestition (Kapitalwert):</strong> Durchführen, sobald <code>Kapitalwert &ge; 0</code> (die geforderte Mindestverzinsung wird erreicht oder übertroffen).</li>
+                    <li><strong>Alternativenvergleich (2 Maschinen):</strong> Maschine mit dem <strong>höheren Kapitalwert</strong> bzw. der <strong>höheren Annuität</strong> wählen.</li>
+                    <li><strong>Prüfungsfalle:</strong> Immer prüfen, ob Zahlungen <em>nachschüssig</em> (Ende Jahr, Standard) oder <em>vorschüssig</em> (Anfang Jahr) anfallen und ob ein <em>Liquidationserlös</em> am Ende der Nutzungsdauer abgezinst werden muss!</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- ==================== REWE QUIZ ==================== -->
     <section id="rewe-quiz">
         <span class="block-badge">Prüfungstraining Rechnungswesen</span>
         <h2>Interaktives Rechnungswesen-Quiz &amp; Rangliste</h2>
-        <p>96 rotierende Prüfungsfragen aus Block 1 bis Block 7 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen, Kennzahlen, Stille Reserven, Nutzschwelle, BAB, Kalkulation, Investitionsrechnung &amp; Mehrstufige DBR). Deine Punkte zählen in die gemeinsame Rangliste!</p>
+        <p>108 rotierende Prüfungsfragen aus Block 1 bis Block 8 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen, Kennzahlen, Stille Reserven, Nutzschwelle, BAB, Kalkulation, Statische &amp; Dynamische Investitionsrechnung, Mehrstufige DBR). Deine Punkte zählen in die gemeinsame Rangliste!</p>
 
         <div class="player-bar">
             <div class="player-login">
@@ -5418,6 +5497,160 @@ const reweQuestionBank = [
             { id: '130', label: '+130 (CHF 130’000)' }
         ],
         explanation: 'Fleisch +400, Suppe +200, Gemüse −400, Brot +300 → Total DB 3 = 500; minus 370 = Betriebserfolg +130.'
+    },
+    {
+        id: 'rs35', type: 'single',
+        question: 'Was ist der Hauptunterschied zwischen dynamischer und statischer Investitionsrechnung?',
+        options: [
+            { text: 'Die dynamische Rechnung betrachtet die gesamte Nutzungsdauer ganzheitlich und zinst alle Zahlungen auf/ab', ok: true },
+            { text: 'Die dynamische Rechnung verwendet nur ein einzelnes Durchschnittsjahr', ok: false },
+            { text: 'Die dynamische Rechnung verzichtet komplett auf Cashflows', ok: false },
+            { text: 'Die statische Rechnung verwendet den Rentenbarwertfaktor', ok: false }
+        ],
+        explanation: 'Statisch = Durchschnittsjahr ohne Zeitwert; dynamisch = gesamte Nutzungsdauer mit Auf- und Abzinsung.'
+    },
+    {
+        id: 'rs36', type: 'single',
+        question: 'Wie lautet die Formel für den Kapitalwert (Net Present Value) einer Investition?',
+        options: [
+            { text: 'Barwert aller zukünftigen Cashflows (inkl. abgezinstem Liquidationserlös) − Kapitaleinsatz', ok: true },
+            { text: 'Kapitaleinsatz − durchschnittlicher Jahresgewinn', ok: false },
+            { text: 'Jährliche Abschreibungen + kalkulatorische Zinsen', ok: false },
+            { text: 'Total Nettoerlös / Total variable Kosten', ok: false }
+        ],
+        explanation: 'Kapitalwert = Summe der abgezinsten zukünftigen Cashflows minus ursprünglicher Kapitaleinsatz.'
+    },
+    {
+        id: 'rs37', type: 'single',
+        question: 'Wann ist eine Investition nach der Kapitalwertmethode vorteilhaft?',
+        options: [
+            { text: 'Wenn der Kapitalwert grösser oder gleich 0 ist (bei Alternativen: der höhere Wert)', ok: true },
+            { text: 'Nur wenn der Kapitalwert kleiner als 0 ist', ok: false },
+            { text: 'Wenn die jährlichen Abschreibungen grösser als der Umsatz sind', ok: false },
+            { text: 'Nur wenn der Kapitalwert exakt dem Liquidationserlös entspricht', ok: false }
+        ],
+        explanation: 'Kapitalwert ≥ 0 bedeutet, dass die geforderte Mindestverzinsung erreicht bzw. übertroffen wird.'
+    },
+    {
+        id: 'rs38', type: 'single',
+        question: 'Welcher Faktor wird verwendet, um jährlich gleichbleibende Cashflows (eine Rente) auf heute abzuzinsen?',
+        options: [
+            { text: 'Rentenbarwertfaktor (RBF)', ok: true },
+            { text: 'Aufzinsungsfaktor', ok: false },
+            { text: 'Materialgemeinkostenzuschlag', ok: false },
+            { text: 'Selbstfinanzierungsgrad', ok: false }
+        ],
+        explanation: 'Gleichbleibende jährliche Zahlungen (Renten) lassen sich bequem mit dem Rentenbarwertfaktor (RBF) auf heute (t=0) abzinsen.'
+    },
+    {
+        id: 'rm33', type: 'multi',
+        question: 'Welche Begriffe gehören zur dynamischen Investitionsrechnung? (Mehrere richtig)',
+        options: [
+            { text: 'Zeitwert (Ein-/Auszahlung zu einem bestimmten Zeitpunkt)', ok: true },
+            { text: 'Barwert (auf heute auf- oder abgezinster Wert einer Zahlung)', ok: true },
+            { text: 'Rente (über mehrere Jahre gleichbleibende jährliche Zahlung)', ok: true },
+            { text: 'Schlussbilanz 2 (nach Gewinnverwendung)', ok: false }
+        ],
+        explanation: 'Zeitwert, Barwert und Rente (vorschüssig vs. nachschüssig) sind die zentralen Grundbegriffe der dynamischen Investitionsrechnung.'
+    },
+    {
+        id: 'rm34', type: 'multi',
+        question: 'Welche dynamischen Verfahren sind laut Unterricht (Folie 6–8) prüfungsrelevant? (Mehrere richtig)',
+        options: [
+            { text: 'Kapitalwertverfahren (Barwert aller Cashflows − Kapitaleinsatz)', ok: true },
+            { text: 'Annuitätenmethode (= dynamischer Gewinnvergleich; mindestens 0)', ok: true },
+            { text: 'Dynamisierte Payback-Methode (wie statisch, mit Abzinsungsfaktor)', ok: true },
+            { text: 'Interner Ertragssatz (IRR)', ok: false }
+        ],
+        explanation: 'Laut Folie 8 ist der interne Ertragssatz ausdrücklich NICHT prüfungsrelevant; Kapitalwert, Annuität und dyn. Payback hingegen schon.'
+    },
+    {
+        id: 'rm35', type: 'multi',
+        question: 'Worauf muss man beim Abzinsen mit Tabellenwerten in der Prüfung besonders achten? (Mehrere richtig)',
+        options: [
+            { text: 'Ob die Zahlungen vorschüssig (Anfang Jahr) oder nachschüssig (Ende Jahr) erfolgen', ok: true },
+            { text: 'Ob die jährlichen Cashflows gleich bleiben (RBF) oder unterschiedlich hoch sind (Abzinsungsfaktor je Jahr)', ok: true },
+            { text: 'Ob am Ende der Nutzungsdauer noch ein Liquidationserlös separat abgezinst werden muss', ok: true },
+            { text: 'Dass Abschreibungen doppelt vom Cashflow abgezogen werden', ok: false }
+        ],
+        explanation: 'Cashflows enthalten keine Abschreibungen! Wichtig sind vor-/nachschüssig, gleich vs. ungleich (RBF vs. Abzinsungsfaktor) und Liquidationserlös.'
+    },
+    {
+        id: 'rm36', type: 'multi',
+        question: 'Welche Aussagen zur Annuitätenmethode stimmen? (Mehrere richtig)',
+        options: [
+            { text: 'Sie entspricht dem dynamischen Gegenstück zum statischen Gewinnvergleich', ok: true },
+            { text: 'Eine Investition ist gut, wenn die Annuität mindestens 0 beträgt', ok: true },
+            { text: 'Bei zwei Alternativen wird die Maschine mit der höheren Annuität gewählt', ok: true },
+            { text: 'Sie ist nur gültig, wenn der Kapitalwert negativ ist', ok: false }
+        ],
+        explanation: 'Bei positivem Kapitalwert ist auch die Annuität positiv (≥ 0) – sie verteilt den Kapitalwert gleichmässig auf die Nutzungsjahre.'
+    },
+    {
+        id: 'rdnd31', type: 'dnd',
+        question: 'Drag & Drop (Dynamische Faktoren): Ordne jeden Faktor dem richtigen Anwendungsfall zu.',
+        items: [
+            { id: 'rdf1', text: 'Ungleiche Cashflows & Liquidationserlös auf t=0 rechnen', target: 'abz' },
+            { id: 'rdf2', text: 'Gleichbleibende jährliche Renten auf t=0 rechnen', target: 'rbf' },
+            { id: 'rdf3', text: 'Zahlung vor Inbetriebnahme auf t=0 hochrechnen', target: 'auf' },
+            { id: 'rdf4', text: 'Gleichbleibende Renten auf Endzeitpunkt hochrechnen', target: 'rew' }
+        ],
+        targets: [
+            { id: 'abz', label: 'Abzinsungsfaktor' },
+            { id: 'rbf', label: 'Rentenbarwertfaktor (RBF)' },
+            { id: 'auf', label: 'Aufzinsungsfaktor' },
+            { id: 'rew', label: 'Rentenendwertfaktor' }
+        ],
+        explanation: 'Einzelne zukünftige Zahlung → heute = Abzinsungsfaktor; gleiche Renten → heute = RBF; vor t=0 → Aufzinsungsfaktor; Endwert = Rentenendwertfaktor.'
+    },
+    {
+        id: 'rdnd32', type: 'dnd',
+        question: 'Drag & Drop (Dynamische Begriffe): Ordne die Definitionen korrekt zu.',
+        items: [
+            { id: 'rdb1', text: 'Ein-/Auszahlung zu einem bestimmten Zeitpunkt', target: 'zw' },
+            { id: 'rdb2', text: 'Wert nach Auf- oder Abzinsung auf heute (t=0)', target: 'bw' },
+            { id: 'rdb3', text: 'Über mehrere Jahre gleichbleibende jährliche Zahlung', target: 're' },
+            { id: 'rdb4', text: 'Barwert aller Cashflows minus Kapitaleinsatz', target: 'kw' }
+        ],
+        targets: [
+            { id: 'zw', label: 'Zeitwert' },
+            { id: 'bw', label: 'Barwert' },
+            { id: 're', label: 'Rente' },
+            { id: 'kw', label: 'Kapitalwert (NPV)' }
+        ],
+        explanation: 'Zeitwert = Zahlung zum Zeitpunkt; Barwert = abgezinster Wert; Rente = gleichbleibende Zahlungsreihe; Kapitalwert = Barwert − Kapitaleinsatz.'
+    },
+    {
+        id: 'rdnd33', type: 'dnd',
+        question: 'Drag & Drop (Dynamische Verfahren & Regeln): Ordne richtig zu.',
+        items: [
+            { id: 'rdv1', text: 'Kapitalwertverfahren', target: 'kw0' },
+            { id: 'rdv2', text: 'Annuitätenmethode', target: 'ann' },
+            { id: 'rdv3', text: 'Dynamisierte Payback-Methode', target: 'pay' },
+            { id: 'rdv4', text: 'Interner Ertragssatz (IRR)', target: 'irr' }
+        ],
+        targets: [
+            { id: 'kw0', label: 'Vorteilhaft bei Kapitalwert ≥ 0' },
+            { id: 'ann', label: 'Dynamischer Gewinnvergleich (≥ 0)' },
+            { id: 'pay', label: 'Amortisation mit Abzinsungsfaktor' },
+            { id: 'irr', label: 'Nicht prüfungsrelevant (lt. Folie 8)' }
+        ],
+        explanation: 'Kapitalwert ≥ 0, Annuität = dyn. Gewinnvergleich, dyn. Payback mit Abzinsungsfaktor, IRR laut Unterricht nicht prüfungsrelevant.'
+    },
+    {
+        id: 'rdnd34', type: 'dnd',
+        question: 'Drag & Drop (Statisch vs. Dynamisch): Ordne die Merkmale der richtigen Methode zu.',
+        items: [
+            { id: 'rsd1', text: 'Rechnet mit einem einzelnen Durchschnittsjahr', target: 'stat' },
+            { id: 'rsd2', text: 'Berücksichtigt die gesamte Nutzungsdauer & Zinseszins', target: 'dyn' },
+            { id: 'rsd3', text: 'Arbeitet mit kalk. Abschreibungen & Ø-Kapital', target: 'stat' },
+            { id: 'rsd4', text: 'Zinst Cashflows auf t=0 ab (Abzinsungstabelle)', target: 'dyn' }
+        ],
+        targets: [
+            { id: 'stat', label: 'Statische Investitionsrechnung' },
+            { id: 'dyn', label: 'Dynamische Investitionsrechnung' }
+        ],
+        explanation: 'Statisch = Durchschnittsjahr mit Abschreibungen & Ø-Kapital; dynamisch = gesamte Nutzungsdauer mit abgezinsten Cashflows.'
     }
 ];
 
