@@ -1,104 +1,324 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="HWD VWL und BWL Lernkompendium – Blöcke 1 bis 10, übersichtlich für die Prüfungsvorbereitung.">
-  <meta name="theme-color" content="#4f46e5">
-  <title>HWD VWL &amp; BWL – Lernkompendium</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; scroll-behavior: smooth; }
-    .main-tab-active { background-color: #4f46e5; color: white; box-shadow: 0 4px 6px -1px rgba(79,70,229,.25); }
-    .card-box { background: white; border-radius: 1.25rem; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px 0 rgba(0,0,0,.04); }
-    svg text { font-family: 'Inter', sans-serif; }
-    section[id] { scroll-margin-top: 150px; }
-    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HWD VWL & BWL – Gesamtes Lernkompendium (Blöcke 1–10)</title>
+    <style>
+        :root {
+            --primary: #4a154b;
+            --secondary: #2b102f;
+            --accent: #e0a80d;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #333333;
+            --border: #e2e8f0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.1rem;
+            opacity: 0.85;
+        }
+        nav {
+            background-color: #ffffff;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        nav a {
+            color: var(--primary);
+            background-color: #f1f5f9;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+        nav a:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        section {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
+        }
+        h2 {
+            color: var(--primary);
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        h3 {
+            color: var(--secondary);
+            margin-top: 1.5rem;
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        th, td {
+            border: 1px solid var(--border);
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary);
+        }
+        .graphic-container {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .graphic-container svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .explanation {
+            background-color: #f8fafc;
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            border-radius: 0 6px 6px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
-<body class="antialiased min-h-screen flex flex-col">
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
-        <div class="flex items-center gap-3">
-          <div class="bg-indigo-600 text-white p-2.5 rounded-xl shadow-md"><i data-lucide="graduation-cap" class="w-5 h-5" aria-hidden="true"></i></div>
-          <div><span class="text-[11px] font-bold uppercase tracking-wider text-indigo-600 block">Höhere Wirtschaftsdiplome (HWD VSK)</span><h1 class="text-base sm:text-lg font-extrabold text-slate-900">VWL &amp; BWL – Lernkompendium (Block 1–10)</h1></div>
+<body>
+
+<header>
+    <h1>HWD VWL & BWL – Gesamtkompendium</h1>
+    <p>Chronologische Lernzusammenfassung mit allen Modellen, Grafiken & Erklärungen (Blöcke 1 bis 10)</p>
+</header>
+
+<nav>
+    <a href="#block1">Block 1</a>
+    <a href="#block2">Block 2</a>
+    <a href="#block3">Block 3</a>
+    <a href="#block4">Block 4</a>
+    <a href="#block5">Block 5</a>
+    <a href="#block6">Block 6</a>
+    <a href="#block7">Block 7</a>
+    <a href="#block8">Block 8</a>
+    <a href="#block9">Block 9</a>
+    <a href="#block10">Block 10</a>
+</nav>
+
+<div class="container">
+
+    <!-- BLOCK 1 -->
+    <section id="block1">
+        <h2>Block 1: Einführung, Bedürfnisse, Märkte & Elastizitäten</h2>
+        <p>Grundlagen des wirtschaftlichen Handelns, Güterarten, das ökonomische Prinzip sowie Preis- und Nachfrageanalysen.</p>
+        
+        <h3>Bedürfnisse & Konsumwünsche</h3>
+        <p>Der Mensch strebt nach der Behebung von Mängeln. Da Ressourcen (Geld, Zeit) knapp sind, entsteht das ökonomische Problem: <strong>Knappe Güter vs. unendliche Bedürfnisse</strong>.</p>
+
+        <h3>Das Marktgleichgewicht</h3>
+        <div class="graphic-container">
+            <svg width="400" height="250" viewBox="0 0 400 250">
+                <line x1="50" y1="200" x2="350" y2="200" stroke="#333" stroke-width="2"/>
+                <line x1="50" y1="200" x2="50" y2="30" stroke="#333" stroke-width="2"/>
+                <text x="350" y="220" font-size="12">Menge</text>
+                <text x="20" y="40" font-size="12">Preis</text>
+                <!-- Nachfragekurve -->
+                <path d="M 80 50 Q 200 150 320 180" fill="none" stroke="#8b5cf6" stroke-width="3"/>
+                <text x="230" y="110" font-size="11" fill="#8b5cf6">Nachfrage</text>
+                <!-- Angebotskurve -->
+                <path d="M 80 180 Q 200 150 320 50" fill="none" stroke="#475569" stroke-width="3"/>
+                <text x="230" y="180" font-size="11" fill="#475569">Angebot</text>
+                <!-- Schnittpunkt -->
+                <circle cx="200" cy="135" r="5" fill="#dc2626"/>
+                <line x1="50" y1="135" x2="200" y2="135" stroke="#94a3b8" stroke-dasharray="4"/>
+                <line x1="200" y1="135" x2="200" y2="200" stroke="#94a3b8" stroke-dasharray="4"/>
+                <text x="10" y="140" font-size="10">Gleichgewichtspreis</text>
+                <text x="180" y="215" font-size="10">Gleichgewichtsmenge</text>
+            </svg>
+            <div class="explanation">
+                <strong>Erklärung:</strong> Der Schnittpunkt von Angebots- und Nachfragekurve bestimmt den Marktpreis. Bei diesem Preis stimmen Verkaufs- und Kaufbereitschaft überein.
+            </div>
         </div>
-        <div class="flex gap-2 bg-slate-100 p-1.5 rounded-2xl" role="group" aria-label="Lernkompendium-Teil auswählen">
-          <button type="button" onclick="switchPart('part1')" id="btn-part1" aria-pressed="true" class="main-tab-active px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5"><i data-lucide="book-open" class="w-4 h-4" aria-hidden="true"></i><span>Teil 1 (Block 1–5)</span></button>
-          <button type="button" onclick="switchPart('part2')" id="btn-part2" aria-pressed="false" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:text-slate-900 transition-all flex items-center gap-1.5"><i data-lucide="layers" class="w-4 h-4" aria-hidden="true"></i><span>Teil 2 (Block 6–10)</span></button>
-        </div>
-      </div>
-      <div id="subnav-part1" class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100 mt-3"><span class="text-xs font-bold text-slate-400 self-center mr-2">Blöcke Teil 1:</span>
-        <button type="button" onclick="scrollToBlock('sec-b1')" class="nav-link">Block 1</button><button type="button" onclick="scrollToBlock('sec-b2')" class="nav-link">Block 2</button><button type="button" onclick="scrollToBlock('sec-b3')" class="nav-link">Block 3</button><button type="button" onclick="scrollToBlock('sec-b4')" class="nav-link">Block 4</button><button type="button" onclick="scrollToBlock('sec-b5')" class="nav-link">Block 5</button>
-      </div>
-      <div id="subnav-part2" class="hidden flex-wrap gap-1.5 pt-3 border-t border-slate-100 mt-3"><span class="text-xs font-bold text-slate-400 self-center mr-2">Blöcke Teil 2:</span>
-        <button type="button" onclick="scrollToBlock('sec-b6')" class="nav-link">Block 6</button><button type="button" onclick="scrollToBlock('sec-b7')" class="nav-link">Block 7</button><button type="button" onclick="scrollToBlock('sec-b8')" class="nav-link">Block 8</button><button type="button" onclick="scrollToBlock('sec-b9')" class="nav-link">Block 9</button><button type="button" onclick="scrollToBlock('sec-b10')" class="nav-link">Block 10</button>
-      </div>
-    </div>
-  </nav>
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
-    <div id="container-part1" class="space-y-12">
-      <section id="sec-b1" class="block-section space-y-6">
-        <div class="section-heading border-indigo-600"><span class="block-badge bg-indigo-600">BLOCK 1</span><h2>Grundlagen der VWL, Güterarten, Ökonomisches Prinzip &amp; Märkte</h2></div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <article class="card-box p-6 space-y-4"><h3 class="card-title">1. Bedürfnisse, Knappheit &amp; Wirtschaften</h3><ul class="space-y-2.5 text-sm text-slate-700"><li><strong>Bedürfnis:</strong> Verlangen des Menschen, einen echten oder vermeintlichen Mangel zu beheben.</li><li><strong>Ökonomisches Problem:</strong> Unbegrenzte Konsumwünsche treffen auf knappe Ressourcen.</li><li><strong>Opportunitätskosten:</strong> Der entgangene Nutzen der besten nicht gewählten Alternative.</li><li><strong>Ökonomisches Prinzip:</strong> Mit gegebenen Mitteln den grösstmöglichen Erfolg erzielen (Maximumprinzip) oder ein Ziel mit möglichst geringem Mitteleinsatz erreichen (Minimumprinzip).</li></ul></article>
-          <article class="card-box p-6 space-y-4"><h3 class="card-title">2. Produktionsfaktoren &amp; Güterarten</h3><div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center text-xs"><div class="factor bg-emerald-50 border-emerald-200"><strong>Boden</strong>Rohstoffe</div><div class="factor bg-blue-50 border-blue-200"><strong>Arbeit</strong>Körperlich / geistig</div><div class="factor bg-amber-50 border-amber-200"><strong>Kapital</strong>Maschinen / Geld</div><div class="factor bg-purple-50 border-purple-200"><strong>Wissen</strong>Know-how</div></div><div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-xs space-y-1"><div><strong>Freie Güter:</strong> In grosser Menge verfügbar, meist ohne Preis (z.B. Sonnenlicht).</div><div><strong>Wirtschaftliche Güter:</strong> Knapp und deshalb mit einem Preis.</div><div><strong>Komplementärgüter:</strong> Werden gemeinsam genutzt (Auto und Reifen).</div><div><strong>Substitutionsgüter:</strong> Können einander ersetzen (Butter und Margarine).</div></div></article>
-        </div>
-        <article class="card-box p-6 space-y-5"><h3 class="card-title">3. Märkte, Preisbildung &amp; Preiselastizität</h3><div class="grid grid-cols-1 lg:grid-cols-2 gap-6"><div class="bg-slate-50 p-4 rounded-2xl border border-slate-200"><h4 class="font-bold text-sm mb-2">Marktgleichgewicht</h4><svg viewBox="0 0 300 180" class="w-full bg-white rounded-xl border p-2" role="img" aria-label="Angebots- und Nachfragekurven schneiden sich im Marktgleichgewicht"><line x1="30" y1="150" x2="280" y2="150" stroke="#334155" stroke-width="2"/><line x1="30" y1="150" x2="30" y2="20" stroke="#334155" stroke-width="2"/><path d="M 50,135 Q 150,90 260,30" fill="none" stroke="#64748b" stroke-width="2.5"/><path d="M 50,30 Q 150,90 260,135" fill="none" stroke="#7e22ce" stroke-width="2.5"/><circle cx="155" cy="90" r="4" fill="#4f46e5"/><text x="180" y="45" font-size="9" fill="#64748b">Angebot (A)</text><text x="180" y="130" font-size="9" fill="#7e22ce">Nachfrage (N)</text></svg><p class="text-xs text-slate-700 mt-2">Am Schnittpunkt von Angebot und Nachfrage liegt der Gleichgewichtspreis; der Markt wird geräumt.</p></div><div class="bg-slate-50 p-4 rounded-2xl border border-slate-200"><h4 class="font-bold text-sm mb-2">Preiselastizität</h4><p class="text-sm text-slate-700 mb-3">Preiselastizität = prozentuale Mengenänderung ÷ prozentuale Preisänderung.</p><p class="text-xs text-slate-700"><strong>Elastisch (Betrag &gt; 1):</strong> Die Menge reagiert stark auf Preisänderungen.</p><p class="text-xs text-slate-700 mt-2"><strong>Unelastisch (Betrag &lt; 1):</strong> Die Menge reagiert schwach.</p></div></div></article>
-      </section>
-      <section id="sec-b2" class="block-section space-y-6"><div class="section-heading border-emerald-600"><span class="block-badge bg-emerald-600">BLOCK 2</span><h2>Wirtschaftskreislauf, BIP, Staatseingriffe &amp; Geldpolitik</h2></div><article class="card-box p-6 space-y-4"><h3 class="card-title">Wirtschaftskreislauf &amp; Bruttoinlandprodukt</h3><p class="text-sm text-slate-700">Das <strong>Bruttoinlandprodukt (BIP)</strong> misst den Wert der im Inland innerhalb eines Zeitraums produzierten Endgüter und Dienstleistungen. Vorleistungen werden nicht doppelt gezählt. Im einfachen Kreislauf tauschen Haushalte und Unternehmen Güter, Dienstleistungen und Geld aus.</p><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-xs"><div class="info-box bg-rose-50 border-rose-200"><strong>Höchstpreis:</strong> Unter dem Gleichgewichtspreis entsteht tendenziell Nachfrageüberschuss.</div><div class="info-box bg-blue-50 border-blue-200"><strong>Mindestpreis:</strong> Über dem Gleichgewichtspreis entsteht tendenziell Angebotsüberschuss.</div><div class="info-box bg-amber-50 border-amber-200"><strong>Steuern:</strong> Können Produktionskosten erhöhen und das Angebot verringern.</div><div class="info-box bg-emerald-50 border-emerald-200"><strong>Subventionen:</strong> Können Kosten senken und das Angebot fördern.</div></div><p class="text-sm text-slate-700"><strong>Geldpolitik:</strong> Die Zentralbank beeinflusst über Leitzinsen und weitere Instrumente Geldversorgung, Kreditbedingungen und Preisentwicklung.</p></article></section>
-      <section id="sec-b3" class="block-section space-y-6"><div class="section-heading border-purple-600"><span class="block-badge bg-purple-600">BLOCK 3</span><h2>Wertkette nach Porter &amp; St. Galler Management-Modell</h2></div><article class="card-box p-6 space-y-4"><h3 class="card-title">Unternehmen und Umfeld verstehen</h3><p class="text-sm text-slate-700">Das <strong>St. Galler Management-Modell (SGMM)</strong> betrachtet die Unternehmung in Wechselwirkung mit ihrer Umwelt. Zu den Umweltsphären zählen Natur, Gesellschaft, Technologie und Wirtschaft; Anspruchsgruppen sind etwa Kunden, Mitarbeitende, Staat und Lieferanten.</p><p class="text-sm text-slate-700">Im Zentrum stehen <strong>Ordnungsmomente</strong> (Strategie, Struktur und Kultur) sowie Management- und Geschäftsprozesse. Porters <strong>Wertkette</strong> gliedert Unternehmensaktivitäten in primäre Tätigkeiten und unterstützende Aktivitäten, um Quellen von Wertschöpfung und Wettbewerbsvorteilen zu erkennen.</p></article></section>
-      <section id="sec-b4" class="block-section space-y-6"><div class="section-heading border-sky-600"><span class="block-badge bg-sky-600">BLOCK 4</span><h2>Value Proposition Design &amp; Strategieentwicklung</h2></div><article class="card-box p-6 space-y-4"><h3 class="card-title">Kundennutzen, Ziele &amp; Strategieprozess</h3><p class="text-sm text-slate-700"><strong>Value Proposition Design</strong> richtet ein Angebot auf Kundenbedürfnisse aus: Welche Aufgaben, Probleme und gewünschten Ergebnisse haben Kunden – und wie helfen Produkte oder Dienstleistungen dabei?</p><div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm"><div class="info-box bg-indigo-50 border-indigo-200"><strong>Normative Ziele</strong><br>Werte, Zweck und Vision geben die langfristige Ausrichtung vor.</div><div class="info-box bg-sky-50 border-sky-200"><strong>Strategische Ziele</strong><br>Langfristige Positionierung und Entwicklung der Unternehmung.</div><div class="info-box bg-emerald-50 border-emerald-200"><strong>Operative Ziele</strong><br>Konkrete, überprüfbare Ziele für das Tagesgeschäft, idealerweise SMART formuliert.</div></div></article></section>
-      <section id="sec-b5" class="block-section space-y-6"><div class="section-heading border-amber-600"><span class="block-badge bg-amber-600">BLOCK 5</span><h2>Strategiematrizen (TOWS, Ansoff, BCG, Porter)</h2></div><article class="card-box p-6 space-y-4"><h3 class="card-title">Werkzeuge der Strategieanalyse</h3><div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm"><div class="info-box bg-slate-50 border-slate-200"><strong>TOWS / SWOT:</strong> Verknüpft Stärken und Schwächen mit Chancen und Gefahren, um Handlungsoptionen abzuleiten.</div><div class="info-box bg-slate-50 border-slate-200"><strong>Ansoff-Matrix:</strong> Marktdurchdringung, Marktentwicklung, Produktentwicklung und Diversifikation.</div><div class="info-box bg-slate-50 border-slate-200"><strong>BCG-Matrix:</strong> Stars, Cash Cows, Question Marks und Dogs anhand von Marktwachstum und relativem Marktanteil.</div><div class="info-box bg-slate-50 border-slate-200"><strong>Porter:</strong> Grundstrategien sind Kostenführerschaft, Differenzierung und Fokussierung.</div></div></article></section>
-    </div>
-    <div id="container-part2" class="hidden space-y-12">
-      <section id="sec-b6" class="block-section space-y-6"><div class="section-heading border-indigo-600"><span class="block-badge bg-indigo-600">BLOCK 6</span><h2>Lorenz-Kurve, Konjunkturzyklus &amp; Arbeitslosigkeit</h2></div><article class="card-box p-6 space-y-4"><h3 class="card-title">Einkommensverteilung &amp; Konjunktur</h3><p class="text-sm text-slate-700">Die <strong>Lorenz-Kurve</strong> zeigt die kumulierte Verteilung von Einkommen oder Vermögen. Die Diagonale steht für vollständige Gleichverteilung; je stärker die Kurve davon abweicht, desto ungleicher ist die Verteilung. Der <strong>Gini-Koeffizient</strong> fasst diese Ungleichheit in einer Kennzahl zusammen.</p><p class="text-sm text-slate-700">Der Konjunkturzyklus beschreibt Schwankungen der Wirtschaftsleistung, typischerweise mit Aufschwung, Hochkonjunktur, Abschwung und Tiefphase. Arbeitslosigkeit kann unter anderem konjunkturelle, strukturelle oder saisonale Ursachen haben.</p></article></section>
-      <section id="sec-b7" class="block-section space-y-6"><div class="section-heading border-emerald-600"><span class="block-badge bg-emerald-600">BLOCK 7</span><h2>Sozialversicherungen (3-Säulen-Prinzip) &amp; Erweiterter Kreislauf</h2></div><article class="card-box p-6 space-y-4"><h3 class="card-title">Das Schweizer 3-Säulen-System</h3><div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm"><div class="info-box bg-rose-50 border-rose-200"><strong>1. Säule (AHV/IV)</strong><br>Staatliche Vorsorge; sichert den Grundbedarf. Finanzierung grundsätzlich im Umlageverfahren.</div><div class="info-box bg-indigo-50 border-indigo-200"><strong>2. Säule (BVG)</strong><br>Berufliche Vorsorge über Pensionskassen; ergänzt die staatliche Vorsorge.</div><div class="info-box bg-emerald-50 border-emerald-200"><strong>3. Säule (3a/3b)</strong><br>Private, freiwillige Vorsorge; Säule 3a ist an gesetzliche Bedingungen gebunden.</div></div><p class="text-sm text-slate-700">Im erweiterten Wirtschaftskreislauf werden zusätzlich Staat, Banken und Ausland berücksichtigt; dazu gehören beispielsweise Steuern, Staatsausgaben, Sparen, Investitionen, Importe und Exporte.</p></article></section>
-      <section id="sec-b8" class="block-section space-y-6"><div class="section-heading border-purple-600"><span class="block-badge bg-purple-600">BLOCK 8</span><h2>Globalisierung, Wechselkurse &amp; Internationale Organisationen</h2></div><article class="card-box p-6 space-y-4"><h3 class="card-title">Aussenwirtschaft &amp; Wechselkurse</h3><p class="text-sm text-slate-700">Eine Aufwertung des Schweizer Frankens verbilligt Importe in CHF, kann aber Schweizer Exporte im Ausland verteuern. Eine Abwertung wirkt tendenziell umgekehrt. Wechselkurse beeinflussen damit Handel, Preise und Unternehmen.</p><p class="text-sm text-slate-700"><strong>Internationale Organisationen:</strong> Die WTO befasst sich mit Regeln des Welthandels, der IWF mit internationaler Währungsstabilität und die Weltbank mit Entwicklungsfinanzierung. G7, G20 und BRICS sind wichtige Staatenforen bzw. Staatengruppen.</p></article></section>
-      <section id="sec-b9" class="block-section space-y-6"><div class="section-heading border-sky-600"><span class="block-badge bg-sky-600">BLOCK 9</span><h2>Ertragsmodell &amp; Marketing-Mix (4 Ps)</h2></div><article class="card-box p-6 space-y-4"><h3 class="card-title">Die 4 Ps des Marketings</h3><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm"><div class="info-box bg-sky-50 border-sky-200"><strong>Product</strong><br>Produktgestaltung, Qualität, Marke und Service.</div><div class="info-box bg-emerald-50 border-emerald-200"><strong>Price</strong><br>Preisgestaltung, Rabatte und Zahlungsbedingungen.</div><div class="info-box bg-amber-50 border-amber-200"><strong>Place</strong><br>Vertrieb, Verkaufsorte und Absatzkanäle.</div><div class="info-box bg-purple-50 border-purple-200"><strong>Promotion</strong><br>Kommunikation, Werbung, PR und Verkaufsförderung.</div></div><p class="text-sm text-slate-700">Ein <strong>Ertragsmodell</strong> beschreibt, wie ein Unternehmen mit seinem Angebot Einnahmen erzielt und welche Kundengruppen, Kanäle und Zahlungsarten dabei eine Rolle spielen.</p></article></section>
-      <section id="sec-b10" class="block-section space-y-6"><div class="section-heading border-amber-600"><span class="block-badge bg-amber-600">BLOCK 10</span><h2>Magisches Sechseck &amp; Nachhaltigkeit</h2></div><article class="card-box p-6 space-y-4"><h3 class="card-title">Ziele der Wirtschaftspolitik</h3><p class="text-sm text-slate-700">Das <strong>magische Sechseck</strong> bündelt sechs wirtschaftspolitische Ziele: stetiges Wirtschaftswachstum, hoher Beschäftigungsstand, Preisstabilität, aussenwirtschaftliches Gleichgewicht, gerechte Einkommens- und Vermögensverteilung sowie Umweltschutz.</p><p class="text-sm text-slate-700">Die Ziele können miteinander in Konflikt geraten – zum Beispiel kann starkes Wachstum die Umwelt belasten. Nachhaltige Entwicklung versucht, wirtschaftliche, soziale und ökologische Anliegen langfristig miteinander zu vereinbaren.</p></article></section>
-    </div>
-  </main>
-  <footer class="bg-white border-t border-slate-200 py-6 px-4 text-center text-xs text-slate-500"><p>HWD Lernkompendium (Blöcke 1–10) · Zur Prüfungsvorbereitung</p><p class="mt-1">Lernunterlage – bitte mit den offiziellen Kursunterlagen abgleichen.</p></footer>
-  <style>
-    .nav-link { padding:.25rem .75rem; border-radius:.5rem; font-size:.75rem; font-weight:600; background:#f1f5f9; color:#334155; transition:background .2s; }
-    .nav-link:hover { background:#e2e8f0; }
-    .section-heading { display:flex; align-items:center; gap:.75rem; border-bottom-width:2px; padding-bottom:.75rem; }
-    .section-heading h2 { font-size:1.5rem; line-height:2rem; font-weight:800; color:#0f172a; }
-    .block-badge { color:white; font-size:.875rem; font-weight:800; padding:.25rem .75rem; border-radius:.5rem; white-space:nowrap; }
-    .card-title { font-size:1.125rem; line-height:1.75rem; font-weight:700; color:#0f172a; }
-    .factor { border-width:1px; padding:.75rem; border-radius:.75rem; }
-    .factor strong { display:block; margin-bottom:.2rem; }
-    .info-box { border-width:1px; padding:.75rem; border-radius:.75rem; }
-    @media (max-width:640px) { .section-heading h2 { font-size:1.2rem; line-height:1.6rem; } section[id] { scroll-margin-top:200px; } }
-  </style>
-  <script>
-    lucide.createIcons();
-    function switchPart(part) {
-      const first = part === 'part1';
-      const btn1 = document.getElementById('btn-part1');
-      const btn2 = document.getElementById('btn-part2');
-      const cont1 = document.getElementById('container-part1');
-      const cont2 = document.getElementById('container-part2');
-      const sub1 = document.getElementById('subnav-part1');
-      const sub2 = document.getElementById('subnav-part2');
-      btn1.className = first ? 'main-tab-active px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5' : 'px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:text-slate-900 transition-all flex items-center gap-1.5';
-      btn2.className = first ? 'px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:text-slate-900 transition-all flex items-center gap-1.5' : 'main-tab-active px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5';
-      btn1.setAttribute('aria-pressed', String(first));
-      btn2.setAttribute('aria-pressed', String(!first));
-      cont1.classList.toggle('hidden', !first);
-      cont2.classList.toggle('hidden', first);
-      sub1.classList.toggle('hidden', !first);
-      sub2.classList.toggle('hidden', first);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-    function scrollToBlock(blockId) {
-      const element = document.getElementById(blockId);
-      if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  </script>
+    </section>
+
+    <!-- BLOCK 2 -->
+    <section id="block2">
+        <h2>Block 2: Marktformen, Staatseingriffe & Geld</h2>
+        <p>Vollständige Konkurrenz, Monopole, Höchst-/Mindestpreise, Steuern, Subventionen sowie die Rolle der Notenbank (SNB).</p>
+        
+        <h3>Höchst- und Mindestpreise</h3>
+        <ul>
+            <li><strong>Höchstpreis:</strong> Liegt unter dem Gleichgewichtspreis (Schutz der Konsumenten, z.B. Mietpreisdeckelung). Resultat: <em>Nachfrageüberschuss / Mangel</em>.</li>
+            <li><strong>Mindestpreis:</strong> Liegt über dem Gleichgewichtspreis (Schutz der Produzenten, z.B. Mindestlohn). Resultat: <em>Angebotsüberschuss / Überschuss</em>.</li>
+        </ul>
+    </section>
+
+    <!-- BLOCK 3 -->
+    <section id="block3">
+        <h2>Block 3: St. Galler Management-Modell (SGMM) & Wertschöpfung</h2>
+        <p>Unternehmensstrukturen, Umweltsphären, Anspruchsgruppen sowie die Wertkette nach Porter.</p>
+        
+        <h3>Wertkette nach Michael Porter</h3>
+        <table>
+            <tr>
+                <th>Aktivitätentyp</th>
+                <th>Beispiele</th>
+            </tr>
+            <tr>
+                <td><strong>Primäre Aktivitäten</strong></td>
+                <td>Eingangslogistik, Produktion, Ausgangslogistik, Marketing & Verkauf, Service</td>
+            </tr>
+            <tr>
+                <td><strong>Unterstützende Aktivitäten</strong></td>
+                <td>Unternehmensinfrastructure, Personalmanagement, Technologiemanagement, Beschaffung</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- BLOCK 4 -->
+    <section id="block4">
+        <h2>Block 4: Strategisches Management & Marktanalyse</h2>
+        <p>SWOT-Analyse, PESTEL, Porter's 5 Forces und quantitative Marktkenngrössen.</p>
+        
+        <h3>Marktkenngrössen (Formeln)</h3>
+        <ul>
+            <li><strong>Marktkapazität:</strong> Maximal mögliche Absatzmenge im Gesamtmarkt.</li>
+            <li><strong>Marktpotenzial:</strong> Maximal möglicher Gesamtumsatz aller Anbieter.</li>
+            <li><strong>Marktvolumen:</strong> Tatsächlich realisierter Gesamtumsatz aller Anbieter.</li>
+            <li><strong>Marktanteil:</strong> $(\text{Einfacher Unternehmensumsatz} / \text{Marktvolumen}) \times 100$</li>
+            <li><strong>Sättigungsgrad:</strong> $(\text{Marktvolumen} / \text{Marktpotenzial}) \times 100$</li>
+        </ul>
+    </section>
+
+    <!-- BLOCK 5 -->
+    <section id="block5">
+        <h2>Block 5: Strategieauswahl & Umsetzung</h2>
+        <p>Ansoff-Matrix, BCG-Matrix, Porter Wettbewerbsstrategien, SMART-Formel und Balanced Scorecard.</p>
+        
+        <h3>Die BCG-Matrix (Boston Consulting Group)</h3>
+        <ul>
+            <li><strong>Question Marks:</strong> Hohes Marktwachstum, geringer Marktanteil (Investieren oder abstossen).</li>
+            <li><strong>Stars:</strong> Hohes Marktwachstum, hoher Marktanteil (Marktposition ausbauen).</li>
+            <li><strong>Cash Cows:</strong> Geringes Marktwachstum, hoher Marktanteil (Erträge abschöpfen).</li>
+            <li><strong>Poor Dogs:</strong> Geringes Marktwachstum, geringer Marktanteil (Desinvestition / Ausstieg).</li>
+        </ul>
+    </section>
+
+    <!-- BLOCK 6 -->
+    <section id="block6">
+        <h2>Block 6: Gesamtwirtschaftliche Daten & Sozialpolitik</h2>
+        <p>BIP, BNE, Arbeitslosigkeit, Inflation, Lorenz-Kurve und das Schweizer Sozialversicherungssystem (3-Säulen-Prinzip).</p>
+        
+        <h3>Das 3-Säulen-Prinzip der Vorsorge</h3>
+        <table>
+            <tr>
+                <th>Säule</th>
+                <th>Ziel / Zweck</th>
+                <th>Finanzierung</th>
+            </tr>
+            <tr>
+                <td><strong>1. Säule (AHV/IV/EL)</strong></td>
+                <td>Existenzbedarf sichern (Staatlich)</td>
+                <td>Umlageverfahren (Beiträge von Versicherten + Staat)</td>
+            </tr>
+            <tr>
+                <td><strong>2. Säule (Pensionskasse - BVG)</strong></td>
+                <td>Fortführung gewohnter Lebenshaltung</td>
+                <td>Kapitaldeckungsverfahren (Obligatorisch für Arbeitnehmende)</td>
+            </tr>
+            <tr>
+                <td><strong>3. Säule (Privates Sparen)</strong></td>
+                <td>Komfortbedarf im Alter (Steuerprivilegiert)</td>
+                <td>Individuell & freiwillig</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- BLOCK 7 -->
+    <section id="block7">
+        <h2>Block 7: Nachhaltigkeit, Risikomanagement & Globalisierung</h2>
+        <p>Corporate Social Responsibility (CSR), ESG-Kriterien, Ökologiemanagement (ISO 14001, Ökobilanz) sowie Freihandel vs. Protektionismus.</p>
+    </section>
+
+    <!-- BLOCK 8 -->
+    <section id="block8">
+        <h2>Block 8: Internationale Organisationen & Business Plan</h2>
+        <p>G7, G20, BRICS, Welthandel, Wechselkurse, Euro-Zone sowie Aufbau und Struktur eines Business Plans.</p>
+    </section>
+
+    <!-- BLOCK 9 -->
+    <section id="block9">
+        <h2>Block 9: Ertragsmodelle & Kostenstruktur</h2>
+        <p>Fixe und variable Kosten, Kostensenkungspotenziale sowie zentrale Fragen zur Einnahmengestaltung.</p>
+    </section>
+
+    <!-- BLOCK 10 -->
+    <section id="block10">
+        <h2>Block 10: Konjunkturpolitik, Marktversagen & Qualitätsmanagement</h2>
+        <p>Magisches Sechseck, antizyklische Konjunkturpolitik (Rezession vs. Hochkonjunktur), Qualitätsmanagement (PDCA-Zyklus) und TQM.</p>
+        
+        <h3>Antizyklische Konjunkturpolitik</h3>
+        <ul>
+            <li><strong>In einer Rezession:</strong> Staat erhöht Ausgaben, senkt Steuern $\rightarrow$ Gesamtnachfrage wird stimuliert.</li>
+            <li><strong>In einer Hochkonjunktur:</strong> Staat senkt Ausgaben, erhöht Steuern $\rightarrow$ Überhitzung wird gebremst.</li>
+        </ul>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 HWD Lernkompendium – Erstellt für die Prüfungsvorbereitung</p>
+</footer>
+
 </body>
 </html>
