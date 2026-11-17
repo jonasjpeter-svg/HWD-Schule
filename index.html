@@ -610,7 +610,7 @@
 <div class="subject-bar" role="tablist" aria-label="Fächer-Auswahl">
     <button type="button" class="subject-tab active" id="tab-vwl" onclick="switchSubject('vwl')">📊 VWL &amp; BWL <span class="subject-badge-soon">10 Blöcke + Quiz</span></button>
     <button type="button" class="subject-tab" id="tab-marketing" onclick="switchSubject('marketing')">📣 Marketing <span class="subject-badge-soon">3 Präsentationen + Quiz</span></button>
-    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">2 Blöcke + Quiz</span></button>
+    <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">3 Blöcke + Quiz</span></button>
 </div>
 
 <nav id="nav-vwl">
@@ -637,6 +637,7 @@
 <nav id="nav-rechnungswesen" style="display:none;">
     <a href="#rewe-block1">Block 1: Bilanz, ER &amp; Buchung</a>
     <a href="#rewe-block2">Block 2: Kennzahlen &amp; Analyse</a>
+    <a href="#rewe-block3">Block 3: Stille Reserven</a>
     <a href="#rewe-quiz" style="background: linear-gradient(135deg,#8b5cf6,#6d28d9); color: #ffffff;">🎯 ReWe-Quiz &amp; Rangliste</a>
 </nav>
 
@@ -2222,11 +2223,76 @@
         </div>
     </section>
 
+    <!-- ==================== REWE BLOCK 3: STILLE RESERVEN ==================== -->
+    <section id="rewe-block3">
+        <span class="block-badge">3. Block · 03.09.2026 &bull; Stille Reserven</span>
+        <h2>3. Block: Stille Reserven (Externe vs. Interne Bilanz &amp; Erfolgsrechnung)</h2>
+
+        <div class="callout">
+            <strong>Grundprinzip nach OR (Vorsichtsprinzip):</strong> Stille Reserven sind aus der <strong>externen Bilanz</strong> (Handels-/Steuerbilanz) nicht ersichtlich (Wert = 0), sondern bilden den <strong>einzigen Unterschied zwischen externer und interner (wahrheitsgetreuer) Bilanz</strong>. Sie entstehen durch <strong>Unterbewertung von Aktiven</strong> (z.B. zu hohe Abschreibungen, tiefere Warenvorräte) oder <strong>Überbewertung von Fremdkapital</strong> (z.B. überhöhte Rückstellungen). Gemäss Buchführungsvorschriften sind stille Reserven ausdrücklich erlaubt.
+        </div>
+
+        <h3 style="margin-top:1.3rem;">3.1 Mechanik: Bildung vs. Auflösung Stiller Reserven</h3>
+        <div class="graphic-container">
+            <svg width="780" height="232" viewBox="0 0 780 232">
+                <text x="390" y="16" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">Wirkung von Stillen Reserven auf Bilanz &amp; Erfolgsrechnung</text>
+
+                <!-- Bildung -->
+                <rect x="15" y="28" width="365" height="148" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+                <rect x="15" y="28" width="365" height="26" rx="6" fill="#16a34a"/>
+                <text x="197" y="45" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">BILDUNG stiller Reserven (SB &gt; AB)</text>
+                <text x="27" y="72" font-size="9.8" font-weight="bold" fill="#166534">&bull; Wie? Aktiven tiefer oder FK höher bewerten</text>
+                <text x="27" y="90" font-size="9.8">&bull; Externer Aufwand steigt (z.B. höhere Abschreibung)</text>
+                <text x="27" y="108" font-size="9.8">&bull; Externer Gewinn ist KLEINER als interner Gewinn</text>
+                <text x="27" y="126" font-size="9.8">&bull; Beispiel: Warenvorrat oder Mobiliar tiefer bewertet,</text>
+                <text x="37" y="141" font-size="9.8">oder Rückstellungen (RKST) höher angesetzt</text>
+                <text x="27" y="163" font-size="9.8" font-weight="bold" fill="#166534">&rarr; Interner Gewinn = Externer Gewinn + Bildung</text>
+
+                <!-- Auflösung -->
+                <rect x="400" y="28" width="365" height="148" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+                <rect x="400" y="28" width="365" height="26" rx="6" fill="#dc2626"/>
+                <text x="582" y="45" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">AUFLÖSUNG stiller Reserven (SB &lt; AB)</text>
+                <text x="412" y="72" font-size="9.8" font-weight="bold" fill="#991b1b">&bull; Wie? Unterbewertung abbauen / FK-Reserve senken</text>
+                <text x="412" y="90" font-size="9.8">&bull; Externer Aufwand sinkt (oder Ertrag steigt)</text>
+                <text x="412" y="108" font-size="9.8">&bull; Externer Gewinn ist GRÖSSER als interner Gewinn</text>
+                <text x="412" y="126" font-size="9.8">&bull; Gefahr: Schlechteres Betriebsergebnis wird extern</text>
+                <text x="422" y="141" font-size="9.8">„geschönt“ (höher ausgewiesen als wahrheitsgetreu)</text>
+                <text x="412" y="163" font-size="9.8" font-weight="bold" fill="#991b1b">&rarr; Interner Gewinn = Externer Gewinn &minus; Auflösung</text>
+
+                <!-- Goldene Umrechnung -->
+                <rect x="15" y="186" width="750" height="36" rx="6" fill="#2c1638"/>
+                <text x="390" y="208" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10.5">Interne Bilanz: Aktiven (+SR) &bull; FK (&minus;SR) &bull; EK (+ Anfangsbestand SR + Veränderung SR = Interner Gewinn)</text>
+            </svg>
+        </div>
+
+        <h3 style="margin-top:1.3rem;">3.2 Praxisbeispiel (aus „Zusammenfassung Stille Reserven“)</h3>
+        <div class="grid-2">
+            <div class="card">
+                <h4>Bestand &amp; Veränderung der Stillen Reserven</h4>
+                <ul>
+                    <li><strong>Warenvorrat:</strong> AB <code>50</code> &rarr; SB <code>40</code> (<strong>&minus;10 Auflösung</strong>)</li>
+                    <li><strong>Mobiliar:</strong> AB <code>60</code> &rarr; SB <code>70</code> (<strong>+10 Bildung</strong>)</li>
+                    <li><strong>Rückstellungen (FK):</strong> AB <code>10</code> &rarr; SB <code>15</code> (<strong>+5 Bildung</strong>)</li>
+                    <li><strong>Total Stille Reserven:</strong> AB <strong>120</strong> &rarr; SB <strong>125</strong> (Netto: <strong>+5 Bildung</strong>)</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Überleitung Extern &rarr; Intern (Bilanz &amp; ER)</h4>
+                <ul>
+                    <li><strong>Aktiven:</strong> Warenvorrat <code>110 + 40 = 150</code> &bull; Mobiliar <code>200 + 70 = 270</code></li>
+                    <li><strong>Fremdkapital:</strong> Rückstellungen <code>20 &minus; 15 = 5</code> (extern überbewertet!)</li>
+                    <li><strong>Eigenkapital:</strong> Stille Reserven (AB) <code>0 &rarr; 120</code>; Bilanzsumme <code>410 &rarr; 520</code></li>
+                    <li><strong>Erfolgsrechnung:</strong> Ertrag <code>100</code>, Warenaufwand <code>30 &rarr; 40</code>, Abschr. <code>10 &rarr; 0</code>, RKST <code>10 &rarr; 5</code>, Div. Aufw. <code>10</code> &rarr; <strong>Externer Gewinn 40</strong> vs. <strong>Interner Gewinn 45</strong> (<code>40 + 5</code>)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- ==================== REWE QUIZ ==================== -->
     <section id="rewe-quiz">
         <span class="block-badge">Prüfungstraining Rechnungswesen</span>
         <h2>Interaktives Rechnungswesen-Quiz &amp; Rangliste</h2>
-        <p>36 rotierende Prüfungsfragen aus Block 1 &amp; Block 2 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen &amp; Kennzahlen). Deine Punkte zählen in die gemeinsame Rangliste!</p>
+        <p>48 rotierende Prüfungsfragen aus Block 1, Block 2 &amp; Block 3 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen, Kennzahlen &amp; Stille Reserven). Deine Punkte zählen in die gemeinsame Rangliste!</p>
 
         <div class="player-bar">
             <div class="player-login">
@@ -4242,6 +4308,162 @@ const reweQuestionBank = [
             { id: 'df', label: '252 Tage (Debitorenfrist)' }
         ],
         explanation: '10/100 = 10 %; 300/50 = 600 %; 150/450 = 33.3 %; 360 / 1.4286 = 252 Tage.'
+    },
+    {
+        id: 'rs15', type: 'single',
+        question: 'Wie werden Stille Reserven gebildet?',
+        options: [
+            { text: 'Durch Unterbewertung von Aktiven oder Überbewertung von Fremdkapital', ok: true },
+            { text: 'Durch Überbewertung von Aktiven oder Unterbewertung von Fremdkapital', ok: false },
+            { text: 'Durch offene Zuweisung an die gesetzlichen Gewinnreserven', ok: false },
+            { text: 'Nur durch Aufnahme eines langfristigen Bankdarlehens', ok: false }
+        ],
+        explanation: 'Vorsichtsprinzip: Aktiven tiefer ansetzen (z.B. höhere Abschreibung) oder Schulden/Rückstellungen höher ansetzen bildet stille Reserven.'
+    },
+    {
+        id: 'rs16', type: 'single',
+        question: 'Wenn im Geschäftsjahr Stille Reserven netto um 5 aufgelöst werden (SB < AB) und der externe Gewinn 40 beträgt, wie hoch ist der interne Gewinn?',
+        options: [
+            { text: '35 (Externer Gewinn 40 − Auflösung 5)', ok: true },
+            { text: '45 (Externer Gewinn 40 + Auflösung 5)', ok: false },
+            { text: '40 (Auflösung verändert den Gewinn nicht)', ok: false },
+            { text: '5 (nur die Veränderung)', ok: false }
+        ],
+        explanation: 'Auflösung stiller Reserven erhöht den externen Gewinn künstlich; der tatsächliche interne Gewinn ist daher kleiner (40 − 5 = 35).'
+    },
+    {
+        id: 'rs17', type: 'single',
+        question: 'Welcher Wert steht in der EXTERNEN Bilanz für das Konto „Stille Reserven“?',
+        options: [
+            { text: 'Immer 0 (in der externen Bilanz nicht ersichtlich)', ok: true },
+            { text: 'Der Schlussbestand der stillen Reserven', ok: false },
+            { text: 'Der Anfangsbestand der stillen Reserven', ok: false },
+            { text: 'Die Differenz zwischen EK und FK', ok: false }
+        ],
+        explanation: 'Stille Reserven sind definitionsgemäss „still“ – sie erscheinen nur in der internen Bilanz, extern sind sie 0.'
+    },
+    {
+        id: 'rs18', type: 'single',
+        question: 'Praxisbeispiel: Externer Gewinn = 40. Warenvorrat-SR sinkt von 50 auf 40 (−10), Mobiliar-SR steigt von 60 auf 70 (+10), RKST-SR steigt von 10 auf 15 (+5). Wie hoch ist der interne Gewinn?',
+        options: [
+            { text: '45 (Nettobildung +5 zum externen Gewinn 40 addiert)', ok: true },
+            { text: '35 (40 − 5)', ok: false },
+            { text: '65 (40 + 10 + 15)', ok: false },
+            { text: '40 (hebt sich auf)', ok: false }
+        ],
+        explanation: 'Veränderung total: −10 + 10 + 5 = +5 (Nettobildung). Interner Gewinn = 40 + 5 = 45.'
+    },
+    {
+        id: 'rm13', type: 'multi',
+        question: 'Welche Aussagen zu Stillen Reserven sind richtig? (Mehrere richtig)',
+        options: [
+            { text: 'Sie sind der einzige Unterschied zwischen externer und interner Bilanz', ok: true },
+            { text: 'Sie entstehen aus dem Vorsichtsprinzip gemäss OR und sind ausdrücklich erlaubt', ok: true },
+            { text: 'In der internen Bilanz steht der Anfangsbestand im Eigenkapital-Konto „Stille Reserven“', ok: true },
+            { text: 'Stille Reserven auf Rückstellungen werden intern zu den Rückstellungen addiert', ok: false }
+        ],
+        explanation: 'Rückstellungen sind extern überbewertet; intern werden die stillen Reserven von den externen Rückstellungen abgezogen (z.B. 20 − 15 = 5).'
+    },
+    {
+        id: 'rm14', type: 'multi',
+        question: 'Was passiert bei einer BILDUNG stiller Reserven auf dem Anlagevermögen (z.B. höhere Abschreibung)? (Mehrere richtig)',
+        options: [
+            { text: 'Der externe Abschreibungsaufwand ist höher als der interne', ok: true },
+            { text: 'Der externe Gewinn fällt tiefer aus als der interne Gewinn', ok: true },
+            { text: 'Der externe Bilanzwert des Anlagevermögens ist tiefer als der interne Wert', ok: true },
+            { text: 'Die flüssigen Mittel auf dem Bankkonto nehmen ab', ok: false }
+        ],
+        explanation: 'Abschreibungen sind nicht liquiditätswirksam! Extern sinken Anlagewert und Gewinn, während der Aufwand steigt.'
+    },
+    {
+        id: 'rm15', type: 'multi',
+        question: 'Wie rechnet man von der externen zur internen Bilanz um? (Mehrere richtig)',
+        options: [
+            { text: 'Interne Aktiven = Externe Aktiven + Schlussbestand SR auf Aktiven', ok: true },
+            { text: 'Internes Fremdkapital = Externes FK − Schlussbestand SR auf FK (Rückstellungen)', ok: true },
+            { text: 'Interner Gewinn = Externer Gewinn + Nettobildung (bzw. − Nettoauflösung) SR', ok: true },
+            { text: 'Externes Aktienkapital wird verdoppelt', ok: false }
+        ],
+        explanation: 'Aktiven + SR, FK − SR, EK enthält Anfangsbestand SR plus Veränderung SR als Teil des internen Gewinns.'
+    },
+    {
+        id: 'rm16', type: 'multi',
+        question: 'Welche Begriffe aus den Zusatzaufgaben Theorie stimmen? (Mehrere richtig)',
+        options: [
+            { text: 'Schlussbilanz 1 = Erfolgsermittlungsbilanz (vor Gewinnverwendung)', ok: true },
+            { text: 'Betriebsbuchhaltung besteht meist aus Kostenarten-, Kostenstellen- und Kostenträgerrechnung', ok: true },
+            { text: 'Materialkosten + Fertigungskosten = Herstellkosten (+ VVGK = Selbstkosten)', ok: true },
+            { text: 'Rechnungswesen und Buchhaltung sind genau dasselbe wie Finanzbuchhaltung', ok: false }
+        ],
+        explanation: 'Rechnungswesen ist der Oberbegriff (FIBU, BEBU, Statistik, Planung). Die übrigen 3 Aussagen sind exakt richtig.'
+    },
+    {
+        id: 'rdnd11', type: 'dnd',
+        question: 'Drag & Drop (Stille Reserven Mechanik): Ordne jede Veränderung richtig zu.',
+        items: [
+            { id: 'rsr1', text: 'Warenvorrat SR: AB 50 → SB 40', target: 'auf' },
+            { id: 'rsr2', text: 'Mobiliar SR: AB 60 → SB 70', target: 'bil' },
+            { id: 'rsr3', text: 'Externe Bilanz: Konto Stille Reserven', target: 'null' },
+            { id: 'rsr4', text: 'Rückstellungen extern 20 (SR 15)', target: 'fk5' }
+        ],
+        targets: [
+            { id: 'auf', label: 'Auflösung (−10)' },
+            { id: 'bil', label: 'Bildung (+10)' },
+            { id: 'null', label: 'Immer 0' },
+            { id: 'fk5', label: 'Intern 5 (20 − 15)' }
+        ],
+        explanation: 'SB < AB = Auflösung (−10); SB > AB = Bildung (+10); extern = 0; FK intern = 20 − 15 = 5.'
+    },
+    {
+        id: 'rdnd12', type: 'dnd',
+        question: 'Drag & Drop (Extern vs. Intern): Ordne die Wirkung auf die Positionen zu.',
+        items: [
+            { id: 'rei1', text: 'Aktiven bei vorhandenen SR', target: 'extk' },
+            { id: 'rei2', text: 'Fremdkapital bei vorhandenen SR', target: 'extg' },
+            { id: 'rei3', text: 'Externer Gewinn bei SR-Bildung', target: 'gewk' },
+            { id: 'rei4', text: 'Externer Gewinn bei SR-Auflösung', target: 'gewg' }
+        ],
+        targets: [
+            { id: 'extk', label: 'Extern kleiner als intern' },
+            { id: 'extg', label: 'Extern grösser als intern' },
+            { id: 'gewk', label: 'Kleiner als interner Gewinn' },
+            { id: 'gewg', label: 'Grösser als interner Gewinn' }
+        ],
+        explanation: 'Aktiven unterbewertet (extern kleiner), FK überbewertet (extern grösser); Bildung drückt externen Gewinn, Auflösung bläht ihn auf.'
+    },
+    {
+        id: 'rdnd13', type: 'dnd',
+        question: 'Drag & Drop (Überleitung ER Praxisbeispiel): Ordne die internen Zahlen zu.',
+        items: [
+            { id: 'rer1', text: 'Warenaufwand extern 30 (Waren-SR −10)', target: 'wa40' },
+            { id: 'rer2', text: 'Abschreibung extern 10 (Mobiliar-SR +10)', target: 'ab0' },
+            { id: 'rer3', text: 'RKST-Aufwand extern 10 (RKST-SR +5)', target: 'rk5' },
+            { id: 'rer4', text: 'Gewinn extern 40 (Total SR +5)', target: 'gw45' }
+        ],
+        targets: [
+            { id: 'wa40', label: 'Intern 40 (30 + 10)' },
+            { id: 'ab0', label: 'Intern 0 (10 − 10)' },
+            { id: 'rk5', label: 'Intern 5 (10 − 5)' },
+            { id: 'gw45', label: 'Intern 45 (40 + 5)' }
+        ],
+        explanation: 'Auflösung beim Warenvorrat (−10) bedeutet intern höheren Warenaufwand (40); Bildung bei Abschr./RKST bedeutet intern tieferen Aufwand (0 bzw. 5).'
+    },
+    {
+        id: 'rdnd14', type: 'dnd',
+        question: 'Drag & Drop (Betriebsbuchhaltung & Theorie): Ordne die Begriffe korrekt zu.',
+        items: [
+            { id: 'rbt1', text: 'Materialkosten + Fertigungskosten', target: 'hk' },
+            { id: 'rbt2', text: 'Herstellkosten + VVGK', target: 'sk' },
+            { id: 'rbt3', text: 'Deckungsbeitragsrechnung', target: 'tkr' },
+            { id: 'rbt4', text: 'Zuschlagskalkulation', target: 'vkr' }
+        ],
+        targets: [
+            { id: 'hk', label: 'Herstellkosten' },
+            { id: 'sk', label: 'Selbstkosten' },
+            { id: 'tkr', label: 'Teilkostenrechnung' },
+            { id: 'vkr', label: 'Vollkostenrechnung' }
+        ],
+        explanation: 'Material + Fertigung = Herstellkosten; + VVGK = Selbstkosten; Deckungsbeitrag = Teilkosten; Zuschlagskalkulation = Vollkosten.'
     }
 ];
 
