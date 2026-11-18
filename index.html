@@ -777,8 +777,8 @@
                 <div class="stat-lbl">Lernblöcke komplett</div>
             </div>
             <div class="bento-stat">
-                <div class="stat-val">45</div>
-                <div class="stat-lbl">Rotierende Praxis-Quizfragen</div>
+                <div class="stat-val">60</div>
+                <div class="stat-lbl">Rotierende VWL/BWL-Quizfragen</div>
             </div>
             <div class="bento-stat">
                 <div class="stat-val" id="hero-player-count">0</div>
@@ -2158,7 +2158,7 @@
     <section id="mkt-quiz">
         <span class="block-badge">Prüfungstraining Marketing</span>
         <h2>Interaktives Marketing-Quiz &amp; Rangliste</h2>
-        <p>Rotierende Prüfungsfragen inkl. Praxisbeispielen aus allen 3 Marketing-Präsentationen! Deine Punkte zählen direkt in die gemeinsame Rangliste.</p>
+        <p>45 rotierende Prüfungsfragen inkl. Praxisbeispielen aus allen 3 Marketing-Präsentationen! Deine Punkte zählen direkt in die gemeinsame Rangliste.</p>
 
         <div class="player-bar">
             <div class="player-login">
@@ -3053,7 +3053,7 @@
     <section id="rewe-quiz">
         <span class="block-badge">Prüfungstraining Rechnungswesen</span>
         <h2>Interaktives Rechnungswesen-Quiz &amp; Rangliste</h2>
-        <p>120 rotierende Prüfungsfragen aus Block 1 bis Block 9 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen, Kennzahlen, Stille Reserven, Nutzschwelle, BAB, Kalkulation, Statische &amp; Dynamische Investitionsrechnung, Mehrstufige DBR &amp; Fixkostenschichten). Deine Punkte zählen in die gemeinsame Rangliste!</p>
+        <p>135 rotierende Prüfungsfragen aus Block 1 bis Block 9 (Bilanz, Mehrstufige ER, T-Konten, Liquiditäts-/Erfolgswirksam, MWST, Abschreibungen, Kennzahlen, Stille Reserven, Nutzschwelle, BAB, Kalkulation, Statische &amp; Dynamische Investitionsrechnung, Mehrstufige DBR &amp; Fixkostenschichten). Deine Punkte zählen in die gemeinsame Rangliste!</p>
 
         <div class="player-bar">
             <div class="player-login">
@@ -3672,6 +3672,195 @@ const questionBank = [
             { id: 'oeff', label: '5. Öffentliche Güter' }
         ],
         explanation: 'WEKO = Wettbewerbspolitik; Deklarationspflicht = Information/Prohibition; CO2-Abgabe = Umweltpolitik; Polizei/Justiz = Öffentliche Güter.'
+    },
+    {
+        id: 'vs_ext1', type: 'single',
+        question: 'Welches Schweizer Praxisbeispiel passt am besten zur Marktform „Oligopol“?',
+        options: [
+            { text: 'Der Schweizer Mobilfunkmarkt mit wenigen grossen Anbietern (Swisscom, Sunrise, Salt)', ok: true },
+            { text: 'Die SIX Swiss Exchange als vollkommener Aktienmarkt', ok: false },
+            { text: 'Das gesetzliche Briefmonopol der Schweizerischen Post bis 50 g', ok: false },
+            { text: 'Tausende unabhängige Bäckereien und Restaurants in der Schweiz', ok: false }
+        ],
+        explanation: 'Wenige grosse Anbieter mit hohen Markteintrittshürden (Swisscom, Sunrise, Salt) sind das klassische Schweizer Oligopol.'
+    },
+    {
+        id: 'vs_ext2', type: 'single',
+        question: 'Was misst das Bruttoinlandprodukt (BIP) der Schweiz?',
+        options: [
+            { text: 'Den Wert aller im Inland während eines Jahres hergestellten Waren & Dienstleistungen abzüglich Vorleistungen/Importe', ok: true },
+            { text: 'Nur die gesamten Steuereinnahmen von Bund, Kantonen und Gemeinden', ok: false },
+            { text: 'Den gesamten Bargeldbestand bei der Schweizerischen Nationalbank (SNB)', ok: false },
+            { text: 'Ausschliesslich die Exporte der Schweizer Uhren- und Pharmaindustrie', ok: false }
+        ],
+        explanation: 'Das BIP misst die jährliche inländische Wertschöpfung aller produzierten Endgüter und Dienstleistungen.'
+    },
+    {
+        id: 'vs_ext3', type: 'single',
+        question: 'Wie reagiert die Schweizerische Nationalbank (SNB), wenn sie die Geldmenge bremsen und eine hohe Inflation bekämpfen will?',
+        options: [
+            { text: 'Sie erhöht den Leitzins (Kredite werden teurer, Geldmenge sinkt)', ok: true },
+            { text: 'Sie senkt den Leitzins auf 0 % oder in den Minusbereich', ok: false },
+            { text: 'Sie kauft unbegrenzt fremde Devisen mit neu geschaffenen Franken', ok: false },
+            { text: 'Sie schafft die Mindestreserven der Geschäftsbanken komplett ab', ok: false }
+        ],
+        explanation: 'Ein höherer Leitzins verteuert Kredite, bremst die Nachfrage und reduziert die Geldmenge (restriktive Geldpolitik).'
+    },
+    {
+        id: 'vs_ext4', type: 'single',
+        question: 'Welche Wirkung hat ein staatlich festgelegter Höchstpreis (unterhalb des Marktgleichgewichts), z.B. bei strenger Mietpreisbremse?',
+        options: [
+            { text: 'Es entsteht ein Nachfrageüberschuss (Wohnungsmangel / Wartelisten)', ok: true },
+            { text: 'Es entsteht ein Angebotsüberschuss (leere Wohnungen)', ok: false },
+            { text: 'Das Marktgleichgewicht verschiebt sich automatisch nach rechts ohne Knappheit', ok: false },
+            { text: 'Alle Anbieter erhöhen freiwillig die Produktionsmenge', ok: false }
+        ],
+        explanation: 'Liegt der Höchstpreis unter dem Gleichgewichtspreis, wollen mehr Leute kaufen/mieten als angeboten wird → Nachfrageüberschuss.'
+    },
+    {
+        id: 'vs_ext5', type: 'single',
+        question: 'Worin unterscheidet sich „Adverse Selektion“ von „Moral Hazard“ bei Versicherungen?',
+        options: [
+            { text: 'Adverse Selektion entsteht VOR Vertragsabschluss (verborgene Eigenschaften), Moral Hazard NACH Vertragsabschluss (leichtsinnigeres Verhalten)', ok: true },
+            { text: 'Moral Hazard entsteht vor Vertragsabschluss, Adverse Selektion erst im Schadensfall', ok: false },
+            { text: 'Beide Begriffe beschreiben ausschliesslich Preisabsprachen in Kartellen', ok: false },
+            { text: 'Adverse Selektion gibt es nur bei Aktien, Moral Hazard nur bei Steuern', ok: false }
+        ],
+        explanation: 'Vor Vertragsabschluss = Adverse Selektion (schlechte Risiken bleiben); nach Vertragsabschluss = Moral Hazard (weniger Vorsicht).'
+    },
+    {
+        id: 'vs_ext6', type: 'single',
+        question: 'Welche Rechtsform eignet sich in der Schweiz für ein grösseres Unternehmen, das Kapital über viele Aktionäre aufnehmen möchte und deren Haftung auf das Gesellschaftsvermögen beschränkt ist?',
+        options: [
+            { text: 'Aktiengesellschaft (AG) – Mindestkapital CHF 100’000', ok: true },
+            { text: 'Einzelunternehmen – unbeschränkte persönliche Haftung', ok: false },
+            { text: 'Einfache Gesellschaft ohne Handelsregistereintrag', ok: false },
+            { text: 'Kollektivgesellschaft (unbeschränkte solidarische Haftung der Gesellschafter)', ok: false }
+        ],
+        explanation: 'Bei der AG (Mindestaktienkapital CHF 100’000) haftet nur das Gesellschaftsvermögen, und Beteiligungen lassen sich leicht über Aktien übertragen.'
+    },
+    {
+        id: 'vm_ext1', type: 'multi',
+        question: 'Welche Ströme fliessen im EINFACHEN Wirtschaftskreislauf zwischen Haushalten und Unternehmen? (Mehrere richtig)',
+        options: [
+            { text: 'Realstrom: Haushalte liefern Produktionsfaktoren (Arbeit, Kapital, Boden) an Unternehmen', ok: true },
+            { text: 'Realstrom: Unternehmen liefern Waren & Dienstleistungen an Haushalte', ok: true },
+            { text: 'Geldstrom: Einkommen (Lohn, Zins, Gewinn) an Haushalte und Konsumausgaben an Unternehmen', ok: true },
+            { text: 'Zollabgaben und Entwicklungshilfe an das Ausland', ok: false }
+        ],
+        explanation: 'Staat, Banken und Ausland gehören erst zum ERWEITERTEN Wirtschaftskreislauf.'
+    },
+    {
+        id: 'vm_ext2', type: 'multi',
+        question: 'Welche 3 Bedingungen müssen erfüllt sein, damit aus einem Bedürfnis eine echte wirtschaftliche Nachfrage wird? (Mehrere richtig)',
+        options: [
+            { text: 'Herstellbares Gut (verfügbares Produkt/DL)', ok: true },
+            { text: 'Zahlungsbereitschaft (man will das Gut kaufen)', ok: true },
+            { text: 'Kaufkraft (nötiges Geld ist tatsächlich vorhanden)', ok: true },
+            { text: 'Eine staatliche Subvention von mindestens 50 %', ok: false }
+        ],
+        explanation: 'Bedürfnis + herstellbares Gut + Zahlungsbereitschaft + Kaufkraft = Nachfrage.'
+    },
+    {
+        id: 'vm_ext3', type: 'multi',
+        question: 'Welche Funktionen erfüllt Geld in einer modernen Volkswirtschaft? (Mehrere richtig)',
+        options: [
+            { text: 'Zahlungsmittel (Tauschfunktion ohne direkten Naturaltausch)', ok: true },
+            { text: 'Wertmassstab / Recheneinheit (Preise vergleichbar machen)', ok: true },
+            { text: 'Wertaufbewahrungsmittel (Kaufkraft für später sparen)', ok: true },
+            { text: 'Ersatz für alle Produktionsfaktoren', ok: false }
+        ],
+        explanation: 'Die 3 klassischen Geldfunktionen sind Zahlungsmittel, Wertmassstab und Wertaufbewahrungsmittel.'
+    },
+    {
+        id: 'vm_ext4', type: 'multi',
+        question: 'Welche Gefahren drohen bei einem unkontrollierten Monopol? (Mehrere richtig)',
+        options: [
+            { text: 'Höhere Preise als bei Wettbewerb', ok: true },
+            { text: 'Schlechtere Güterversorgung / künstliche Verknappung', ok: true },
+            { text: 'Tiefere Leistungs- und Innovationsanreize', ok: true },
+            { text: 'Wirtschaftliche und politische Machtballung', ok: true }
+        ],
+        explanation: 'Alle 4 Punkte (höhere Preise, schlechtere Versorgung, geringere Leistungsanreize, Machtballung) sind die klassischen Monopolgefahren.'
+    },
+    {
+        id: 'vm_ext5', type: 'multi',
+        question: 'Welche Elemente gehören zur Nutzwertanalyse bei betriebswirtschaftlichen Entscheidungen? (Mehrere richtig)',
+        options: [
+            { text: 'Festlegen und Gewichten relevanter Bewertungskriterien (z.B. Preis, Qualität, Service)', ok: true },
+            { text: 'Bewerten jeder Alternative mit Punkten je Kriterium', ok: true },
+            { text: 'Multiplizieren von Gewicht × Punktzahl und Aufsummieren zum Gesamtnutzen', ok: true },
+            { text: 'Ausschliessliches Vergleichen der Abschreibungsdauer ohne Qualitätskriterien', ok: false }
+        ],
+        explanation: 'Die Nutzwertanalyse macht qualitative und quantitative Kriterien durch Gewichtung und Punktvergabe vergleichbar.'
+    },
+    {
+        id: 'vdnd_ext1', type: 'dnd',
+        question: 'Drag & Drop (CH-Marktformen): Ordne jedes Schweizer Beispiel der richtigen Marktform zu.',
+        items: [
+            { id: 'chm1', text: 'SIX Swiss Exchange (Aktien- & Devisenhandel)', target: 'vk' },
+            { id: 'chm2', text: 'Migros, Coop, Gastronomie & Coiffeure', target: 'mk' },
+            { id: 'chm3', text: 'Swisscom, Sunrise, Salt (Mobilfunk)', target: 'ol' },
+            { id: 'chm4', text: 'Die Schweizerische Post (Briefe bis 50 g) & SUVA', target: 'mo' }
+        ],
+        targets: [
+            { id: 'vk', label: 'Vollständige Konkurrenz' },
+            { id: 'mk', label: 'Monopolistische Konkurrenz' },
+            { id: 'ol', label: 'Oligopol' },
+            { id: 'mo', label: 'Monopol' }
+        ],
+        explanation: 'SIX = vollständige Konkurrenz; Detailhandel/Gastro = monopolistische Konkurrenz; Mobilfunk = Oligopol; Post/SUVA = Monopol.'
+    },
+    {
+        id: 'vdnd_ext2', type: 'dnd',
+        question: 'Drag & Drop (Erweiterter Wirtschaftskreislauf): Ordne die Geld-/Güterströme den Sektoren zu.',
+        items: [
+            { id: 'ewk1', text: 'Steuern & Abgaben ↔ Staatsaufträge & Subventionen', target: 'st' },
+            { id: 'ewk2', text: 'Sparen der Haushalte → Kredite für Investitionen', target: 'bk' },
+            { id: 'ewk3', text: 'Exporte (Geldzufluss) ↔ Importe (Geldabfluss)', target: 'al' },
+            { id: 'ewk4', text: 'Produktionsfaktoren → Einkommen (Lohn, Zins, Gewinn)', target: 'hu' }
+        ],
+        targets: [
+            { id: 'st', label: 'Staat' },
+            { id: 'bk', label: 'Banken / Kapitalmarkt' },
+            { id: 'al', label: 'Ausland' },
+            { id: 'hu', label: 'Haushalte ↔ Unternehmen' }
+        ],
+        explanation: 'Staat = Steuern/Subventionen; Banken = Sparen/Kredite; Ausland = Exporte/Importe; Haushalte/Unternehmen = Faktoren/Einkommen.'
+    },
+    {
+        id: 'vdnd_ext3', type: 'dnd',
+        question: 'Drag & Drop (Elastizität der Nachfrage): Ordne das Preis-/Mengenverhalten richtig zu.',
+        items: [
+            { id: 'el1', text: 'Preis +10 % → Menge −15 % (z.B. Butter / Markenprodukt)', target: 'ela' },
+            { id: 'el2', text: 'Preis +20 % → Menge −3 % (z.B. Insulin / Grundnahrung)', target: 'unel' },
+            { id: 'el3', text: 'Höchstpreis unter dem Gleichgewichtspreis', target: 'nachf' },
+            { id: 'el4', text: 'Mindestpreis über dem Gleichgewichtspreis', target: 'ang' }
+        ],
+        targets: [
+            { id: 'ela', label: 'Elastische Nachfrage (|E| > 1)' },
+            { id: 'unel', label: 'Unelastische Nachfrage (|E| < 1)' },
+            { id: 'nachf', label: 'Nachfrageüberschuss (Mangel)' },
+            { id: 'ang', label: 'Angebotsüberschuss (Überschuss)' }
+        ],
+        explanation: 'Starke Mengenreaktion = elastisch; schwache Reaktion = unelastisch; Höchstpreis → Mangel; Mindestpreis → Überschuss.'
+    },
+    {
+        id: 'vdnd_ext4', type: 'dnd',
+        question: 'Drag & Drop (4 Produktionsfaktoren): Ordne die konkreten Beispiele richtig zu.',
+        items: [
+            { id: 'pf1', text: 'Mitarbeitende in Produktion und Beratung', target: 'arb' },
+            { id: 'pf2', text: 'Maschinen, Gebäude, Werkzeuge & Geldmittel', target: 'kap' },
+            { id: 'pf3', text: 'Grundstücke, Wasser, Rohstoffe & Energie', target: 'bod' },
+            { id: 'pf4', text: 'Idee, Risikoübernahme & Koordination der Faktoren', target: 'unt' }
+        ],
+        targets: [
+            { id: 'arb', label: 'Arbeit' },
+            { id: 'kap', label: 'Kapital' },
+            { id: 'bod', label: 'Boden (Natur)' },
+            { id: 'unt', label: 'Unternehmerleistung' }
+        ],
+        explanation: 'Die 4 Produktionsfaktoren: Arbeit (Mitarbeitende), Kapital (Maschinen/Geld), Boden (Natur/Rohstoffe), Unternehmerleistung.'
     }
 ];
 
@@ -4386,6 +4575,195 @@ const mktQuestionBank = [
             { id: 'act', label: 'A – Action' }
         ],
         explanation: 'AIDA = Attention (Anzeige) → Interest (Infos) → Desire (Konfigurator) → Action (Beratung/Kauf).'
+    },
+    {
+        id: 'ms_ext1', type: 'single',
+        question: 'Welche Strategie aus der Ansoff-Matrix verfolgt ein Unternehmen, wenn es ein NEUES Produkt für einen BESTEHENDEN Markt entwickelt?',
+        options: [
+            { text: 'Produktentwicklung', ok: true },
+            { text: 'Marktdurchdringung', ok: false },
+            { text: 'Marktentwicklung', ok: false },
+            { text: 'Diversifikation', ok: false }
+        ],
+        explanation: 'Bestehender Markt + neues Produkt = Produktentwicklung (z.B. Spiegelschrank-Hersteller bringt neues smartes LED-Spiegelmodell für bestehende Kunden).'
+    },
+    {
+        id: 'ms_ext2', type: 'single',
+        question: 'Wie heisst das Feld in der BCG-Portfolio-Matrix mit HOHEM Marktwachstum und HOHEM eigenem Marktanteil?',
+        options: [
+            { text: 'Star (hohe Investitionen nötig, bringt aber starkes Wachstum)', ok: true },
+            { text: 'Cash Cow (niedriges Wachstum, hoher Anteil)', ok: false },
+            { text: 'Poor Dog (niedriges Wachstum, niedriger Anteil)', ok: false },
+            { text: 'Question Mark (hohes Wachstum, niedriger Anteil)', ok: false }
+        ],
+        explanation: 'Stars haben hohes Wachstum und hohen Marktanteil; Cash Cows melken den reifen Markt.'
+    },
+    {
+        id: 'ms_ext3', type: 'single',
+        question: 'Was beschreibt die „Skimming-Strategie“ (Abschöpfungsstrategie) bei der Preiseinführung?',
+        options: [
+            { text: 'Start mit einem hohen Einführungspreis für Zahlungsbereite, danach schrittweise Preissenkung', ok: true },
+            { text: 'Start mit einem extrem tiefen Preis, um sofort Massenmarktanteile zu gewinnen', ok: false },
+            { text: 'Dauerhaft einheitlicher Tiefstpreis ohne Qualitätsdifferenzierung', ok: false },
+            { text: 'Verbot jeglicher Rabatte im B2B-Geschäft', ok: false }
+        ],
+        explanation: 'Skimming = hoch starten & Zahlungsbereitschaft abschöpfen; Penetration = tief starten für schnelle Marktdurchdringung.'
+    },
+    {
+        id: 'ms_ext4', type: 'single',
+        question: 'Welche 3 zusätzlichen „P“ ergänzen beim Dienstleistungsmarketing die klassischen 4P (Product, Price, Place, Promotion) zu den 7P?',
+        options: [
+            { text: 'People (Personal), Process (Prozesse) und Physical Evidence (Ausstattung/Umfeld)', ok: true },
+            { text: 'Profit, Patent und Politik', ok: false },
+            { text: 'Planung, Produktion und Prüfung', ok: false },
+            { text: 'Packaging, PR und Provision', ok: false }
+        ],
+        explanation: 'Bei Dienstleistungen sind Mitarbeitende (People), Abläufe (Process) und physisches Umfeld (Physical Evidence) entscheidend.'
+    },
+    {
+        id: 'ms_ext5', type: 'single',
+        question: 'Worin liegt der Unterschied zwischen Primär- und Sekundärforschung in der Marktforschung?',
+        options: [
+            { text: 'Primärforschung erhebt neue Daten direkt am Markt (z.B. Umfragen); Sekundärforschung wertet bereits vorhandene Daten aus', ok: true },
+            { text: 'Sekundärforschung befragt Kunden direkt, Primärforschung nutzt nur alte Statistiken', ok: false },
+            { text: 'Primärforschung ist immer kostenlos, Sekundärforschung immer illegal nach DSGVO', ok: false },
+            { text: 'Beide Begriffe bedeuten exakt das Gleiche', ok: false }
+        ],
+        explanation: 'Primär = Field Research (neu erheben); Sekundär = Desk Research (vorhandene Quellen nutzen).'
+    },
+    {
+        id: 'ms_ext6', type: 'single',
+        question: 'Was bedeutet „Pull-Marketing“ bei den Absatzwegen?',
+        options: [
+            { text: 'Endkunden werden direkt durch Werbung angesprochen, sodass sie das Produkt beim Handel nachfragen („Sog“)', ok: true },
+            { text: 'Hersteller drücken das Produkt ausschliesslich mit hohen Rabatten in die Händlerregale', ok: false },
+            { text: 'Der Verkauf erfolgt ausschliesslich über telefonische Kaltakquise', ok: false },
+            { text: 'Produkte werden ohne Preisauszeichnung verkauft', ok: false }
+        ],
+        explanation: 'Pull = Nachfragesog beim Endkunden erzeugen; Push = Druck auf den Zwischenhandel durch Konditionen/Aussendienst.'
+    },
+    {
+        id: 'mm_ext1', type: 'multi',
+        question: 'Welche Anforderungen muss ein Marketingziel nach der SMART-Regel erfüllen? (Mehrere richtig)',
+        options: [
+            { text: 'Spezifisch & Messbar (klare Kennzahl, z.B. +10 % Umsatz)', ok: true },
+            { text: 'Attraktiv / Akzeptiert & Realistisch', ok: true },
+            { text: 'Terminiert (mit festem Enddatum)', ok: true },
+            { text: 'So vage wie möglich formuliert, damit man es nicht überprüfen kann', ok: false }
+        ],
+        explanation: 'SMART = Spezifisch, Messbar, Attraktiv/Akzeptiert, Realistisch, Terminiert.'
+    },
+    {
+        id: 'mm_ext2', type: 'multi',
+        question: 'Welche Kriterien werden häufig zur Marktsegmentierung eingesetzt? (Mehrere richtig)',
+        options: [
+            { text: 'Geografisch (Region, Stadt vs. Land, Kanton)', ok: true },
+            { text: 'Demografisch (Alter, Einkommen, Haushaltsgrösse)', ok: true },
+            { text: 'Psychografisch & Verhaltensorientiert (Lebensstil, Werte, Kaufhäufigkeit)', ok: true },
+            { text: 'Zufällige Buchstaben des Nachnamens ohne Bezug zum Kaufverhalten', ok: false }
+        ],
+        explanation: 'Geografische, demografische, psychografische und verhaltensorientierte Kriterien bilden die 4 Hauptgruppen der Segmentierung.'
+    },
+    {
+        id: 'mm_ext3', type: 'multi',
+        question: 'Welche Punkte sind gemäss DSG / DSGVO bei E-Mail-Marketing und Kundendaten zwingend zu beachten? (Mehrere richtig)',
+        options: [
+            { text: 'Einwilligung (Opt-in) für Newsletter-Versand einholen', ok: true },
+            { text: 'Jederzeit einfache Abmeldemöglichkeit (Opt-out) anbieten', ok: true },
+            { text: 'Datensparsamkeit und transparente Datenschutzerklärung', ok: true },
+            { text: 'Kundendaten ohne Zustimmung an beliebige Dritte verkaufen', ok: false }
+        ],
+        explanation: 'Opt-in, jederzeitiges Opt-out, Zweckbindung und Datensparsamkeit sind Kernpflichten im Datenschutz.'
+    },
+    {
+        id: 'mm_ext4', type: 'multi',
+        question: 'Wo hilft Künstliche Intelligenz (KI) heute konkret im digitalen Marketing? (Mehrere richtig)',
+        options: [
+            { text: 'Personalisierte Produktempfehlungen und dynamisches Ad-Targeting', ok: true },
+            { text: 'Erstellen und Testen von Text-, Bild- und Video-Varianten (A/B-Testing)', ok: true },
+            { text: '24/7 Kundenservice über intelligente Chatbots', ok: true },
+            { text: 'KI ersetzt automatisch jede strategische Markenverantwortung ohne menschliche Prüfung', ok: false }
+        ],
+        explanation: 'KI beschleunigt Personalisierung, Content-Varianten und Support – Strategie, Marke und Kontrolle bleiben beim Menschen.'
+    },
+    {
+        id: 'mm_ext5', type: 'multi',
+        question: 'Welche Massnahmen gehören im Marketingmix zum „P“ Promotion (Kommunikationspolitik)? (Mehrere richtig)',
+        options: [
+            { text: 'Klassische Werbung, Social Media Ads & Influencer-Marketing', ok: true },
+            { text: 'Public Relations (Öffentlichkeitsarbeit) & Sponsoring', ok: true },
+            { text: 'Verkaufsförderung (Messen, Gutscheine, Probieraktionen)', ok: true },
+            { text: 'Festlegung der Zahlungsfristen und Rabattstaffel', ok: false }
+        ],
+        explanation: 'Zahlungsfristen und Rabatte gehören zur Preis-/Konditionenpolitik (Price), nicht zur Promotion.'
+    },
+    {
+        id: 'mdnd_ext1', type: 'dnd',
+        question: 'Drag & Drop (Ansoff-Matrix): Ordne jede Wachstumsstrategie der passenden Kombination zu.',
+        items: [
+            { id: 'ans1', text: 'Bestehendes Produkt + bestehender Markt', target: 'md' },
+            { id: 'ans2', text: 'Bestehendes Produkt + neuer Markt', target: 'me' },
+            { id: 'ans3', text: 'Neues Produkt + bestehender Markt', target: 'pe' },
+            { id: 'ans4', text: 'Neues Produkt + neuer Markt', target: 'div' }
+        ],
+        targets: [
+            { id: 'md', label: 'Marktdurchdringung' },
+            { id: 'me', label: 'Marktentwicklung' },
+            { id: 'pe', label: 'Produktentwicklung' },
+            { id: 'div', label: 'Diversifikation' }
+        ],
+        explanation: 'Ansoff-Matrix: alt/alt = Durchdringung; alt/neu = Marktentwicklung; neu/alt = Produktentwicklung; neu/neu = Diversifikation.'
+    },
+    {
+        id: 'mdnd_ext2', type: 'dnd',
+        question: 'Drag & Drop (BCG-Portfolio): Ordne jedes Feld der passenden Normstrategie zu.',
+        items: [
+            { id: 'bcg1', text: 'Hohes Wachstum + hoher Marktanteil', target: 'star' },
+            { id: 'bcg2', text: 'Tiefes Wachstum + hoher Marktanteil', target: 'cow' },
+            { id: 'bcg3', text: 'Hohes Wachstum + tiefer Marktanteil', target: 'qm' },
+            { id: 'bcg4', text: 'Tiefes Wachstum + tiefer Marktanteil', target: 'dog' }
+        ],
+        targets: [
+            { id: 'star', label: 'Star (Investieren & halten)' },
+            { id: 'cow', label: 'Cash Cow (Gewinne abschöpfen)' },
+            { id: 'qm', label: 'Question Mark (Selektiv ausbauen/prüfen)' },
+            { id: 'dog', label: 'Poor Dog (Desinvestieren / abbauen)' }
+        ],
+        explanation: 'BCG-Matrix: Stars → investieren; Cash Cows → abschöpfen; Question Marks → selektieren; Poor Dogs → abbauen.'
+    },
+    {
+        id: 'mdnd_ext3', type: 'dnd',
+        question: 'Drag & Drop (Marketingmix 4P): Ordne die konkreten Beispiele dem richtigen P zu.',
+        items: [
+            { id: 'mp1', text: 'Garantie, Design, Verpackung & Sortiment', target: 'prod' },
+            { id: 'mp2', text: 'Listenpreis, Skonto, Rabatt & Zahlungsfrist', target: 'pric' },
+            { id: 'mp3', text: 'Online-Shop, Fachhandel & Lieferlogistik', target: 'plac' },
+            { id: 'mp4', text: 'Google Ads, Messeauftritt & PR', target: 'prom' }
+        ],
+        targets: [
+            { id: 'prod', label: 'Product (Produktpolitik)' },
+            { id: 'pric', label: 'Price (Preispolitik)' },
+            { id: 'plac', label: 'Place (Distributionspolitik)' },
+            { id: 'prom', label: 'Promotion (Kommunikation)' }
+        ],
+        explanation: 'Die klassischen 4P: Product (Leistung), Price (Konditionen), Place (Vertriebsweg), Promotion (Kommunikation).'
+    },
+    {
+        id: 'mdnd_ext4', type: 'dnd',
+        question: 'Drag & Drop (Preisstrategien): Ordne jede Preisform richtig zu.',
+        items: [
+            { id: 'prs1', text: 'Hoch starten und Preis später senken', target: 'skim' },
+            { id: 'prs2', text: 'Tief starten für schnelle Massenverbreitung', target: 'pen' },
+            { id: 'prs3', text: 'Unterschiedliche Preise je Zielgruppe/Zeit (z.B. SBB Halbtax/Tageskarte)', target: 'diff' },
+            { id: 'prs4', text: 'Bewusst hoher Preis als Qualitätssignal (Luxus)', target: 'prem' }
+        ],
+        targets: [
+            { id: 'skim', label: 'Skimming-Strategie' },
+            { id: 'pen', label: 'Penetrationsstrategie' },
+            { id: 'diff', label: 'Preisdifferenzierung' },
+            { id: 'prem', label: 'Prämien- / Hochpreisstrategie' }
+        ],
+        explanation: 'Skimming = hoch → tief; Penetration = tief → Marktanteil; Differenzierung = nach Segment/Zeit; Prämie = Luxus-Image.'
     }
 ];
 
@@ -6157,6 +6535,195 @@ const reweQuestionBank = [
             { id: 'r5', label: 'Rang 5' }
         ],
         explanation: 'Nach absolutem DB 1: 1. B2 (375’), 2. B1 (320’), 3. A1 (70’), 4. A2 (49’), 5. A3 (24.3’).'
+    },
+    {
+        id: 'rs43', type: 'single',
+        question: 'Wie lautet der Buchungssatz, wenn ein Unternehmen Handelswaren gegen Banküberweisung einkauft (MIT laufender Inventur)?',
+        options: [
+            { text: 'Warenbestand / Bank', ok: true },
+            { text: 'Warenaufwand / Bank', ok: false },
+            { text: 'Bank / Warenertrag', ok: false },
+            { text: 'Debitoren / Warenbestand', ok: false }
+        ],
+        explanation: 'Mit laufender Inventur wird direkt das Aktivkonto Warenbestand belastet (ohne laufende Inventur: Warenaufwand / Bank).'
+    },
+    {
+        id: 'rs44', type: 'single',
+        question: 'Welche Aussage zur „Goldenen Finanzregel“ (Block 2) trifft zu?',
+        options: [
+            { text: 'Gesunde Liquiditätsgrade zusammen mit gesunden Anlagedeckungsgraden (ADG 2 > 100 %)', ok: true },
+            { text: 'Das Fremdkapital muss mindestens doppelt so hoch sein wie das Anlagevermögen', ok: false },
+            { text: 'Alle Vorräte werden ohne Abschreibung direkt als Gewinn verbucht', ok: false },
+            { text: 'Die Debitorendauer soll möglichst über 360 Tagen liegen', ok: false }
+        ],
+        explanation: 'Goldene Bilanzregel = langfristiges AV langfristig decken (ADG 2 > 100 %); zusammen mit gesunder Liquidität ergibt das die Goldene Finanzregel.'
+    },
+    {
+        id: 'rs45', type: 'single',
+        question: 'Wie hoch ist der Eigenfinanzierungsgrad (EFG), wenn das Fremdkapital CHF 180’000 und das Eigenkapital CHF 120’000 beträgt?',
+        options: [
+            { text: '40 % (120’000 / 300’000)', ok: true },
+            { text: '60 % (180’000 / 300’000)', ok: false },
+            { text: '66.7 % (120’000 / 180’000)', ok: false },
+            { text: '150 % (180’000 / 120’000)', ok: false }
+        ],
+        explanation: 'Gesamtkapital = 180’000 + 120’000 = 300’000. EFG = EK / GK = 120’000 / 300’000 = 40 % (FFG = 60 %).'
+    },
+    {
+        id: 'rs46', type: 'single',
+        question: 'Welcher Geschäftsfall ist NUR liquiditätswirksam (verändert flüssige Mittel, aber NICHT den Gewinn)?',
+        options: [
+            { text: 'Barkauf eines neuen Lieferwagens (Fahrzeuge / Kasse)', ok: true },
+            { text: 'Banküberweisung der Monatslöhne (Personalaufwand / Bank)', ok: false },
+            { text: 'Planmässige Abschreibung auf Maschinen (Abschreibung / Maschinen)', ok: false },
+            { text: 'Wareneinkauf auf Kredit (Warenaufwand / Kreditoren)', ok: false }
+        ],
+        explanation: 'Fahrzeuge / Kasse tauscht nur zwei Aktivkonten (Aktivtausch) – Kasse sinkt (liquiditätswirksam), aber kein Aufwand/Ertrag (erfolgsneutral).'
+    },
+    {
+        id: 'rs47', type: 'single',
+        question: 'Wie hoch ist der Einstandspreis, wenn der Rechnungsbetrag nach Rabatt CHF 8’000 beträgt, 2 % Skonto abgezogen und danach 10 % Bezugskosten auf die Zahlung aufgeschlagen werden?',
+        options: [
+            { text: 'CHF 8’624 (Zahlung 7’840 + Bezugskosten 784)', ok: true },
+            { text: 'CHF 8’800 (8’000 + 10 %)', ok: false },
+            { text: 'CHF 7’840 (8’000 − 2 %)', ok: false },
+            { text: 'CHF 7’056 (7’840 − 10 %)', ok: false }
+        ],
+        explanation: '8’000 − 2 % Skonto (160) = 7’840 Zahlung. Darauf 10 % Bezugskosten (784) = CHF 8’624 Einstandspreis.'
+    },
+    {
+        id: 'rs48', type: 'single',
+        question: 'Welche Aussage zur direkten vs. indirekten Abschreibung ist richtig?',
+        options: [
+            { text: 'Direkt bucht man „Abschreibungen / Anlagekonto“, indirekt „Abschreibungen / WB Anlage“ (Aktivminuskonto Kl. 1)', ok: true },
+            { text: 'Indirekte Abschreibungen werden direkt vom Eigenkapitalkonto abgezogen', ok: false },
+            { text: 'Direkte Abschreibungen erhöhen den Buchwert der Maschine', ok: false },
+            { text: 'Abschreibungen sind gemäss OR völlig freiwillig', ok: false }
+        ],
+        explanation: 'Wertberichtigungskonten (WB) sind Aktivminuskonten in Kontenklasse 1 und nehmen im Haben zu; Abschreibungen sind Pflicht.'
+    },
+    {
+        id: 'rm41', type: 'multi',
+        question: 'Welche Konten gehören in der Bilanz zum UMLAUFVERMÖGEN (UV)? (Mehrere richtig)',
+        options: [
+            { text: 'Flüssige Mittel (Kasse, Post, Bank)', ok: true },
+            { text: 'Forderungen aus Lieferungen und Leistungen (Debitoren)', ok: true },
+            { text: 'Handelswaren- und Rohstoffvorräte', ok: true },
+            { text: 'Hypothekarschulden und Rückstellungen', ok: false }
+        ],
+        explanation: 'Flüssige Mittel, Forderungen und Vorräte sind die 3 Hauptgruppen des Umlaufvermögens; Hypotheken & Rückstellungen sind Fremdkapital.'
+    },
+    {
+        id: 'rm42', type: 'multi',
+        question: 'Welche Aussagen zu den Stufen der Mehrstufigen Erfolgsrechnung (Block 1) stimmen? (Mehrere richtig)',
+        options: [
+            { text: 'Warenertrag (Kl. 3) − Warenaufwand (Kl. 4) = Bruttogewinn', ok: true },
+            { text: 'EBITDA liegt VOR Abzug der Abschreibungen (Kl. 68), Zinsen und Steuern', ok: true },
+            { text: 'EBIT = EBITDA − Abschreibungen (Kl. 68) (Betriebsergebnis vor Zinsen & Steuern)', ok: true },
+            { text: 'Direkte Steuern (Kl. 89) werden bereits vor dem Bruttogewinn abgezogen', ok: false }
+        ],
+        explanation: 'Direkte Steuern (Kl. 89) kommen erst ganz am Schluss vor dem Unternehmungserfolg (Reingewinn/-verlust).'
+    },
+    {
+        id: 'rm43', type: 'multi',
+        question: 'Was stimmt beim Vergleich von STATISCHER und DYNAMISCHER Investitionsrechnung (Block 7 & 8)? (Mehrere richtig)',
+        options: [
+            { text: 'Die statische Rechnung arbeitet mit Durchschnittsgrössen eines Jahres (inkl. Abschreibungen & Ø-Kapital)', ok: true },
+            { text: 'Die dynamische Rechnung zinst zukünftige Cashflows auf heute (t=0) ab', ok: true },
+            { text: 'Beim Kapitalwertverfahren ist eine Investition ab Kapitalwert ≥ 0 vorteilhaft', ok: true },
+            { text: 'Der Interne Ertragssatz (IRR) ist laut Block 8 das einzige prüfungsrelevante Verfahren', ok: false }
+        ],
+        explanation: 'Laut Folie 8 in Block 8 ist der Interne Ertragssatz ausdrücklich NICHT prüfungsrelevant.'
+    },
+    {
+        id: 'rm44', type: 'multi',
+        question: 'Welche Aussagen zur Nutzschwelle / Break-Even-Analyse (Block 4) sind richtig? (Mehrere richtig)',
+        options: [
+            { text: 'An der Nutzschwelle gilt: Nettoerlös = Totalkosten bzw. Gewinn = 0', ok: true },
+            { text: 'Mengenmässige Nutzschwelle = Fixkosten / Deckungsbeitrag pro Stück', ok: true },
+            { text: 'Bei ganzen Einheiten (z.B. Seminarteilnehmern) wird zur Verlustvermeidung aufgerundet', ok: true },
+            { text: 'Steigen die Fixkosten, sinkt die mengenmässige Nutzschwelle', ok: false }
+        ],
+        explanation: 'Höhere Fixkosten erfordern mehr verkaufte Einheiten bis zur Kostendeckung → die Nutzschwelle steigt.'
+    },
+    {
+        id: 'rm45', type: 'multi',
+        question: 'Welche Aussagen zu Stillen Reserven (Block 3) sind korrekt? (Mehrere richtig)',
+        options: [
+            { text: 'Sie sind in der externen Bilanz nicht sichtbar (Wert = 0)', ok: true },
+            { text: 'Sie entstehen durch Unterbewertung von Aktiven oder Überbewertung von Fremdkapital', ok: true },
+            { text: 'Eine Netto-Bildung stiller Reserven lässt den externen Gewinn tiefer erscheinen als den internen', ok: true },
+            { text: 'Eine Netto-Auflösung stiller Reserven drückt den externen Gewinn unter den internen Gewinn', ok: false }
+        ],
+        explanation: 'Bei einer Auflösung stiller Reserven sinkt der externe Aufwand (bzw. steigt der Ertrag) → externer Gewinn ist GRÖSSER als interner Gewinn.'
+    },
+    {
+        id: 'rdnd39', type: 'dnd',
+        question: 'Drag & Drop (Bilanz-Zuordnung): Ordne die Konten der richtigen Bilanzgruppe zu.',
+        items: [
+            { id: 'bz1', text: 'Bankguthaben, Debitoren & Handelswaren', target: 'uv' },
+            { id: 'bz2', text: 'Immobilien, Maschinen & Patente', target: 'av' },
+            { id: 'bz3', text: 'Kreditoren, Hypotheken & Rückstellungen', target: 'fk' },
+            { id: 'bz4', text: 'Aktienkapital, Kapital- & Gewinnreserven', target: 'ek' }
+        ],
+        targets: [
+            { id: 'uv', label: 'Umlaufvermögen (Aktiven)' },
+            { id: 'av', label: 'Anlagevermögen (Aktiven)' },
+            { id: 'fk', label: 'Fremdkapital (Passiven)' },
+            { id: 'ek', label: 'Eigenkapital (Passiven)' }
+        ],
+        explanation: 'Rückstellungen gehören zum Fremdkapital, Reserven zum Eigenkapital!'
+    },
+    {
+        id: 'rdnd40', type: 'dnd',
+        question: 'Drag & Drop (Kennzahlen-Übersicht Block 2): Ordne jede Kennzahl ihrer Gruppe zu.',
+        items: [
+            { id: 'kz1', text: 'Eigenfinanzierungsgrad & Selbstfinanzierungsgrad', target: 'kap' },
+            { id: 'kz2', text: 'Liquiditätsgrad 1, 2 und 3', target: 'liq' },
+            { id: 'kz3', text: 'Bruttogewinn-, EBIT- und Gewinnmarge', target: 'ren' },
+            { id: 'kz4', text: 'Debitorenfrist, Lagerdauer & Kapitalumschlag', target: 'akt' }
+        ],
+        targets: [
+            { id: 'kap', label: 'Kapitalstruktur (Bilanz)' },
+            { id: 'liq', label: 'Liquidität (Bilanz)' },
+            { id: 'ren', label: 'Umsatzrentabilität (ER)' },
+            { id: 'akt', label: 'Aktivitäts-Analyse (Umschlag)' }
+        ],
+        explanation: 'Kapitalstruktur & Liquidität sind bilanzbezogen; Margen = Umsatzrentabilität; Fristen/Umschlag = Aktivitäts-Analyse.'
+    },
+    {
+        id: 'rdnd41', type: 'dnd',
+        question: 'Drag & Drop (BAB & Kalkulation Block 5/6): Ordne den Begriff der richtigen Bedeutung zu.',
+        items: [
+            { id: 'bk1', text: 'Überleitung FIBU-Aufwand → BEBU-Kostenarten', target: 'abg' },
+            { id: 'bk2', text: 'Umlage Gebäude & Fuhrpark auf Hauptkostenstellen', target: 'vk' },
+            { id: 'bk3', text: 'Herstellkosten + VVGK', target: 'sk' },
+            { id: 'bk4', text: 'Ist-Kostenkontrolle nach Auftragsabschluss', target: 'nk' }
+        ],
+        targets: [
+            { id: 'abg', label: 'Zeitliche & Sachliche Abgrenzung' },
+            { id: 'vk', label: 'Vorkostenstellen-Umlage' },
+            { id: 'sk', label: 'Selbstkosten' },
+            { id: 'nk', label: 'Nachkalkulation' }
+        ],
+        explanation: 'Abgrenzungen überführen FIBU in BEBU; Vorkostenstellen gehen auf Haupt-KST; HK + VVGK = Selbstkosten; Ist-Kontrolle = Nachkalkulation.'
+    },
+    {
+        id: 'rdnd42', type: 'dnd',
+        question: 'Drag & Drop (Investition & DBR Block 7–9): Ordne die Entscheidung bzw. Stufe korrekt zu.',
+        items: [
+            { id: 'idb1', text: 'Kapitalwert (NPV) ≥ 0', target: 'inv' },
+            { id: 'idb2', text: 'Kürzeste Wiedergewinnungszeit in Jahren', target: 'pay' },
+            { id: 'idb3', text: 'DB 1 − Artikelfixkosten', target: 'db2' },
+            { id: 'idb4', text: 'Total DB 3 − Unternehmensfixkosten', target: 'db4' }
+        ],
+        targets: [
+            { id: 'inv', label: 'Investition vorteilhaft (Kapitalwert)' },
+            { id: 'pay', label: 'Amortisationsrechnung (Payback)' },
+            { id: 'db2', label: 'Deckungsbeitrag 2 (Produktebene)' },
+            { id: 'db4', label: 'DB 4 (Betriebserfolg)' }
+        ],
+        explanation: 'NPV ≥ 0 = vorteilhaft; Payback = Amortisationszeit; DB1 − Artikelfix = DB2; Total DB3 − Unternehmensfix = DB4.'
     }
 ];
 
