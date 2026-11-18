@@ -857,6 +857,101 @@
             </div>
         </div>
 
+        <div class="graphic-container">
+            <svg width="860" height="268" viewBox="0 0 860 268">
+                <defs>
+                    <marker id="wk-arr-violet" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                        <polygon points="0 0, 7 3.5, 0 7" fill="#6d28d9"/>
+                    </marker>
+                    <marker id="wk-arr-green" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                        <polygon points="0 0, 7 3.5, 0 7" fill="#16a34a"/>
+                    </marker>
+                    <marker id="wk-arr-blue" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                        <polygon points="0 0, 7 3.5, 0 7" fill="#2563eb"/>
+                    </marker>
+                    <marker id="wk-arr-amber" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                        <polygon points="0 0, 7 3.5, 0 7" fill="#d97706"/>
+                    </marker>
+                </defs>
+
+                <!-- LINKS: EINFACHER WIRTSCHAFTSKREISLAUF -->
+                <rect x="10" y="10" width="380" height="248" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+                <text x="200" y="30" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">1. Einfacher Wirtschaftskreislauf</text>
+
+                <!-- Haushalte & Unternehmen -->
+                <rect x="125" y="44" width="150" height="34" rx="8" fill="#5b2c6f"/>
+                <text x="200" y="65" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11.5">Haushalte</text>
+
+                <rect x="125" y="196" width="150" height="34" rx="8" fill="#1e293b"/>
+                <text x="200" y="217" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11.5">Unternehmen</text>
+
+                <!-- Links: Produktionsfaktoren (unten) & Einkommen (innen) -->
+                <path d="M 125 61 L 52 61 L 52 213 L 120 213" fill="none" stroke="#6d28d9" stroke-width="2.2" marker-end="url(#wk-arr-violet)"/>
+                <text x="44" y="132" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#5b2c6f" transform="rotate(-90 44 132)">Produktionsfaktoren (Real)</text>
+
+                <path d="M 155 196 L 155 83" fill="none" stroke="#16a34a" stroke-width="2.2" marker-end="url(#wk-arr-green)"/>
+                <text x="148" y="138" text-anchor="end" font-size="9.2" font-weight="bold" fill="#166534">Einkommen</text>
+                <text x="148" y="150" text-anchor="end" font-size="8.4" fill="#166534">(Lohn, Zins, Gewinn)</text>
+
+                <!-- Rechts: Konsumausgaben (innen) & Güter/DL (aussen) -->
+                <path d="M 245 78 L 245 191" fill="none" stroke="#16a34a" stroke-width="2.2" marker-end="url(#wk-arr-green)"/>
+                <text x="252" y="138" text-anchor="start" font-size="9.2" font-weight="bold" fill="#166534">Ausgaben</text>
+                <text x="252" y="150" text-anchor="start" font-size="8.4" fill="#166534">(Konsumgeld)</text>
+
+                <path d="M 275 213 L 348 213 L 348 61 L 280 61" fill="none" stroke="#6d28d9" stroke-width="2.2" marker-end="url(#wk-arr-violet)"/>
+                <text x="356" y="138" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#5b2c6f" transform="rotate(90 356 138)">Waren &amp; DL (Realstrom)</text>
+
+                <!-- Legende -->
+                <text x="200" y="247" text-anchor="middle" font-size="8.8" fill="#475569">Violett = Güter-/Faktorstrom &bull; Grün = Geldstrom</text>
+
+                <!-- RECHTS: ERWEITERTER WIRTSCHAFTSKREISLAUF -->
+                <rect x="405" y="10" width="445" height="248" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+                <text x="627" y="30" text-anchor="middle" font-weight="bold" font-size="12.5" fill="#5b2c6f">2. Erweiterter Wirtschaftskreislauf (+ Staat, Banken, Ausland &amp; BIP)</text>
+
+                <!-- 5 Sektoren -->
+                <rect x="422" y="106" width="106" height="36" rx="7" fill="#5b2c6f"/>
+                <text x="475" y="128" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">Haushalte</text>
+
+                <rect x="727" y="106" width="106" height="36" rx="7" fill="#1e293b"/>
+                <text x="780" y="128" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">Unternehmen</text>
+
+                <rect x="577" y="44" width="100" height="30" rx="7" fill="#2563eb"/>
+                <text x="627" y="63" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10.5">Staat</text>
+
+                <rect x="567" y="108" width="120" height="32" rx="7" fill="#7c3aed"/>
+                <text x="627" y="128" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10">Banken / Kapital</text>
+
+                <rect x="577" y="172" width="100" height="30" rx="7" fill="#d97706"/>
+                <text x="627" y="191" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10.5">Ausland</text>
+
+                <!-- Verbindungen zum Staat -->
+                <path d="M 475 106 L 475 59 L 572 59" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#wk-arr-blue)"/>
+                <text x="515" y="53" text-anchor="middle" font-size="8.5" fill="#1e40af" font-weight="bold">Steuern &amp; Abgaben</text>
+                <path d="M 677 59 L 780 59 L 780 101" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#wk-arr-blue)"/>
+                <text x="734" y="53" text-anchor="middle" font-size="8.5" fill="#1e40af" font-weight="bold">Aufträge &amp; Subvent.</text>
+
+                <!-- Verbindungen zu Banken/Kapital -->
+                <path d="M 528 124 L 562 124" fill="none" stroke="#16a34a" stroke-width="1.8" marker-end="url(#wk-arr-green)"/>
+                <text x="545" y="118" text-anchor="middle" font-size="8.2" fill="#166534" font-weight="bold">Sparen</text>
+                <path d="M 687 124 L 722 124" fill="none" stroke="#16a34a" stroke-width="1.8" marker-end="url(#wk-arr-green)"/>
+                <text x="705" y="118" text-anchor="middle" font-size="8.2" fill="#166534" font-weight="bold">Kredite</text>
+
+                <!-- Verbindungen zum Ausland -->
+                <path d="M 577 187 L 475 187 L 475 147" fill="none" stroke="#d97706" stroke-width="1.8" marker-end="url(#wk-arr-amber)"/>
+                <text x="520" y="181" text-anchor="middle" font-size="8.5" fill="#92400e" font-weight="bold">Importe (Geld ab)</text>
+                <path d="M 780 142 L 780 187 L 682 187" fill="none" stroke="#d97706" stroke-width="1.8" marker-end="url(#wk-arr-amber)"/>
+                <text x="734" y="181" text-anchor="middle" font-size="8.5" fill="#92400e" font-weight="bold">Exporte (Geld zu)</text>
+
+                <!-- BIP Box unten -->
+                <rect x="422" y="214" width="411" height="34" rx="6" fill="#2c1638"/>
+                <text x="627" y="229" text-anchor="middle" fill="#e9d5ff" font-weight="bold" font-size="9.5">BIP (Bruttoinlandprodukt)</text>
+                <text x="627" y="242" text-anchor="middle" fill="#fff" font-size="8.7">Wert aller im Inland hergestellten Waren &amp; DL (1 Jahr) &minus; Vorleistungen/Importe</text>
+            </svg>
+            <div class="graphic-caption">
+                <strong>Merke für die Prüfung:</strong> Im <em>einfachen Kreislauf</em> fliessen Produktionsfaktoren und Güter (Realstrom) entgegengesetzt zu Einkommen und Konsumausgaben (Geldstrom). Im <em>erweiterten Kreislauf</em> kommen <strong>Staat</strong>, <strong>Banken/Kapitalmarkt</strong> und <strong>Ausland</strong> (Exporte vs. Importe) hinzu.
+            </div>
+        </div>
+
         <h3>Preis-/Mengen-Diagramm, Elastizität, Höchst-/Mindestpreis &amp; Steuern/Subventionen</h3>
         <div class="graphic-container">
             <svg width="860" height="270" viewBox="0 0 860 270">
