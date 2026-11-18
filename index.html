@@ -656,6 +656,20 @@
             background: rgba(239, 68, 68, 0.28);
             color: #ffffff;
         }
+        .tile-note-close {
+            background: rgba(139, 92, 246, 0.18);
+            border: 1px solid rgba(196, 181, 253, 0.35);
+            color: #e9d5ff;
+            border-radius: 8px;
+            padding: 0.22rem 0.65rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .tile-note-close:hover {
+            background: rgba(139, 92, 246, 0.34);
+            color: #ffffff;
+        }
         .tile-note-textarea {
             width: 100%;
             min-height: 82px;
@@ -6243,7 +6257,11 @@ function setPlayerTileNote(playerName, sectionId, text) {
 function updateNoteButtonState(btn, hasText, isOpen) {
     btn.classList.toggle('has-note', hasText);
     btn.classList.toggle('is-open', isOpen);
-    btn.textContent = hasText ? '📝 Notiz ✓' : '📝 Notiz';
+    if (isOpen) {
+        btn.textContent = hasText ? '📝 Schliessen ▲' : '📝 Schliessen ▲';
+    } else {
+        btn.textContent = hasText ? '📝 Notiz ✓' : '📝 Notiz';
+    }
 }
 
 function initTileNotes() {
@@ -6281,6 +6299,7 @@ function initTileNotes() {
                 <div class="tile-note-actions">
                     <span class="tile-note-status"></span>
                     <button type="button" class="tile-note-clear">Leeren</button>
+                    <button type="button" class="tile-note-close">Schliessen ✕</button>
                 </div>
             </div>
             <textarea class="tile-note-textarea" placeholder="Eigene Notiz, Eselsbrücke oder Prüfungsfrage zu dieser Kachel eingeben ..."></textarea>
@@ -6295,12 +6314,19 @@ function initTileNotes() {
         const textarea = panel.querySelector('.tile-note-textarea');
         const statusEl = panel.querySelector('.tile-note-status');
         const clearBtn = panel.querySelector('.tile-note-clear');
+        const closeBtn = panel.querySelector('.tile-note-close');
 
         btn.addEventListener('click', () => {
             const isOpen = panel.classList.toggle('is-open');
             const hasText = textarea.value.trim().length > 0;
             updateNoteButtonState(btn, hasText, isOpen);
             if (isOpen) textarea.focus();
+        });
+
+        closeBtn.addEventListener('click', () => {
+            panel.classList.remove('is-open');
+            const hasText = textarea.value.trim().length > 0;
+            updateNoteButtonState(btn, hasText, false);
         });
 
         textarea.addEventListener('input', () => {
