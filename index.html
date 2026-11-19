@@ -729,6 +729,145 @@
             color: #ffffff;
             transform: translateY(-1px);
         }
+        /* Globale Suchleiste & Fehler-Training */
+        .search-shell {
+            max-width: 780px;
+            margin: 0.9rem auto 0;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 950;
+        }
+        .search-input-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            background: radial-gradient(120% 90% at 50% 100%, rgba(59, 130, 246, 0.14) 0%, rgba(11, 17, 32, 0.96) 85%);
+            border: 1px solid rgba(147, 197, 253, 0.3);
+            border-radius: 12px 4px 12px 4px;
+            padding: 0.48rem 0.85rem;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 8px 22px rgba(0, 0, 0, 0.3);
+            transition: border-color 0.18s ease, box-shadow 0.18s ease;
+        }
+        .search-input-wrap:focus-within {
+            border-color: var(--lavender);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25), 0 10px 26px rgba(0, 0, 0, 0.4);
+        }
+        .search-input-wrap input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: #f8fafc;
+            font-size: 0.92rem;
+            outline: none;
+            min-width: 0;
+        }
+        .search-input-wrap input::placeholder {
+            color: var(--text-muted);
+        }
+        .search-clear-btn {
+            display: none;
+            background: rgba(148, 163, 184, 0.18);
+            border: 1px solid rgba(148, 163, 184, 0.28);
+            color: #dbeafe;
+            border-radius: 8px 2px 8px 2px;
+            padding: 0.16rem 0.5rem;
+            font-size: 0.78rem;
+            cursor: pointer;
+        }
+        .search-clear-btn.visible { display: inline-block; }
+        .search-results {
+            display: none;
+            position: absolute;
+            left: 1rem;
+            right: 1rem;
+            top: calc(100% + 6px);
+            background: #0b1120;
+            border: 1px solid rgba(147, 197, 253, 0.35);
+            border-radius: 16px 5px 16px 5px;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65);
+            max-height: 360px;
+            overflow-y: auto;
+            padding: 0.45rem;
+        }
+        .search-results.open { display: block; }
+        .search-result-item {
+            width: 100%;
+            text-align: left;
+            background: transparent;
+            border: 1px solid transparent;
+            border-radius: 12px 4px 12px 4px;
+            padding: 0.6rem 0.8rem;
+            color: var(--text-main);
+            cursor: pointer;
+            display: block;
+            transition: background 0.15s ease, border-color 0.15s ease;
+        }
+        .search-result-item:hover {
+            background: rgba(59, 130, 246, 0.16);
+            border-color: rgba(147, 197, 253, 0.35);
+        }
+        .search-result-top {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            margin-bottom: 0.2rem;
+            flex-wrap: wrap;
+        }
+        .search-subject-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.12rem 0.5rem;
+            border-radius: 8px 2px 8px 2px;
+            background: rgba(37, 99, 235, 0.28);
+            color: #bfdbfe;
+            border: 1px solid rgba(147, 197, 253, 0.32);
+        }
+        .search-result-title {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #ffffff;
+        }
+        .search-result-snippet {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.35;
+        }
+        .search-empty {
+            padding: 0.8rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.86rem;
+        }
+        @keyframes tilePulseBlue {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.75); border-color: #60a5fa; }
+            70% { box-shadow: 0 0 0 12px rgba(59, 130, 246, 0); border-color: #93c5fd; }
+            100% { box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35); }
+        }
+        section.search-highlight {
+            animation: tilePulseBlue 1.4s ease-out;
+        }
+        .quiz-btn.mistake-btn {
+            background: radial-gradient(125% 95% at 62% 100%, rgba(251, 191, 36, 0.38) 0%, rgba(217, 119, 6, 0.42) 45%, rgba(23, 18, 12, 0.96) 100%);
+            border: 1px solid rgba(252, 211, 77, 0.42);
+            color: #fef3c7;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 8px 20px rgba(217, 119, 6, 0.22);
+        }
+        .quiz-btn.mistake-btn:hover {
+            border-color: rgba(253, 230, 138, 0.7);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32), 0 10px 24px rgba(217, 119, 6, 0.35);
+            color: #ffffff;
+        }
+        .mistake-mode-banner {
+            background: rgba(245, 158, 11, 0.14);
+            border: 1px solid rgba(252, 211, 77, 0.45);
+            color: #fef3c7;
+            border-radius: 12px 4px 12px 4px;
+            padding: 0.65rem 0.95rem;
+            margin-bottom: 1rem;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
         .tile-note-textarea {
             width: 100%;
             min-height: 82px;
@@ -792,6 +931,15 @@
     <button type="button" class="subject-tab active" id="tab-vwl" onclick="switchSubject('vwl')">📊 VWL &amp; BWL <span class="subject-badge-soon">10 Blöcke + Quiz</span></button>
     <button type="button" class="subject-tab" id="tab-marketing" onclick="switchSubject('marketing')">📣 Marketing <span class="subject-badge-soon">3 Präsentationen + Quiz</span></button>
     <button type="button" class="subject-tab" id="tab-rechnungswesen" onclick="switchSubject('rechnungswesen')">🧾 Rechnungswesen <span class="subject-badge-soon">9 Blöcke + Quiz</span></button>
+</div>
+
+<div class="search-shell">
+    <div class="search-input-wrap">
+        <span aria-hidden="true" style="color: var(--lavender); font-size: 0.95rem;">🔍</span>
+        <input type="search" id="global-search-input" placeholder="Suchbegriff eingeben (z.B. EBIT, Ansoff, Nutzschwelle, SNB) ..." autocomplete="off" aria-label="In allen Fächern suchen">
+        <button type="button" id="global-search-clear" class="search-clear-btn" aria-label="Suche leeren">✕</button>
+    </div>
+    <div id="global-search-results" class="search-results" role="listbox" aria-label="Suchergebnisse"></div>
 </div>
 
 <nav id="nav-vwl">
@@ -1795,6 +1943,7 @@
         <div class="quiz-actions">
             <button type="button" class="quiz-btn" onclick="checkQuiz()">Antworten prüfen &amp; Punkte sichern</button>
             <button type="button" class="quiz-btn secondary" onclick="resetQuiz()">Neue Fragen / Nächste Runde</button>
+            <button type="button" class="quiz-btn mistake-btn" onclick="startMistakeTraining('vwl')">🎯 Fehler-Training (<span id="vwl-mistake-count">0</span>)</button>
         </div>
 
         <div id="motivation-banner" class="motivation-banner"></div>
@@ -2181,6 +2330,7 @@
         <div class="quiz-actions">
             <button type="button" class="quiz-btn" onclick="checkMktQuiz()">Antworten prüfen &amp; Punkte sichern</button>
             <button type="button" class="quiz-btn secondary" onclick="resetMktQuiz()">Neue Fragen / Nächste Runde</button>
+            <button type="button" class="quiz-btn mistake-btn" onclick="startMistakeTraining('mkt')">🎯 Fehler-Training (<span id="mkt-mistake-count">0</span>)</button>
         </div>
 
         <div id="mkt-motivation-banner" class="motivation-banner"></div>
@@ -3076,6 +3226,7 @@
         <div class="quiz-actions">
             <button type="button" class="quiz-btn" onclick="checkReweQuiz()">Antworten prüfen &amp; Punkte sichern</button>
             <button type="button" class="quiz-btn secondary" onclick="resetReweQuiz()">Neue Fragen / Nächste Runde</button>
+            <button type="button" class="quiz-btn mistake-btn" onclick="startMistakeTraining('rewe')">🎯 Fehler-Training (<span id="rewe-mistake-count">0</span>)</button>
         </div>
 
         <div id="rewe-motivation-banner" class="motivation-banner"></div>
@@ -4387,16 +4538,24 @@ function pickFromPool(type, count) {
     });
 }
 
-function renderQuiz() {
+function renderQuiz(customQuestions) {
     const container = document.getElementById('quiz-container');
     container.innerHTML = '';
     selectedChip = null;
 
-    activeQuiz = [
-        ...pickFromPool('single', 5),
-        ...pickFromPool('multi', 4),
-        ...pickFromPool('dnd', 3)
-    ];
+    if (Array.isArray(customQuestions) && customQuestions.length > 0) {
+        activeQuiz = customQuestions.map(q => (q.type === 'single' || q.type === 'multi') ? { ...q, shuffledOptions: shuffle(q.options) } : q);
+        const info = document.createElement('div');
+        info.className = 'mistake-mode-banner';
+        info.textContent = `🎯 Fehler-Training aktiv: Du übst gezielt ${activeQuiz.length} bisher falsch beantwortete Frage(n). Richtige Antworten werden aus deiner Fehlerliste gestrichen!`;
+        container.appendChild(info);
+    } else {
+        activeQuiz = [
+            ...pickFromPool('single', 5),
+            ...pickFromPool('multi', 4),
+            ...pickFromPool('dnd', 3)
+        ];
+    }
 
     activeQuiz.forEach((q, qIdx) => {
         const card = document.createElement('div');
@@ -4563,6 +4722,7 @@ function checkQuiz() {
         }
 
         if (ok) score++;
+        if (typeof recordQuizMistake === 'function') recordQuizMistake('vwl', q.id, ok);
         card.classList.remove('card-ok', 'card-err');
         card.classList.add(ok ? 'card-ok' : 'card-err');
         fb.className = 'quiz-feedback ' + (ok ? 'ok' : 'err');
@@ -4590,6 +4750,7 @@ function checkQuiz() {
         roundScored = true;
         saveScore(score, activeQuiz.length);
     }
+    if (typeof updateMistakeCounts === 'function') updateMistakeCounts();
 }
 
 function resetQuiz() {
@@ -4664,6 +4825,7 @@ function updatePlayerUI() {
     }
     document.getElementById('hero-player-count').textContent = Object.keys(players).length;
     if (typeof refreshTileNotesForPlayer === 'function') refreshTileNotesForPlayer();
+    if (typeof updateMistakeCounts === 'function') updateMistakeCounts();
 }
 
 function loginPlayerFrom(inputId) {
@@ -6048,18 +6210,26 @@ function pickFromMktPool(type, count) {
     return chosen.map(q => (q.type === 'single' || q.type === 'multi') ? { ...q, shuffledOptions: shuffle(q.options) } : q);
 }
 
-function renderMktQuiz() {
+function renderMktQuiz(customQuestions) {
     const container = document.getElementById('mkt-quiz-container');
     if (!container) return;
     container.innerHTML = '';
     selectedChip = null;
     mktRoundScored = false;
 
-    activeMktQuiz = [
-        ...pickFromMktPool('single', 5),
-        ...pickFromMktPool('multi', 4),
-        ...pickFromMktPool('dnd', 3)
-    ];
+    if (Array.isArray(customQuestions) && customQuestions.length > 0) {
+        activeMktQuiz = customQuestions.map(q => (q.type === 'single' || q.type === 'multi') ? { ...q, shuffledOptions: shuffle(q.options) } : q);
+        const info = document.createElement('div');
+        info.className = 'mistake-mode-banner';
+        info.textContent = `🎯 Fehler-Training aktiv: Du übst gezielt ${activeMktQuiz.length} bisher falsch beantwortete Frage(n). Richtige Antworten werden aus deiner Fehlerliste gestrichen!`;
+        container.appendChild(info);
+    } else {
+        activeMktQuiz = [
+            ...pickFromMktPool('single', 5),
+            ...pickFromMktPool('multi', 4),
+            ...pickFromMktPool('dnd', 3)
+        ];
+    }
 
     activeMktQuiz.forEach((q, qIdx) => {
         const card = document.createElement('div');
@@ -6224,6 +6394,7 @@ function checkMktQuiz() {
         }
 
         if (ok) score++;
+        if (typeof recordQuizMistake === 'function') recordQuizMistake('vwl', q.id, ok);
         card.classList.remove('card-ok', 'card-err');
         card.classList.add(ok ? 'card-ok' : 'card-err');
         fb.className = 'quiz-feedback ' + (ok ? 'ok' : 'err');
@@ -6244,6 +6415,7 @@ function checkMktQuiz() {
         mktRoundScored = true;
         saveScore(score, activeMktQuiz.length);
     }
+    if (typeof updateMistakeCounts === 'function') updateMistakeCounts();
 }
 
 function resetMktQuiz() {
@@ -8008,18 +8180,26 @@ function pickFromRewePool(type, count) {
     return chosen.map(q => (q.type === 'single' || q.type === 'multi') ? { ...q, shuffledOptions: shuffle(q.options) } : q);
 }
 
-function renderReweQuiz() {
+function renderReweQuiz(customQuestions) {
     const container = document.getElementById('rewe-quiz-container');
     if (!container) return;
     container.innerHTML = '';
     selectedChip = null;
     reweRoundScored = false;
 
-    activeReweQuiz = [
-        ...pickFromRewePool('single', 5),
-        ...pickFromRewePool('multi', 4),
-        ...pickFromRewePool('dnd', 3)
-    ];
+    if (Array.isArray(customQuestions) && customQuestions.length > 0) {
+        activeReweQuiz = customQuestions.map(q => (q.type === 'single' || q.type === 'multi') ? { ...q, shuffledOptions: shuffle(q.options) } : q);
+        const info = document.createElement('div');
+        info.className = 'mistake-mode-banner';
+        info.textContent = `🎯 Fehler-Training aktiv: Du übst gezielt ${activeReweQuiz.length} bisher falsch beantwortete Frage(n). Richtige Antworten werden aus deiner Fehlerliste gestrichen!`;
+        container.appendChild(info);
+    } else {
+        activeReweQuiz = [
+            ...pickFromRewePool('single', 5),
+            ...pickFromRewePool('multi', 4),
+            ...pickFromRewePool('dnd', 3)
+        ];
+    }
 
     activeReweQuiz.forEach((q, qIdx) => {
         const card = document.createElement('div');
@@ -8184,6 +8364,7 @@ function checkReweQuiz() {
         }
 
         if (ok) score++;
+        if (typeof recordQuizMistake === 'function') recordQuizMistake('vwl', q.id, ok);
         card.classList.remove('card-ok', 'card-err');
         card.classList.add(ok ? 'card-ok' : 'card-err');
         fb.className = 'quiz-feedback ' + (ok ? 'ok' : 'err');
@@ -8204,6 +8385,7 @@ function checkReweQuiz() {
         reweRoundScored = true;
         saveScore(score, activeReweQuiz.length);
     }
+    if (typeof updateMistakeCounts === 'function') updateMistakeCounts();
 }
 
 function resetReweQuiz() {
@@ -8354,6 +8536,180 @@ function refreshTileNotesForPlayer() {
     });
 }
 
+// --- GLOBALE SUCHLEISTE ---
+function initGlobalSearch() {
+    const input = document.getElementById('global-search-input');
+    const clearBtn = document.getElementById('global-search-clear');
+    const resultsBox = document.getElementById('global-search-results');
+    if (!input || !resultsBox) return;
+
+    const panelMeta = [
+        { panelId: 'panel-vwl', subject: 'vwl', label: 'VWL & BWL' },
+        { panelId: 'panel-marketing', subject: 'marketing', label: 'Marketing' },
+        { panelId: 'panel-rechnungswesen', subject: 'rechnungswesen', label: 'Rechnungswesen' }
+    ];
+
+    const searchIndex = [];
+    panelMeta.forEach(meta => {
+        const panel = document.getElementById(meta.panelId);
+        if (!panel) return;
+        panel.querySelectorAll('section[id]').forEach(sec => {
+            const h2 = sec.querySelector(':scope > h2');
+            const title = h2 ? h2.textContent.trim() : sec.id;
+            const rawText = sec.textContent.replace(/\s+/g, ' ').trim();
+            searchIndex.push({
+                id: sec.id,
+                subject: meta.subject,
+                subjectLabel: meta.label,
+                title,
+                text: rawText,
+                lower: rawText.toLowerCase()
+            });
+        });
+    });
+
+    function buildSnippet(text, query) {
+        const idx = text.toLowerCase().indexOf(query);
+        if (idx === -1) return text.slice(0, 125) + (text.length > 125 ? ' ...' : '');
+        const start = Math.max(0, idx - 40);
+        const end = Math.min(text.length, idx + query.length + 85);
+        return (start > 0 ? '... ' : '') + text.slice(start, end) + (end < text.length ? ' ...' : '');
+    }
+
+    function runSearch() {
+        const q = input.value.trim().toLowerCase();
+        clearBtn.classList.toggle('visible', q.length > 0);
+        if (q.length < 2) {
+            resultsBox.classList.remove('open');
+            resultsBox.innerHTML = '';
+            return;
+        }
+
+        const matches = searchIndex.filter(item => item.lower.includes(q)).slice(0, 10);
+        resultsBox.innerHTML = '';
+        if (matches.length === 0) {
+            const empty = document.createElement('div');
+            empty.className = 'search-empty';
+            empty.textContent = `Keine Treffer für „${input.value.trim()}“ gefunden.`;
+            resultsBox.appendChild(empty);
+        } else {
+            matches.forEach(item => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'search-result-item';
+                btn.innerHTML = `
+                    <div class="search-result-top">
+                        <span class="search-subject-tag"></span>
+                        <span class="search-result-title"></span>
+                    </div>
+                    <div class="search-result-snippet"></div>
+                `;
+                btn.querySelector('.search-subject-tag').textContent = item.subjectLabel;
+                btn.querySelector('.search-result-title').textContent = item.title;
+                btn.querySelector('.search-result-snippet').textContent = buildSnippet(item.text, q);
+                btn.addEventListener('click', () => {
+                    switchSubject(item.subject);
+                    resultsBox.classList.remove('open');
+                    const targetSec = document.getElementById(item.id);
+                    if (targetSec) {
+                        targetSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        targetSec.classList.remove('search-highlight');
+                        void targetSec.offsetWidth;
+                        targetSec.classList.add('search-highlight');
+                    }
+                });
+                resultsBox.appendChild(btn);
+            });
+        }
+        resultsBox.classList.add('open');
+    }
+
+    input.addEventListener('input', runSearch);
+    input.addEventListener('focus', () => { if (input.value.trim().length >= 2) resultsBox.classList.add('open'); });
+    clearBtn.addEventListener('click', () => {
+        input.value = '';
+        runSearch();
+        input.focus();
+    });
+    document.addEventListener('click', e => {
+        if (!e.target.closest('.search-shell')) resultsBox.classList.remove('open');
+    });
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') resultsBox.classList.remove('open');
+    });
+}
+
+// --- FEHLER-TRAINING PRO NUTZER & FACH ---
+const STORAGE_MISTAKES = 'hwd_quiz_mistakes_v1';
+
+function getAllMistakes() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_MISTAKES)) || {}; }
+    catch { return {}; }
+}
+
+function saveAllMistakes(data) {
+    localStorage.setItem(STORAGE_MISTAKES, JSON.stringify(data));
+}
+
+function getPlayerMistakes(subject) {
+    const all = getAllMistakes();
+    const userMap = all[currentPlayer] || {};
+    return Array.isArray(userMap[subject]) ? userMap[subject] : [];
+}
+
+function recordQuizMistake(subject, qId, isOk) {
+    const all = getAllMistakes();
+    if (!all[currentPlayer]) all[currentPlayer] = { vwl: [], mkt: [], rewe: [] };
+    if (!Array.isArray(all[currentPlayer][subject])) all[currentPlayer][subject] = [];
+    const list = all[currentPlayer][subject];
+    const idx = list.indexOf(qId);
+    if (isOk) {
+        if (idx !== -1) list.splice(idx, 1);
+    } else {
+        if (idx === -1) list.push(qId);
+    }
+    saveAllMistakes(all);
+}
+
+function updateMistakeCounts() {
+    const map = {
+        vwl: 'vwl-mistake-count',
+        mkt: 'mkt-mistake-count',
+        rewe: 'rewe-mistake-count'
+    };
+    Object.entries(map).forEach(([subject, elId]) => {
+        const el = document.getElementById(elId);
+        if (el) el.textContent = getPlayerMistakes(subject).length;
+    });
+}
+
+function startMistakeTraining(subject) {
+    const bankMap = {
+        vwl: { bank: questionBank, render: renderQuiz, bannerId: 'motivation-banner', progressFn: updateProgress },
+        mkt: { bank: mktQuestionBank, render: renderMktQuiz, bannerId: 'mkt-motivation-banner', progressFn: updateMktProgress },
+        rewe: { bank: reweQuestionBank, render: renderReweQuiz, bannerId: 'rewe-motivation-banner', progressFn: updateReweProgress }
+    };
+    const cfg = bankMap[subject];
+    if (!cfg) return;
+
+    const mistakeIds = getPlayerMistakes(subject);
+    const banner = document.getElementById(cfg.bannerId);
+    if (mistakeIds.length === 0) {
+        if (banner) {
+            banner.className = 'motivation-banner great';
+            banner.textContent = `🎉 Super, ${currentPlayer}! Du hast aktuell keine offenen Fehler in diesem Fach – starte einfach eine normale Quiz-Runde.`;
+        }
+        return;
+    }
+
+    if (banner) banner.className = 'motivation-banner';
+    const picked = shuffle(cfg.bank.filter(q => mistakeIds.includes(q.id))).slice(0, 12);
+    if (subject === 'vwl') roundScored = false;
+    cfg.render(picked);
+    if (typeof cfg.progressFn === 'function') cfg.progressFn();
+}
+
+initGlobalSearch();
 initTileNotes();
 renderReweQuiz();
 updatePlayerUI();
