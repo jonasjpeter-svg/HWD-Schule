@@ -399,16 +399,51 @@
             border-color: var(--red);
             box-shadow: 0 0 24px rgba(239, 68, 68, 0.2);
         }
+        .quiz-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.45rem;
+        }
         .quiz-type-tag {
             display: inline-block;
             font-size: 0.72rem;
             font-weight: 700;
             text-transform: uppercase;
-            padding: 0.18rem 0.6rem;
-            border-radius: 999px;
-            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            padding: 0.18rem 0.65rem;
+            border-radius: 8px 2px 8px 2px;
+            background: radial-gradient(125% 95% at 62% 100%, rgba(147, 197, 253, 0.55) 0%, rgba(37, 99, 235, 0.85) 55%, #172554 100%);
+            border: 1px solid rgba(191, 219, 254, 0.35);
             color: #ffffff;
-            margin-bottom: 0.45rem;
+        }
+        .quiz-stat-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.74rem;
+            font-weight: 700;
+            padding: 0.18rem 0.65rem;
+            border-radius: 8px 2px 8px 2px;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(148, 163, 184, 0.32);
+            color: #cbd5e1;
+        }
+        .quiz-stat-pill.stat-easy {
+            background: rgba(20, 83, 45, 0.55);
+            border-color: rgba(74, 222, 128, 0.45);
+            color: #bbf7d0;
+        }
+        .quiz-stat-pill.stat-mid {
+            background: rgba(120, 53, 15, 0.55);
+            border-color: rgba(251, 191, 36, 0.48);
+            color: #fde68a;
+        }
+        .quiz-stat-pill.stat-hard {
+            background: rgba(127, 29, 29, 0.6);
+            border-color: rgba(248, 113, 113, 0.5);
+            color: #fecaca;
         }
         .quiz-question h4 { margin: 0.25rem 0 0.8rem; color: #ffffff; font-size: 1.03rem; }
         .quiz-option {
@@ -4621,10 +4656,7 @@ function renderQuiz(customQuestions) {
         card.className = 'quiz-question';
         card.id = 'card-' + q.id;
 
-        const badge = document.createElement('span');
-        badge.className = 'quiz-type-tag';
-        badge.textContent = q.type === 'single' ? 'Single Choice' : (q.type === 'multi' ? 'Multiple Choice' : 'Drag & Drop');
-        card.appendChild(badge);
+        card.appendChild(createQuestionHeaderRow(q));
 
         const title = document.createElement('h4');
         title.textContent = `${qIdx + 1}. ${q.question}`;
@@ -4885,6 +4917,7 @@ function updatePlayerUI() {
     document.getElementById('hero-player-count').textContent = Object.keys(players).length;
     if (typeof refreshTileNotesForPlayer === 'function') refreshTileNotesForPlayer();
     if (typeof updateMistakeCounts === 'function') updateMistakeCounts();
+    if (typeof refreshAllQuestionStatPills === 'function') refreshAllQuestionStatPills();
 }
 
 function loginPlayerFrom(inputId) {
@@ -6295,10 +6328,7 @@ function renderMktQuiz(customQuestions) {
         card.className = 'quiz-question';
         card.id = 'card-' + q.id;
 
-        const badge = document.createElement('span');
-        badge.className = 'quiz-type-tag';
-        badge.textContent = q.type === 'single' ? 'Single Choice' : (q.type === 'multi' ? 'Multiple Choice' : 'Drag & Drop');
-        card.appendChild(badge);
+        card.appendChild(createQuestionHeaderRow(q));
 
         const title = document.createElement('h4');
         title.textContent = `${qIdx + 1}. ${q.question}`;
@@ -8265,10 +8295,7 @@ function renderReweQuiz(customQuestions) {
         card.className = 'quiz-question';
         card.id = 'card-' + q.id;
 
-        const badge = document.createElement('span');
-        badge.className = 'quiz-type-tag';
-        badge.textContent = q.type === 'single' ? 'Single Choice' : (q.type === 'multi' ? 'Multiple Choice' : 'Drag & Drop');
-        card.appendChild(badge);
+        card.appendChild(createQuestionHeaderRow(q));
 
         const title = document.createElement('h4');
         title.textContent = `${qIdx + 1}. ${q.question}`;
@@ -8737,8 +8764,84 @@ function initGlobalSearch() {
     });
 }
 
-// --- FEHLER-TRAINING PRO NUTZER & FACH ---
-const STORAGE_MISTAKES = 'hwd_quiz_mistakes_v1';
+// --- FEHLER-TRAINING & PRO-FRAGE-STATISTIK PRO NUTZER ---
+var STORAGE_MISTAKES = 'hwd_quiz_mistakes_v1';
+var STORAGE_QSTATS = 'hwd_quiz_qstats_v1';
+
+function getAllQStats() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_QSTATS)) || {}; }
+    catch { return {}; }
+}
+
+function saveAllQStats(data) {
+    localStorage.setItem(STORAGE_QSTATS, JSON.stringify(data));
+}
+
+function getQuestionStat(qId) {
+    const all = getAllQStats();
+    const userMap = all[currentPlayer] || {};
+    return userMap[qId] || { attempts: 0, correct: 0, recent: [] };
+}
+
+function recordQuestionStat(qId, isOk) {
+    const all = getAllQStats();
+    if (!all[currentPlayer]) all[currentPlayer] = {};
+    const cur = all[currentPlayer][qId] || { attempts: 0, correct: 0, recent: [] };
+    cur.attempts += 1;
+    if (isOk) cur.correct += 1;
+    if (!Array.isArray(cur.recent)) cur.recent = [];
+    cur.recent.push(isOk ? 1 : 0);
+    if (cur.recent.length > 5) cur.recent = cur.recent.slice(-5);
+    all[currentPlayer][qId] = cur;
+    saveAllQStats(all);
+}
+
+function applyStatPillContent(pill, qId) {
+    const st = getQuestionStat(qId);
+    pill.className = 'quiz-stat-pill';
+    if (!st || st.attempts === 0) {
+        pill.textContent = 'Neu · noch ungelöst';
+        pill.title = 'Noch keine Versuche für diese Frage';
+        return;
+    }
+    const recent = Array.isArray(st.recent) && st.recent.length > 0 ? st.recent : [];
+    const recentOk = recent.reduce((sum, v) => sum + v, 0);
+    const pct = recent.length > 0
+        ? Math.round((recentOk / recent.length) * 100)
+        : Math.round((st.correct / st.attempts) * 100);
+    let level = 'Mittel';
+    let dot = '🟡';
+    let cls = 'stat-mid';
+    if (pct >= 75) { level = 'Leicht'; dot = '🟢'; cls = 'stat-easy'; }
+    else if (pct < 40) { level = 'Schwer'; dot = '🔴'; cls = 'stat-hard'; }
+    pill.classList.add(cls);
+    const ratioTxt = recent.length > 0 ? `${recentOk}/${recent.length}` : `${st.correct}/${st.attempts}`;
+    pill.textContent = `${dot} ${level} · ${pct}% (${ratioTxt})`;
+    pill.title = `Letzte ${recent.length || st.attempts} Versuche: ${pct}% richtig (Gesamt: ${st.correct}/${st.attempts})`;
+}
+
+function createQuestionHeaderRow(q) {
+    const row = document.createElement('div');
+    row.className = 'quiz-card-top';
+
+    const badge = document.createElement('span');
+    badge.className = 'quiz-type-tag';
+    badge.textContent = q.type === 'single' ? 'Single Choice' : (q.type === 'multi' ? 'Multiple Choice' : 'Drag & Drop');
+    row.appendChild(badge);
+
+    const statPill = document.createElement('span');
+    statPill.className = 'quiz-stat-pill';
+    statPill.dataset.qid = q.id;
+    applyStatPillContent(statPill, q.id);
+    row.appendChild(statPill);
+    return row;
+}
+
+function refreshAllQuestionStatPills() {
+    document.querySelectorAll('.quiz-stat-pill[data-qid]').forEach(pill => {
+        applyStatPillContent(pill, pill.dataset.qid);
+    });
+}
 
 function getAllMistakes() {
     try { return JSON.parse(localStorage.getItem(STORAGE_MISTAKES)) || {}; }
@@ -8756,6 +8859,10 @@ function getPlayerMistakes(subject) {
 }
 
 function recordQuizMistake(subject, qId, isOk) {
+    recordQuestionStat(qId, isOk);
+    const pill = document.querySelector(`.quiz-stat-pill[data-qid="${qId}"]`);
+    if (pill) applyStatPillContent(pill, qId);
+
     const all = getAllMistakes();
     if (!all[currentPlayer]) all[currentPlayer] = { vwl: [], mkt: [], rewe: [] };
     if (!Array.isArray(all[currentPlayer][subject])) all[currentPlayer][subject] = [];
