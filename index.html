@@ -777,7 +777,7 @@
                 <div class="stat-lbl">Lernblöcke komplett</div>
             </div>
             <div class="bento-stat">
-                <div class="stat-val">60</div>
+                <div class="stat-val">100</div>
                 <div class="stat-lbl">Rotierende VWL/BWL-Quizfragen</div>
             </div>
             <div class="bento-stat">
@@ -3861,6 +3861,504 @@ const questionBank = [
             { id: 'unt', label: 'Unternehmerleistung' }
         ],
         explanation: 'Die 4 Produktionsfaktoren: Arbeit (Mitarbeitende), Kapital (Maschinen/Geld), Boden (Natur/Rohstoffe), Unternehmerleistung.'
+    },
+    {
+        id: 'vs_100_1', type: 'single',
+        question: 'Welche Stufe steht in der Maslow-Bedürfnispyramide ganz unten als Basis?',
+        options: [
+            { text: 'Grundbedürfnisse (Nahrung, Schlaf, Wohnung)', ok: true },
+            { text: 'Selbstverwirklichung', ok: false },
+            { text: 'Achtung & Anerkennung', ok: false },
+            { text: 'Soziale Bedürfnisse', ok: false }
+        ],
+        explanation: 'Maslow: 1. Grundbedürfnisse → 2. Sicherheit → 3. Soziale Bedürfnisse → 4. Achtung/Anerkennung → 5. Selbstverwirklichung.'
+    },
+    {
+        id: 'vs_100_2', type: 'single',
+        question: 'Warum neigen reine Umweltgüter (wie saubere Luft oder freie Landschaft) ohne staatliche Regeln zur Verschwendung?',
+        options: [
+            { text: 'Weil sie niemandem gehören (Allmendegut) und keinen Marktpreis haben', ok: true },
+            { text: 'Weil sie unendlich teuer verkauft werden', ok: false },
+            { text: 'Weil sie ausschliesslich von Banken produziert werden', ok: false },
+            { text: 'Weil sie eine extrem elastische Nachfrage haben', ok: false }
+        ],
+        explanation: 'Freie bzw. Umweltgüter ohne Eigentumsrechte führen zur Übernutzung, wenn der Staat keine Anreize/Regeln (z.B. CO2-Abgabe) setzt.'
+    },
+    {
+        id: 'vs_100_3', type: 'single',
+        question: 'Was versteht man in der Volkswirtschaftslehre unter dem Grundproblem der „Knappheit“?',
+        options: [
+            { text: 'Unbegrenzte menschliche Bedürfnisse treffen auf begrenzte Güter und Ressourcen', ok: true },
+            { text: 'Unternehmen produzieren grundsätzlich mehr als gewünscht wird', ok: false },
+            { text: 'Der Staat verbietet jede Art von Konsumausgaben', ok: false },
+            { text: 'Es gibt zu viele Produktionsfaktoren bei null Nachfrage', ok: false }
+        ],
+        explanation: 'Knappheit ist der Kern der Ökonomie: Bedürfnisse sind unbegrenzt, Mittel/Ressourcen sind begrenzt.'
+    },
+    {
+        id: 'vs_100_4', type: 'single',
+        question: 'Welches Ergebnis entsteht im Preis-/Mengen-Diagramm bei einem staatlichen Mindestpreis ÜBER dem Gleichgewichtspreis (z.B. Agrar-Mindestpreis)?',
+        options: [
+            { text: 'Angebotsüberschuss (z.B. Milchsee / Butterberg)', ok: true },
+            { text: 'Nachfrageüberschuss (Warteschlangen)', ok: false },
+            { text: 'Vollständige Markträumung ohne Überschuss', ok: false },
+            { text: 'Sofortiger Preisverfall unter 0 CHF', ok: false }
+        ],
+        explanation: 'Liegt der Mindestpreis über dem Gleichgewichtspreis, bieten Produzenten mehr an, als Konsumenten kaufen → Angebotsüberschuss.'
+    },
+    {
+        id: 'vs_100_5', type: 'single',
+        question: 'Welches Beispiel zeigt eine UNELASTISCHE Nachfrage?',
+        options: [
+            { text: 'Lebensnotwendiges Medikament (z.B. Insulin): +20 % Preis → nur −2 % Menge', ok: true },
+            { text: 'Austauschbare Süssigkeit: +10 % Preis → −25 % Menge', ok: false },
+            { text: 'Pauschalreise in der Nebensaison: +15 % Preis → −30 % Menge', ok: false },
+            { text: 'Luxus-Armbanduhr: +10 % Preis → −20 % Menge', ok: false }
+        ],
+        explanation: 'Bei lebensnotwendigen Gütern ohne nahen Ersatz reagieren Käufer kaum auf Preisänderungen (|E| < 1).'
+    },
+    {
+        id: 'vs_100_6', type: 'single',
+        question: 'Welche Aufgabe hat die Wettbewerbskommission (WEKO) in der Schweiz?',
+        options: [
+            { text: 'Sie bekämpft schädliche Kartelle, Preisabsprachen und den Missbrauch marktbeherrschender Stellungen', ok: true },
+            { text: 'Sie druckt die Schweizer Banknoten', ok: false },
+            { text: 'Sie erhebt die direkte Bundessteuer auf Löhnen', ok: false },
+            { text: 'Sie vergibt Konzessionen für den Skiliftbetrieb', ok: false }
+        ],
+        explanation: 'Die WEKO wacht über das Schweizer Kartellgesetz (Wettbewerbspolitik).'
+    },
+    {
+        id: 'vs_100_7', type: 'single',
+        question: 'Wie nennt man eine Konjunkturphase, in der das reale BIP in mindestens zwei aufeinanderfolgenden Quartalen sinkt?',
+        options: [
+            { text: 'Rezession', ok: true },
+            { text: 'Aufschwung (Expansion)', ok: false },
+            { text: 'Hochkonjunktur (Boom)', ok: false },
+            { text: 'Stagflation per Definition', ok: false }
+        ],
+        explanation: 'Technische Definition der Rezession: Rückgang des realen BIP in zwei Quartalen hintereinander.'
+    },
+    {
+        id: 'vs_100_8', type: 'single',
+        question: 'Welche beiden Ziele im „Magischen Sechseck“ stehen häufig in einem Zielkonflikt zueinander?',
+        options: [
+            { text: 'Hohes Wirtschaftswachstum vs. Umweltschutz / Preisstabilität', ok: true },
+            { text: 'Hohe Arbeitslosigkeit vs. hohe Inflation', ok: false },
+            { text: 'Weniger Importe vs. weniger Exporte', ok: false },
+            { text: 'Tiefe Produktivität vs. hohe Löhne', ok: false }
+        ],
+        explanation: 'Starkes Wachstum kann Umweltbelastung und Inflation anheizen – daher spricht man vom „magischen“ Zielkonflikt.'
+    },
+    {
+        id: 'vs_100_9', type: 'single',
+        question: 'Was kennzeichnet die GmbH (Gesellschaft mit beschränkter Haftung) in der Schweiz?',
+        options: [
+            { text: 'Mindeststammkapital CHF 20’000, Haftung auf das Gesellschaftsvermögen beschränkt', ok: true },
+            { text: 'Mindestkapital CHF 100’000 und anonyme Inhaberaktien an der Börse', ok: false },
+            { text: 'Unbeschränkte persönliche Haftung aller Gesellschafter mit Privatvermögen', ok: false },
+            { text: 'Kein Handelsregistereintrag erforderlich', ok: false }
+        ],
+        explanation: 'Die GmbH benötigt CHF 20’000 Stammkapital (voll einbezahlt) und schützt das Privatvermögen der Gesellschafter.'
+    },
+    {
+        id: 'vs_100_10', type: 'single',
+        question: 'Welches Führungsinstrument prüft interne Stärken/Schwächen sowie externe Chancen/Gefahren?',
+        options: [
+            { text: 'SWOT-Analyse', ok: true },
+            { text: 'BCG-Matrix', ok: false },
+            { text: 'Break-Even-Analyse', ok: false },
+            { text: 'Zuschlagskalkulation', ok: false }
+        ],
+        explanation: 'SWOT = Strengths, Weaknesses (intern) & Opportunities, Threats (extern).'
+    },
+    {
+        id: 'vs_100_11', type: 'single',
+        question: 'Was versteht man in der BWL unter einer „Holdinggesellschaft“?',
+        options: [
+            { text: 'Eine Dachgesellschaft, die Beteiligungen an anderen rechtlich selbstständigen Unternehmen hält', ok: true },
+            { text: 'Ein reines Logistikunternehmen für Lagerhaltung', ok: false },
+            { text: 'Eine staatliche Behörde für Arbeitslosenversicherung', ok: false },
+            { text: 'Ein kurzfristiger Bankkredit über 30 Tage', ok: false }
+        ],
+        explanation: 'Eine Holding hält und verwaltet Beteiligungen an Tochtergesellschaften.'
+    },
+    {
+        id: 'vs_100_12', type: 'single',
+        question: 'Wann liegt eine „Innenfinanzierung“ im Unternehmen vor?',
+        options: [
+            { text: 'Wenn Finanzmittel aus dem eigenen Umsatz/Gewinn (z.B. einbehaltene Gewinne, Abschreibungsgegenwerte) stammen', ok: true },
+            { text: 'Wenn die Bank einen neuen Hypothekarkredit gewährt', ok: false },
+            { text: 'Wenn neue Aktionäre frisches Kapital von aussen einbezahlen', ok: false },
+            { text: 'Wenn der Staat eine einmalige Subvention überweist', ok: false }
+        ],
+        explanation: 'Innenfinanzierung = Selbstfinanzierung (Gewinne) & Finanzierung aus Abschreibungen/Rückstellungen ohne externe Geldgeber.'
+    },
+    {
+        id: 'vs_100_13', type: 'single',
+        question: 'Welche Aussage zur „Produktivität“ in der BWL stimmt?',
+        options: [
+            { text: 'Verhältnis von Output-Menge zu Input-Menge (z.B. Stück pro Arbeitsstunde)', ok: true },
+            { text: 'Gewinn geteilt durch Eigenkapital in Prozent', ok: false },
+            { text: 'Nettoerlös minus Fixkosten', ok: false },
+            { text: 'Kassenbestand geteilt durch kurzfristiges Fremdkapital', ok: false }
+        ],
+        explanation: 'Produktivität ist ein Mengenverhältnis (Output / Input), Wirtschaftlichkeit ein Wertverhältnis (Ertrag / Aufwand).'
+    },
+    {
+        id: 'vs_100_14', type: 'single',
+        question: 'Welcher Begriff beschreibt die Zusammenarbeit rechtlich und wirtschaftlich selbstständiger Unternehmen auf gleicher Stufe (z.B. Einkaufsgemeinschaft)?',
+        options: [
+            { text: 'Kooperation (im Gegensatz zur Fusion, bei der die Selbstständigkeit endet)', ok: true },
+            { text: 'Liquidation', ok: false },
+            { text: 'Insolvenz', ok: false },
+            { text: 'Monopolisierung durch Gesetz', ok: false }
+        ],
+        explanation: 'Bei einer Kooperation bleiben die Partner rechtlich selbstständig; bei einer Fusion verschmelzen sie zu einem Unternehmen.'
+    },
+    {
+        id: 'vs_100_15', type: 'single',
+        question: 'Welche Massnahme gehört zu den automatischen Stabilisatoren in einer Rezession?',
+        options: [
+            { text: 'Arbeitslosenversicherung (zahlt mehr Leistungen aus, Steuereinnahmen sinken automatisch)', ok: true },
+            { text: 'Erhöhung der Mehrwertsteuer mitten in der Krise', ok: false },
+            { text: 'Verdoppelung des Leitzinses', ok: false },
+            { text: 'Streichung aller Infrastrukturinvestitionen', ok: false }
+        ],
+        explanation: 'Arbeitslosenversicherung und progressive Steuern wirken antizyklisch ohne neues Gesetz – das sind automatische Stabilisatoren.'
+    },
+    {
+        id: 'vs_100_16', type: 'single',
+        question: 'Was gehört in den Bereich „Information & Prohibition“ bei staatlichen Eingriffen?',
+        options: [
+            { text: 'Deklarationspflicht auf Lebensmitteln sowie Verbote gefährlicher Substanzen', ok: true },
+            { text: 'Senkung der Hypothekarzinsen durch Geschäftsbanken', ok: false },
+            { text: 'Bau einer neuen Kantonsstrasse', ok: false },
+            { text: 'Gründung eines privaten Mobilfunk-Oligopols', ok: false }
+        ],
+        explanation: 'Schutz vor Informationsasymmetrien & Schäden erfolgt über Deklarationspflichten (Information) und Verbote (Prohibition).'
+    },
+    {
+        id: 'vm_100_1', type: 'multi',
+        question: 'Welche Aussagen zur Vollständigen Konkurrenz stimmen? (Mehrere richtig)',
+        options: [
+            { text: 'Es gibt sehr viele Käufer und Verkäufer', ok: true },
+            { text: 'Die gehandelten Güter sind homogen (völlig gleichartig)', ok: true },
+            { text: 'Es herrscht volle Markttransparenz ohne Eintrittsbarrieren', ok: true },
+            { text: 'Ein einzelner kleiner Anbieter kann den Marktpreis beliebig diktieren', ok: false }
+        ],
+        explanation: 'Bei vollständiger Konkurrenz ist der einzelne Anbieter Preisnehmer, nicht Preissetzer.'
+    },
+    {
+        id: 'vm_100_2', type: 'multi',
+        question: 'Welche Instrumente nutzt die Schweizerische Nationalbank (SNB) zur Geldmengensteuerung? (Mehrere richtig)',
+        options: [
+            { text: 'Festlegung des Leitzinses', ok: true },
+            { text: 'Kauf und Verkauf von Devisen (Fremdwährungen) & Wertpapieren', ok: true },
+            { text: 'Vorschriften zu Mindestreserven der Geschäftsbanken', ok: true },
+            { text: 'Festsetzung der Mehrwertsteuer-Sätze', ok: false }
+        ],
+        explanation: 'Die MWST-Sätze legt der Bund (Politik/Volk) fest, nicht die Nationalbank.'
+    },
+    {
+        id: 'vm_100_3', type: 'multi',
+        question: 'Welche Lösungen helfen gegen „Adverse Selektion“ (vor Vertragsabschluss)? (Mehrere richtig)',
+        options: [
+            { text: 'Obligatorische Versicherung (z.B. Grundversicherung KVG)', ok: true },
+            { text: 'Kollektivversicherungen (ganze Firmen/Gruppen versichern)', ok: true },
+            { text: 'Screening & Signalisieren (z.B. Gesundheitsprüfung, Zeugnisse, Bonus-Malus)', ok: true },
+            { text: 'Verbot jeglicher Vertragsbedingungen', ok: false }
+        ],
+        explanation: 'Obligatorium, Kollektivverträge und Screening/Signaling verhindern die Entmischung guter und schlechter Risiken.'
+    },
+    {
+        id: 'vm_100_4', type: 'multi',
+        question: 'Welche Massnahmen wirken gegen „Moral Hazard“ (nach Vertragsabschluss)? (Mehrere richtig)',
+        options: [
+            { text: 'Selbstbehalt und Franchise für Versicherte', ok: true },
+            { text: 'Bonus-Malus-System (Schadenfreiheitsrabatt)', ok: true },
+            { text: 'Kontrollen / Überwachung und klare Sorgfaltspflichten', ok: true },
+            { text: 'Erstattung von 200 % jedes selbst verschuldeten Schadens', ok: false }
+        ],
+        explanation: 'Selbstbeteiligung, Bonus-Malus und Kontrollen erhalten den Anreiz zu sorgfältigem Verhalten.'
+    },
+    {
+        id: 'vm_100_5', type: 'multi',
+        question: 'Welche Ziele gehören zum „Magischen Sechseck“ der Volkswirtschaft? (Mehrere richtig)',
+        options: [
+            { text: 'Stetiges Wirtschaftswachstum & Vollbeschäftigung', ok: true },
+            { text: 'Preisstabilität (keine hohe Inflation/Deflation) & ausgeglichene Aussenwirtschaft', ok: true },
+            { text: 'Soziale Gerechtigkeit & Erhalt der Umwelt', ok: true },
+            { text: 'Maximierung von Kartellgewinnen', ok: false }
+        ],
+        explanation: 'Die 6 Ziele: Wachstum, Vollbeschäftigung, Preisstabilität, Aussenwirtschaftliches Gleichgewicht, Soziale Gerechtigkeit, Umwelt.'
+    },
+    {
+        id: 'vm_100_6', type: 'multi',
+        question: 'Welche Vorteile hat eine Aktiengesellschaft (AG) gegenüber einem Einzelunternehmen? (Mehrere richtig)',
+        options: [
+            { text: 'Haftung ist auf das Gesellschaftsvermögen beschränkt (Privatvermögen geschützt)', ok: true },
+            { text: 'Leichtere Kapitalbeschaffung durch Ausgabe von Aktien', ok: true },
+            { text: 'Unabhängiger vom Eigentümerwechsel / Nachfolge leichter regelbar', ok: true },
+            { text: 'Es ist keinerlei Mindestkapital nötig (0 CHF)', ok: false }
+        ],
+        explanation: 'Eine AG braucht CHF 100’000 Aktienkapital (mind. CHF 50’000 liberiert), bietet aber Haftungsbeschränkung & Kapitalzugang.'
+    },
+    {
+        id: 'vm_100_7', type: 'multi',
+        question: 'Welche Faktoren zählen zu den 4 Produktionsfaktoren der VWL? (Mehrere richtig)',
+        options: [
+            { text: 'Arbeit', ok: true },
+            { text: 'Kapital', ok: true },
+            { text: 'Boden (Natur/Ressourcen) & Unternehmerleistung', ok: true },
+            { text: 'Mehrwertsteuer', ok: false }
+        ],
+        explanation: 'Die 4 Produktionsfaktoren sind Arbeit, Kapital, Boden und Unternehmerleistung.'
+    },
+    {
+        id: 'vm_100_8', type: 'multi',
+        question: 'Welche Aufgaben übernimmt der Staat in der Marktwirtschaft? (Mehrere richtig)',
+        options: [
+            { text: 'Bereitstellung öffentlicher Güter (Polizei, Justiz, Strassen, Bildung)', ok: true },
+            { text: 'Wettbewerbspolitik (Kartellverbot durch WEKO)', ok: true },
+            { text: 'Umwelt- & Sozialpolitik (CO2-Abgabe, AHV/IV/ALV)', ok: true },
+            { text: 'Festlegung aller täglichen Gemüsepreise in sämtlichen Supermärkten', ok: false }
+        ],
+        explanation: 'In der sozialen Marktwirtschaft greift der Staat bei Marktversagen, öffentlichen Gütern und sozialem Ausgleich ein – nicht bei allen Detailpreisen.'
+    },
+    {
+        id: 'vm_100_9', type: 'multi',
+        question: 'Welche Beispiele zeigen eine staatliche Besteuerung vs. Subvention im Markt? (Mehrere richtig)',
+        options: [
+            { text: 'Lenkungssteuer (z.B. CO2-Abgabe) verteuert unerwünschte Güter und senkt die Nachfrage', ok: true },
+            { text: 'Subventionen (z.B. ÖV oder erneuerbare Energien) verbilligen erwünschte Güter', ok: true },
+            { text: 'Externe Kosten (z.B. Umweltschäden) werden durch Steuern internalisiert', ok: true },
+            { text: 'Steuern senken immer automatisch den Endpreis für Konsumenten', ok: false }
+        ],
+        explanation: 'Steuern erhöhen grundsätzlich den Preis (Verteuerung), Subventionen senken ihn.'
+    },
+    {
+        id: 'vm_100_10', type: 'multi',
+        question: 'Welche Kriterien gehören zu einer klassischen Unternehmensanalyse (Umwelt & Strategie)? (Mehrere richtig)',
+        options: [
+            { text: 'Ökonomische, technologische, ökologische, rechtliche und gesellschaftliche Umweltsphären (PESTEL)', ok: true },
+            { text: 'Stakeholder-Analyse (Kunden, Mitarbeitende, Eigentümer, Staat, Lieferanten)', ok: true },
+            { text: 'SWOT-Analyse zur Strategieableitung', ok: true },
+            { text: 'Ausschliessliches Würfeln der Jahresziele', ok: false }
+        ],
+        explanation: 'Umweltsphären, Anspruchsgruppen (Stakeholder) und SWOT bilden die strategische Basis in der BWL.'
+    },
+    {
+        id: 'vm_100_11', type: 'multi',
+        question: 'Was stimmt zu Aufbau- und Ablauforganisation in Unternehmen? (Mehrere richtig)',
+        options: [
+            { text: 'Aufbauorganisation regelt Stellen, Abteilungen, Hierarchie und Weisungsbefugnisse (Organigramm)', ok: true },
+            { text: 'Ablauforganisation regelt zeitliche und räumliche Arbeitsprozesse (Workflows)', ok: true },
+            { text: 'Stabstellen beraten die Linieninstanzen ohne eigene direkte Weisungsbefugnis', ok: true },
+            { text: 'Ein Organigramm zeigt ausschliesslich die Kontonummern der Buchhaltung', ok: false }
+        ],
+        explanation: 'Aufbau = Struktur/Organigramm; Ablauf = Prozesse; Stab = Beratung ohne direkte Linienweisung.'
+    },
+    {
+        id: 'vm_100_12', type: 'multi',
+        question: 'Welche Punkte zählen zur „Fremdfinanzierung“ (Aussensicht)? (Mehrere richtig)',
+        options: [
+            { text: 'Bankdarlehen und Hypotheken', ok: true },
+            { text: 'Lieferantenkredite (Kreditoren / VLL)', ok: true },
+            { text: 'Ausgabe von Obligationenanleihen', ok: true },
+            { text: 'Einbehaltene Gewinne (Gewinnreserven)', ok: false }
+        ],
+        explanation: 'Einbehaltene Gewinne sind Eigen-/Innenfinanzierung; Darlehen, Kreditoren und Obligationen sind Fremdfinanzierung.'
+    },
+    {
+        id: 'vm_100_13', type: 'multi',
+        question: 'Was passiert in einer „Hochkonjunktur (Boom)“? (Mehrere richtig)',
+        options: [
+            { text: 'Sehr hohe Kapazitätsauslastung und tiefe Arbeitslosigkeit', ok: true },
+            { text: 'Steigende Löhne und Gefahr von Überhitzung / Inflation', ok: true },
+            { text: 'Starke Investitions- und Konsumnachfrage', ok: true },
+            { text: 'Massiver Einbruch des BIP über mehrere Jahre', ok: false }
+        ],
+        explanation: 'Im Boom laufen die Maschinen auf Volllast, Arbeitslosigkeit ist tief, aber Inflationsdruck steigt.'
+    },
+    {
+        id: 'vm_100_14', type: 'multi',
+        question: 'Welche Aussagen zu Inflation und Deflation sind richtig? (Mehrere richtig)',
+        options: [
+            { text: 'Inflation = anhaltender Anstieg des allgemeinen Preisniveaus (Geld verliert an Kaufkraft)', ok: true },
+            { text: 'Deflation = allgemeiner Rückgang des Preisniveaus (Kaufaufschub-Gefahr!)', ok: true },
+            { text: 'Der Landesindex der Konsumentenpreise (LIK) misst in der Schweiz die Teuerung', ok: true },
+            { text: 'Bei Inflation steigt die reale Kaufkraft eines unveränderten Sparbetrags', ok: false }
+        ],
+        explanation: 'Bei Inflation sinkt die Kaufkraft des Geldes; in der Schweiz misst der LIK die Preisentwicklung.'
+    },
+    {
+        id: 'vdnd_100_1', type: 'dnd',
+        question: 'Drag & Drop (Maslow-Pyramide): Ordne die Beispiele den richtigen Bedürfnisstufen zu.',
+        items: [
+            { id: 'msw1', text: 'Nahrung, Wasser, Schlaf & Kleidung', target: 'grund' },
+            { id: 'msw2', text: 'Fester Arbeitsvertrag, Versicherungen & Schutz', target: 'sich' },
+            { id: 'msw3', text: 'Freundschaft, Teamzugehörigkeit & Familie', target: 'soz' },
+            { id: 'msw4', text: 'Beförderung, Status, Lob & eigene Entfaltung', target: 'ich' }
+        ],
+        targets: [
+            { id: 'grund', label: '1. Grundbedürfnisse' },
+            { id: 'sich', label: '2. Sicherheitsbedürfnisse' },
+            { id: 'soz', label: '3. Soziale Bedürfnisse' },
+            { id: 'ich', label: '4./5. Achtung & Selbstverwirklichung' }
+        ],
+        explanation: 'Maslow-Stufen von unten nach oben: Grund → Sicherheit → Sozial → Achtung & Selbstverwirklichung.'
+    },
+    {
+        id: 'vdnd_100_2', type: 'dnd',
+        question: 'Drag & Drop (Rechtsformen Schweiz): Ordne die Merkmale der passenden Rechtsform zu.',
+        items: [
+            { id: 'rf1', text: 'Alleiniger Inhaber, unbeschränkte persönliche Haftung', target: 'eu' },
+            { id: 'rf2', text: 'Mindestkapital CHF 20’000, Stammanteile', target: 'gmbh' },
+            { id: 'rf3', text: 'Mindestkapital CHF 100’000, Aktienkapital', target: 'ag' },
+            { id: 'rf4', text: 'Mehrere Gesellschafter mit solidarischer Haftung', target: 'koll' }
+        ],
+        targets: [
+            { id: 'eu', label: 'Einzelunternehmen' },
+            { id: 'gmbh', label: 'GmbH' },
+            { id: 'ag', label: 'Aktiengesellschaft (AG)' },
+            { id: 'koll', label: 'Kollektivgesellschaft' }
+        ],
+        explanation: 'Einzelunternehmen = 1 Person, voll haftbar; GmbH = 20’000 CHF; AG = 100’000 CHF; Kollektiv = mind. 2 voll haftende Gesellschafter.'
+    },
+    {
+        id: 'vdnd_100_3', type: 'dnd',
+        question: 'Drag & Drop (Geldpolitik SNB): Ordne die Massnahme ihrer konjunkturellen Wirkung zu.',
+        items: [
+            { id: 'snb1', text: 'SNB erhöht den Leitzins deutlich', target: 'rest' },
+            { id: 'snb2', text: 'SNB senkt den Leitzins stark', target: 'exp' },
+            { id: 'snb3', text: 'SNB verkauft Devisen (zieht CHF aus dem Markt)', target: 'rest' },
+            { id: 'snb4', text: 'SNB kauft Devisen (gibt neue CHF in den Markt)', target: 'exp' }
+        ],
+        targets: [
+            { id: 'rest', label: 'Restriktiv (Geldmenge sinkt / bremst Inflation)' },
+            { id: 'exp', label: 'Expansiv (Geldmenge steigt / stützt Konjunktur)' }
+        ],
+        explanation: 'Zinserhöhung & Devisenverkauf entziehen Geld (restriktiv); Zinssenkung & Devisenkauf erhöhen die Geldmenge (expansiv).'
+    },
+    {
+        id: 'vdnd_100_4', type: 'dnd',
+        question: 'Drag & Drop (Informationsprobleme): Ordne Problem und Lösung richtig zu.',
+        items: [
+            { id: 'infp1', text: 'Schlechte Risiken bleiben unter sich (vor Vertrag)', target: 'adv' },
+            { id: 'infp2', text: 'Unvorsichtigeres Verhalten nach Versicherungsabschluss', target: 'mh' },
+            { id: 'infp3', text: 'Obligatorium & Kollektivversicherung', target: 'ladv' },
+            { id: 'infp4', text: 'Selbstbehalt & Franchise', target: 'lmh' }
+        ],
+        targets: [
+            { id: 'adv', label: 'Adverse Selektion' },
+            { id: 'mh', label: 'Moral Hazard' },
+            { id: 'ladv', label: 'Lösung gegen Adverse Selektion' },
+            { id: 'lmh', label: 'Lösung gegen Moral Hazard' }
+        ],
+        explanation: 'Vor Vertrag = Adverse Selektion (Lösung: Obligatorium/Kollektiv); nach Vertrag = Moral Hazard (Lösung: Selbstbehalt/Bonus-Malus).'
+    },
+    {
+        id: 'vdnd_100_5', type: 'dnd',
+        question: 'Drag & Drop (SWOT-Analyse): Ordne die Beispiele den 4 Feldern richtig zu.',
+        items: [
+            { id: 'sw1', text: 'Starke Schweizer Marke & motivierte Fachkräfte (intern)', target: 's' },
+            { id: 'sw2', text: 'Veraltete IT-Systeme & lange Lieferzeiten (intern)', target: 'w' },
+            { id: 'sw3', text: 'Wachsender Online-Markt & neue Zielgruppen (extern)', target: 'o' },
+            { id: 'sw4', text: 'Starker Franken & aggressive Billigkonkurrenz (extern)', target: 't' }
+        ],
+        targets: [
+            { id: 's', label: 'Strengths (Stärken)' },
+            { id: 'w', label: 'Weaknesses (Schwächen)' },
+            { id: 'o', label: 'Opportunities (Chancen)' },
+            { id: 't', label: 'Threats (Gefahren)' }
+        ],
+        explanation: 'Intern = Stärken/Schwächen; Extern = Chancen/Gefahren.'
+    },
+    {
+        id: 'vdnd_100_6', type: 'dnd',
+        question: 'Drag & Drop (Finanzierungsarten): Ordne jede Quelle korrekt zu.',
+        items: [
+            { id: 'fin1', text: 'Einbehaltene Gewinne (Reservenbildung)', target: 'ei' },
+            { id: 'fin2', text: 'Ausgabe neuer Aktien durch Aktionäre', target: 'ea' },
+            { id: 'fin3', text: 'Langfristiges Bankdarlehen / Hypothek', target: 'fa' },
+            { id: 'fin4', text: 'Bildung langfristiger Rückstellungen im Betrieb', target: 'fi' }
+        ],
+        targets: [
+            { id: 'ei', label: 'Eigen- & Innenfinanzierung' },
+            { id: 'ea', label: 'Eigen- & Aussenfinanzierung' },
+            { id: 'fa', label: 'Fremd- & Aussenfinanzierung' },
+            { id: 'fi', label: 'Fremd- & Innenfinanzierung' }
+        ],
+        explanation: 'Gewinne = Eigen/Innen; neue Aktien = Eigen/Aussen; Bankkredit = Fremd/Aussen; Rückstellungen = Fremd/Innen.'
+    },
+    {
+        id: 'vdnd_100_7', type: 'dnd',
+        question: 'Drag & Drop (Wirtschaftlichkeitsprinzip): Ordne die Prinzipien richtig zu.',
+        items: [
+            { id: 'wp1', text: 'Mit gegebenen Mitteln den grösstmöglichen Ertrag erzielen', target: 'max' },
+            { id: 'wp2', text: 'Einen vorgegebenen Ertrag mit geringstmöglichem Aufwand erreichen', target: 'min' },
+            { id: 'wp3', text: 'Output-Menge / Input-Menge (z.B. Stk./Std.)', target: 'prod' },
+            { id: 'wp4', text: 'Ertrag in CHF / Aufwand in CHF', target: 'wirt' }
+        ],
+        targets: [
+            { id: 'max', label: 'Maximalprinzip' },
+            { id: 'min', label: 'Minimalprinzip' },
+            { id: 'prod', label: 'Produktivität (Mengen)' },
+            { id: 'wirt', label: 'Wirtschaftlichkeit (Werte)' }
+        ],
+        explanation: 'Maximal = fixer Input, max Output; Minimal = fixer Output, min Input; Produktivität = Mengen; Wirtschaftlichkeit = Geldwerte.'
+    },
+    {
+        id: 'vdnd_100_8', type: 'dnd',
+        question: 'Drag & Drop (Konjunkturzyklus): Ordne die Merkmale der passenden Phase zu.',
+        items: [
+            { id: 'kj1', text: 'Aufträge steigen, Arbeitslosigkeit sinkt', target: 'auf' },
+            { id: 'kj2', text: 'Vollbeschäftigung, hohe Preise, Überhitzung', target: 'boom' },
+            { id: 'kj3', text: 'Aufträge & Gewinne gehen zurück, Skepsis wächst', target: 'abs' },
+            { id: 'kj4', text: 'BIP sinkt in mindestens 2 Quartalen, Kurzarbeit', target: 'rez' }
+        ],
+        targets: [
+            { id: 'auf', label: '1. Aufschwung (Expansion)' },
+            { id: 'boom', label: '2. Boom (Hochkonjunktur)' },
+            { id: 'abs', label: '3. Abschwung' },
+            { id: 'rez', label: '4. Rezession' }
+        ],
+        explanation: 'Die 4 Phasen: Aufschwung → Boom → Abschwung → Rezession.'
+    },
+    {
+        id: 'vdnd_100_9', type: 'dnd',
+        question: 'Drag & Drop (Stakeholder / Anspruchsgruppen): Ordne die typischen Erwartungen zu.',
+        items: [
+            { id: 'stk1', text: 'Hohe Qualität, fairer Preis & guter Service', target: 'kun' },
+            { id: 'stk2', text: 'Sicherer Arbeitsplatz, fairer Lohn & Weiterbildung', target: 'mit' },
+            { id: 'stk3', text: 'Attraktive Dividende & nachhaltige Wertsteigerung', target: 'eig' },
+            { id: 'stk4', text: 'Steuereinnahmen & Einhaltung der Gesetze', target: 'sta' }
+        ],
+        targets: [
+            { id: 'kun', label: 'Kunden' },
+            { id: 'mit', label: 'Mitarbeitende' },
+            { id: 'eig', label: 'Eigentümer / Aktionäre' },
+            { id: 'sta', label: 'Staat / Gesellschaft' }
+        ],
+        explanation: 'Jede Anspruchsgruppe hat eigene Interessen, zwischen denen die Unternehmensführung ausgleichen muss.'
+    },
+    {
+        id: 'vdnd_100_10', type: 'dnd',
+        question: 'Drag & Drop (Organisationsformen): Ordne die Strukturmerkmale richtig zu.',
+        items: [
+            { id: 'org1', text: 'Jede Stelle hat genau einen direkten Vorgesetzten', target: 'ein' },
+            { id: 'org2', text: 'Kombination aus Funktions- und Produkt-/Projektverantwortung', target: 'mat' },
+            { id: 'org3', text: 'Beratende Spezialisten ohne direktes Weisungsrecht', target: 'stab' },
+            { id: 'org4', text: 'Klare Beschreibung von Aufgaben, Kompetenzen und Verantwortung', target: 'akv' }
+        ],
+        targets: [
+            { id: 'ein', label: 'Einliniensystem' },
+            { id: 'mat', label: 'Matrixorganisation' },
+            { id: 'stab', label: 'Stabsstelle' },
+            { id: 'akv', label: 'AKV-Prinzip (Kongruenzprinzip)' }
+        ],
+        explanation: 'Einlinie = 1 Chef; Matrix = 2 Dimensionen; Stab = Beratung; AKV = Aufgaben, Kompetenzen & Verantwortung im Gleichgewicht.'
     }
 ];
 
@@ -4764,6 +5262,773 @@ const mktQuestionBank = [
             { id: 'prem', label: 'Prämien- / Hochpreisstrategie' }
         ],
         explanation: 'Skimming = hoch → tief; Penetration = tief → Marktanteil; Differenzierung = nach Segment/Zeit; Prämie = Luxus-Image.'
+    },
+    {
+        id: 'ms_100_1', type: 'single',
+        question: 'Was beschreibt der Begriff „Kundennutzen / Unique Selling Proposition (USP)“ im Marketing?',
+        options: [
+            { text: 'Das einzigartige Leistungsversprechen, durch das sich ein Angebot klar von der Konkurrenz abhebt', ok: true },
+            { text: 'Den niedrigsten Einkaufspreis beim Lieferanten', ok: false },
+            { text: 'Die gesetzliche Mehrwertsteuer-Nummer eines Unternehmens', ok: false },
+            { text: 'Eine interne Buchungsnummer für Abschreibungen', ok: false }
+        ],
+        explanation: 'Der USP (Unique Selling Proposition) ist das herausragende Alleinstellungsmerkmal aus Kundensicht.'
+    },
+    {
+        id: 'ms_100_2', type: 'single',
+        question: 'Welche Aussage kennzeichnet einen „Verkäufermarkt“?',
+        options: [
+            { text: 'Die Nachfrage ist grösser als das Angebot (Knappheit – Anbieter haben starke Marktmacht)', ok: true },
+            { text: 'Das Angebot ist viel grösser als die Nachfrage (harter Verdrängungswettbewerb)', ok: false },
+            { text: 'Es gibt keinerlei Nachfrage am Markt', ok: false },
+            { text: 'Alle Produkte werden kostenlos verschenkt', ok: false }
+        ],
+        explanation: 'Verkäufermarkt = Nachfrage > Angebot; Käufermarkt = Angebot > Nachfrage (Kunde ist König).'
+    },
+    {
+        id: 'ms_100_3', type: 'single',
+        question: 'Warum betreiben heute fast alle Branchen aktives, kundenorientiertes Marketing?',
+        options: [
+            { text: 'Weil in den meisten Branchen ein gesättigter Käufermarkt (Angebot > Nachfrage) herrscht', ok: true },
+            { text: 'Weil Werbung gesetzlich vorgeschrieben ist', ok: false },
+            { text: 'Weil Kunden keine Wahlmöglichkeiten mehr haben', ok: false },
+            { text: 'Weil es keine Produktunterschiede geben darf', ok: false }
+        ],
+        explanation: 'Im Käufermarkt übersteigt das Angebot die Nachfrage, sodass Unternehmen aktiv um Kunden werben müssen.'
+    },
+    {
+        id: 'ms_100_4', type: 'single',
+        question: 'Was ist eine „Sekundärforschungsquelle“ in der Marktforschung?',
+        options: [
+            { text: 'Auswertung bereits vorhandener Daten (z.B. Bundesamt für Statistik, eigene Verkaufszahlen)', ok: true },
+            { text: 'Eine neu durchgeführte Strassenumfrage mit Passanten', ok: false },
+            { text: 'Ein verdeckter Testkauf (Mystery Shopping)', ok: false },
+            { text: 'Ein Labor-Produkttest mit neuen Prototypen', ok: false }
+        ],
+        explanation: 'Sekundärforschung (Desk Research) greift auf bestehende interne oder externe Daten zurück.'
+    },
+    {
+        id: 'ms_100_5', type: 'single',
+        question: 'Was unterscheidet ein „Panel“ von einer einmaligen Ad-hoc-Umfrage?',
+        options: [
+            { text: 'Beim Panel wird derselbe Personenkreis wiederholt über längere Zeit zu gleichen Themen befragt', ok: true },
+            { text: 'Beim Panel werden jedes Mal komplett andere Personen ohne Vergleichbarkeit befragt', ok: false },
+            { text: 'Ein Panel darf maximal 2 Personen umfassen', ok: false },
+            { text: 'Ein Panel ist ausschliesslich eine Preisstrategie', ok: false }
+        ],
+        explanation: 'Panels (z.B. Haushaltspanel) messen Veränderungen und Trends über die Zeit bei derselben Stichprobe.'
+    },
+    {
+        id: 'ms_100_6', type: 'single',
+        question: 'Was bedeutet „Omnibus-Befragung“ in der Marktforschung?',
+        options: [
+            { text: 'Mehrere Auftraggeber teilen sich eine Umfrage, um Kosten pro Frage zu senken', ok: true },
+            { text: 'Eine Umfrage ausschliesslich in öffentlichen Bussen', ok: false },
+            { text: 'Eine vollautomatische Preisanpassung im Online-Shop', ok: false },
+            { text: 'Ein Verkaufsgespräch im B2B-Aussendienst', ok: false }
+        ],
+        explanation: 'Omnibus-Umfragen sind Mehrthemenbefragungen, bei denen mehrere Unternehmen Fragen einkaufen.'
+    },
+    {
+        id: 'ms_100_7', type: 'single',
+        question: 'Welche Strategie verfolgt ein Unternehmen mit „Marktdurchdringung“ (Ansoff)?',
+        options: [
+            { text: 'Mit bestehenden Produkten im bestehenden Markt mehr Umsatz erzielen (z.B. durch Rabatte, Werbung, höhere Kaufhäufigkeit)', ok: true },
+            { text: 'Völlig neue Produkte für völlig neue Märkte entwickeln', ok: false },
+            { text: 'Mit bestehenden Produkten in ein neues Land expandieren', ok: false },
+            { text: 'Sich komplett aus dem Markt zurückziehen', ok: false }
+        ],
+        explanation: 'Marktdurchdringung = bestehendes Produkt + bestehender Markt.'
+    },
+    {
+        id: 'ms_100_8', type: 'single',
+        question: 'Welches Beispiel steht in der Ansoff-Matrix für „Marktentwicklung“?',
+        options: [
+            { text: 'Keller Spiegelschrank verkauft seine bestehenden Spiegelschränke neu auch in Österreich oder Frankreich', ok: true },
+            { text: 'Keller Spiegelschrank entwickelt eine neue Duscharmatur für Schweizer Stammkunden', ok: false },
+            { text: 'Keller Spiegelschrank eröffnet eine Kaffeerösterei in Südamerika', ok: false },
+            { text: 'Keller Spiegelschrank senkt den Preis der bisherigen Modelle in der Schweiz', ok: false }
+        ],
+        explanation: 'Bestehendes Produkt + neuer Markt (neue Region oder neue Zielgruppe) = Marktentwicklung.'
+    },
+    {
+        id: 'ms_100_9', type: 'single',
+        question: 'Was beschreibt die „Diversifikation“ in der Ansoff-Matrix?',
+        options: [
+            { text: 'Neues Produkt auf einem neuen Markt (höchstes Risiko, z.B. horizontale, vertikale oder laterale Diversifikation)', ok: true },
+            { text: 'Preissenkung bei bestehenden Artikeln', ok: false },
+            { text: 'Neues Verpackungsdesign für Stammkunden', ok: false },
+            { text: 'Ausschliessliche Kundenbindung über Newsletter', ok: false }
+        ],
+        explanation: 'Diversifikation kombiniert ein neues Produkt mit einem neuen Markt – und birgt dadurch das höchste Risiko.'
+    },
+    {
+        id: 'ms_100_10', type: 'single',
+        question: 'Welche Strategie empfiehlt die BCG-Matrix bei einer „Cash Cow“?',
+        options: [
+            { text: 'Erhalten / Abschöpfen (Überschüsse melken und in Stars/Question Marks investieren)', ok: true },
+            { text: 'Sofort ersatzlos einstellen', ok: false },
+            { text: 'Ohne Rücksicht auf Rendite massiv überinvestieren', ok: false },
+            { text: 'Den Preis unter die variablen Kosten senken', ok: false }
+        ],
+        explanation: 'Cash Cows haben hohen Marktanteil in reifen Märkten und finanzieren mit ihren stabilen Gewinnen neue Wachstumsprodukte.'
+    },
+    {
+        id: 'ms_100_11', type: 'single',
+        question: 'In welcher Phase des Produktlebenszyklus (PLZ) ist das Umsatzwachstum am stärksten und erste Gewinne werden erzielt?',
+        options: [
+            { text: 'Wachstumsphase', ok: true },
+            { text: 'Einführungsphase', ok: false },
+            { text: 'Sättigungsphase', ok: false },
+            { text: 'Degenerationsphase', ok: false }
+        ],
+        explanation: 'Einführung = hohe Kosten/Verlust; Wachstum = steiler Umsatzanstieg & Break-Even; Reife/Sättigung = Maximum; Degeneration = Rückgang.'
+    },
+    {
+        id: 'ms_100_12', type: 'single',
+        question: 'Was bedeutet „Produktvariation“ in der Produktpolitik?',
+        options: [
+            { text: 'Ein bestehendes Produkt wird gezielt verändert/verbessert (z.B. neues Design, mehr Funktionen), ohne das alte dauerhaft daneben zu führen', ok: true },
+            { text: 'Ein komplett neuer Geschäftszweig wird eröffnet', ok: false },
+            { text: 'Ein Produkt wird endgültig vom Markt genommen (Elimination)', ok: false },
+            { text: 'Der Verkaufspreis wird halbiert', ok: false }
+        ],
+        explanation: 'Variation = Anpassung eines bestehenden Produkts (Facelift/Update); Differenzierung = zusätzliche Variante im Sortiment.'
+    },
+    {
+        id: 'ms_100_13', type: 'single',
+        question: 'Was versteht man unter „Sortimentsbreite“ vs. „Sortimentstiefe“?',
+        options: [
+            { text: 'Breite = Anzahl verschiedener Produktgruppen; Tiefe = Anzahl Varianten innerhalb einer Produktgruppe', ok: true },
+            { text: 'Breite = physische Regalbreite in cm; Tiefe = Lagerhöhe in Metern', ok: false },
+            { text: 'Tiefe = Anzahl verschiedener Länder; Breite = Anzahl Mitarbeiter', ok: false },
+            { text: 'Beides beschreibt ausschliesslich den Online-Checkout', ok: false }
+        ],
+        explanation: 'Breit = viele verschiedene Produktlinien; tief = grosse Auswahl (Grössen, Farben, Modelle) je Linie.'
+    },
+    {
+        id: 'ms_100_14', type: 'single',
+        question: 'Welche Art der Distribution liegt vor, wenn ein Hersteller seine Produkte über JEDEN verfügbaren Händler und Supermarkt verkauft (z.B. Getränke, Kaugummi)?',
+        options: [
+            { text: 'Intensive (ubiquitäre) Distribution', ok: true },
+            { text: 'Exklusive Distribution (nur ganz wenige Flagship-Partner)', ok: false },
+            { text: 'Reiner Direktvertrieb ab Fabrik ohne Händler', ok: false },
+            { text: 'Selektive Distribution nur nach Einladung', ok: false }
+        ],
+        explanation: 'Intensiv = überall erhältlich; Selektiv = ausgewählte Fachhändler; Exklusiv = streng limitierte Partner.'
+    },
+    {
+        id: 'ms_100_15', type: 'single',
+        question: 'Was kennzeichnet den „direkten Absatzweg“?',
+        options: [
+            { text: 'Der Hersteller verkauft ohne Zwischenhandel direkt an den Endkunden (z.B. eigener Online-Shop, Hofladen, Flagship-Store)', ok: true },
+            { text: 'Die Ware läuft über Grosshandel und Detailhandel zum Endkunden', ok: false },
+            { text: 'Der Verkauf erfolgt ausschliesslich über Amazon-Drittanbieter', ok: false },
+            { text: 'Der Preis wird direkt vom Staat festgelegt', ok: false }
+        ],
+        explanation: 'Direkter Absatz = kein selbstständiger Zwischenhändler zwischen Produzent und Endabnehmer.'
+    },
+    {
+        id: 'ms_100_16', type: 'single',
+        question: 'Was misst der „Customer Lifetime Value (CLV)“?',
+        options: [
+            { text: 'Den gesamten Deckungsbeitrag/Wert, den ein Kunde während der gesamten Geschäftsbeziehung für das Unternehmen generiert', ok: true },
+            { text: 'Die durchschnittliche Lieferzeit in Tagen', ok: false },
+            { text: 'Die Produktionskosten einer einzelnen Maschine', ok: false },
+            { text: 'Die Anzahl Klicks auf ein Banner pro Stunde', ok: false }
+        ],
+        explanation: 'Der CLV zeigt, wie wertvoll eine langfristige Kundenbeziehung über Jahre hinweg ist.'
+    },
+    {
+        id: 'ms_100_17', type: 'single',
+        question: 'Was bedeutet „Cross-Selling“ im Verkauf?',
+        options: [
+            { text: 'Dem Kunden ergänzende Zusatzprodukte zum Hauptkauf anbieten (z.B. Pflege-Set zum Spiegelschrank)', ok: true },
+            { text: 'Dem Kunden genau das gleiche Produkt zweimal zum halben Preis verkaufen', ok: false },
+            { text: 'Den Kunden zur Konkurrenz schicken', ok: false },
+            { text: 'Produkte nur über Kreuzfahrtschiffe vertreiben', ok: false }
+        ],
+        explanation: 'Cross-Selling = passende Zusatzartikel anbieten; Up-Selling = höherwertige/teurere Produktvariante empfehlen.'
+    },
+    {
+        id: 'ms_100_18', type: 'single',
+        question: 'Was ist der Unterschied zwischen „Corporate Identity (CI)“ und „Corporate Design (CD)“?',
+        options: [
+            { text: 'CI ist die gesamte Unternehmenspersönlichkeit (Verhalten, Kommunikation, Design); CD ist nur das visuelle Erscheinungsbild (Logo, Farben, Schrift)', ok: true },
+            { text: 'CD umfasst alles, CI nur das Logo', ok: false },
+            { text: 'Beides gilt ausschliesslich für gemeinnützige Vereine', ok: false },
+            { text: 'CI beschreibt nur die IT-Abteilung', ok: false }
+        ],
+        explanation: 'CI = Corporate Behaviour + Corporate Communications + Corporate Design (CD).'
+    },
+    {
+        id: 'ms_100_19', type: 'single',
+        question: 'Welche Kennzahl im Online-Marketing beschreibt den Anteil der Nutzer, die auf eine Anzeige klicken, im Verhältnis zu den Einblendungen (Impressions)?',
+        options: [
+            { text: 'CTR (Click-Through-Rate)', ok: true },
+            { text: 'EBIT-Marge', ok: false },
+            { text: 'Lagerumschlag', ok: false },
+            { text: 'Liquiditätsgrad 2', ok: false }
+        ],
+        explanation: 'CTR = Klicks / Impressions (%). Sie misst, wie stark eine Anzeige oder ein Snippet zum Klicken anregt.'
+    },
+    {
+        id: 'ms_100_20', type: 'single',
+        question: 'Was versteht man unter „SEO (Search Engine Optimization)“?',
+        options: [
+            { text: 'Massnahmen zur Verbesserung der unbezahlten (organischen) Sichtbarkeit in Suchmaschinen wie Google', ok: true },
+            { text: 'Bezahlte Google-Textanzeigen pro Klick (SEA)', ok: false },
+            { text: 'Versand von gedruckten Postwurfsendungen', ok: false },
+            { text: 'Rabattaktionen an der Supermarktkasse', ok: false }
+        ],
+        explanation: 'SEO = organisches Ranking verbessern; SEA = bezahlte Suchmaschinenwerbung (z.B. Google Ads). Zusammen bilden sie SEM.'
+    },
+    {
+        id: 'ms_100_21', type: 'single',
+        question: 'Was beschreibt die „Conversion Rate (CR)“ im digitalen Marketing?',
+        options: [
+            { text: 'Den Prozentsatz der Website-Besucher, die eine gewünschte Aktion (z.B. Kauf, Anfrage, Newsletter-Anmeldung) abschliessen', ok: true },
+            { text: 'Den Wechselkurs zwischen CHF und EUR', ok: false },
+            { text: 'Die Anzahl der Mitarbeitenden im Marketingteam', ok: false },
+            { text: 'Die Ladezeit eines Bildes in Millisekunden', ok: false }
+        ],
+        explanation: 'Conversion Rate = Abschlüsse / Besucher × 100 %.'
+    },
+    {
+        id: 'ms_100_22', type: 'single',
+        question: 'Welche Gefahr besteht bei einer dauerhaften „Tiefpreis- / Rabattschlacht“ für eine Qualitätsmarke?',
+        options: [
+            { text: 'Erosion der Gewinnmarge und Beschädigung des Qualitäts- und Markenimages', ok: true },
+            { text: 'Automatischer Anstieg des Luxus-Images', ok: false },
+            { text: 'Wegfall sämtlicher Produktionskosten', ok: false },
+            { text: 'Starke Erhöhung der Markenloyalität ohne Preisbindung', ok: false }
+        ],
+        explanation: 'Dauerrabatte gewöhnen Kunden an tiefe Preise, schmälern die Marge und verwässern das Qualitätsimage.'
+    },
+    {
+        id: 'ms_100_23', type: 'single',
+        question: 'Welcher Begriff beschreibt eine mündliche oder digitale Weiterempfehlung durch zufriedene Kunden („Mund-zu-Mund-Propaganda“)?',
+        options: [
+            { text: 'Word-of-Mouth / Empfehlungsmarketing', ok: true },
+            { text: 'Push-Distribution', ok: false },
+            { text: 'Skimming-Preispolitik', ok: false },
+            { text: 'Produktelimination', ok: false }
+        ],
+        explanation: 'Word-of-Mouth (WOM) geniesst extrem hohes Vertrauen, weil Empfehlungen von echten Kunden statt vom Hersteller kommen.'
+    },
+    {
+        id: 'ms_100_24', type: 'single',
+        question: 'Was macht ein „Buying Center“ im B2B-Marketing (Business-to-Business) besonders?',
+        options: [
+            { text: 'Mehrere Personen mit unterschiedlichen Rollen (Entscheider, Einkäufer, Anwender, Beeinflusser) wirken beim Kauf mit', ok: true },
+            { text: 'Es handelt sich immer um einen einzigen Spontankauf an der Kasse', ok: false },
+            { text: 'Es kauft ausschliesslich für private Haushalte ein', ok: false },
+            { text: 'Es entscheidet ohne jegliche Preis- oder Qualitätsprüfung', ok: false }
+        ],
+        explanation: 'Im B2B-Bereich entscheiden meist Buying Center (z.B. Technik, Einkauf, Geschäftsleitung gemeinsam).'
+    },
+    {
+        id: 'ms_100_25', type: 'single',
+        question: 'Welcher Trend kennzeichnet „Omnichannel-Marketing“?',
+        options: [
+            { text: 'Nahtlose Verknüpfung aller Kanäle (z.B. online informieren, im Laden beraten lassen, per App bestellen / Click & Collect)', ok: true },
+            { text: 'Verkauf über genau einen einzigen Kanal ohne Website', ok: false },
+            { text: 'Verbot von Social Media im Kundenservice', ok: false },
+            { text: 'Trennung von Online-Shop und Filiale ohne gemeinsame Kundendaten', ok: false }
+        ],
+        explanation: 'Omnichannel verbindet stationäre Filialen, Online-Shop, App und Service zu einem durchgängigen Kundenerlebnis.'
+    },
+    {
+        id: 'mm_100_1', type: 'multi',
+        question: 'Welche Unterschiede bestehen typischerweise zwischen B2C- und B2B-Marketing? (Mehrere richtig)',
+        options: [
+            { text: 'Im B2B entscheiden häufig mehrere Personen (Buying Center) stärker rational/wirtschaftlich', ok: true },
+            { text: 'Im B2C sind Emotionen, Markenimage und Spontankäufe oft wichtiger', ok: true },
+            { text: 'Im B2B stehen persönliche Beratung, Langfristverträge und technischer Service oft im Vordergrund', ok: true },
+            { text: 'Im B2B spielen Preis, Lieferzuverlässigkeit und Qualität gar keine Rolle', ok: false }
+        ],
+        explanation: 'B2B = rationaler, längere Entscheidungsprozesse, Buying Center; B2C = grössere Zielgruppen, oft emotionaler.'
+    },
+    {
+        id: 'mm_100_2', type: 'multi',
+        question: 'Welche Methoden gehören zur PRIMÄREN Marktforschung (Field Research)? (Mehrere richtig)',
+        options: [
+            { text: 'Schriftliche, telefonische oder Online-Befragung von Kunden', ok: true },
+            { text: 'Beobachtung (z.B. Laufwege im Geschäft, Blickregistrierung, Mystery Shopping)', ok: true },
+            { text: 'Experiment / Testmarkt (z.B. neues Produkt in einer Testregion verkaufen)', ok: true },
+            { text: 'Nachschlagen in alten Jahresberichten des Bundesamts für Statistik', ok: false }
+        ],
+        explanation: 'Befragung, Beobachtung und Experiment sind die 3 klassischen Erhebungsmethoden der Primärforschung.'
+    },
+    {
+        id: 'mm_100_3', type: 'multi',
+        question: 'Welche Vorteile bietet eine klare „Positionierung“ im Markt? (Mehrere richtig)',
+        options: [
+            { text: 'Eindeutige Abgrenzung von der Konkurrenz in den Köpfen der Zielgruppe', ok: true },
+            { text: 'Höhere Zahlungsbereitschaft statt reinem Preiskampf', ok: true },
+            { text: 'Klare Leitlinie für Produktgestaltung, Preis und Kommunikation', ok: true },
+            { text: 'Man braucht keinerlei Zielgruppe mehr zu definieren', ok: false }
+        ],
+        explanation: 'Positionierung funktioniert nur mit klar definierter Zielgruppe und unverwechselbarem Nutzenversprechen.'
+    },
+    {
+        id: 'mm_100_4', type: 'multi',
+        question: 'Welche Aufgaben übernimmt die „Marke“ für Konsumenten und Unternehmen? (Mehrere richtig)',
+        options: [
+            { text: 'Orientierungshilfe und Vertrauen (Qualitätsversprechen)', ok: true },
+            { text: 'Wiedererkennungswert und emotionale Bindung', ok: true },
+            { text: 'Schutz vor Austauschbarkeit und Spielraum für höhere Margen', ok: true },
+            { text: 'Sie ersetzt automatisch die Buchhaltungspflicht nach OR', ok: false }
+        ],
+        explanation: 'Starke Marken schaffen Vertrauen, Orientierung, Differenzierung und Preisspielraum.'
+    },
+    {
+        id: 'mm_100_5', type: 'multi',
+        question: 'Welche Punkte gehören zu den 3 zusätzlichen „P“ im Dienstleistungsmarketing (7P)? (Mehrere richtig)',
+        options: [
+            { text: 'People (Freundlichkeit, Kompetenz & Auftreten der Mitarbeitenden)', ok: true },
+            { text: 'Process (schnelle, reibungslose Service- und Buchungsabläufe)', ok: true },
+            { text: 'Physical Evidence (Ausstattung, Räume, Website-Optik, Kleidung)', ok: true },
+            { text: 'Product-Elimination als einziges Ziel', ok: false }
+        ],
+        explanation: 'People, Process und Physical Evidence machen immaterielle Dienstleistungen für Kunden greifbar.'
+    },
+    {
+        id: 'mm_100_6', type: 'multi',
+        question: 'Welche Formen der Preisdifferenzierung gibt es in der Praxis? (Mehrere richtig)',
+        options: [
+            { text: 'Zeitlich (z.B. Happy Hour, Nebensaison, Frühbucherrabatt)', ok: true },
+            { text: 'Räumlich / Regional (unterschiedliche Preise in verschiedenen Ländern/Regionen)', ok: true },
+            { text: 'Nach Zielgruppe / Menge (z.B. Studentenrabatt, SBB Junior-Karte, Mengenstaffel)', ok: true },
+            { text: 'Jeder Kunde zahlt weltweit immer exakt denselben Fixpreis', ok: false }
+        ],
+        explanation: 'Zeitliche, räumliche, mengenmässige und zielgruppenspezifische Preisdifferenzierung schöpfen unterschiedliche Zahlungsbereitschaften ab.'
+    },
+    {
+        id: 'mm_100_7', type: 'multi',
+        question: 'Was kennzeichnet die „Einführungsphase“ im Produktlebenszyklus (PLZ)? (Mehrere richtig)',
+        options: [
+            { text: 'Hohe Entwicklungs- und Marketingkosten bei noch geringen Umsätzen', ok: true },
+            { text: 'Oft noch negative Deckungsbeiträge / Verluste zu Beginn', ok: true },
+            { text: 'Ziel ist Bekanntheitsaufbau und Gewinnung von Early Adopters', ok: true },
+            { text: 'Maximale Marktsättigung und sinkende Gesamtnachfrage', ok: false }
+        ],
+        explanation: 'In der Einführungsphase stehen Bekanntheitsaufbau und hohe Anfangsinvestitionen im Vordergrund.'
+    },
+    {
+        id: 'mm_100_8', type: 'multi',
+        question: 'Welche Aufgaben hat die „Corporate Communication“ (unternehmensweite Kommunikation)? (Mehrere richtig)',
+        options: [
+            { text: 'Einheitliche, glaubwürdige Botschaften nach aussen (Kunden, Medien, Öffentlichkeit)', ok: true },
+            { text: 'Klare interne Kommunikation gegenüber Mitarbeitenden', ok: true },
+            { text: 'Krisenkommunikation bei kritischen Ereignissen', ok: true },
+            { text: 'Widersprüchliche Werbeaussagen je nach Abteilung fördern', ok: false }
+        ],
+        explanation: 'Integrierte Kommunikation sorgt für ein widerspruchsfreies Erscheinungsbild nach innen und aussen.'
+    },
+    {
+        id: 'mm_100_9', type: 'multi',
+        question: 'Welche Vorteile bietet direktes Online-Marketing gegenüber klassischer Plakatwerbung? (Mehrere richtig)',
+        options: [
+            { text: 'Genaue Messbarkeit von Klicks, Conversions und Kosten pro Abschluss', ok: true },
+            { text: 'Gezieltes Targeting nach Interessen, Region oder Suchintention', ok: true },
+            { text: 'Schnelle Anpassbarkeit und A/B-Tests in Echtzeit', ok: true },
+            { text: 'Garantiert kostenlos ohne Budget für Anzeigen oder Content', ok: false }
+        ],
+        explanation: 'Digitales Marketing punktet durch Messbarkeit, Targeting und Agilität (kostet aber natürlich Budget und Pflege).'
+    },
+    {
+        id: 'mm_100_10', type: 'multi',
+        question: 'Welche Massnahmen stärken langfristig die Kundenbindung (Customer Retention)? (Mehrere richtig)',
+        options: [
+            { text: 'Zuverlässige Produktqualität und kulanter Kundendienst nach dem Kauf', ok: true },
+            { text: 'Treueprogramme, Club-Vorteile oder personalisierte Service-Erinnerungen', ok: true },
+            { text: 'Aktives Beschwerdemanagement, das Probleme schnell löst', ok: true },
+            { text: 'Kunden nach Vertragsabschluss komplett ignorieren', ok: false }
+        ],
+        explanation: 'Neukundengewinnung ist meist deutlich teurer als Kundenbindung durch Qualität, Service und Treueprogramme.'
+    },
+    {
+        id: 'mm_100_11', type: 'multi',
+        question: 'Welche Instrumente gehören zur „Verkaufsförderung (Sales Promotion)“? (Mehrere richtig)',
+        options: [
+            { text: 'Zeitlich begrenzte Gutscheine, Rabattcoupons & Zugaben', ok: true },
+            { text: 'Degustationen, Warenproben & Sonderplatzierungen im Laden (PoS)', ok: true },
+            { text: 'Gewinnspiele und Messeaktionen', ok: true },
+            { text: 'Erstellung der Jahresbilanz für das Handelsregister', ok: false }
+        ],
+        explanation: 'Sales Promotion setzt kurzfristige Kaufanreize am Point of Sale (PoS), auf Messen oder online.'
+    },
+    {
+        id: 'mm_100_12', type: 'multi',
+        question: 'Was unterscheidet „Above-the-line“ von „Below-the-line“-Kommunikation? (Mehrere richtig)',
+        options: [
+            { text: 'Above-the-line = klassische Massenmedien (TV, Radio, Plakate, Print)', ok: true },
+            { text: 'Below-the-line = direkte/zielgerichtete Massnahmen (Direct Mail, Events, Sponsoring, Guerilla, Social/PR)', ok: true },
+            { text: 'Beide werden heute im Kommunikationsmix sinnvoll kombiniert', ok: true },
+            { text: 'Below-the-line bedeutet ausschliesslich illegale Schleichwerbung', ok: false }
+        ],
+        explanation: 'ATL = klassische Massenwerbung; BTL = zielgruppenspezifische, oft interaktive Kommunikationsmassnahmen.'
+    },
+    {
+        id: 'mm_100_13', type: 'multi',
+        question: 'Welche Kriterien sprechen für einen INDIREKTEN Absatzweg (über Fachhandel/Detailhandel)? (Mehrere richtig)',
+        options: [
+            { text: 'Grosse flächendeckende Marktabdeckung ohne eigene Filialen', ok: true },
+            { text: 'Nutzung bestehender Logistik, Beratung und Kundenfrequenz der Händler', ok: true },
+            { text: 'Geringerer eigener Kapitalbedarf für Läden im Vergleich zum eigenen Filialnetz', ok: true },
+            { text: 'Vollständige direkte Kontrolle über jedes Endkundengespräch ohne Händler', ok: false }
+        ],
+        explanation: 'Indirekter Vertrieb spart eigene Filialkosten und nutzt Händlerreichweite, gibt aber einen Teil der Marge und Kontrolle ab.'
+    },
+    {
+        id: 'mm_100_14', type: 'multi',
+        question: 'Welche Faktoren beeinflussen die Kaufentscheidung im „Konsumentenverhalten“? (Mehrere richtig)',
+        options: [
+            { text: 'Persönliche & psychologische Faktoren (Alter, Beruf, Motive, Einstellung)', ok: true },
+            { text: 'Soziale Faktoren (Familie, Freundeskreis, Meinungsführer / Influencer)', ok: true },
+            { text: 'Kulturelle & situative Faktoren (Werte, Zeitdruck, Ladenatmosphäre)', ok: true },
+            { text: 'Ausschliesslich die Höhe des Aktienkapitals des Herstellers', ok: false }
+        ],
+        explanation: 'Konsumenten entscheiden im Zusammenspiel aus psychologischen, persönlichen, sozialen und kulturellen Einflüssen.'
+    },
+    {
+        id: 'mm_100_15', type: 'multi',
+        question: 'Welche Aussagen zu „Marketing-Controlling & KPIs“ stimmen? (Mehrere richtig)',
+        options: [
+            { text: 'ROAS (Return on Ad Spend) misst den Umsatz pro eingesetztem Werbefranken', ok: true },
+            { text: 'CAC (Customer Acquisition Cost) zeigt, wie viel die Gewinnung eines Neukunden kostet', ok: true },
+            { text: 'Für nachhaltige Profitabilität sollte der CLV deutlich über den CAC liegen', ok: true },
+            { text: 'Marketing-Controlling prüft erst nach 20 Jahren, ob eine Kampagne funktioniert hat', ok: false }
+        ],
+        explanation: 'Laufendes Controlling über KPIs wie ROAS, CAC, CTR, CR und CLV ermöglicht schnelle Kampagnenoptimierung.'
+    },
+    {
+        id: 'mm_100_16', type: 'multi',
+        question: 'Was beschreibt den „Marketing-Regelkreis (Managementprozess)“? (Mehrere richtig)',
+        options: [
+            { text: '1. Analyse (Situation, Markt, Konkurrenz, SWOT)', ok: true },
+            { text: '2. Ziele & Strategie (Segmentierung, Positionierung, Ansoff)', ok: true },
+            { text: '3. Massnahmenplanung & Umsetzung (4P / 7P Marketingmix)', ok: true },
+            { text: '4. Kontrolle & Anpassung (Soll-Ist-Vergleich)', ok: true }
+        ],
+        explanation: 'Analyse → Ziele/Strategie → Massnahmen (Mix) → Umsetzung & Kontrolle bilden den geschlossenen Marketingprozess.'
+    },
+    {
+        id: 'mm_100_17', type: 'multi',
+        question: 'Welche Produktpolitik-Entscheidungen gehören zum Sortimentsmanagement? (Mehrere richtig)',
+        options: [
+            { text: 'Produktinnovation (völlig neues Produkt entwickeln)', ok: true },
+            { text: 'Produktvariation & -differenzierung (bestehende Angebote anpassen/ergänzen)', ok: true },
+            { text: 'Produktelimination (unrentable Produkte vom Markt nehmen)', ok: true },
+            { text: 'Festlegung der Mehrwertsteuer-Sätze durch den Bund', ok: false }
+        ],
+        explanation: 'Innovation, Variation, Differenzierung und Elimination sind die Kernwerkzeuge der Produktpolitik.'
+    },
+    {
+        id: 'mm_100_18', type: 'multi',
+        question: 'Welche Vorteile hat „Content-Marketing“ (Ratgeber, Videos, How-to-Artikel)? (Mehrere richtig)',
+        options: [
+            { text: 'Es liefert echten Mehrwert und baut Vertrauen & Expertenstatus auf', ok: true },
+            { text: 'Es verbessert langfristig die organische Sichtbarkeit in Suchmaschinen (SEO)', ok: true },
+            { text: 'Es wirkt weniger aufdringlich als klassische Unterbrecherwerbung', ok: true },
+            { text: 'Es verbietet jede Verlinkung auf eigene Produkte oder Services', ok: false }
+        ],
+        explanation: 'Gutes Content-Marketing zieht Interessenten über hilfreiche Inhalte an und führt sie organisch zum Angebot.'
+    },
+    {
+        id: 'mm_100_19', type: 'multi',
+        question: 'Welche Risiken bringt KI-generierter Content im Marketing mit sich, wenn man ihn ungeprüft nutzt? (Mehrere richtig)',
+        options: [
+            { text: 'Faktische Fehler / Halluzinationen bei Produktdaten oder Preisen', ok: true },
+            { text: 'Austauschbare, generische Texte ohne echte Markenstimme', ok: true },
+            { text: 'Mögliche Urheberrechts- oder Datenschutzfragen bei sensiblen Kundendaten', ok: true },
+            { text: 'KI löscht automatisch die gesamte Buchhaltung', ok: false }
+        ],
+        explanation: 'Faktenprüfung, Markensprache und Datenschutz (keine Kundendaten in offene Prompts!) sind beim KI-Einsatz Pflicht.'
+    },
+    {
+        id: 'mm_100_20', type: 'multi',
+        question: 'Welche Massnahmen gehören zur „Public Relations (Öffentlichkeitsarbeit)“? (Mehrere richtig)',
+        options: [
+            { text: 'Medienmitteilungen und Pressekonferenzen', ok: true },
+            { text: 'Tage der offenen Tür, Nachhaltigkeitsberichte & Sponsoring-Partnerschaften', ok: true },
+            { text: 'Aufbau von Vertrauen und positivem Image bei der gesamten Öffentlichkeit (nicht nur Käufern)', ok: true },
+            { text: 'Ausschliesslich bezahlte Rabattcoupons an der Kasse', ok: false }
+        ],
+        explanation: 'PR zielt auf langfristiges Vertrauen und Glaubwürdigkeit in der Öffentlichkeit und bei allen Stakeholdern.'
+    },
+    {
+        id: 'mdnd_100_1', type: 'dnd',
+        question: 'Drag & Drop (Marketingprozess): Bringe die 4 Phasen in die richtige Reihenfolge.',
+        items: [
+            { id: 'mpr1', text: 'Markt-, Kunden-, Konkurrenz- & SWOT-Analyse', target: 'p1' },
+            { id: 'mpr2', text: 'SMART-Ziele, Zielgruppe & Positionierung festlegen', target: 'p2' },
+            { id: 'mpr3', text: '4P / 7P Marketingmix konkret planen & umsetzen', target: 'p3' },
+            { id: 'mpr4', text: 'KPIs (Umsatz, Marktanteil, ROAS) prüfen & nachsteuern', target: 'p4' }
+        ],
+        targets: [
+            { id: 'p1', label: '1. Situationsanalyse' },
+            { id: 'p2', label: '2. Ziele & Strategie' },
+            { id: 'p3', label: '3. Massnahmen (Mix)' },
+            { id: 'p4', label: '4. Controlling' }
+        ],
+        explanation: 'Der klassische Marketing-Regelkreis: Analyse → Strategie/Ziele → Massnahmen → Kontrolle.'
+    },
+    {
+        id: 'mdnd_100_2', type: 'dnd',
+        question: 'Drag & Drop (Marktformen im Marketing): Ordne die Marktbegriffe richtig zu.',
+        items: [
+            { id: 'mmf1', text: 'Nachfrage > Angebot (Anbieter sitzen am längeren Hebel)', target: 'vm' },
+            { id: 'mmf2', text: 'Angebot > Nachfrage (harter Wettbewerb um Kunden)', target: 'km' },
+            { id: 'mmf3', text: 'Alle potenziellen Käufer eines Marktes (Obergrenze)', target: 'mpot' },
+            { id: 'mmf4', text: 'Eigener Umsatzanteil am gesamten Marktvolumen (%)', target: 'mant' }
+        ],
+        targets: [
+            { id: 'vm', label: 'Verkäufermarkt' },
+            { id: 'km', label: 'Käufermarkt' },
+            { id: 'mpot', label: 'Marktpotenzial' },
+            { id: 'mant', label: 'Marktanteil' }
+        ],
+        explanation: 'Verkäufermarkt = Nachfrageüberschuss; Käufermarkt = Angebotsüberschuss; Potenzial = Maximum; Anteil = eigener % am Volumen.'
+    },
+    {
+        id: 'mdnd_100_3', type: 'dnd',
+        question: 'Drag & Drop (Marktforschungsmethoden): Ordne die Erhebung der passenden Kategorie zu.',
+        items: [
+            { id: 'mmf2_1', text: 'Bestehende interne Verkaufsstatistiken & BFS-Daten auswerten', target: 'sek' },
+            { id: 'mmf2_2', text: 'Online-Fragebogen an 500 Neukunden senden', target: 'bef' },
+            { id: 'mmf2_3', text: 'Mystery Shopping / Laufwege im Geschäft erfassen', target: 'beob' },
+            { id: 'mmf2_4', text: 'A/B-Test zweier Preisvarianten in zwei Teststädten', target: 'exp' }
+        ],
+        targets: [
+            { id: 'sek', label: 'Sekundärforschung (Desk Research)' },
+            { id: 'bef', label: 'Primärforschung: Befragung' },
+            { id: 'beob', label: 'Primärforschung: Beobachtung' },
+            { id: 'exp', label: 'Primärforschung: Experiment' }
+        ],
+        explanation: 'Bestehende Daten = Sekundärforschung; neu erhoben = Primärforschung (Befragung, Beobachtung, Experiment).'
+    },
+    {
+        id: 'mdnd_100_4', type: 'dnd',
+        question: 'Drag & Drop (Dienstleistungs-7P): Ordne die zusätzlichen 3 P ihren Beispielen zu.',
+        items: [
+            { id: 'm7p1', text: 'Kompetente, freundliche Beratende im Hotel/Studio', target: 'peo' },
+            { id: 'm7p2', text: 'Schnelle Online-Terminbuchung & klare Abläufe', target: 'pro' },
+            { id: 'm7p3', text: 'Modernes Laden-Design, Sauberkeit & Duftkonzept', target: 'phy' },
+            { id: 'm7p4', text: 'Grundleistung, Garantie & Serviceumfang', target: 'prd' }
+        ],
+        targets: [
+            { id: 'peo', label: 'People (Personal)' },
+            { id: 'pro', label: 'Process (Prozesse)' },
+            { id: 'phy', label: 'Physical Evidence (Umfeld)' },
+            { id: 'prd', label: 'Product (Leistung)' }
+        ],
+        explanation: 'Bei Dienstleistungen ergänzen People, Process und Physical Evidence die klassischen 4P.'
+    },
+    {
+        id: 'mdnd_100_5', type: 'dnd',
+        question: 'Drag & Drop (Produktlebenszyklus): Ordne die typischen Merkmale der passenden Phase zu.',
+        items: [
+            { id: 'plz1', text: 'Hohe Startkosten, geringe Umsätze, Verlustzone', target: 'ein' },
+            { id: 'plz2', text: 'Starkes Umsatzwachstum, Break-Even wird überschritten', target: 'wach' },
+            { id: 'plz3', text: 'Höchster Umsatz, harter Wettbewerb, Ersatzkäufe', target: 'saet' },
+            { id: 'plz4', text: 'Sinkende Nachfrage, Produkt wird überarbeitet oder eingestellt', target: 'deg' }
+        ],
+        targets: [
+            { id: 'ein', label: '1. Einführungsphase' },
+            { id: 'wach', label: '2. Wachstumsphase' },
+            { id: 'saet', label: '3. Reife-/Sättigungsphase' },
+            { id: 'deg', label: '4. Degenerationsphase' }
+        ],
+        explanation: 'Produktlebenszyklus: Einführung → Wachstum → Reife/Sättigung → Degeneration.'
+    },
+    {
+        id: 'mdnd_100_6', type: 'dnd',
+        question: 'Drag & Drop (Produktpolitik): Ordne die Begriffe richtig zu.',
+        items: [
+            { id: 'mpp1', text: 'Völlig neues Produkt wird erstmals auf den Markt gebracht', target: 'inn' },
+            { id: 'mpp2', text: 'Bestehendes Modell bekommt neues Design/Update (ersetzt altes)', target: 'var' },
+            { id: 'mpp3', text: 'Zusätzliche Grösse/Geschmacksrichtung neben bestehendem Produkt', target: 'dif' },
+            { id: 'mpp4', text: 'Unrentabler Ladenhüter wird aus dem Sortiment gestrichen', target: 'eli' }
+        ],
+        targets: [
+            { id: 'inn', label: 'Produktinnovation' },
+            { id: 'var', label: 'Produktvariation' },
+            { id: 'dif', label: 'Produktdifferenzierung' },
+            { id: 'eli', label: 'Produktelimination' }
+        ],
+        explanation: 'Neu = Innovation; ersetzen/verbessern = Variation; ergänzen = Differenzierung; streichen = Elimination.'
+    },
+    {
+        id: 'mdnd_100_7', type: 'dnd',
+        question: 'Drag & Drop (Distributionsintensität): Ordne das Produkt der passenden Strategie zu.',
+        items: [
+            { id: 'mdi1', text: 'Mineralwasser & Kaugummi an jedem Kiosk und Supermarkt', target: 'int' },
+            { id: 'mdi2', text: 'Hochwertige Wanderschuhe nur in ausgewählten Sportfachgeschäften', target: 'sel' },
+            { id: 'mdi3', text: 'Luxus-Schweizeruhr nur in wenigen exklusiven Boutiquen', target: 'exk' },
+            { id: 'mdi4', text: 'Hersteller verkauft ausschliesslich im eigenen Webshop', target: 'dir' }
+        ],
+        targets: [
+            { id: 'int', label: 'Intensive Distribution' },
+            { id: 'sel', label: 'Selektive Distribution' },
+            { id: 'exk', label: 'Exklusive Distribution' },
+            { id: 'dir', label: 'Direkter Absatzweg' }
+        ],
+        explanation: 'Alltagsgüter = intensiv; Fachhandel = selektiv; Luxus = exklusiv; ohne Händler = direkt.'
+    },
+    {
+        id: 'mdnd_100_8', type: 'dnd',
+        question: 'Drag & Drop (Pull vs. Push & Verkauf): Ordne die Massnahmen richtig zu.',
+        items: [
+            { id: 'mps1', text: 'Endkunden-Werbung weckt Nachfrage im Handel („Sog“)', target: 'pull' },
+            { id: 'mps2', text: 'Hohe Händlerrabatte & Aussendienst drücken Ware ins Regal', target: 'push' },
+            { id: 'mps3', text: 'Passende Ergänzung zum Hauptprodukt anbieten', target: 'cros' },
+            { id: 'mps4', text: 'Höherwertige / leistungsstärkere Modellvariante empfehlen', target: 'ups' }
+        ],
+        targets: [
+            { id: 'pull', label: 'Pull-Marketing' },
+            { id: 'push', label: 'Push-Marketing' },
+            { id: 'cros', label: 'Cross-Selling' },
+            { id: 'ups', label: 'Up-Selling' }
+        ],
+        explanation: 'Pull = Endkunde fragt nach; Push = Druck auf Händler; Cross = Zusatzprodukt; Up = besseres/teureres Modell.'
+    },
+    {
+        id: 'mdnd_100_9', type: 'dnd',
+        question: 'Drag & Drop (Online-Marketing KPIs): Ordne jede Kennzahl ihrer Bedeutung zu.',
+        items: [
+            { id: 'mok1', text: 'Klicks / Einblendungen (Impressions) in %', target: 'ctr' },
+            { id: 'mok2', text: 'Anteil Besucher, die kaufen oder anfragen (%)', target: 'cr' },
+            { id: 'mok3', text: 'Umsatz geteilt durch Werbeausgaben', target: 'roas' },
+            { id: 'mok4', text: 'Kosten für die Gewinnung eines Neukunden', target: 'cac' }
+        ],
+        targets: [
+            { id: 'ctr', label: 'CTR (Click-Through-Rate)' },
+            { id: 'cr', label: 'Conversion Rate' },
+            { id: 'roas', label: 'ROAS (Return on Ad Spend)' },
+            { id: 'cac', label: 'CAC (Customer Acquisition Cost)' }
+        ],
+        explanation: 'CTR = Klickrate; CR = Abschlussrate; ROAS = Werbeertrag; CAC = Akquisitionskosten.'
+    },
+    {
+        id: 'mdnd_100_10', type: 'dnd',
+        question: 'Drag & Drop (Digital & Suchmaschinen): Ordne die Begriffe korrekt zu.',
+        items: [
+            { id: 'mds1', text: 'Unbezahlte organische Google-Sichtbarkeit optimieren', target: 'seo' },
+            { id: 'mds2', text: 'Bezahlte Suchanzeigen (Google Ads pro Klick)', target: 'sea' },
+            { id: 'mds3', text: 'Nahtlose Verbindung von Webshop, App & Ladenfiliale', target: 'omni' },
+            { id: 'mds4', text: 'Freiwillige Einwilligung zum Newsletter-Empfang', target: 'opt' }
+        ],
+        targets: [
+            { id: 'seo', label: 'SEO (Search Engine Optimization)' },
+            { id: 'sea', label: 'SEA (Search Engine Advertising)' },
+            { id: 'omni', label: 'Omnichannel-Marketing' },
+            { id: 'opt', label: 'Opt-in (DSG/DSGVO)' }
+        ],
+        explanation: 'SEO = organisch; SEA = bezahlte Ads; Omnichannel = vernetzte Kanäle; Opt-in = Einwilligung.'
+    },
+    {
+        id: 'mdnd_100_11', type: 'dnd',
+        question: 'Drag & Drop (Corporate Identity): Ordne die 3 Säulen + Markenbegriff richtig zu.',
+        items: [
+            { id: 'mci1', text: 'Logo, Hausfarben, Hausschrift & Layout', target: 'cd' },
+            { id: 'mci2', text: 'Einheitliche Sprache in Werbung, PR & Social Media', target: 'cc' },
+            { id: 'mci3', text: 'Umgang mit Kunden, Mitarbeitenden & Lieferanten', target: 'cb' },
+            { id: 'mci4', text: 'Einzigartiges Leistungsversprechen gegenüber Konkurrenz', target: 'usp' }
+        ],
+        targets: [
+            { id: 'cd', label: 'Corporate Design (CD)' },
+            { id: 'cc', label: 'Corporate Communications (CC)' },
+            { id: 'cb', label: 'Corporate Behaviour (CB)' },
+            { id: 'usp', label: 'USP (Alleinstellungsmerkmal)' }
+        ],
+        explanation: 'CI besteht aus Design (Optik), Communications (Sprache) und Behaviour (Verhalten); USP = Alleinstellungsmerkmal.'
+    },
+    {
+        id: 'mdnd_100_12', type: 'dnd',
+        question: 'Drag & Drop (Segmentierungskriterien): Ordne die Kundenmerkmale der richtigen Gruppe zu.',
+        items: [
+            { id: 'msg1', text: 'Deutschschweiz vs. Romandie, Stadt vs. Bergregion', target: 'geo' },
+            { id: 'msg2', text: 'Alter, Einkommen, Familienstand & Bildung', target: 'dem' },
+            { id: 'msg3', text: 'Nachhaltigkeitswerte, Lebensstil & Hobbys', target: 'psy' },
+            { id: 'msg4', text: 'Markentreue, Kaufhäufigkeit & Preissensibilität', target: 'ver' }
+        ],
+        targets: [
+            { id: 'geo', label: 'Geografisch' },
+            { id: 'dem', label: 'Demografisch' },
+            { id: 'psy', label: 'Psychografisch' },
+            { id: 'ver', label: 'Verhaltensorientiert' }
+        ],
+        explanation: 'Die 4 Segmentierungsarten: Geografisch (Ort), Demografisch (Statistik), Psychografisch (Werte/Lifestyle), Verhalten.'
+    },
+    {
+        id: 'mdnd_100_13', type: 'dnd',
+        question: 'Drag & Drop (Kommunikationsmix): Ordne die Massnahme dem richtigen Instrument zu.',
+        items: [
+            { id: 'mkm1', text: 'Klassische Plakate, TV-Spots & Social Ads', target: 'werb' },
+            { id: 'mkm2', text: 'Medienmitteilung & Tag der offenen Tür', target: 'pr' },
+            { id: 'mkm3', text: 'Probierstand im Supermarkt & Rabattgutschein', target: 'vf' },
+            { id: 'mkm4', text: 'Finanzierung eines lokalen Sportvereins mit Logo-Präsenz', target: 'spon' }
+        ],
+        targets: [
+            { id: 'werb', label: 'Werbung' },
+            { id: 'pr', label: 'Public Relations (PR)' },
+            { id: 'vf', label: 'Verkaufsförderung (Sales Promotion)' },
+            { id: 'spon', label: 'Sponsoring' }
+        ],
+        explanation: 'Werbung = bezahlte Botschaft; PR = öffentliches Vertrauen; Verkaufsförderung = kurzfristiger Kaufanreiz; Sponsoring = Leistung/Gegenleistung.'
+    },
+    {
+        id: 'mdnd_100_14', type: 'dnd',
+        question: 'Drag & Drop (B2B vs. B2C & Buying Center): Ordne die Rollen bzw. Merkmale zu.',
+        items: [
+            { id: 'mbb1', text: 'Trifft die finale formelle Kaufentscheidung im Unternehmen', target: 'ent' },
+            { id: 'mbb2', text: 'Nutzt die neue Maschine oder Software später im Alltag', target: 'anw' },
+            { id: 'mbb3', text: 'Verhandelt Preise, Rabatte & Lieferbedingungen mit dem Anbieter', target: 'eink' },
+            { id: 'mbb4', text: 'Private Haushalte kaufen für den eigenen Konsum', target: 'b2c' }
+        ],
+        targets: [
+            { id: 'ent', label: 'Entscheider (Buying Center)' },
+            { id: 'anw', label: 'Anwender / User (Buying Center)' },
+            { id: 'eink', label: 'Einkäufer / Buyer (Buying Center)' },
+            { id: 'b2c', label: 'B2C (Business-to-Consumer)' }
+        ],
+        explanation: 'Im B2B-Buying-Center wirken Entscheider, Einkäufer und Anwender zusammen; B2C richtet sich an private Konsumenten.'
+    },
+    {
+        id: 'mdnd_100_15', type: 'dnd',
+        question: 'Drag & Drop (Sortiment & Markenstrategie): Ordne die Begriffe korrekt zu.',
+        items: [
+            { id: 'msm1', text: 'Viele verschiedene Produktgruppen im Angebot (z.B. Migros)', target: 'breit' },
+            { id: 'msm2', text: 'Sehr viele Varianten/Grössen innerhalb einer Produktlinie', target: 'tief' },
+            { id: 'msm3', text: 'Einzelne Produktmarke mit eigenem Namen (z.B. Nutella)', target: 'einz' },
+            { id: 'msm4', text: 'Alle Produkte laufen unter demselben Firmennamen (z.B. Apple)', target: 'dach' }
+        ],
+        targets: [
+            { id: 'breit', label: 'Breites Sortiment' },
+            { id: 'tief', label: 'Tiefes Sortiment' },
+            { id: 'einz', label: 'Einzelmarkenstrategie' },
+            { id: 'dach', label: 'Dachmarkenstrategie' }
+        ],
+        explanation: 'Sortimentsbreite = Anzahl Gruppen; Tiefe = Varianten je Gruppe; Einzelmarke vs. Dachmarke.'
+    },
+    {
+        id: 'mdnd_100_16', type: 'dnd',
+        question: 'Drag & Drop (KI im Marketing): Ordne Anwendungsfall und Schutzmassnahme richtig zu.',
+        items: [
+            { id: 'mki1', text: 'Automatische Übersetzung & Varianten für Google/Meta Ads', target: 'cont' },
+            { id: 'mki2', text: '24/7 Beantwortung häufiger Kundenfragen im Webshop', target: 'bot' },
+            { id: 'mki3', text: 'Keine echten Kundennamen oder E-Mails in offene KI-Tools kopieren', target: 'dsg' },
+            { id: 'mki4', text: 'Jeden KI-Text vor Veröffentlichung auf Fakten & Markenton prüfen', target: 'qual' }
+        ],
+        targets: [
+            { id: 'cont', label: 'Content- & Ad-Erstellung' },
+            { id: 'bot', label: 'Kundenservice / Chatbot' },
+            { id: 'dsg', label: 'Datenschutz (DSG/DSGVO)' },
+            { id: 'qual', label: 'Qualitätssicherung (Human-in-the-loop)' }
+        ],
+        explanation: 'KI hilft bei Content & Chatbots, erfordert aber zwingend Datenschutz und menschliche Qualitätskontrolle.'
     }
 ];
 
